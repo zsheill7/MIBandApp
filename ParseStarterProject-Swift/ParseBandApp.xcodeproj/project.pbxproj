@@ -25,11 +25,12 @@
 		C829AA371D35CA410073DF94 /* eventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829AA351D35CA410073DF94 /* eventCell.swift */; };
 		C85079A11D306F82000BA862 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C850799D1D306F81000BA862 /* CalendarViewController.swift */; };
 		C85079A31D306F82000BA862 /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C850799F1D306F82000BA862 /* BarcodeViewController.swift */; };
-		C85079A41D306F82000BA862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85079A01D306F82000BA862 /* LoginViewController.swift */; };
+		C85079A41D306F82000BA862 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85079A01D306F82000BA862 /* SignupViewController.swift */; };
 		C85079AE1D307B1B000BA862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85079AD1D307B1B000BA862 /* Main.storyboard */; };
 		C85079B21D307B8F000BA862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85079B11D307B8F000BA862 /* Assets.xcassets */; };
 		C8AD156A1D41A2DB0067AE2F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8AD15681D41A2DB0067AE2F /* Fabric.framework */; };
 		C8AD156B1D41A2DB0067AE2F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8AD15691D41A2DB0067AE2F /* Crashlytics.framework */; };
+		C8AD156D1D41AB5C0067AE2F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AD156C1D41AB5C0067AE2F /* LoginViewController.swift */; };
 		C8C266D51D3DAB6C00574541 /* ChangePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,11 +60,12 @@
 		C829AA351D35CA410073DF94 /* eventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventCell.swift; sourceTree = "<group>"; };
 		C850799D1D306F81000BA862 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C850799F1D306F82000BA862 /* BarcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
-		C85079A01D306F82000BA862 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C85079A01D306F82000BA862 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C85079AD1D307B1B000BA862 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C85079B11D307B8F000BA862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Resources/Assets.xcassets; sourceTree = "<group>"; };
 		C8AD15681D41A2DB0067AE2F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ParseStarterProject/Fabric.framework; sourceTree = "<group>"; };
 		C8AD15691D41A2DB0067AE2F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ParseStarterProject/Crashlytics.framework; sourceTree = "<group>"; };
+		C8AD156C1D41AB5C0067AE2F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,9 +134,7 @@
 				C85079AD1D307B1B000BA862 /* Main.storyboard */,
 				C850799D1D306F81000BA862 /* CalendarViewController.swift */,
 				C850799F1D306F82000BA862 /* BarcodeViewController.swift */,
-				C85079A01D306F82000BA862 /* LoginViewController.swift */,
-				C829AA321D35C7830073DF94 /* EventTableViewController.swift */,
-				C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */,
+				C8AD156E1D41AB7B0067AE2F /* User Setup */,
 				C829AA341D35CA410073DF94 /* eventItem.swift */,
 				C829AA351D35CA410073DF94 /* eventCell.swift */,
 				C85079B11D307B8F000BA862 /* Assets.xcassets */,
@@ -170,6 +170,17 @@
 				81BA81761A49E0D500E65899 /* libsqlite3.dylib */,
 			);
 			name = "System Frameworks";
+			sourceTree = "<group>";
+		};
+		C8AD156E1D41AB7B0067AE2F /* User Setup */ = {
+			isa = PBXGroup;
+			children = (
+				C85079A01D306F82000BA862 /* SignupViewController.swift */,
+				C8AD156C1D41AB5C0067AE2F /* LoginViewController.swift */,
+				C829AA321D35C7830073DF94 /* EventTableViewController.swift */,
+				C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */,
+			);
+			name = "User Setup";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C85079A41D306F82000BA862 /* LoginViewController.swift in Sources */,
+				C8AD156D1D41AB5C0067AE2F /* LoginViewController.swift in Sources */,
+				C85079A41D306F82000BA862 /* SignupViewController.swift in Sources */,
 				C829AA361D35CA410073DF94 /* eventItem.swift in Sources */,
 				C829AA331D35C7830073DF94 /* EventTableViewController.swift in Sources */,
 				C829AA371D35CA410073DF94 /* eventCell.swift in Sources */,

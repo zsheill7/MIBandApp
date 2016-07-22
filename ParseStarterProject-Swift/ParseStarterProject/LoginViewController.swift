@@ -1,24 +1,20 @@
 //
 //  LoginViewController.swift
-//  Band App
+//  ParseBandApp
 //
-//  Created by Zoe Sheill on 7/5/16.
-//  Copyright © 2016 ClassroomM. All rights reserved.
+//  Created by Zoe Sheill on 7/21/16.
+//  Copyright © 2016 Parse. All rights reserved.
 //
 
 import UIKit
 import Parse
 
 class LoginViewController: UIViewController {
-    var signupActive = true
+  
+   
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    
-    @IBOutlet weak var registeredText: UILabel!
-
-    @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
      var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     func displayAlert(title: String, message: String) {
@@ -36,162 +32,61 @@ class LoginViewController: UIViewController {
         } else {
             print("error")
         }
-       
+        
         
         
     }
+
     
     @IBAction func logIn(sender: AnyObject) {
         
-        if signupActive == true {
-            
-            signUpButton.setTitle("Log In", forState: UIControlState.Normal)
-            
-            registeredText.text = "Not registered?"
-            
-            loginButton.setTitle("Sign Up", forState: UIControlState.Normal)
-            
-            signupActive = false
-            
-        } else {
-            
-            signUpButton.setTitle("Sign Up", forState: UIControlState.Normal)
-            
-            registeredText.text = "Already registered?"
-            
-            loginButton.setTitle("Login", forState: UIControlState.Normal)
-            
-            signupActive = true
-            
-        }
-    }
-
-    @IBAction func signUp(sender: AnyObject) {
-   
+        activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         
-        if username.text == "" || password.text == "" {
+        var errorMessage = "Please try again later"
+
+        
+        
+        PFUser.logInWithUsernameInBackground(username.text!, password: password.text!, block: { (user, error) -> Void in
             
-            displayAlert("Missing Fields", message: "Please enter a username and password")
+            self.activityIndicator.stopAnimating()
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
             
-        } else {
-            
-            activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
-            activityIndicator.center = self.view.center
-            activityIndicator.hidesWhenStopped = true
-            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-            view.addSubview(activityIndicator)
-            activityIndicator.startAnimating()
-            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-            
-            var errorMessage = "Please try again later"
-            
-            if signupActive == true {
+            if user != nil {
                 
-                var user = PFUser()
-                user.username = username.text!
-                user.password = password.text!
+                // Logged In!
                 
+                dispatch_async(dispatch_get_main_queue()) {
+                    [unowned self] in
+                    self.performSegueWithIdentifier("login", sender: self)
+                }
                 
-                
-                user.signUpInBackgroundWithBlock({ (success, error) -> Void in
-                    
-                    self.activityIndicator.stopAnimating()
-                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
-                    
-                    if error == nil {
-                        
-                        // Signup successful
-                        
-                        dispatch_async(dispatch_get_main_queue()) {
-                            [unowned self] in
-                            self.performSegueWithIdentifier("signup", sender: self)
-                        }
-                        
-                        
-                    } else {
-                        
-                        if let errorString = error!.userInfo["error"] as? String {
-                            
-                            errorMessage = errorString
-                            
-                        }
-                        
-                        self.displayAlert("Failed SignUp", message: errorMessage)
-                        
-                    }
-                    
-                })
                 
             } else {
                 
-                PFUser.logInWithUsernameInBackground(username.text!, password: password.text!, block: { (user, error) -> Void in
+                if let errorString = error!.userInfo["error"] as? String {
                     
-                    self.activityIndicator.stopAnimating()
-                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                    errorMessage = errorString
                     
-                    if user != nil {
-                        
-                        // Logged In!
-                        
-                        dispatch_async(dispatch_get_main_queue()) {
-                            [unowned self] in
-                            self.performSegueWithIdentifier("login", sender: self)
-                        }
-                        
-                        
-                    } else {
-                        
-                        if let errorString = error!.userInfo["error"] as? String {
-                            
-                            errorMessage = errorString
-                            
-                        }
-                        
-                        self.displayAlert("Failed Login", message: errorMessage)
-                        
-                    }
-                    
-                })
+                }
+                
+                self.displayAlert("Failed Login", message: errorMessage)
                 
             }
             
-        }
+        })
     }
     
+    
+    @IBAction func signUp(sender: AnyObject) {
         
-  
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.performSegueWithIdentifier("loginToSignup", sender: self)
     }
     
-  /*override func viewDidAppear(animated: Bool) {
-        if PFUser.currentUser() != nil {
-            
-            self.performSegueWithIdentifier("login", sender: self)
-            
-            
-        }
-    }*/
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 
 }

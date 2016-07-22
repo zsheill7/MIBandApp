@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1305FB91FAD268C967CB4ED4 /* Pods_ParseBandApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA4F162F5FA0350DB6727B1 /* Pods_ParseBandApp.framework */; };
 		81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814A1A49DA1800E65899 /* AppDelegate.swift */; };
 		81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814C1A49DA1800E65899 /* ViewController.swift */; };
 		81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA816B1A49DB6800E65899 /* Bolts.framework */; };
@@ -27,10 +28,13 @@
 		C85079A41D306F82000BA862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85079A01D306F82000BA862 /* LoginViewController.swift */; };
 		C85079AE1D307B1B000BA862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85079AD1D307B1B000BA862 /* Main.storyboard */; };
 		C85079B21D307B8F000BA862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85079B11D307B8F000BA862 /* Assets.xcassets */; };
+		C8AD156A1D41A2DB0067AE2F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8AD15681D41A2DB0067AE2F /* Fabric.framework */; };
+		C8AD156B1D41A2DB0067AE2F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8AD15691D41A2DB0067AE2F /* Crashlytics.framework */; };
 		C8C266D51D3DAB6C00574541 /* ChangePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D9D75FEBC7C0503220AD82A /* Pods-ParseBandApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseBandApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseBandApp/Pods-ParseBandApp.debug.xcconfig"; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81BA81451A49DA1800E65899 /* ParseBandApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseBandApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BA814A1A49DA1800E65899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,8 +47,11 @@
 		81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		9AA4F162F5FA0350DB6727B1 /* Pods_ParseBandApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseBandApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9337BFC7C0494EA845E60FE /* Pods-ParseBandApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseBandApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseBandApp/Pods-ParseBandApp.release.xcconfig"; sourceTree = "<group>"; };
 		C802EE3C1D3D630800110415 /* SettingsInstrumentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInstrumentsTableViewController.swift; sourceTree = "<group>"; };
 		C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		C80FF6891D41492F0063DC27 /* ParseBandApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseBandApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSetupViewController.swift; sourceTree = "<group>"; };
 		C829AA301D35C7680073DF94 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		C829AA321D35C7830073DF94 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +62,8 @@
 		C85079A01D306F82000BA862 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C85079AD1D307B1B000BA862 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C85079B11D307B8F000BA862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Resources/Assets.xcassets; sourceTree = "<group>"; };
+		C8AD15681D41A2DB0067AE2F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ParseStarterProject/Fabric.framework; sourceTree = "<group>"; };
+		C8AD15691D41A2DB0067AE2F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ParseStarterProject/Crashlytics.framework; sourceTree = "<group>"; };
 		C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,17 +73,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */,
+				C8AD156B1D41A2DB0067AE2F /* Crashlytics.framework in Frameworks */,
 				81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */,
 				81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */,
+				C8AD156A1D41A2DB0067AE2F /* Fabric.framework in Frameworks */,
 				81BA81771A49E0D500E65899 /* libsqlite3.dylib in Frameworks */,
 				81BA81711A49DB6800E65899 /* Parse.framework in Frameworks */,
 				81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */,
+				1305FB91FAD268C967CB4ED4 /* Pods_ParseBandApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6025BED2FC972A76429C9FC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D75FEBC7C0503220AD82A /* Pods-ParseBandApp.debug.xcconfig */,
+				A9337BFC7C0494EA845E60FE /* Pods-ParseBandApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +111,7 @@
 				814C3AC51B69877600E307BB /* Resources */,
 				81BA816A1A49DB5600E65899 /* Frameworks */,
 				81BA81461A49DA1800E65899 /* Products */,
+				6025BED2FC972A76429C9FC9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +141,7 @@
 				C802EE3C1D3D630800110415 /* SettingsInstrumentsTableViewController.swift */,
 				C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */,
 				C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */,
+				C80FF6891D41492F0063DC27 /* ParseBandApp-Bridging-Header.h */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -126,11 +149,14 @@
 		81BA816A1A49DB5600E65899 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C8AD15681D41A2DB0067AE2F /* Fabric.framework */,
+				C8AD15691D41A2DB0067AE2F /* Crashlytics.framework */,
 				81BA816B1A49DB6800E65899 /* Bolts.framework */,
 				81BA816C1A49DB6800E65899 /* Parse.framework */,
 				81BA816E1A49DB6800E65899 /* ParseFacebookUtils.framework */,
 				81BA81801A49E10C00E65899 /* ParseUI.framework */,
 				81BA81751A49E0C500E65899 /* System Frameworks */,
+				9AA4F162F5FA0350DB6727B1 /* Pods_ParseBandApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,9 +179,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "ParseBandApp" */;
 			buildPhases = (
+				EEB16F962EA83A395E2B5E83 /* [CP] Check Pods Manifest.lock */,
 				81BA81411A49DA1800E65899 /* Sources */,
 				81BA81421A49DA1800E65899 /* Frameworks */,
 				81BA81431A49DA1800E65899 /* Resources */,
+				E36DE6074A0B2B5B03C1FF4A /* [CP] Embed Pods Frameworks */,
+				B9ACE6C15EDC2278E8D010E1 /* [CP] Copy Pods Resources */,
+				C8AD15631D41851A0067AE2F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -210,6 +240,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9ACE6C15EDC2278E8D010E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParseBandApp/Pods-ParseBandApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8AD15631D41851A0067AE2F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 9a481d1689708bda50e5eee8befae62329b40faa 5d699cc7207e2a83661616386912734054857c0454f446ccb16c04aa9b21e830";
+		};
+		E36DE6074A0B2B5B03C1FF4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParseBandApp/Pods-ParseBandApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB16F962EA83A395E2B5E83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		81BA81411A49DA1800E65899 /* Sources */ = {
@@ -317,14 +408,17 @@
 		};
 		81BA81651A49DA1800E65899 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D9D75FEBC7C0503220AD82A /* Pods-ParseBandApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ParseStarterProject",
 				);
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parse.ParseBandApp;
 				PRODUCT_NAME = ParseBandApp;
@@ -333,14 +427,17 @@
 		};
 		81BA81661A49DA1800E65899 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9337BFC7C0494EA845E60FE /* Pods-ParseBandApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ParseStarterProject",
 				);
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parse.ParseBandApp;
 				PRODUCT_NAME = ParseBandApp;

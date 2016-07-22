@@ -11,6 +11,10 @@ import UIKit
 
 import Parse
 
+import Fabric
+import Crashlytics
+
+
 // If you want to use any of the UI components, uncomment this line
 // import ParseUI
 
@@ -34,6 +38,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://mihsband.herokuapp.com/parse"
         }
         Parse.initializeWithConfiguration(configuration)
+        
+        Fabric.with([Crashlytics.self])
+
+        
+       /* let token = "acf8f6a1484ea0ea2ffb2c18713ff265"
+        let mixpanel = Mixpanel.sharedInstanceWithToken(token)*/
         
         //UINavigationBar.appearance().barTintColor = UIColor.redColor()
         

@@ -54,15 +54,14 @@ class UserSetupTableViewController: UITableViewController {
         
     }
     
-    
-    @IBOutlet weak var scroller: UIScrollView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.marchingTableView.reloadData()
         self.concertInstTableView.reloadData()
         
-        scroller.contentSize = CGSizeMake(400, 1600)
+
     }
     
     override func viewDidLayoutSubviews() {

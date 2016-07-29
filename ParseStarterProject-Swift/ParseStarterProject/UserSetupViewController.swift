@@ -64,9 +64,6 @@ class UserSetupTableViewController: UITableViewController {
 
     }
     
-    override func viewDidLayoutSubviews() {
-        scroller.scrollEnabled = true
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -9,6 +9,7 @@
 
 import UIKit
 import Parse
+import AFNetworking
 
 
 class ViewController: UIViewController {
@@ -23,11 +24,11 @@ class ViewController: UIViewController {
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,
                 responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
+                print("JSON: " + responseObject.description)
             },
-            failure: { (operation: AFHTTPRequestOperation!,
+            failure: { (operation: AFHTTPRequestOperation?,
                 error: NSError!) in
-                println("Error: " + error.localizedDescription)
+                print("Error: " + error.localizedDescription)
             }
         )
         

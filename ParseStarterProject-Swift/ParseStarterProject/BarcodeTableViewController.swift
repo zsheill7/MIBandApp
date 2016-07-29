@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class BarcodeViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class BarcodeTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     func displayAlert(title: String, message: String) {
         

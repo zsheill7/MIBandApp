@@ -18,7 +18,7 @@ let bandTypesList = ["6th Grade Band", "7th Grade Band", "8th Grade Band", "Conc
 
 
 
-class UserSetupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserSetupTableViewController: UITableViewController {
     
     
    
@@ -76,12 +76,12 @@ class UserSetupViewController: UIViewController, UITableViewDelegate, UITableVie
 
     // MARK: - Table view data source
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    /*func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
-    }
+    }*/
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
         if (tableView == marchingTableView) {
@@ -95,7 +95,7 @@ class UserSetupViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
         //print(concertInstrumentsList[indexPath.row])
@@ -116,7 +116,7 @@ class UserSetupViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell

@@ -18,6 +18,7 @@
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
 		C802EE3D1D3D630800110415 /* SettingsInstrumentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802EE3C1D3D630800110415 /* SettingsInstrumentsTableViewController.swift */; };
 		C802EE3F1D3D670F00110415 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */; };
+		C817B8211D4B018400E9A5FD /* DirectorAddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817B8201D4B018400E9A5FD /* DirectorAddEventTableViewController.swift */; };
 		C829AA271D31DA1D0073DF94 /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */; };
 		C829AA311D35C7690073DF94 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829AA301D35C7680073DF94 /* EventViewController.swift */; };
 		C829AA331D35C7830073DF94 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829AA321D35C7830073DF94 /* EventTableViewController.swift */; };
@@ -53,6 +54,7 @@
 		C802EE3C1D3D630800110415 /* SettingsInstrumentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInstrumentsTableViewController.swift; sourceTree = "<group>"; };
 		C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseBandApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		C817B8201D4B018400E9A5FD /* DirectorAddEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorAddEventTableViewController.swift; sourceTree = "<group>"; };
 		C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSetupViewController.swift; sourceTree = "<group>"; };
 		C829AA301D35C7680073DF94 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		C829AA321D35C7830073DF94 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */,
 				C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */,
 				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
+				C817B8201D4B018400E9A5FD /* DirectorAddEventTableViewController.swift */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				C8AD156D1D41AB5C0067AE2F /* LoginViewController.swift in Sources */,
 				C85079A41D306F82000BA862 /* SignupViewController.swift in Sources */,
 				C829AA361D35CA410073DF94 /* eventItem.swift in Sources */,
+				C817B8211D4B018400E9A5FD /* DirectorAddEventTableViewController.swift in Sources */,
 				C829AA331D35C7830073DF94 /* EventTableViewController.swift in Sources */,
 				C829AA371D35CA410073DF94 /* eventCell.swift in Sources */,
 				C85079A11D306F82000BA862 /* CalendarViewController.swift in Sources */,

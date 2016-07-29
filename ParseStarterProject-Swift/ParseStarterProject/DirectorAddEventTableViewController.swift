@@ -11,18 +11,22 @@ import Parse
 
 
 
-class AddEventTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class DirectorAddEventTableViewController: UITableViewController {
     
     @IBOutlet weak var eventDescription: UITextField!
     
- 
-    @IBOutlet weak var myDatePicker: UIDatePicker!
+    
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+
+    @IBOutlet weak var endDatePicker: UIDatePicker!
     
     @IBOutlet weak var eventType: UIPickerView!
     
     @IBOutlet weak var bandType: UIPickerView!
-
-   
+    
+    @IBOutlet weak var ensembleTable: UITableView!
+    
+    @IBOutlet weak var instrumentTable: UITableView!
     
     var activityIndicator = UIActivityIndicatorView()
     
@@ -52,7 +56,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         
         
     }
-
+    
     
     @IBAction func addEventButton(sender: AnyObject) {
         
@@ -69,7 +73,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         let pickerEvent = String(eventPickerData[eventType.selectedRowInComponent(0)])
         
         let bandTypeEvent = String(eventPickerData[bandType.selectedRowInComponent(0)])
-
+        
         //let attrString = NSAttributedString(string: dateString, attributes:attributes)
         
         var eventDescriptionText = " "
@@ -86,18 +90,24 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         
         event["title"] = pickerEvent
         
-        event["date"] = myDatePicker.date
+        
+        
+        event["date"] = startDatePicker.date
+        
+        event["endDate"] = endDatePicker.date
         
         event["description"] = eventDescriptionText
         
-        if pickerEvent == "Marching Band Sectional" {
+        /*if pickerEvent == "Marching Band Sectional" {
             event["instrument"] = PFUser.currentUser()!.objectForKey("marchingInstrument")
             event["ensemble"] = "Marching Band"
         } else {
             
             event["instrument"] = PFUser.currentUser()!.objectForKey("concertInstrument")
             event["ensemble"] = PFUser.currentUser()!.objectForKey("concertBandType")
-        }
+        }*/
+        
+        //event["instrument"] =
         
         event.saveInBackgroundWithBlock{(success, error) -> Void in
             self.activityIndicator.stopAnimating()
@@ -110,32 +120,69 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                     [unowned self] in
                     self.performSegueWithIdentifier("addEvent", sender: self)
                 }
-
+                
             } else {
                 self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
             }
         }
-
         
-
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+        
         
         
         
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         formatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        eventType.dataSource = self
+        /*eventType.dataSource = self
         eventType.delegate = self
         
         bandType.dataSource = self
-        bandType.delegate = self
+        bandType.delegate = self*/
         
     }
+    
+    /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if tableView == ensembleTable {
+            
+            
+        } else if tableView == instrumentTable {
+            
+        }
+    }*/
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == ensembleTable {
+            return bandTypesList.count
+            
+        } else if tableView == instrumentTable {
+            concertInstrumentsList.count
+        }
+        return 0
+        
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
+        
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        
+        if tableView == ensembleTable {
+            cell.textLabel?.text = String(bandTypesList[indexPath.row])
+            
+        } else if tableView == instrumentTable {
+            cell.textLabel?.text = String(concertInstrumentsList[indexPath.row])
+        }
+        return cell
+        
+        
+
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -143,24 +190,10 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
     
     
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return eventPickerData.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return eventPickerData[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        /*        */
-    }
     
     
-
-
+    
+    
+    
 }
 

@@ -18,7 +18,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
   
     var events = [eventItem]()
     
-    
+    let user = PFUser.currentUser()
 
   
 
@@ -109,7 +109,19 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
     }
-    
+
+    @IBAction func addEvent(sender: AnyObject) {
+        var segueString = "memberAddEvent"
+        
+        
+        if let isAdmin = user!["isAdmin"] as? Boolean {
+            if isAdmin == true {
+                segueString = "adminAddEvent"
+            }
+        }
+        
+        self.performSegueWithIdentifier(segueString, sender: self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

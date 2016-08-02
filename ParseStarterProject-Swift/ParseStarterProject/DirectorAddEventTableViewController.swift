@@ -11,19 +11,22 @@ import Parse
 
 
 
-class DirectorAddEventTableViewController: UITableViewController {
-    
-    @IBOutlet weak var eventDescription: UITextField!
-    
-    
-    @IBOutlet weak var startDatePicker: UIDatePicker!
-
-    @IBOutlet weak var endDatePicker: UIDatePicker!
+class DirectorAddEventTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var eventType: UIPickerView!
     
     @IBOutlet weak var bandType: UIPickerView!
     
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    @IBOutlet weak var eventDescription: UITextField!
+    
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+
+    @IBOutlet weak var endDatePicker: UIDatePicker!
+    
+  
     @IBOutlet weak var ensembleTable: UITableView!
     
     @IBOutlet weak var instrumentTable: UITableView!
@@ -36,6 +39,10 @@ class DirectorAddEventTableViewController: UITableViewController {
     
     let eventPickerData = ["Marching Band Sectional", "Concert Band Sectional", "Ensemble Rehearsal"]
     let bandTypePickerData = ["Marching Band", "Concert Band"]
+    
+    var searchActive: Bool = false
+    
+    var filtered:[String] = []
     
     func displayAlert(title: String, message: String) {
         
@@ -144,7 +151,43 @@ class DirectorAddEventTableViewController: UITableViewController {
         bandType.dataSource = self
         bandType.delegate = self*/
         
+        searchBar.delegate = self
+        
     }
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        filtered = concertInstrumentsList.filter({ (text) -> Bool in
+            let tmp:NSString = text
+            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return range.location != NSNotFound
+        })
+        
+        if(filtered.count == 0) {
+            searchActive = false
+        } else {
+            searchActive = true
+        }
+        self.tableView.reloadData()
+        
+    }
+    
+    
+    
     
     /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if tableView == ensembleTable {
@@ -157,6 +200,9 @@ class DirectorAddEventTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == ensembleTable {
+            if searchActive == true {
+                return filtered.count
+            }
             return bandTypesList.count
             
         } else if tableView == instrumentTable {
@@ -175,7 +221,12 @@ class DirectorAddEventTableViewController: UITableViewController {
             cell.textLabel?.text = String(bandTypesList[indexPath.row])
             
         } else if tableView == instrumentTable {
-            cell.textLabel?.text = String(concertInstrumentsList[indexPath.row])
+            
+            if searchActive == true {
+                cell.textLabel?.text = filtered[indexPath.row]
+            } else {
+                cell.textLabel?.text = String(concertInstrumentsList[indexPath.row])
+            }
         }
         return cell
         

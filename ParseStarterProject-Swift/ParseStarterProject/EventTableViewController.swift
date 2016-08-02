@@ -114,7 +114,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         var segueString = "memberAddEvent"
         
         
-        if let isAdmin = user!["isAdmin"] as? Boolean {
+        if let isAdmin = user!["isAdmin"] as? Bool {
             if isAdmin == true {
                 segueString = "adminAddEvent"
             }

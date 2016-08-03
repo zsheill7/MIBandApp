@@ -14,7 +14,8 @@ let marchingInstrumentsList = ["Flute", "Clarinet", "Bassoon", "Alto Saxophone",
 
 let concertInstrumentsList = ["Flute", "Oboe", "Clarinet", "Bassoon", "Alto Saxophone", "Low Saxophone", "Trumpet", "Trombone", "French Horn", "Tuba", "Euphonium", "Percussion"]
 
-let bandTypesList = ["6th Grade Band", "7th Grade Band", "8th Grade Band", "Concert Band", "Percussion Ensemble", "Symphonic Band", "Wind Symphony", "Wind Ensemble"]
+let bandTypesList = ["Concert Band", "Symphonic Band", "Wind Symphony", "Wind Ensemble", "Percussion Ensemble"]
+let gradeList = ["9th Grade", "10th Grade", "11th Grade", "12th Grade"]
 
 
 
@@ -25,15 +26,13 @@ class UserSetupTableViewController: UITableViewController {
     
     var user = PFUser.currentUser()
     
-    @IBOutlet weak var isAdmin: UISwitch!
-
-    @IBOutlet weak var isSectionLeader: UISwitch!
-    @IBOutlet weak var marchingTableView: UITableView!
+   
+    //@IBOutlet weak var marchingTableView: UITableView!
 
     
-    @IBOutlet weak var concertInstTableView: UITableView!
-    @IBOutlet weak var bandTypeTableView: UITableView!
+
    
+    
     func displayAlert(title: String, message: String) {
         
         if #available(iOS 8.0, *) {
@@ -53,13 +52,22 @@ class UserSetupTableViewController: UITableViewController {
         
         
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*marchingTableView.delegate = self
+        marchingTableView.dataSource = self
 
-        self.marchingTableView.reloadData()
-        self.concertInstTableView.reloadData()
+        concertInstTableView.delegate = self
+        concertInstTableView.dataSource = self
+        
+        bandTypeTableView.delegate = self
+        bandTypeTableView.dataSource = self
+        
+        self.marchingTableView.reloadData()*/
+        //self.concertInstTableView.reloadData()
+        //self.bandTypeTableView.reloadData()
         
 
     }
@@ -70,6 +78,15 @@ class UserSetupTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func nextButton(sender: AnyObject) {
+        
+        
+        if user!["marchingInstrument"] != nil && user!["concertInstrument"] != nil && user!["concertBandType"] != nil{
+            self.performSegueWithIdentifier("finishSetup", sender: self)
+        } else {
+            displayAlert("Missing Fields", message: "Please select: \nA marching band instrument\n A concert band instrument\nYour concert band")
+        }
+    }
     // MARK: - Table view data source
 
     /*func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -77,26 +94,28 @@ class UserSetupTableViewController: UITableViewController {
         return 1
     }*/
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    /*override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
         if (tableView == marchingTableView) {
+            //print(marchingInstrumentsList.count)
             return marchingInstrumentsList.count
         } else if (tableView == concertInstTableView) {
             return concertInstrumentsList.count
         } else if (tableView == bandTypeTableView) {
             return bandTypesList.count
         }
+        //return 1
         return 0
-    }
+    }*/
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    /*override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
         //print(concertInstrumentsList[indexPath.row])
         
-        if (tableView == marchingTableView) {
+        /*if (tableView == marchingTableView) {
             cell.textLabel?.text = String(marchingInstrumentsList[indexPath.row])
             return cell
         }
@@ -107,12 +126,13 @@ class UserSetupTableViewController: UITableViewController {
             cell.textLabel?.text = String(bandTypesList[indexPath.row])
             return cell
         }
-        
+        */
         cell.textLabel?.text = ""
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    
+   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
@@ -136,62 +156,21 @@ class UserSetupTableViewController: UITableViewController {
         user!.saveInBackground()
         
     }
+    */
     
-    @IBAction func finishButton(sender: AnyObject) {
-        user!.setObject(isSectionLeader.on, forKey: "isSectionLeader")
-        user!.saveInBackground()
-        user!.setObject(isAdmin.on, forKey: "isAdmin")
-        user!.saveInBackground()
-        
-        if user!["marchingInstrument"] != nil && user!["concertInstrument"] != nil && user!["concertBandType"] != nil{
-            self.performSegueWithIdentifier("finishSetup", sender: self)
-        } else {
-            displayAlert("Missing Fields", message: "Please select: \nA marching band instrument\n C band instrument\nyour concert band")
-        }
-    }
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+    
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+        
+        
+    }*/
+    
 
 }
+

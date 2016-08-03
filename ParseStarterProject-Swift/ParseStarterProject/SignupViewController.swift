@@ -76,9 +76,9 @@ class SignupViewController: UIViewController {
             if signupActive == true {
                 
                 var user = PFUser()
-                user.username = username.text!
-                user.password = password.text!
                 
+                user.password = password.text!
+                user.username = email.text!
                 
                 
                 user.signUpInBackgroundWithBlock({ (success, error) -> Void in

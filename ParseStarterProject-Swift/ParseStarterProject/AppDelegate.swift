@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [NSForegroundColorAttributeName:UIColor.whiteColor()]
         
         UIBarButtonItem.appearance().tintColor = UIColor.grayColor()
-        let navBgImage:UIImage = UIImage(named: "maroonBg.jpg")!
+        let navBgImage:UIImage = UIImage(named: "maroonSolid")!
         UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics:  .Default)
 
         /*parse-dashboard --appId mihsbandGRHUILAEHFRALIWH4738568 --masterKey FUHIDLSHfnjdlsh48937596575789 --serverURL "https://mihsband.herokuapp.com/parse" --appName MIHS Band

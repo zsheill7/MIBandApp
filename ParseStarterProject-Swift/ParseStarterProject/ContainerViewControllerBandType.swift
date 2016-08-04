@@ -69,7 +69,7 @@ class ContainerViewControllerThree: UIViewController, UITableViewDelegate, UITab
         let cellText:String = currentCell.textLabel!.text!
         
         
-        user!.setObject(cellText, forKey: "bandType")
+        user!.setObject(cellText, forKey: "concertBandType")
         
         user!.saveInBackground()
         

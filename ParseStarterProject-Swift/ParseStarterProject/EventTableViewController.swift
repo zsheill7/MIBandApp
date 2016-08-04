@@ -14,6 +14,7 @@ var eventList = [eventItem]()
 
 class EventTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var nagivationItem: UINavigationItem!
     @IBOutlet weak var table: UITableView!
   
     var events = [eventItem]()
@@ -28,6 +29,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         /*if NSUserDefaults.standardUserDefaults().objectForKey("eventList") != nil {
             eventList = NSUserDefaults.standardUserDefaults().objectForKey("eventList") as! [eventItem]
         }*/
+        navigationItem.hidesBackButton = true
         
         var query1 = PFUser.query()
         

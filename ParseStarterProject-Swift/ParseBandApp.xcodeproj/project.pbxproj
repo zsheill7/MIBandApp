@@ -157,8 +157,8 @@
 				C802EE3C1D3D630800110415 /* SettingsInstrumentsTableViewController.swift */,
 				C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */,
 				C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */,
-				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
 				C817B8201D4B018400E9A5FD /* DirectorAddEventTableViewController.swift */,
+				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";

@@ -87,8 +87,10 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, UUID: "sdfg")
                         
                         self.events.append(newEvent)
-                        
+                      
+                        self.events = self.events.sort({$0.date.compare($1.date) == .OrderedAscending})
                         self.table.reloadData()
+                        
                         
                     }
                 }
@@ -99,9 +101,8 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             
         })
         
-        events = events.sort({$0.date.timeIntervalSinceNow > $1.date.timeIntervalSinceNow})
         
-        self.table.reloadData()
+        
     
        
 

@@ -464,7 +464,7 @@
         <scene sceneID="nBk-tb-HvS">
             <objects>
                 <tableViewController id="rL5-Lr-wAR" customClass="BarcodeTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="hE2-xV-CoH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="4" id="hE2-xV-CoH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -520,46 +520,83 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Locker" id="cmF-Ow-5MM">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7hp-CC-bGg">
-                                        <rect key="frame" x="0.0" y="460.5" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7hp-CC-bGg" id="Ko9-Re-uLb">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Locker Combination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-q2-214">
-                                                    <rect key="frame" x="8" y="11" width="181" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTn-rO-WAH">
-                                                    <rect key="frame" x="197" y="6" width="209" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xLV-IN-SsK">
-                                        <rect key="frame" x="0.0" y="504.5" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="xLV-IN-SsK">
+                                        <rect key="frame" x="0.0" y="446.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xLV-IN-SsK" id="12f-Vb-uFA">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4Q-qO-ouc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Locker Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-R1-Xyj">
+                                                    <rect key="frame" x="8" y="11" width="181" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HaJ-Nl-soE">
+                                                    <rect key="frame" x="197" y="6" width="209" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RVn-R1-Xyj" firstAttribute="centerY" secondItem="12f-Vb-uFA" secondAttribute="centerY" id="38Z-pf-Kwa"/>
+                                                <constraint firstItem="RVn-R1-Xyj" firstAttribute="leading" secondItem="12f-Vb-uFA" secondAttribute="leadingMargin" id="DDt-Bv-pQG"/>
+                                                <constraint firstItem="HaJ-Nl-soE" firstAttribute="leading" secondItem="RVn-R1-Xyj" secondAttribute="trailing" constant="8" id="XEo-Ph-vD2"/>
+                                                <constraint firstItem="HaJ-Nl-soE" firstAttribute="centerY" secondItem="12f-Vb-uFA" secondAttribute="centerY" id="fA1-oI-ys2"/>
+                                                <constraint firstItem="HaJ-Nl-soE" firstAttribute="trailing" secondItem="12f-Vb-uFA" secondAttribute="trailingMargin" id="p08-uN-pYf"/>
+                                                <constraint firstItem="HaJ-Nl-soE" firstAttribute="leading" secondItem="RVn-R1-Xyj" secondAttribute="trailing" constant="8" id="yWq-LE-db7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7hp-CC-bGg">
+                                        <rect key="frame" x="0.0" y="490.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7hp-CC-bGg" id="Ko9-Re-uLb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Locker Combination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-q2-214">
+                                                    <rect key="frame" x="8" y="11" width="181" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTn-rO-WAH">
+                                                    <rect key="frame" x="197" y="6" width="209" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rjs-q2-214" firstAttribute="centerY" secondItem="Ko9-Re-uLb" secondAttribute="centerY" id="784-29-EOZ"/>
+                                                <constraint firstItem="LTn-rO-WAH" firstAttribute="centerY" secondItem="Ko9-Re-uLb" secondAttribute="centerY" id="BIU-JQ-iGc"/>
+                                                <constraint firstItem="Rjs-q2-214" firstAttribute="leading" secondItem="Ko9-Re-uLb" secondAttribute="leadingMargin" id="E9V-XY-R2i"/>
+                                                <constraint firstItem="LTn-rO-WAH" firstAttribute="leading" secondItem="Rjs-q2-214" secondAttribute="trailing" constant="8" id="QoS-DJ-s3g"/>
+                                                <constraint firstItem="LTn-rO-WAH" firstAttribute="trailing" secondItem="Ko9-Re-uLb" secondAttribute="trailingMargin" id="nDd-3y-zIf"/>
+                                                <constraint firstItem="LTn-rO-WAH" firstAttribute="leading" secondItem="Rjs-q2-214" secondAttribute="trailing" constant="8" id="xyh-CV-xTb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9dF-Q5-QRa">
+                                        <rect key="frame" x="0.0" y="534.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9dF-Q5-QRa" id="goL-78-QIr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiR-XH-bPb">
                                                     <rect key="frame" x="169" y="8" width="77" height="26"/>
                                                     <state key="normal" title="Button" image="ButtonConfirm"/>
                                                     <connections>
-                                                        <action selector="chooseLockerPhoto:" destination="rL5-Lr-wAR" eventType="touchUpInside" id="F7t-n2-t2J"/>
+                                                        <action selector="chooseLockerPhoto:" destination="rL5-Lr-wAR" eventType="touchUpInside" id="boo-ZH-lP4"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="L4Q-qO-ouc" firstAttribute="centerX" secondItem="12f-Vb-uFA" secondAttribute="centerX" id="KtX-o1-GQL"/>
-                                                <constraint firstItem="L4Q-qO-ouc" firstAttribute="top" secondItem="12f-Vb-uFA" secondAttribute="topMargin" id="LOv-Fs-KMu"/>
-                                                <constraint firstItem="L4Q-qO-ouc" firstAttribute="bottom" secondItem="12f-Vb-uFA" secondAttribute="bottomMargin" id="tqV-sb-eLr"/>
+                                                <constraint firstItem="LiR-XH-bPb" firstAttribute="top" secondItem="goL-78-QIr" secondAttribute="topMargin" id="GgR-gP-6Jf"/>
+                                                <constraint firstItem="LiR-XH-bPb" firstAttribute="centerX" secondItem="goL-78-QIr" secondAttribute="centerX" id="ins-Lc-7Ds"/>
+                                                <constraint firstItem="LiR-XH-bPb" firstAttribute="bottom" secondItem="goL-78-QIr" secondAttribute="bottomMargin" id="rHi-aK-oDR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -579,10 +616,11 @@
                     <connections>
                         <outlet property="barcodeButton" destination="VdV-9f-tb6" id="or6-6t-e8Y"/>
                         <outlet property="barcodeImage" destination="nh2-Ln-zls" id="gQA-uJ-tHc"/>
-                        <outlet property="lockerButton" destination="L4Q-qO-ouc" id="Rdg-s5-8hw"/>
                         <outlet property="lockerCell" destination="7hp-CC-bGg" id="751-Jg-kce"/>
                         <outlet property="lockerComboField" destination="LTn-rO-WAH" id="Kqd-dX-bv1"/>
+                        <outlet property="lockerNumberField" destination="HaJ-Nl-soE" id="U8T-T9-6ei"/>
                         <outlet property="myLockerCombo" destination="Rjs-q2-214" id="hfX-rL-pGn"/>
+                        <outlet property="myLockerNumber" destination="RVn-R1-Xyj" id="Pvo-VO-6Nr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U43-pg-fZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>

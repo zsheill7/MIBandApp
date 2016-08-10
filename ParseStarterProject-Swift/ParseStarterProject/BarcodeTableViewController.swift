@@ -12,8 +12,14 @@ import Parse
 class BarcodeTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var myLockerCombo: UILabel!
 
+    @IBOutlet weak var myLockerNumber: UILabel!
+ 
+    
     @IBOutlet weak var lockerCell: UITableViewCell!
     @IBOutlet weak var lockerComboField: UITextField!
+    
+    @IBOutlet weak var lockerNumberField: UITextField!
+
     func displayAlert(title: String, message: String) {
         
         if #available(iOS 8.0, *) {
@@ -21,7 +27,6 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 
-                //self.dismissViewControllerAnimated(true, completion: nil)
                 
             })))
             
@@ -45,7 +50,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
   
     
     @IBOutlet weak var barcodeImage: UIImageView!
-    @IBOutlet weak var lockerImage: UIImageView!
+
     
     
     @IBAction func takePhoto(sender: AnyObject) {
@@ -116,7 +121,12 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         }*/
         
         lockerComboField?.tag = 1
-        
+        lockerNumberField?.tag = 1
+        if let viewWithTag = self.view.viewWithTag(1) {
+            viewWithTag.removeFromSuperview()
+        }else{
+            print("tag not found")
+        }
         if let viewWithTag = self.view.viewWithTag(1) {
             viewWithTag.removeFromSuperview()
         }else{
@@ -127,10 +137,21 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             myLockerCombo.text = lockerComboField.text!
             myLockerCombo.center = CGPointMake(self.view.center.x, lockerCell.frame.size.height / 2)
             
-            displayAlert("Locker Combination Set", message: "You can always change this in Settings")
+            
+            myLockerCombo.textAlignment = NSTextAlignment.Center
+            
+            myLockerNumber.text = lockerNumberField.text!
+            myLockerNumber.center = CGPointMake(self.view.center.x, lockerCell.frame.size.height / 2)
+            
+            
+            myLockerNumber.textAlignment = NSTextAlignment.Center
+            
+            self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1))!.hidden = true
+            
+            displayAlert("Success!", message: "You can always change your locker info in Settings")
             
         } else {
-            displayAlert("Field Empty", message: "Please enter your locker combination")
+            displayAlert("Field(s) Empty", message: "Please enter your locker number and combination")
         
         }
         
@@ -140,7 +161,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
  
     @IBOutlet weak var barcodeButton: UIButton!
 
-    @IBOutlet weak var lockerButton: UIButton!
+ 
     
 
     
@@ -160,8 +181,10 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
                     self.barcodeImage.image = downloadedImage
                 }
             })
+              self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 0))!.hidden = true
+                displayAlert("Sucess!", message: "You can always change this image in settings")
             }
-        } else if picker == pickedLockerImage {
+        } /*else if picker == pickedLockerImage {
             if let imageFile = PFFile(name: "image.png", data: imageData!) {
                 
                 user!.setObject(imageFile, forKey: "locker")
@@ -173,7 +196,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
                 })
             }
                 
-        }
+        }*/
         
         
         
@@ -184,6 +207,8 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
     }
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

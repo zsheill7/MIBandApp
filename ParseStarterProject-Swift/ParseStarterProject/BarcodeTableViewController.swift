@@ -10,7 +10,10 @@ import UIKit
 import Parse
 
 class BarcodeTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    @IBOutlet weak var myLockerCombo: UILabel!
 
+    @IBOutlet weak var lockerCell: UITableViewCell!
+    @IBOutlet weak var lockerComboField: UITextField!
     func displayAlert(title: String, message: String) {
         
         if #available(iOS 8.0, *) {
@@ -18,7 +21,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 
-                self.dismissViewControllerAnimated(true, completion: nil)
+                //self.dismissViewControllerAnimated(true, completion: nil)
                 
             })))
             
@@ -82,7 +85,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     }
  
     @IBAction func chooseLockerPhoto(sender: AnyObject) {
-        if #available(iOS 8.0, *) {
+        /*if #available(iOS 8.0, *) {
             let alertController = UIAlertController(title: "Choose Photo", message: "", preferredStyle: .Alert)
             let choosePhoto = UIAlertAction(title: "Choose from Photo Library", style: .Default) { (_) in
                 self.pickedLockerImage.delegate = self
@@ -110,7 +113,28 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             presentViewController(alertController, animated: true, completion: nil)
         } else {
             displayAlert( "Software Update Needed", message: "Please update to iOS8 or later or contact an admin")
+        }*/
+        
+        lockerComboField?.tag = 1
+        
+        if let viewWithTag = self.view.viewWithTag(1) {
+            viewWithTag.removeFromSuperview()
+        }else{
+            print("tag not found")
         }
+        
+        if lockerComboField?.text != nil {
+            myLockerCombo.text = lockerComboField.text!
+            myLockerCombo.center = CGPointMake(self.view.center.x, lockerCell.frame.size.height / 2)
+            
+            displayAlert("Locker Combination Set", message: "You can always change this in Settings")
+            
+        } else {
+            displayAlert("Field Empty", message: "Please enter your locker combination")
+        
+        }
+        
+        
     }
 
  
@@ -157,9 +181,14 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         //choosePhotoButtonLabel.setTitle("", forState: UIControlState.Normal)
     }
     
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         /*if barcodeImage.image != nil {
             barcodeImage.image = UIImage(named: "placeholder4")

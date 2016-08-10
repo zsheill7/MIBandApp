@@ -40,7 +40,7 @@ class UserSetupTableViewController: UITableViewController {
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 
-                self.dismissViewControllerAnimated(true, completion: nil)
+                //self.dismissViewControllerAnimated(true, completion: nil)
                 
             })))
             
@@ -94,7 +94,7 @@ class UserSetupTableViewController: UITableViewController {
         }else{
             print("tag not found")
         }
-        self.view.willRemoveSubview(downArrow)
+        //self.view.willRemoveSubview(downArrow)
         
         upArrow = UIButton(frame: CGRect(x: self.view.frame.size.width - 50, y: 150, width: 50, height: 50))
         upArrow.tag = 2
@@ -146,6 +146,10 @@ class UserSetupTableViewController: UITableViewController {
         } else {
             displayAlert("Missing Fields", message: "Please select: \nA marching band instrument\n A concert band instrument\nYour concert band")
         }
+    }
+    
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
     }
     // MARK: - Table view data source
 

@@ -21,7 +21,7 @@ class ChangePasswordTableViewController: UITableViewController {
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 
-                self.dismissViewControllerAnimated(true, completion: nil)
+                //self.dismissViewControllerAnimated(true, completion: nil)
                 
             })))
             

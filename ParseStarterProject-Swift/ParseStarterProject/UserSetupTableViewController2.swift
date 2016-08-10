@@ -20,7 +20,7 @@ class UserSetupTableViewController2: UITableViewController {
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 
-                self.dismissViewControllerAnimated(true, completion: nil)
+                //self.dismissViewControllerAnimated(true, completion: nil)
                 
             })))
             
@@ -118,6 +118,12 @@ class UserSetupTableViewController2: UITableViewController {
                 displayAlert("Missing Fields", message: "Please select: \nA marching band instrument\n A concert band instrument\nYour concert band")
             }
         }
+        
+        
+    }
+    
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
     }
     
     

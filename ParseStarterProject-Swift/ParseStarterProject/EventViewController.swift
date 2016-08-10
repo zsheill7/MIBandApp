@@ -148,11 +148,19 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return eventPickerData.count
+        
+        if pickerView == eventType {
+            return eventPickerData.count
+        }
+        return bandTypePickerData.count
+  
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return eventPickerData[row]
+        if pickerView == eventType {
+            return eventPickerData[row]
+        }
+        return bandTypePickerData[row]
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

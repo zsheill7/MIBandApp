@@ -38,6 +38,7 @@
 		C8AF37031D516CBE00B80DB9 /* ContainerViewControllerBandType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF37021D516CBE00B80DB9 /* ContainerViewControllerBandType.swift */; };
 		C8AF37051D516CCA00B80DB9 /* ContainerViewControllerGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF37041D516CCA00B80DB9 /* ContainerViewControllerGrade.swift */; };
 		C8C266D51D3DAB6C00574541 /* ChangePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */; };
+		C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		C8AF37021D516CBE00B80DB9 /* ContainerViewControllerBandType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerBandType.swift; sourceTree = "<group>"; };
 		C8AF37041D516CCA00B80DB9 /* ContainerViewControllerGrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerGrade.swift; sourceTree = "<group>"; };
 		C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewController.swift; sourceTree = "<group>"; };
+		C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +146,10 @@
 				C829AA301D35C7680073DF94 /* EventViewController.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				C85079AD1D307B1B000BA862 /* Main.storyboard */,
+				C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */,
 				C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */,
 				C829AA321D35C7830073DF94 /* EventTableViewController.swift */,
+				C850799D1D306F81000BA862 /* CalendarViewController.swift */,
 				C8AD156E1D41AB7B0067AE2F /* User Setup */,
 				C829AA341D35CA410073DF94 /* eventItem.swift */,
 				C829AA351D35CA410073DF94 /* eventCell.swift */,
@@ -188,7 +192,6 @@
 		C8AD156E1D41AB7B0067AE2F /* User Setup */ = {
 			isa = PBXGroup;
 			children = (
-				C850799D1D306F81000BA862 /* CalendarViewController.swift */,
 				C85079A01D306F82000BA862 /* SignupViewController.swift */,
 				C8AD156C1D41AB5C0067AE2F /* LoginViewController.swift */,
 				C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */,
@@ -263,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */,
 				C85079AE1D307B1B000BA862 /* Main.storyboard in Resources */,
 				C85079B21D307B8F000BA862 /* Assets.xcassets in Resources */,
 			);

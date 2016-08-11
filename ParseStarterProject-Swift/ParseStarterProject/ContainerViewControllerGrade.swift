@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Mixpanel
 
 class ContainerViewControllerGrade: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,6 +21,8 @@ class ContainerViewControllerGrade: UIViewController, UITableViewDelegate, UITab
         
         gradeTableView.delegate = self
         gradeTableView.dataSource = self
+        
+        
         
         self.gradeTableView.reloadData()
         // Do any additional setup after loading the view.

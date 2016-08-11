@@ -20,18 +20,16 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Mixpanel (2.9.9):
-    - Mixpanel/Mixpanel (= 2.9.9)
-  - Mixpanel/Mixpanel (2.9.9)
+  - Mixpanel-swift (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
-  - Mixpanel
+  - Mixpanel-swift
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  Mixpanel: 818d1940c2d9402453b349545022a86968097f57
+  Mixpanel-swift: f35c35756e2122a8dbd9bd2f0e27441fc7a02e33
 
-PODFILE CHECKSUM: f4a61389ea886e6a4260cfe87e1bea15ef648c8e
+PODFILE CHECKSUM: 89ad38dad06162330bb32c28826dfef5f3cd4916
 
-COCOAPODS: 1.1.0.beta.1
+COCOAPODS: 1.0.1

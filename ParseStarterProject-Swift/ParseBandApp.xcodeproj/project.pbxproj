@@ -143,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
-				C829AA301D35C7680073DF94 /* EventViewController.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				C85079AD1D307B1B000BA862 /* Main.storyboard */,
 				C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */,
@@ -151,13 +150,14 @@
 				C829AA321D35C7830073DF94 /* EventTableViewController.swift */,
 				C850799D1D306F81000BA862 /* CalendarViewController.swift */,
 				C8AD156E1D41AB7B0067AE2F /* User Setup */,
+				C829AA301D35C7680073DF94 /* EventViewController.swift */,
+				C817B8201D4B018400E9A5FD /* DirectorAddEventTableViewController.swift */,
 				C829AA341D35CA410073DF94 /* eventItem.swift */,
 				C829AA351D35CA410073DF94 /* eventCell.swift */,
 				C85079B11D307B8F000BA862 /* Assets.xcassets */,
 				C802EE3C1D3D630800110415 /* SettingsInstrumentsTableViewController.swift */,
 				C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */,
 				C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */,
-				C817B8201D4B018400E9A5FD /* DirectorAddEventTableViewController.swift */,
 				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
 			);
 			path = ParseStarterProject;
@@ -240,6 +240,7 @@
 				TargetAttributes = {
 					81BA81441A49DA1800E65899 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = J5G994BZC2;
 					};
 				};
 			};
@@ -330,7 +331,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -453,6 +454,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -462,8 +465,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				New_Setting = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.parse.ParseBandApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.parseband.app;
 				PRODUCT_NAME = ParseBandApp;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseBandApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -476,6 +480,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -485,8 +491,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				New_Setting = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.parse.ParseBandApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.parseband.app;
 				PRODUCT_NAME = ParseBandApp;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseBandApp-Bridging-Header.h";
 			};
 			name = Release;

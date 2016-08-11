@@ -9,7 +9,9 @@
 import UIKit
 import Parse
 
-class BarcodeTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class BarcodeTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverControllerDelegate {
+    
+    //User locker info
     @IBOutlet weak var myLockerCombo: UILabel!
 
     @IBOutlet weak var myLockerNumber: UILabel!
@@ -19,11 +21,41 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     @IBOutlet weak var lockerComboField: UITextField!
     
     @IBOutlet weak var lockerNumberField: UITextField!
+    
+    //User barcode info
+
+   @IBOutlet weak var barcodeImage: UIImageView!
+
+    
+    var activityIndicator = UIActivityIndicatorView()
+    let pickedBarcodeImage = UIImagePickerController()
+    
+    let pickedLockerImage = UIImagePickerController()
+    
+    let picker = UIImageView(image: UIImage(named: "Custom Picker View 2"))
+    
+    var pickerFrame: CGRect?
+    
+    var user = PFUser.currentUser()
+    
+    
+    
+    struct properties {
+        static let pickerEvents = [
+            ["title" : "Settings", "color" : UIColor(red:0.19, green:0.54, blue:0.98, alpha:1.0)],
+            ["title" : "About Us", "color": UIColor(red:0.19, green:0.54, blue:0.98, alpha:1.0)],
+            ["title" : "Suggest a Change", "color" : UIColor(red:0.19, green:0.54, blue:0.98, alpha:1.0)],
+
+        ]
+    }
+    
+    
 
     func displayAlert(title: String, message: String) {
         
         if #available(iOS 8.0, *) {
             let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.modalPresentationStyle = .Popover
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 
@@ -38,26 +70,51 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         
         
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 10, width: 200, height: 160)
+        //Setting barcode image and locker image if it exists for user
+        /*if let userBarcodeImage = user!.objectForKey("barcode") {
+            barcodeImage.image = userBarcodeImage as? UIImage
+            print("@barcode")
+        }
+        
+        if let userLockerNumber = user!.objectForKey("lockerNumber") {
+            
+            myLockerNumber.text = userLockerNumber as? String
+            if let userLockerCombo = user!.objectForKey("lockerCombo") {
+                myLockerCombo.text = userLockerCombo as? String
+            }
+            print("@locker")
+            setLockerInfo()
+        }*/
+        
+        createPicker()
+        
+        /*if barcodeImage.image != nil {
+         barcodeImage.image = UIImage(named: "placeholder4")
+         }
+         if lockerImage.image != nil {
+         lockerImage.image = UIImage(named: "placeholder4")
+         }*/
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+   
 
-    
-    var activityIndicator = UIActivityIndicatorView()
-    let pickedBarcodeImage = UIImagePickerController()
-    
-    let pickedLockerImage = UIImagePickerController()
-    var user = PFUser.currentUser()
-    
-    
-  
-    
-    @IBOutlet weak var barcodeImage: UIImageView!
-
-    
     
     @IBAction func takePhoto(sender: AnyObject) {
-        
+        //UIAlertController for choosing photo
 
         if #available(iOS 8.0, *) {
-            let alertController = UIAlertController(title: "Choose Photo", message: "", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Choose Photo", message: "", preferredStyle: .ActionSheet)
             let choosePhoto = UIAlertAction(title: "Choose from Photo Library", style: .Default) { (_) in
                 self.pickedBarcodeImage.delegate = self
                 self.pickedBarcodeImage.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
@@ -68,6 +125,9 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
                 //barcodeImage.image = image
                 
             }
+        
+            
+
             let takePhoto = UIAlertAction(title: "Take Photo", style: .Default) { (_) in
                 self.pickedBarcodeImage.delegate = self
                 self.pickedBarcodeImage.sourceType = UIImagePickerControllerSourceType.Camera
@@ -82,6 +142,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             alertController.addAction(cancelAction)
             
             presentViewController(alertController, animated: true, completion: nil)
+            
         } else {
             displayAlert( "Software Update Needed", message: "Please update to iOS8 or later or hggg contact an admin")
         }
@@ -120,34 +181,19 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             displayAlert( "Software Update Needed", message: "Please update to iOS8 or later or contact an admin")
         }*/
         
-        lockerComboField?.tag = 1
-        lockerNumberField?.tag = 1
-        if let viewWithTag = self.view.viewWithTag(1) {
-            viewWithTag.removeFromSuperview()
-        }else{
-            print("tag not found")
-        }
-        if let viewWithTag = self.view.viewWithTag(1) {
-            viewWithTag.removeFromSuperview()
-        }else{
-            print("tag not found")
-        }
+        
         
         if lockerComboField?.text != nil {
+            
             myLockerCombo.text = lockerComboField.text!
-            myLockerCombo.center = CGPointMake(self.view.center.x, lockerCell.frame.size.height / 2)
-            
-            
-            myLockerCombo.textAlignment = NSTextAlignment.Center
-            
             myLockerNumber.text = lockerNumberField.text!
-            myLockerNumber.center = CGPointMake(self.view.center.x, lockerCell.frame.size.height / 2)
+            
+            setLockerInfo()
             
             
-            myLockerNumber.textAlignment = NSTextAlignment.Center
-            
-            self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1))!.hidden = true
-            
+            user!.setObject(lockerNumberField.text!, forKey: "lockerNumber")
+            user!.setObject(lockerComboField.text!, forKey: "lockerCombo")
+
             displayAlert("Success!", message: "You can always change your locker info in Settings")
             
         } else {
@@ -156,6 +202,42 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         }
         
         
+    }
+    
+    func setLockerInfo() {
+        
+        //Changing view to remove cells and "choose image" buttons
+        if lockerComboField?.text != nil {
+            
+            lockerComboField?.tag = 1
+            lockerNumberField?.tag = 1
+            if let viewWithTag = self.view.viewWithTag(1) {
+                viewWithTag.removeFromSuperview()
+            }else{
+                print("tag not found")
+            }
+            if let viewWithTag = self.view.viewWithTag(1) {
+                viewWithTag.removeFromSuperview()
+            }else{
+                print("tag not found")
+            }
+
+            myLockerCombo.center = CGPointMake(self.view.center.x, lockerCell.frame.size.height / 2)
+       
+            myLockerCombo.textAlignment = NSTextAlignment.Center
+
+            myLockerNumber.center = CGPointMake(self.view.center.x, lockerCell.frame.size.height / 2)
+            
+            
+            myLockerNumber.textAlignment = NSTextAlignment.Center
+            
+            self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1))!.hidden = true
+            
+            user!.setObject(lockerNumberField.text!, forKey: "lockerNumber")
+            user!.setObject(lockerComboField.text!, forKey: "lockerCombo")
+            
+            
+        }
     }
 
  
@@ -204,30 +286,84 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         //choosePhotoButtonLabel.setTitle("", forState: UIControlState.Normal)
     }
     
+    @IBAction func pickerSelect(sender: UIBarButtonItem) {
+        picker.hidden ? openPicker() : closePicker()
+    }
+    
+    func createPicker()
+    {
+        picker.frame = self.pickerFrame!
+        picker.alpha = 0
+        picker.hidden = true
+        picker.userInteractionEnabled = true
+        
+        var offset = 18
+        
+        for (index, event) in properties.pickerEvents.enumerate()
+        {
+            let button = UIButton()
+            button.frame = CGRect(x: 0, y: offset, width: 200, height: 43)
+            button.setTitleColor(event["color"] as? UIColor, forState: .Normal)
+            button.setTitle(event["title"] as? String, forState: .Normal)
+            button.tag = index
+            
+            button.userInteractionEnabled = true
+            
+            button.addTarget(self, action: #selector(BarcodeTableViewController.pickerButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            
+            picker.addSubview(button)
+            
+            offset += 44
+        }
+        
+        view.addSubview(picker)
+    
+    }
+    
+    func openPicker()
+    {
+        self.picker.hidden = false
+        
+        UIView.animateWithDuration(0.3) { 
+            self.picker.frame = self.pickerFrame!
+            self.picker.alpha = 1
+        }
+    }
+    
+    func closePicker()
+    {
+        UIView.animateWithDuration(0.3,
+                                   animations: {
+                                    self.picker.frame = self.pickerFrame!
+                                    self.picker.alpha = 0
+            },
+                                   completion: { finished in
+                                    self.picker.hidden = true
+            }
+        )
+    }
+
+    func pickerButtonTapped(sender: UIButton!) {
+        print("here")
+        closePicker()
+        if sender.tag == 0 {
+            storyboard?.instantiateViewControllerWithIdentifier("settingsVC")
+        } else if sender.tag == 1 {
+            storyboard?.instantiateViewControllerWithIdentifier("aboutUsVC")
+            
+        } else if sender.tag == 2 {
+            let email = "zsheill7@gmail.com"
+            let url = NSURL(string: "mailto:\(email)")
+            UIApplication.sharedApplication().openURL(url!)
+        }
+    }
+    
     override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
     }
     
    
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-
-        /*if barcodeImage.image != nil {
-            barcodeImage.image = UIImage(named: "placeholder4")
-        }
-        if lockerImage.image != nil {
-            lockerImage.image = UIImage(named: "placeholder4")
-        }*/
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     /*

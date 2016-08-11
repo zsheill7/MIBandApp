@@ -13,7 +13,7 @@ import Parse
 
 import Fabric
 import Crashlytics
-
+import Mixpanel
 
 // If you want to use any of the UI components, uncomment this line
 // import ParseUI
@@ -41,6 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Crashlytics.self])
 
+        Mixpanel.initialize(token: "8479c656aae75569e1d20b19ae9b20e1")
+        let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+        
+        
+        
         
        /* let token = "acf8f6a1484ea0ea2ffb2c18713ff265"
         let mixpanel = Mixpanel.sharedInstanceWithToken(token)*/
@@ -129,6 +136,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         installation.setDeviceTokenFromData(deviceToken)
         installation.saveInBackground()
 
+        let mixpanel = Mixpanel.initialize(token:"4e35256cfd95a9b236936bcf0104bb92")
+        
+        mixpanel.identify(distinctId: "564") //564 is the unique distinct id of user
+        mixpanel.people.set(properties: ["name": "your name", "$email": "email@email.com", "Plan": "Free", "$region" : "Australia"])
+        mixpanel.people.addPushDeviceToken(deviceToken)
+            
         PFPush.subscribeToChannelInBackground("") { (succeeded: Bool, error: NSError?) in
             if succeeded {
                 print("ParseStarterProject successfully subscribed to push notifications on the broadcast channel.\n");
@@ -151,6 +164,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if application.applicationState == UIApplicationState.Inactive {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
+        
+        var alert1: String = ""
+        if let aps = userInfo["aps"] as? NSDictionary {
+            if let alert = aps["alert"] as? NSDictionary {
+                if let message = alert["message"] as? NSString {
+                    //Do stuff
+                }
+            } else if let alert = aps["alert"] as? NSString {
+                print(alert)
+                alert1 = alert as String
+            }
+        }
+        let alertController = UIAlertController(title: "Notification", message:
+            alert1, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
     }
 
     ///////////////////////////////////////////////////////////

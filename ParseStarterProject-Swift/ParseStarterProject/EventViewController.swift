@@ -108,7 +108,9 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                 
                 dispatch_async(dispatch_get_main_queue()) {
                     [unowned self] in
-                    self.performSegueWithIdentifier("addEvent", sender: self)
+                    //self.performSegueWithIdentifier("addEvent", sender: self)
+                    let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
+                    self.presentViewController(VC!, animated: true, completion: nil)
                 }
 
             } else {

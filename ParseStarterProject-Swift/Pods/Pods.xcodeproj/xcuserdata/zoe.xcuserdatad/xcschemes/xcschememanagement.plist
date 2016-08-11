@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Mixpanel.xcscheme</key>
+		<key>Mixpanel-swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3E46E57174846A3EBB800C8F16820B47</key>
+		<key>012C93B936D55E7A8C86650A23F7B786</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33A15922D9CFBB1ED72A42B512587636</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>4878C70B21CA37D7CB8A476BF986741B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B5F312ABB371123942048FA3C80AB971</key>
 		<dict>
 			<key>primary</key>
 			<true/>

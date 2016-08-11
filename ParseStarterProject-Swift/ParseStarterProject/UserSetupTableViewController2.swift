@@ -1,6 +1,6 @@
 import UIKit
 import Parse
-
+import Mixpanel
 
 class UserSetupTableViewController2: UITableViewController {
     
@@ -43,6 +43,11 @@ class UserSetupTableViewController2: UITableViewController {
             
             self.view.addSubview(downArrow)
         }
+        Mixpanel.mainInstance().identify(distinctId: "564")
+        
+        Mixpanel.mainInstance().track(event: "viewDidLoad",
+                                      properties: ["Plan" : "Free"])
+        
         
         
         
@@ -113,11 +118,16 @@ class UserSetupTableViewController2: UITableViewController {
             user!.saveInBackground()
             
             if user!["marchingInstrument"] != nil && user!["concertInstrument"] != nil && user!["concertBandType"] != nil{
-                self.performSegueWithIdentifier("finishSetup", sender: self)
+                
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+                UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+                mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
             } else {
                 displayAlert("Missing Fields", message: "Please select: \nA marching band instrument\n A concert band instrument\nYour concert band")
             }
         }
+        
         
         
     }

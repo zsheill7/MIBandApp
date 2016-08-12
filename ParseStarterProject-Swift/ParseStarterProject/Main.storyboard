@@ -910,7 +910,7 @@
         <!--aboutUsVC-->
         <scene sceneID="1HG-T9-YfC">
             <objects>
-                <viewController title="aboutUsVC" id="9hv-7f-fCP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutUsVC" title="aboutUsVC" id="9hv-7f-fCP" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EaS-ar-c32"/>
                         <viewControllerLayoutGuide type="bottom" id="UvR-Fh-w7m"/>
@@ -935,12 +935,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6M-Hn-FDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="537" y="2172"/>
+            <point key="canvasLocation" x="784" y="2028"/>
         </scene>
         <!--settingsVC-->
         <scene sceneID="E5J-Mv-q1k">
             <objects>
-                <tableViewController title="settingsVC" id="Wt3-QB-iFj" customClass="SettingsTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="settingsVC" title="settingsVC" id="Wt3-QB-iFj" customClass="SettingsTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="J3K-zx-y0P">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1560,7 +1560,7 @@
         <!--Navigation Controller-->
         <scene sceneID="XL2-q4-sKk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OsV-Ay-w3S" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="settingsNC" automaticallyAdjustsScrollViewInsets="NO" id="OsV-Ay-w3S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NPb-iK-Wyf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -3003,7 +3003,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SNa-AS-ic5"/>
-        <segue reference="8Ho-tU-PJy"/>
+        <segue reference="nyi-gH-iPU"/>
         <segue reference="hLB-je-k5o"/>
         <segue reference="0SE-eR-etw"/>
         <segue reference="DTg-Av-LgZ"/>

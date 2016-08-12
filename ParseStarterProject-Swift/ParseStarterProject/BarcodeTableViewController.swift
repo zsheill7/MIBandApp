@@ -302,14 +302,16 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         for (index, event) in properties.pickerEvents.enumerate()
         {
             let button = UIButton()
-            button.frame = CGRect(x: 0, y: offset, width: 200, height: 43)
+            
+            button.frame = CGRect(x: 0, y: offset, width: 200, height: 44)
             button.setTitleColor(event["color"] as? UIColor, forState: .Normal)
+            button.setTitleColor(UIColor.blueColor(), forState: .Highlighted)
             button.setTitle(event["title"] as? String, forState: .Normal)
             button.tag = index
-            
+
             button.userInteractionEnabled = true
             
-            button.addTarget(self, action: #selector(BarcodeTableViewController.pickerButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            button.addTarget(self, action: #selector(BarcodeTableViewController.pickerButtonTapped(_:)), forControlEvents: UIControlEvents.TouchDown)
             
             picker.addSubview(button)
             
@@ -344,17 +346,31 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     }
 
     func pickerButtonTapped(sender: UIButton!) {
-        print("here")
+        
         closePicker()
         if sender.tag == 0 {
-            storyboard?.instantiateViewControllerWithIdentifier("settingsVC")
+            print("here")
+            let settingsVC = storyboard?.instantiateViewControllerWithIdentifier("settingsNC")
+            self.presentViewController(settingsVC!, animated: true, completion: nil)
         } else if sender.tag == 1 {
-            storyboard?.instantiateViewControllerWithIdentifier("aboutUsVC")
+          
             
+            let aboutUsVC = storyboard?.instantiateViewControllerWithIdentifier("aboutUsVC")
+            self.presentViewController(aboutUsVC!, animated: true, completion: nil)
         } else if sender.tag == 2 {
-            let email = "zsheill7@gmail.com"
-            let url = NSURL(string: "mailto:\(email)")
-            UIApplication.sharedApplication().openURL(url!)
+            
+            let subject = "Suggested Changes/Bug fixes to MIHS Band App"
+            let body = "Hello"
+            
+            let email = "mailto:zsheill7@gmail.com?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
+
+            if let emailURL:NSURL = NSURL(string: email!)
+            {
+                if UIApplication.sharedApplication().canOpenURL(emailURL)
+                {
+                    UIApplication.sharedApplication().openURL(emailURL)
+                }
+            }
         }
     }
     

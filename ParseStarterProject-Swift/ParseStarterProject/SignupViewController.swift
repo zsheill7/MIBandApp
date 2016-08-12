@@ -121,12 +121,12 @@ class SignupViewController: UIViewController {
         
   
     override func viewDidAppear(animated: Bool) {
-        if PFUser.currentUser() != nil {
+        /*if PFUser.currentUser() != nil {
             
             self.performSegueWithIdentifier("signup", sender: self)
             
             
-        }
+        }*/
     }
     
     override func viewDidLoad() {

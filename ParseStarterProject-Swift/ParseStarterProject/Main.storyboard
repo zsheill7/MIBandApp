@@ -40,6 +40,7 @@
                     <connections>
                         <outlet property="calendarWebView" destination="ESa-XC-Mvb" id="j1f-U4-9Nv"/>
                         <outlet property="navigationItem" destination="OZv-nz-d4G" id="LFj-24-kcd"/>
+                        <segue destination="OsV-Ay-w3S" kind="show" identifier="goToSettings" id="JEc-w1-sMb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyY-SL-4dl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,17 +185,16 @@
                         <outlet property="password" destination="Gkb-TR-ifF" id="spW-b5-WDB"/>
                         <outlet property="username" destination="m6W-8Y-Giw" id="YmX-sv-ai3"/>
                         <segue destination="g7d-Iw-fNf" kind="show" identifier="loginToSignup" id="wPi-S7-Ba7"/>
-                        <segue destination="o2K-Kk-LQ5" kind="show" identifier="login" id="0SE-eR-etw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tft-oz-rZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="-1146"/>
+            <point key="canvasLocation" x="1068" y="-1170"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="ow8-V1-Wnp">
             <objects>
-                <viewController id="g7d-Iw-fNf" userLabel="Create Account View Controller" customClass="SignupViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createAccountVC" id="g7d-Iw-fNf" userLabel="Create Account View Controller" customClass="SignupViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="abW-sy-2y6"/>
                         <viewControllerLayoutGuide type="bottom" id="e44-rd-gmt"/>
@@ -663,6 +663,7 @@
                         <outlet property="lockerNumberField" destination="HaJ-Nl-soE" id="U8T-T9-6ei"/>
                         <outlet property="myLockerCombo" destination="Rjs-q2-214" id="hfX-rL-pGn"/>
                         <outlet property="myLockerNumber" destination="RVn-R1-Xyj" id="Pvo-VO-6Nr"/>
+                        <segue destination="OsV-Ay-w3S" kind="show" identifier="goToSettings" id="YzP-Qa-I15"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U43-pg-fZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -699,18 +700,18 @@
                         <viewControllerLayoutGuide type="bottom" id="gXh-vp-Y73"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="r9b-xm-S5f">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Xr-ev-zgq">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="4hd-ru-Zj0" customClass="eventCell" customModule="ParseBandApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1" width="600" height="120"/>
+                                        <rect key="frame" x="0.0" y="1" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4hd-ru-Zj0" id="I3L-zi-FeQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4c-vc-AaC">
@@ -769,6 +770,7 @@
                         <outlet property="table" destination="2Xr-ev-zgq" id="T8z-yE-F6a"/>
                         <segue destination="P4g-hL-MNF" kind="show" identifier="sectionLeaderAdd" id="ckz-Ig-JYF"/>
                         <segue destination="8KU-V9-aQx" kind="show" identifier="adminAdd" id="XDb-s6-8E4"/>
+                        <segue destination="OsV-Ay-w3S" kind="show" identifier="goToSettings" id="bu0-oE-uI1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7F-E2-FZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -931,7 +933,7 @@
         <!--Navigation Controller-->
         <scene sceneID="SuN-Ao-dTn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hs7-uB-d3A" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNC" automaticallyAdjustsScrollViewInsets="NO" id="hs7-uB-d3A" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="H7J-iL-vJo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1265,6 +1267,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awE-af-Vl1">
                                                     <rect key="frame" x="16" y="7" width="48" height="30"/>
                                                     <state key="normal" title="Logout"/>
+                                                    <connections>
+                                                        <action selector="logoutButtonPressed:" destination="Wt3-QB-iFj" eventType="touchUpInside" id="z6C-Z4-MYi"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1289,6 +1294,9 @@
                                                     <state key="normal" title="Delete Account">
                                                         <color key="titleColor" red="0.82872635130000005" green="0.2196512222" blue="0.17823198439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="deleteAccountPressed:" destination="Wt3-QB-iFj" eventType="touchUpInside" id="vYI-eG-nUq"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1542,7 +1550,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KiA-qF-bBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1501" y="1804"/>
+            <point key="canvasLocation" x="1309" y="2516"/>
         </scene>
         <!--Barcode View Controller-->
         <scene sceneID="fZz-kr-68E">
@@ -1612,7 +1620,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEs-4H-Ldo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="1094"/>
+            <point key="canvasLocation" x="484" y="1206"/>
         </scene>
         <!--Director Table View Controller-->
         <scene sceneID="yk2-Qq-Pho">
@@ -3042,10 +3050,10 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SNa-AS-ic5"/>
-        <segue reference="nyi-gH-iPU"/>
+        <segue reference="8Ho-tU-PJy"/>
         <segue reference="hLB-je-k5o"/>
-        <segue reference="0SE-eR-etw"/>
+        <segue reference="bu0-oE-uI1"/>
+        <segue reference="u98-mE-Hmq"/>
         <segue reference="DTg-Av-LgZ"/>
-        <segue reference="USK-is-yw8"/>
     </inferredMetricsTieBreakers>
 </document>

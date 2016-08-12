@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 
-                               
+                
             })))
             
             self.presentViewController(alert, animated: true, completion: nil)
@@ -62,7 +62,10 @@ class LoginViewController: UIViewController {
                 
                 dispatch_async(dispatch_get_main_queue()) {
                     [unowned self] in
-                    self.performSegueWithIdentifier("login", sender: self)
+                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+                    UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+                    mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
                 }
                 
                 

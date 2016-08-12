@@ -76,7 +76,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 10, width: 200, height: 160)
         //Setting barcode image and locker image if it exists for user
-        /*if let userBarcodeImage = user!.objectForKey("barcode") {
+        if let userBarcodeImage = user!.objectForKey("barcode") {
             barcodeImage.image = userBarcodeImage as? UIImage
             print("@barcode")
         }
@@ -89,7 +89,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             }
             print("@locker")
             setLockerInfo()
-        }*/
+        }
         
         createPicker()
         
@@ -286,6 +286,8 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         //choosePhotoButtonLabel.setTitle("", forState: UIControlState.Normal)
     }
     
+    //Creates dropdown menu bar that includes "Settings," "About Us," "Suggested Changes"
+    
     @IBAction func pickerSelect(sender: UIBarButtonItem) {
         picker.hidden ? openPicker() : closePicker()
     }
@@ -350,13 +352,15 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         closePicker()
         if sender.tag == 0 {
             print("here")
-            let settingsVC = storyboard?.instantiateViewControllerWithIdentifier("settingsNC")
-            self.presentViewController(settingsVC!, animated: true, completion: nil)
+            /*let settingsVC = storyboard?.instantiateViewControllerWithIdentifier("settingsNC")
+            self.presentViewController(settingsVC!, animated: true, completion: nil)*/
+            self.performSegueWithIdentifier("goToSettings", sender: self)
         } else if sender.tag == 1 {
           
             
-            let aboutUsVC = storyboard?.instantiateViewControllerWithIdentifier("aboutUsVC")
-            self.presentViewController(aboutUsVC!, animated: true, completion: nil)
+            /*let aboutUsVC = storyboard?.instantiateViewControllerWithIdentifier("aboutUsVC")
+            self.presentViewController(aboutUsVC!, animated: true, completion: nil)*/
+            self.performSegueWithIdentifier("goToSettings", sender: self)
         } else if sender.tag == 2 {
             
             let subject = "Suggested Changes/Bug fixes to MIHS Band App"

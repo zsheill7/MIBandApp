@@ -26,6 +26,8 @@ class SettingsTableViewController: UITableViewController {
     
     @IBOutlet weak var ensemble: UILabel!
     
+    var user = PFUser.currentUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -96,6 +98,55 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    
+    @IBAction func deleteAccountPressed(sender: AnyObject) {
+ 
+        
+        if #available(iOS 8.0, *) {
+            let alert = UIAlertController(title: "Are you sure you want to delete your account?", message: "All saved settings will be lost", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction((UIAlertAction(title: "Delete Account", style: .Destructive, handler: { (action) -> Void in
+                self.user?.deleteInBackgroundWithBlock({ (success, error) in
+                    PFUser.logOut()
+                    let createAccountVC = self.storyboard?.instantiateViewControllerWithIdentifier("createAccountVC")
+                    self.presentViewController(createAccountVC!, animated: true, completion: nil)
+                })
+                
+                
+            })))
+            alert.addAction((UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
+               
+                
+            })))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            print("error")
+        }
+
+    }
+    @IBAction func logoutButtonPressed(sender: AnyObject) {
+    if #available(iOS 8.0, *) {
+        let alert = UIAlertController(title: "Logout", message: "Do you want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+                PFUser.logOut()
+            let loginNC = self.storyboard?.instantiateViewControllerWithIdentifier("loginNC")
+            self.presentViewController(loginNC!, animated: true, completion: nil)
+        
+
+        })))
+        alert.addAction((UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
+            
+        })))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    } else {
+    print("error")
+    }
+
+    }
+
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! UITableViewHeaderFooterView
         headerView.textLabel!.textColor = UIColor(red: 151.0/255, green: 193.0/255, blue: 100.0/255, alpha: 1)

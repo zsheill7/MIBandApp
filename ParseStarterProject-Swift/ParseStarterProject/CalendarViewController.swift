@@ -29,8 +29,9 @@ class CalendarViewController: UIViewController {
                     
                     if let calendarURL = NSURL(string: "https://calendar.google.com/calendar/ical/0airjflmdkgrtboce2bninip6s%40group.calendar.google.com/public/basic.ics") {
                         UIApplication.sharedApplication().openURL(calendarURL)
-                        self.user?.setObject(true, forKey: "isSubscribed")
+                        
                     }
+                    self.user?.setObject(true, forKey: "isSubscribed")
                     
                 })))
                 

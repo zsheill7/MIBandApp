@@ -49,6 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+        
+        
+        
+        
        /* let token = "acf8f6a1484ea0ea2ffb2c18713ff265"
         let mixpanel = Mixpanel.sharedInstanceWithToken(token)*/
         
@@ -96,6 +100,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
                 PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
             }
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let isAppAlreadyLaunchedOnce = defaults.stringForKey("isAppAlreadyLaunchedOnce") {
+            
+            
+            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("loginNC") as! UINavigationController
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        } else {
+            
+            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("createAccountVC")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
+            return false
         }
 
         //

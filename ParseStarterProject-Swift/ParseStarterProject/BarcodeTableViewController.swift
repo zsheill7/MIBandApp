@@ -76,18 +76,24 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 10, width: 200, height: 160)
         //Setting barcode image and locker image if it exists for user
-        if let userBarcodeImage = user!.objectForKey("barcode") {
-            barcodeImage.image = userBarcodeImage as? UIImage
-            print("@barcode")
+        if let imageFile = user!.objectForKey("barcode") {
+            
+            imageFile.getDataInBackgroundWithBlock({ (data, error) in
+                if let downloadedImage = UIImage(data: data!) {
+                    self.barcodeImage.image = downloadedImage
+                }
+                print("inside block")
+            })
+            
         }
         
-        if let userLockerNumber = user!.objectForKey("lockerNumber") {
+        if let userLockerNumber = user!["lockerNumber"] as? String {
             
-            myLockerNumber.text = userLockerNumber as? String
-            if let userLockerCombo = user!.objectForKey("lockerCombo") {
-                myLockerCombo.text = userLockerCombo as? String
+            myLockerNumber.text = userLockerNumber
+            if let userLockerCombo = user!["lockerCombo"] as? String{
+                myLockerCombo.text = userLockerCombo
             }
-            print("@locker")
+       
             setLockerInfo()
         }
         
@@ -183,7 +189,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         
         
         
-        if lockerComboField?.text != nil {
+        if lockerComboField?.text != nil && lockerNumberField?.text != nil {
             
             myLockerCombo.text = lockerComboField.text!
             myLockerNumber.text = lockerNumberField.text!
@@ -191,8 +197,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             setLockerInfo()
             
             
-            user!.setObject(lockerNumberField.text!, forKey: "lockerNumber")
-            user!.setObject(lockerComboField.text!, forKey: "lockerCombo")
+            
 
             displayAlert("Success!", message: "You can always change your locker info in Settings")
             
@@ -257,14 +262,15 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         if picker == pickedBarcodeImage {
             if let imageFile = PFFile(name: "image.png", data: imageData!) {
                 user!.setObject(imageFile, forKey: "barcode")
-                
+                print("setImage")
             imageFile.getDataInBackgroundWithBlock({ (data, error) in
                 if let downloadedImage = UIImage(data: data!) {
                     self.barcodeImage.image = downloadedImage
                 }
+                print("in block")
             })
               self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 0))!.hidden = true
-                displayAlert("Sucess!", message: "You can always change this image in settings")
+                displayAlert("Success!", message: "You can always change this image in settings")
             }
         } /*else if picker == pickedLockerImage {
             if let imageFile = PFFile(name: "image.png", data: imageData!) {

@@ -8,18 +8,47 @@
 
 import UIKit
 import Parse
-class BarcodeSettingsTableViewController: UITableViewController, UIImagePickerControllerDelegate {
+class BarcodeSettingsTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var user = PFUser.currentUser()
     
     let pickedBarcodeImage = UIImagePickerController()
     
     @IBOutlet weak var barcodeImage: UIImageView!
+    
+    func displayAlert(title: String, message: String) {
+        
+        if #available(iOS 8.0, *) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+                
+                //self.dismissViewControllerAnimated(true, completion: nil)
+                
+            })))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            print("error")
+        }
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let userBarcode = user?.objectForKey("barcode") as? UIImage {
-            barcodeImage.image = userBarcode
+        
+        
+        if let imageFile = user!.objectForKey("barcode") {
+            
+            imageFile.getDataInBackgroundWithBlock({ (data, error) in
+                if let downloadedImage = UIImage(data: data!) {
+                    self.barcodeImage.image = downloadedImage
+                }
+             
+            })
+          
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -70,6 +99,32 @@ class BarcodeSettingsTableViewController: UITableViewController, UIImagePickerCo
         
         
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        
+        
+        
+        let imageData = UIImagePNGRepresentation(image)
+        if picker == pickedBarcodeImage {
+            if let imageFile = PFFile(name: "image.png", data: imageData!) {
+                user!.setObject(imageFile, forKey: "barcode")
+                
+                imageFile.getDataInBackgroundWithBlock({ (data, error) in
+                    if let downloadedImage = UIImage(data: data!) {
+                        self.barcodeImage.image = downloadedImage
+                    }
+                    print("inside block")
+                })
+                
+                displayAlert("Success!", message: "Your barcode image was changed")
+            } else {
+                print("Couldn't create imagefile")
+            }
+        }
+    }
+
     // MARK: - Table view data source
 
     /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

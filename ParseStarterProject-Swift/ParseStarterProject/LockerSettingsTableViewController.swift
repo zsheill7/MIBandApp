@@ -14,14 +14,34 @@ class LockerSettingsTableViewController: UITableViewController {
     @IBOutlet weak var lockerComboField: UITextField!
     
     var user = PFUser.currentUser()
+    
+    func displayAlert(title: String, message: String) {
+        
+        if #available(iOS 8.0, *) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+                
+                //self.dismissViewControllerAnimated(true, completion: nil)
+                
+            })))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            print("error")
+        }
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let userLockerNumber = user?.objectForKey("lockerNumber") as? String {
+        if let userLockerNumber = user!["lockerNumber"] as? String {
             lockerNumberField.text = userLockerNumber
         }
-        if let userLockerCombo = user?.objectForKey("lockerCombo") as? String {
-            lockerNumberField.text = userLockerCombo
+        if let userLockerCombo = user!["lockerCombo"] as? String {
+            lockerComboField.text = userLockerCombo
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,10 +50,27 @@ class LockerSettingsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
+   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func changeLockerPressed(sender: AnyObject) {
+        if lockerComboField?.text != nil && lockerNumberField?.text != nil {
+            
+            
+            user!.setObject(lockerNumberField.text!, forKey: "lockerNumber")
+            user!.setObject(lockerComboField.text!, forKey: "lockerCombo")
+            
+            displayAlert("Success!", message: "Your locker information was changed")
+            
+        } else {
+            displayAlert("Field(s) Empty", message: "Please enter your locker number and combination")
+            
+        }
+        
+    }
+ 
     
     
 

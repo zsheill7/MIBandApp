@@ -9,6 +9,18 @@
 import UIKit
 import Parse
 
+extension UIColor {
+
+    
+    class func maroon() -> UIColor {
+        return UIColor(red:0.55, green:0.09, blue:0.09, alpha:1.0)
+    }
+    
+    class func titleGreen() -> UIColor {
+        return UIColor(red: 145.0/255, green: 193.0/255, blue: 100.0/255, alpha: 1)
+    }
+}
+
 class SettingsTableViewController: UITableViewController {
 
 
@@ -147,11 +159,10 @@ class SettingsTableViewController: UITableViewController {
 
     }
 
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    /*override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! UITableViewHeaderFooterView
-        headerView.textLabel!.textColor = UIColor(red: 151.0/255, green: 193.0/255, blue: 100.0/255, alpha: 1)
-        
-    }
+        headerView.textLabel!.textColor = UIColor.titleGreen()
+    }*/
     
     
 }

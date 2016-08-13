@@ -35,6 +35,16 @@ class LoginViewController: UIViewController {
         
         
     }
+    override func viewDidAppear(animated: Bool) {
+        if PFUser.currentUser() != nil {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+            UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+            mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
+         
+         
+         }
+    }
 
     
     @IBAction func logIn(sender: AnyObject) {
@@ -88,6 +98,17 @@ class LoginViewController: UIViewController {
     @IBAction func signUp(sender: AnyObject) {
         
         self.performSegueWithIdentifier("loginToSignup", sender: self)
+    }
+    
+    func isAppAlreadyLaunchedOnce()->Bool{
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let isAppAlreadyLaunchedOnce = defaults.stringForKey("isAppAlreadyLaunchedOnce") {
+            return true
+        } else {
+            defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
+            return false
+        }
     }
     
 

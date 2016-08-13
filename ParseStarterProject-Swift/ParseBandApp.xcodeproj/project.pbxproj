@@ -26,6 +26,26 @@
 		C829AA371D35CA410073DF94 /* eventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829AA351D35CA410073DF94 /* eventCell.swift */; };
 		C82B3B001D5E51070037FDC2 /* BarcodeSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3AFF1D5E51070037FDC2 /* BarcodeSettingsTableViewController.swift */; };
 		C82B3B021D5E51170037FDC2 /* LockerSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B011D5E51170037FDC2 /* LockerSettingsTableViewController.swift */; };
+		C82B3B091D5EA0110037FDC2 /* Nonmember.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82B3B081D5EA0110037FDC2 /* Nonmember.storyboard */; };
+		C82B3B0E1D5EA0EF0037FDC2 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0A1D5EA0EF0037FDC2 /* DonateViewController.swift */; };
+		C82B3B0F1D5EA0EF0037FDC2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */; };
+		C82B3B101D5EA0EF0037FDC2 /* SearchTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */; };
+		C82B3B111D5EA0EF0037FDC2 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0D1D5EA0EF0037FDC2 /* TwitterViewController.swift */; };
+		C82B3B131D5EA1160037FDC2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B121D5EA1160037FDC2 /* DetailViewController.swift */; };
+		C82B3B241D5EA1260037FDC2 /* UpcomingEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B141D5EA1260037FDC2 /* UpcomingEventsViewController.swift */; };
+		C82B3B251D5EA1260037FDC2 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B151D5EA1260037FDC2 /* FlickrAPI.swift */; };
+		C82B3B261D5EA1260037FDC2 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B161D5EA1260037FDC2 /* PhotoStore.swift */; };
+		C82B3B271D5EA1260037FDC2 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B171D5EA1260037FDC2 /* PhotosViewController.swift */; };
+		C82B3B281D5EA1260037FDC2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B181D5EA1260037FDC2 /* Photo.swift */; };
+		C82B3B291D5EA1260037FDC2 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B191D5EA1260037FDC2 /* PhotoDataSource.swift */; };
+		C82B3B2A1D5EA1260037FDC2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B1A1D5EA1260037FDC2 /* PhotoCollectionViewCell.swift */; };
+		C82B3B2B1D5EA1260037FDC2 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B1B1D5EA1260037FDC2 /* PhotoInfoViewController.swift */; };
+		C82B3B2C1D5EA1260037FDC2 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B1C1D5EA1260037FDC2 /* PhotosCollectionViewController.swift */; };
+		C82B3B2D1D5EA1260037FDC2 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B1E1D5EA1260037FDC2 /* ContactViewController.swift */; };
+		C82B3B2E1D5EA1260037FDC2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B1F1D5EA1260037FDC2 /* TableViewController.swift */; };
+		C82B3B2F1D5EA1260037FDC2 /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B201D5EA1260037FDC2 /* tableViewCell.swift */; };
+		C82B3B301D5EA1260037FDC2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B211D5EA1260037FDC2 /* Event.swift */; };
+		C82B3B311D5EA1260037FDC2 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B221D5EA1260037FDC2 /* EventList.swift */; };
 		C85079A11D306F82000BA862 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C850799D1D306F81000BA862 /* CalendarViewController.swift */; };
 		C85079A31D306F82000BA862 /* BarcodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */; };
 		C85079A41D306F82000BA862 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85079A01D306F82000BA862 /* SignupViewController.swift */; };
@@ -70,6 +90,26 @@
 		C829AA351D35CA410073DF94 /* eventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventCell.swift; sourceTree = "<group>"; };
 		C82B3AFF1D5E51070037FDC2 /* BarcodeSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeSettingsTableViewController.swift; sourceTree = "<group>"; };
 		C82B3B011D5E51170037FDC2 /* LockerSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerSettingsTableViewController.swift; sourceTree = "<group>"; };
+		C82B3B081D5EA0110037FDC2 /* Nonmember.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Nonmember.storyboard; sourceTree = "<group>"; };
+		C82B3B0A1D5EA0EF0037FDC2 /* DonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
+		C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTimelineViewController.swift; sourceTree = "<group>"; };
+		C82B3B0D1D5EA0EF0037FDC2 /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		C82B3B121D5EA1160037FDC2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C82B3B141D5EA1260037FDC2 /* UpcomingEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpcomingEventsViewController.swift; path = "../../../NonmemberBandApp/Nonmember Band App/UpcomingEventsViewController.swift"; sourceTree = "<group>"; };
+		C82B3B151D5EA1260037FDC2 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		C82B3B161D5EA1260037FDC2 /* PhotoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
+		C82B3B171D5EA1260037FDC2 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		C82B3B181D5EA1260037FDC2 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C82B3B191D5EA1260037FDC2 /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
+		C82B3B1A1D5EA1260037FDC2 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C82B3B1B1D5EA1260037FDC2 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
+		C82B3B1C1D5EA1260037FDC2 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		C82B3B1E1D5EA1260037FDC2 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		C82B3B1F1D5EA1260037FDC2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C82B3B201D5EA1260037FDC2 /* tableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
+		C82B3B211D5EA1260037FDC2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C82B3B221D5EA1260037FDC2 /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		C850799D1D306F81000BA862 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeTableViewController.swift; sourceTree = "<group>"; };
 		C85079A01D306F82000BA862 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +188,7 @@
 			children = (
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
+				C82B3B081D5EA0110037FDC2 /* Nonmember.storyboard */,
 				C85079AD1D307B1B000BA862 /* Main.storyboard */,
 				C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */,
 				C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */,
@@ -161,6 +202,7 @@
 				C85079B11D307B8F000BA862 /* Assets.xcassets */,
 				C82B3B031D5E51210037FDC2 /* Settings */,
 				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
+				C82B3B321D5EA1400037FDC2 /* Nonmember */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -201,6 +243,50 @@
 				C82B3B011D5E51170037FDC2 /* LockerSettingsTableViewController.swift */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		C82B3B1D1D5EA1260037FDC2 /* Flickr API */ = {
+			isa = PBXGroup;
+			children = (
+				C82B3B151D5EA1260037FDC2 /* FlickrAPI.swift */,
+				C82B3B161D5EA1260037FDC2 /* PhotoStore.swift */,
+				C82B3B171D5EA1260037FDC2 /* PhotosViewController.swift */,
+				C82B3B181D5EA1260037FDC2 /* Photo.swift */,
+				C82B3B191D5EA1260037FDC2 /* PhotoDataSource.swift */,
+				C82B3B1A1D5EA1260037FDC2 /* PhotoCollectionViewCell.swift */,
+				C82B3B1B1D5EA1260037FDC2 /* PhotoInfoViewController.swift */,
+				C82B3B1C1D5EA1260037FDC2 /* PhotosCollectionViewController.swift */,
+			);
+			name = "Flickr API";
+			path = "../../../NonmemberBandApp/Nonmember Band App";
+			sourceTree = "<group>";
+		};
+		C82B3B231D5EA1260037FDC2 /* Unused Files */ = {
+			isa = PBXGroup;
+			children = (
+				C82B3B1E1D5EA1260037FDC2 /* ContactViewController.swift */,
+				C82B3B1F1D5EA1260037FDC2 /* TableViewController.swift */,
+				C82B3B201D5EA1260037FDC2 /* tableViewCell.swift */,
+				C82B3B211D5EA1260037FDC2 /* Event.swift */,
+				C82B3B221D5EA1260037FDC2 /* EventList.swift */,
+			);
+			name = "Unused Files";
+			path = "../../../NonmemberBandApp/Nonmember Band App";
+			sourceTree = "<group>";
+		};
+		C82B3B321D5EA1400037FDC2 /* Nonmember */ = {
+			isa = PBXGroup;
+			children = (
+				C82B3B0A1D5EA0EF0037FDC2 /* DonateViewController.swift */,
+				C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */,
+				C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */,
+				C82B3B0D1D5EA0EF0037FDC2 /* TwitterViewController.swift */,
+				C82B3B121D5EA1160037FDC2 /* DetailViewController.swift */,
+				C82B3B141D5EA1260037FDC2 /* UpcomingEventsViewController.swift */,
+				C82B3B1D1D5EA1260037FDC2 /* Flickr API */,
+				C82B3B231D5EA1260037FDC2 /* Unused Files */,
+			);
+			name = Nonmember;
 			sourceTree = "<group>";
 		};
 		C8AD156E1D41AB7B0067AE2F /* User Setup */ = {
@@ -283,6 +369,7 @@
 			files = (
 				C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */,
 				C85079AE1D307B1B000BA862 /* Main.storyboard in Resources */,
+				C82B3B091D5EA0110037FDC2 /* Nonmember.storyboard in Resources */,
 				C85079B21D307B8F000BA862 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,24 +445,43 @@
 				C8AD156D1D41AB5C0067AE2F /* LoginViewController.swift in Sources */,
 				C85079A41D306F82000BA862 /* SignupViewController.swift in Sources */,
 				C829AA361D35CA410073DF94 /* eventItem.swift in Sources */,
+				C82B3B0E1D5EA0EF0037FDC2 /* DonateViewController.swift in Sources */,
 				C817B8211D4B018400E9A5FD /* DirectorAddEventTableViewController.swift in Sources */,
 				C829AA331D35C7830073DF94 /* EventTableViewController.swift in Sources */,
 				C829AA371D35CA410073DF94 /* eventCell.swift in Sources */,
 				C8AF37051D516CCA00B80DB9 /* ContainerViewControllerGrade.swift in Sources */,
+				C82B3B111D5EA0EF0037FDC2 /* TwitterViewController.swift in Sources */,
+				C82B3B131D5EA1160037FDC2 /* DetailViewController.swift in Sources */,
+				C82B3B261D5EA1260037FDC2 /* PhotoStore.swift in Sources */,
 				C8AF37031D516CBE00B80DB9 /* ContainerViewControllerBandType.swift in Sources */,
+				C82B3B101D5EA0EF0037FDC2 /* SearchTimelineViewController.swift in Sources */,
+				C82B3B2E1D5EA1260037FDC2 /* TableViewController.swift in Sources */,
+				C82B3B251D5EA1260037FDC2 /* FlickrAPI.swift in Sources */,
 				C85079A11D306F82000BA862 /* CalendarViewController.swift in Sources */,
+				C82B3B2C1D5EA1260037FDC2 /* PhotosCollectionViewController.swift in Sources */,
 				C829AA271D31DA1D0073DF94 /* UserSetupViewController.swift in Sources */,
+				C82B3B2B1D5EA1260037FDC2 /* PhotoInfoViewController.swift in Sources */,
+				C82B3B281D5EA1260037FDC2 /* Photo.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
+				C82B3B291D5EA1260037FDC2 /* PhotoDataSource.swift in Sources */,
+				C82B3B241D5EA1260037FDC2 /* UpcomingEventsViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
+				C82B3B301D5EA1260037FDC2 /* Event.swift in Sources */,
+				C82B3B2A1D5EA1260037FDC2 /* PhotoCollectionViewCell.swift in Sources */,
 				C802EE3F1D3D670F00110415 /* SettingsTableViewController.swift in Sources */,
+				C82B3B2F1D5EA1260037FDC2 /* tableViewCell.swift in Sources */,
+				C82B3B271D5EA1260037FDC2 /* PhotosViewController.swift in Sources */,
 				C829AA311D35C7690073DF94 /* EventViewController.swift in Sources */,
 				C82B3B001D5E51070037FDC2 /* BarcodeSettingsTableViewController.swift in Sources */,
 				C85079A31D306F82000BA862 /* BarcodeTableViewController.swift in Sources */,
+				C82B3B311D5EA1260037FDC2 /* EventList.swift in Sources */,
 				C8C266D51D3DAB6C00574541 /* ChangePasswordTableViewController.swift in Sources */,
 				C8AF37011D51647900B80DB9 /* ContainerViewControllerConcert.swift in Sources */,
+				C82B3B2D1D5EA1260037FDC2 /* ContactViewController.swift in Sources */,
 				C802EE3D1D3D630800110415 /* SettingsInstrumentsTableViewController.swift in Sources */,
 				C8AF36FF1D51646A00B80DB9 /* ContainerViewControllerMarching.swift in Sources */,
 				C82B3B021D5E51170037FDC2 /* LockerSettingsTableViewController.swift in Sources */,
+				C82B3B0F1D5EA0EF0037FDC2 /* InfoViewController.swift in Sources */,
 				C8AF36FD1D5162DB00B80DB9 /* UserSetupTableViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

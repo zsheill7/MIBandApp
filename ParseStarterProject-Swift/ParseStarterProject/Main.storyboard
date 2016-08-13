@@ -658,7 +658,6 @@
                     <connections>
                         <outlet property="barcodeButton" destination="VdV-9f-tb6" id="or6-6t-e8Y"/>
                         <outlet property="barcodeImage" destination="nh2-Ln-zls" id="gQA-uJ-tHc"/>
-                        <outlet property="lockerCell" destination="7hp-CC-bGg" id="751-Jg-kce"/>
                         <outlet property="lockerComboField" destination="LTn-rO-WAH" id="Kqd-dX-bv1"/>
                         <outlet property="lockerNumberField" destination="HaJ-Nl-soE" id="U8T-T9-6ei"/>
                         <outlet property="myLockerCombo" destination="Rjs-q2-214" id="hfX-rL-pGn"/>
@@ -768,33 +767,14 @@
                     <connections>
                         <outlet property="nagivationItem" destination="pQJ-lQ-bAp" id="7fo-m7-Ga5"/>
                         <outlet property="table" destination="2Xr-ev-zgq" id="T8z-yE-F6a"/>
-                        <segue destination="P4g-hL-MNF" kind="show" identifier="sectionLeaderAdd" id="ckz-Ig-JYF"/>
                         <segue destination="8KU-V9-aQx" kind="show" identifier="adminAdd" id="XDb-s6-8E4"/>
                         <segue destination="OsV-Ay-w3S" kind="show" identifier="goToSettings" id="bu0-oE-uI1"/>
+                        <segue destination="mtu-kE-ktg" kind="show" identifier="sectionLeaderAdd" id="gkI-A8-QMN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7F-E2-FZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3613" y="238"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="sVO-cn-xrx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P4g-hL-MNF" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SoM-NJ-pro">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mtu-kE-ktg" kind="relationship" relationship="rootViewController" id="CTd-ac-qe1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w77-Tb-NJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3987" y="76"/>
+            <point key="canvasLocation" x="3463" y="284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mha-I9-rrt">
@@ -1919,7 +1899,9 @@
                             <outlet property="delegate" destination="mtu-kE-ktg" id="12k-0b-0Kg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Event" id="8qh-ai-4hx"/>
+                    <navigationItem key="navigationItem" title="Add Event" id="8qh-ai-4hx">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="BTJ-8a-zhJ"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -1932,7 +1914,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0g-aV-cai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4838" y="-196"/>
+            <point key="canvasLocation" x="4118" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wad-fz-p7z">
@@ -1951,7 +1933,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHb-5r-ZkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3913" y="728"/>
+            <point key="canvasLocation" x="3976" y="845"/>
         </scene>
         <!--Director Table View Controller-->
         <scene sceneID="Qxm-uE-edy">
@@ -2314,7 +2296,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhM-ay-wMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5345" y="786"/>
+            <point key="canvasLocation" x="5532" y="779"/>
         </scene>
         <!--Director Table View Controller-->
         <scene sceneID="Pg9-v0-9nZ">
@@ -3104,7 +3086,7 @@
                                                     <rect key="frame" x="169" y="8" width="77" height="26"/>
                                                     <state key="normal" title="Button" image="ButtonConfirm"/>
                                                     <connections>
-                                                        <action selector="chooseLockerPhoto:" destination="6Wk-Gt-Woz" eventType="touchUpInside" id="7Je-Hp-Rji"/>
+                                                        <action selector="changeLockerPressed:" destination="6Wk-Gt-Woz" eventType="touchUpInside" id="syO-CQ-rM6"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3124,19 +3106,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Barcode" id="P5j-xh-4fn">
-                        <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="8ca-nz-Vxa">
-                            <connections>
-                                <action selector="pickerSelect:" destination="6Wk-Gt-Woz" id="Yql-tt-b33"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="8ca-nz-Vxa"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="lockerCell" destination="O7a-g7-6Rk" id="JZp-aK-gPw"/>
                         <outlet property="lockerComboField" destination="Tgk-5Q-IAd" id="WJ1-PI-qA2"/>
                         <outlet property="lockerNumberField" destination="Dn1-Is-t2d" id="uK7-Ax-B2V"/>
-                        <outlet property="myLockerCombo" destination="DgG-xh-d8T" id="FaS-Jg-Bje"/>
-                        <outlet property="myLockerNumber" destination="JGI-n7-Plb" id="5Ll-Uc-1Ss"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xv9-vR-4n0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3188,8 +3163,7 @@
                                                     </constraints>
                                                     <state key="normal" title="Button" image="ButtonChange"/>
                                                     <connections>
-                                                        <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="53r-R3-gQ3"/>
-                                                        <action selector="takePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="w2P-9V-umO"/>
+                                                        <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3217,7 +3191,6 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="barcodeButton" destination="X1f-Pd-IZI" id="PdD-pV-yKg"/>
                         <outlet property="barcodeImage" destination="Ij5-fm-teD" id="YY8-RM-6Rk"/>
                     </connections>
                 </tableViewController>
@@ -3251,9 +3224,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DTg-Av-LgZ"/>
-        <segue reference="u98-mE-Hmq"/>
-        <segue reference="YzP-Qa-I15"/>
-        <segue reference="SNa-AS-ic5"/>
+        <segue reference="QO1-r1-TSL"/>
+        <segue reference="USK-is-yw8"/>
+        <segue reference="bu0-oE-uI1"/>
         <segue reference="hLB-je-k5o"/>
         <segue reference="8Ho-tU-PJy"/>
     </inferredMetricsTieBreakers>

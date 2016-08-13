@@ -283,10 +283,10 @@
             </objects>
             <point key="canvasLocation" x="7738" y="370"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--nonmemberTBC-->
         <scene sceneID="m9q-6n-6QV">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Js5-gW-bCp" sceneMemberID="viewController">
+                <tabBarController title="nonmemberTBC" automaticallyAdjustsScrollViewInsets="NO" id="Js5-gW-bCp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="mRW-aQ-P0P">
                         <autoresizingMask key="autoresizingMask"/>

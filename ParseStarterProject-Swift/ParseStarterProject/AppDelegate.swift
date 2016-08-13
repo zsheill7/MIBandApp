@@ -14,6 +14,7 @@ import Parse
 import Fabric
 import Crashlytics
 import Mixpanel
+import TwitterKit
 
 // If you want to use any of the UI components, uncomment this line
 // import ParseUI
@@ -39,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(configuration)
         
-        Fabric.with([Crashlytics.self])
+        Fabric.with([Crashlytics.self, Twitter.self])
 
         Mixpanel.initialize(token: "8479c656aae75569e1d20b19ae9b20e1")
         let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
@@ -102,24 +103,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+        //let nonmemberStoryboard = UIStoryboard(name: "Nonmember", bundle: nil)
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        if let isAppAlreadyLaunchedOnce = defaults.stringForKey("isAppAlreadyLaunchedOnce") {
-            
-            
-            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("loginNC") as! UINavigationController
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-        } else {
-            
-            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("createAccountVC")
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-            defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
-            return false
-        }
 
         //
         //  Swift 1.2

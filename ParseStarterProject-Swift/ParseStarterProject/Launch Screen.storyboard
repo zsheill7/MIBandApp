@@ -48,6 +48,6 @@
     </scenes>
     <resources>
         <image name="Band symbol" width="1095" height="1096"/>
-        <image name="Home icon" width="1095" height="1096"/>
+        <image name="Home icon" width="25" height="25"/>
     </resources>
 </document>

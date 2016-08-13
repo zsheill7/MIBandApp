@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g7d-Iw-fNf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CFm-wB-d7M">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -2810,18 +2810,18 @@
                         <viewControllerLayoutGuide type="bottom" id="hwe-tY-NcK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V8c-Mo-2vp">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="103.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="diP-ja-Rzb">
-                                <rect key="frame" x="0.0" y="0.0" width="398" height="103.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="qCH-uR-K2L">
-                                        <rect key="frame" x="0.0" y="28" width="398" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qCH-uR-K2L" id="a1h-0E-Asv">
-                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3198,8 +3198,102 @@
             </objects>
             <point key="canvasLocation" x="1730" y="2139"/>
         </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="E6a-EG-Ddi">
+            <objects>
+                <viewController title="Initial View Controller" modalTransitionStyle="crossDissolve" id="CFm-wB-d7M" customClass="InitialViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KRu-Kk-qkG"/>
+                        <viewControllerLayoutGuide type="bottom" id="DPh-iL-mRC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yRh-6W-l7P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDT-QF-BUw">
+                                <rect key="frame" x="321" y="480" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Band symbol" translatesAutoresizingMaskIntoConstraints="NO" id="jmL-It-u2Y">
+                                <rect key="frame" x="0.0" y="35" width="414" height="325"/>
+                                <color key="backgroundColor" red="0.50348317620000005" green="0.94799357650000005" blue="0.082912229000000004" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yJ-KF-ca7">
+                                <rect key="frame" x="239" y="403" width="143" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="0gs-O4-QeV"/>
+                                    <constraint firstAttribute="height" constant="62" id="wU4-js-B2y"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Band Member-1"/>
+                                <connections>
+                                    <action selector="BandMemberButtonPressed:" destination="CFm-wB-d7M" eventType="touchUpInside" id="tz5-Na-wCe"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Band member label-2" translatesAutoresizingMaskIntoConstraints="NO" id="Zhi-8f-X8N">
+                                <rect key="frame" x="219" y="486" width="182" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="aGr-OJ-YRj"/>
+                                    <constraint firstAttribute="height" constant="114" id="czu-AM-BeO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Community member label-1" translatesAutoresizingMaskIntoConstraints="NO" id="KsG-rI-Lla">
+                                <rect key="frame" x="9" y="486" width="195" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="vGx-O9-ZRs"/>
+                                    <constraint firstAttribute="height" constant="114" id="zQ7-i6-PA5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mv-yb-hlU">
+                                <rect key="frame" x="27" y="403" width="158" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="1Cl-t2-2UD"/>
+                                    <constraint firstAttribute="width" constant="158" id="R0V-8B-xQG"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="1"/>
+                                <connections>
+                                    <action selector="communityButtonPressed:" destination="CFm-wB-d7M" eventType="touchUpInside" id="qHk-eu-Hl9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KsG-rI-Lla" firstAttribute="top" secondItem="1mv-yb-hlU" secondAttribute="bottom" constant="21" id="323-FM-dKz"/>
+                            <constraint firstItem="DPh-iL-mRC" firstAttribute="top" secondItem="KsG-rI-Lla" secondAttribute="bottom" constant="136" id="3rI-2Z-3VB"/>
+                            <constraint firstItem="1mv-yb-hlU" firstAttribute="top" secondItem="jmL-It-u2Y" secondAttribute="bottom" constant="43" id="7oq-Gc-k6M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CDT-QF-BUw" secondAttribute="trailing" constant="73" id="8mI-i6-bt9"/>
+                            <constraint firstItem="jmL-It-u2Y" firstAttribute="leading" secondItem="yRh-6W-l7P" secondAttribute="leading" id="8od-NR-umE"/>
+                            <constraint firstAttribute="bottom" secondItem="CDT-QF-BUw" secondAttribute="bottom" constant="256" id="FHL-lE-YmD"/>
+                            <constraint firstAttribute="trailing" secondItem="jmL-It-u2Y" secondAttribute="trailing" id="SKR-ll-rhP"/>
+                            <constraint firstItem="Zhi-8f-X8N" firstAttribute="top" secondItem="8yJ-KF-ca7" secondAttribute="bottom" constant="21" id="Whl-Z5-mGj"/>
+                            <constraint firstItem="8yJ-KF-ca7" firstAttribute="leading" secondItem="jmL-It-u2Y" secondAttribute="trailing" constant="-175" id="fOn-zC-spr"/>
+                            <constraint firstItem="jmL-It-u2Y" firstAttribute="top" secondItem="KRu-Kk-qkG" secondAttribute="bottom" constant="15" id="hCH-Af-MOB"/>
+                            <constraint firstItem="8yJ-KF-ca7" firstAttribute="top" secondItem="jmL-It-u2Y" secondAttribute="bottom" constant="43" id="kUD-ke-U5Y"/>
+                            <constraint firstItem="jmL-It-u2Y" firstAttribute="leading" secondItem="1mv-yb-hlU" secondAttribute="trailing" constant="-185" id="mUi-zG-bq8"/>
+                            <constraint firstItem="KsG-rI-Lla" firstAttribute="leading" secondItem="yRh-6W-l7P" secondAttribute="leadingMargin" constant="-11" id="yZc-b5-nrM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zhi-8f-X8N" secondAttribute="trailing" constant="-7" id="yiN-nD-hC9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main" image="Home icon" id="TGW-uX-Zep" userLabel="Main"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="communityButton" destination="1mv-yb-hlU" id="GkA-8t-Qjx"/>
+                        <outlet property="communityLabel" destination="KsG-rI-Lla" id="ag5-Gb-Pz5"/>
+                        <outlet property="memberButton" destination="8yJ-KF-ca7" id="UrG-Uf-FWA"/>
+                        <outlet property="memberLabel" destination="Zhi-8f-X8N" id="y5d-aX-G4t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6y-Uf-lxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="-962"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="1" width="477" height="219"/>
+        <image name="Band Member-1" width="408" height="219"/>
+        <image name="Band member label-2" width="591" height="378"/>
+        <image name="Band symbol" width="1095" height="1096"/>
         <image name="Barcode-25" width="25" height="25"/>
         <image name="ButtonChange" width="121" height="26"/>
         <image name="ButtonChoose" width="121" height="26"/>
@@ -3208,6 +3302,8 @@
         <image name="ButtonLogin" width="228" height="78"/>
         <image name="ButtonSignUp" width="228" height="78"/>
         <image name="Calendar" width="25" height="25"/>
+        <image name="Community member label-1" width="591" height="378"/>
+        <image name="Home icon" width="25" height="25"/>
         <image name="List-25" width="25" height="25"/>
         <image name="Login_Button" width="470" height="78"/>
         <image name="Menu 2-25" width="25" height="25"/>
@@ -3226,7 +3322,7 @@
         <segue reference="DTg-Av-LgZ"/>
         <segue reference="QO1-r1-TSL"/>
         <segue reference="USK-is-yw8"/>
-        <segue reference="bu0-oE-uI1"/>
+        <segue reference="JEc-w1-sMb"/>
         <segue reference="hLB-je-k5o"/>
         <segue reference="8Ho-tU-PJy"/>
     </inferredMetricsTieBreakers>

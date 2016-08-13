@@ -46,6 +46,10 @@
 		C82B3B2F1D5EA1260037FDC2 /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B201D5EA1260037FDC2 /* tableViewCell.swift */; };
 		C82B3B301D5EA1260037FDC2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B211D5EA1260037FDC2 /* Event.swift */; };
 		C82B3B311D5EA1260037FDC2 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B221D5EA1260037FDC2 /* EventList.swift */; };
+		C82B3B361D5EA1D30037FDC2 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82B3B331D5EA1D30037FDC2 /* TwitterKit.framework */; };
+		C82B3B371D5EA1D30037FDC2 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C82B3B341D5EA1D30037FDC2 /* TwitterKitResources.bundle */; };
+		C82B3B381D5EA1D30037FDC2 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82B3B351D5EA1D30037FDC2 /* TwitterCore.framework */; };
+		C82B3B3A1D5EB46C0037FDC2 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B391D5EB46C0037FDC2 /* InitialViewController.swift */; };
 		C85079A11D306F82000BA862 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C850799D1D306F81000BA862 /* CalendarViewController.swift */; };
 		C85079A31D306F82000BA862 /* BarcodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */; };
 		C85079A41D306F82000BA862 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85079A01D306F82000BA862 /* SignupViewController.swift */; };
@@ -110,6 +114,10 @@
 		C82B3B201D5EA1260037FDC2 /* tableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
 		C82B3B211D5EA1260037FDC2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C82B3B221D5EA1260037FDC2 /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		C82B3B331D5EA1D30037FDC2 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = "../../NonmemberBandApp/Nonmember Band App/TwitterKit.framework"; sourceTree = "<group>"; };
+		C82B3B341D5EA1D30037FDC2 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = "../../NonmemberBandApp/Nonmember Band App/TwitterKitResources.bundle"; sourceTree = "<group>"; };
+		C82B3B351D5EA1D30037FDC2 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = "../../NonmemberBandApp/Nonmember Band App/TwitterCore.framework"; sourceTree = "<group>"; };
+		C82B3B391D5EB46C0037FDC2 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		C850799D1D306F81000BA862 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeTableViewController.swift; sourceTree = "<group>"; };
 		C85079A01D306F82000BA862 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -133,9 +141,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */,
+				C82B3B361D5EA1D30037FDC2 /* TwitterKit.framework in Frameworks */,
 				C8AD156B1D41A2DB0067AE2F /* Crashlytics.framework in Frameworks */,
 				81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */,
 				81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */,
+				C82B3B381D5EA1D30037FDC2 /* TwitterCore.framework in Frameworks */,
 				C8AD156A1D41A2DB0067AE2F /* Fabric.framework in Frameworks */,
 				81BA81771A49E0D500E65899 /* libsqlite3.dylib in Frameworks */,
 				81BA81711A49DB6800E65899 /* Parse.framework in Frameworks */,
@@ -191,6 +201,7 @@
 				C82B3B081D5EA0110037FDC2 /* Nonmember.storyboard */,
 				C85079AD1D307B1B000BA862 /* Main.storyboard */,
 				C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */,
+				C82B3B391D5EB46C0037FDC2 /* InitialViewController.swift */,
 				C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */,
 				C829AA321D35C7830073DF94 /* EventTableViewController.swift */,
 				C850799D1D306F81000BA862 /* CalendarViewController.swift */,
@@ -210,6 +221,9 @@
 		81BA816A1A49DB5600E65899 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C82B3B331D5EA1D30037FDC2 /* TwitterKit.framework */,
+				C82B3B341D5EA1D30037FDC2 /* TwitterKitResources.bundle */,
+				C82B3B351D5EA1D30037FDC2 /* TwitterCore.framework */,
 				C8AD15681D41A2DB0067AE2F /* Fabric.framework */,
 				C8AD15691D41A2DB0067AE2F /* Crashlytics.framework */,
 				81BA816B1A49DB6800E65899 /* Bolts.framework */,
@@ -371,6 +385,7 @@
 				C85079AE1D307B1B000BA862 /* Main.storyboard in Resources */,
 				C82B3B091D5EA0110037FDC2 /* Nonmember.storyboard in Resources */,
 				C85079B21D307B8F000BA862 /* Assets.xcassets in Resources */,
+				C82B3B371D5EA1D30037FDC2 /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +472,7 @@
 				C82B3B101D5EA0EF0037FDC2 /* SearchTimelineViewController.swift in Sources */,
 				C82B3B2E1D5EA1260037FDC2 /* TableViewController.swift in Sources */,
 				C82B3B251D5EA1260037FDC2 /* FlickrAPI.swift in Sources */,
+				C82B3B3A1D5EB46C0037FDC2 /* InitialViewController.swift in Sources */,
 				C85079A11D306F82000BA862 /* CalendarViewController.swift in Sources */,
 				C82B3B2C1D5EA1260037FDC2 /* PhotosCollectionViewController.swift in Sources */,
 				C829AA271D31DA1D0073DF94 /* UserSetupViewController.swift in Sources */,

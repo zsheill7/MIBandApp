@@ -296,7 +296,7 @@
                         <segue destination="K8J-0W-Kz6" kind="relationship" relationship="viewControllers" id="B8R-by-aIo"/>
                         <segue destination="q0U-XE-0K7" kind="relationship" relationship="viewControllers" id="Tvy-Qj-Fr0"/>
                         <segue destination="jDK-Ad-tgt" kind="relationship" relationship="viewControllers" id="QFK-0x-kxz"/>
-                        <segue destination="oKT-K6-w4c" kind="relationship" relationship="viewControllers" id="nS0-Xe-hVr"/>
+                        <segue destination="oKT-K6-w4c" kind="relationship" relationship="viewControllers" id="teZ-b7-VvP"/>
                         <segue destination="Znn-II-n1O" kind="relationship" relationship="viewControllers" id="Mog-kY-M54"/>
                     </connections>
                 </tabBarController>

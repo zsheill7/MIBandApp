@@ -33,7 +33,7 @@ class InitialViewController: UIViewController {
         let navigationViewController = initialViewController.viewControllers![3] as! UINavigationController
         let photosViewController = navigationViewController.topViewController as! PhotosViewController
         photosViewController.store = PhotoStore()
-        nonmemberStoryboard.instantiateViewControllerWithIdentifier("nonmemberTBC")
+        presentViewController(initialViewController, animated: true, completion: nil)
         
     }
     

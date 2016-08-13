@@ -286,7 +286,7 @@
         <!--nonmemberTBC-->
         <scene sceneID="m9q-6n-6QV">
             <objects>
-                <tabBarController title="nonmemberTBC" automaticallyAdjustsScrollViewInsets="NO" id="Js5-gW-bCp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="nonmemberTBC" title="nonmemberTBC" automaticallyAdjustsScrollViewInsets="NO" id="Js5-gW-bCp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="mRW-aQ-P0P">
                         <autoresizingMask key="autoresizingMask"/>

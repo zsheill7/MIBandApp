@@ -28,7 +28,12 @@ class InitialViewController: UIViewController {
         let nonmemberStoryboard = UIStoryboard(name: "Nonmember", bundle: nil)
         let initialViewController = nonmemberStoryboard.instantiateViewControllerWithIdentifier("nonmemberTBC") as! UITabBarController
         self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+        UIApplication.sharedApplication().keyWindow?.rootViewController = initialViewController
+        
+        let navigationViewController = initialViewController.viewControllers![3] as! UINavigationController
+        let photosViewController = navigationViewController.topViewController as! PhotosViewController
+        photosViewController.store = PhotoStore()
+        nonmemberStoryboard.instantiateViewControllerWithIdentifier("nonmemberTBC")
         
     }
     
@@ -43,12 +48,15 @@ class InitialViewController: UIViewController {
             
             let initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("loginNC") as! UINavigationController
             self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
+        
+            UIApplication.sharedApplication().keyWindow?.rootViewController = initialViewController
+            mainStoryboard.instantiateViewControllerWithIdentifier("loginNC")
         } else {
             
             let initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("createAccountVC")
             self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
+            UIApplication.sharedApplication().keyWindow?.rootViewController = initialViewController
+            mainStoryboard.instantiateViewControllerWithIdentifier("createAccountVC")
             defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
             
         }

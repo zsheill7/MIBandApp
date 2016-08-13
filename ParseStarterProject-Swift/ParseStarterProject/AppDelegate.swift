@@ -48,6 +48,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().registerForRemoteNotifications()
         
         
+        let nonmemberStoryboard = UIStoryboard(name: "Nonmember", bundle: nil)
+        
+        let nonmemberTBC = nonmemberStoryboard.instantiateViewControllerWithIdentifier("nonmemberTBC") as! UITabBarController
+        let navigationViewController = nonmemberTBC.viewControllers![3] as! UINavigationController
+        let photosViewController = navigationViewController.topViewController as! PhotosViewController
+        photosViewController.store = PhotoStore()
+
         
         
         

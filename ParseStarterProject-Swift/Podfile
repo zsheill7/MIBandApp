@@ -5,6 +5,9 @@ target 'ParseBandApp' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   #pod 'Mixpanel'
+    pod 'TwitterKit'
+    pod 'Fabric'
+    pod 'TwitterCore'
     pod 'Mixpanel-swift'
     source 'https://github.com/CocoaPods/Specs.git'
     #platform :ios, '7.0'

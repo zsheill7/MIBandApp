@@ -53,9 +53,9 @@ class SettingsTableViewController: UITableViewController {
             print("test2")
             self.concertInst.text! = concertInst
         }
-        if let ensemble = PFUser.currentUser()!["ensemble"] as? String {
+        if let concertBandType = PFUser.currentUser()!["concertBandType"] as? String {
             print("test2")
-            self.ensemble.text! = ensemble
+            self.ensemble.text! = concertBandType
         }
         /*marchingInstCell.tag = 1
         concertInstCell.tag = 2
@@ -79,9 +79,9 @@ class SettingsTableViewController: UITableViewController {
 
             self.concertInst.text! = concertInst
         }
-        if let ensemble = PFUser.currentUser()!["ensemble"] as? String {
+        if let concertBandType = PFUser.currentUser()!["concertBandType"] as? String {
             print("test3")
-            self.ensemble.text! = ensemble
+            self.ensemble.text! = concertBandType
         }
         
         

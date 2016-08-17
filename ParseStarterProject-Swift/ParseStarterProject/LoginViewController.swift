@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
         
     }
     override func viewDidAppear(animated: Bool) {
-        if PFUser.currentUser() != nil {
+        if PFUser.currentUser()?.objectId != nil {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
             UIApplication.sharedApplication().keyWindow?.rootViewController = viewController

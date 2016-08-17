@@ -19,7 +19,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarWebView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let isSubscribed = user?.objectForKey("isSubscribed") as? Bool
+        let isSubscribed = user!.objectForKey("isSubscribed") as? Bool
       
         if isSubscribed == nil || isSubscribed == false {
             if #available(iOS 8.0, *) {
@@ -31,7 +31,8 @@ class CalendarViewController: UIViewController {
                         UIApplication.sharedApplication().openURL(calendarURL)
                         
                     }
-                    self.user?.setObject(true, forKey: "isSubscribed")
+                    self.user!.setObject(true, forKey: "isSubscribed")
+                    self.user!.saveInBackground()
                     
                 })))
                 

@@ -39,22 +39,24 @@ class BarcodeSettingsTableViewController: UITableViewController, UIImagePickerCo
         super.viewDidLoad()
 
         
-        
-        if let imageFile = user!.objectForKey("barcode") {
-            
-            imageFile.getDataInBackgroundWithBlock({ (data, error) in
-                if let downloadedImage = UIImage(data: data!) {
-                    self.barcodeImage.image = downloadedImage
-                }
-             
-            })
-          
-        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        if let imageFile = user!["barcode"] {
+            
+            imageFile.getDataInBackgroundWithBlock({ (data, error) in
+                if let downloadedImage = UIImage(data: data!) {
+                    self.barcodeImage.image = downloadedImage
+                }
+                print("inside block 1")
+                
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,16 +108,32 @@ class BarcodeSettingsTableViewController: UITableViewController, UIImagePickerCo
         
         
         
-        let imageData = UIImagePNGRepresentation(image)
+        let imageData = UIImageJPEGRepresentation(image, 0.5)
         if picker == pickedBarcodeImage {
             if let imageFile = PFFile(name: "image.png", data: imageData!) {
-                user!.setObject(imageFile, forKey: "barcode")
+                user!["barcode"] = imageFile
                 
                 imageFile.getDataInBackgroundWithBlock({ (data, error) in
                     if let downloadedImage = UIImage(data: data!) {
                         self.barcodeImage.image = downloadedImage
                     }
                     print("inside block")
+                })
+                imageFile.saveInBackgroundWithBlock({ (success, error) in
+                    if success {
+                        print("success")
+                    
+                    } else {
+                        print(error)
+                    }
+                })
+                user!.saveInBackgroundWithBlock({ (success, error) in
+                    if success {
+                        print("success2")
+                        
+                    } else {
+                        print(error)
+                    }
                 })
                 
                 displayAlert("Success!", message: "Your barcode image was changed")

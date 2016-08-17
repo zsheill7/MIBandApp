@@ -76,7 +76,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 10, width: 200, height: 160)
         //Setting barcode image and locker image if it exists for user
-        if let imageFile = user!.objectForKey("barcode") {
+        if let imageFile = user!["barcode"] as? PFFile {
             
             imageFile.getDataInBackgroundWithBlock({ (data, error) in
                 if let downloadedImage = UIImage(data: data!) {
@@ -189,7 +189,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         
         
         
-        if lockerComboField?.text != nil && lockerNumberField?.text != nil {
+        if lockerComboField!.text != nil && lockerNumberField!.text != nil {
             
             myLockerCombo.text = lockerComboField.text!
             myLockerNumber.text = lockerNumberField.text!
@@ -197,8 +197,12 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             setLockerInfo()
             
             
+            user!["lockerNumber"] = lockerNumberField.text!
+            user!["lockerCombo"] = lockerComboField.text!
             
-
+           
+          user!.saveInBackground()
+            
             displayAlert("Success!", message: "You can always change your locker info in Settings")
             
         } else {
@@ -212,11 +216,13 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     func setLockerInfo() {
         
         //Changing view to remove cells and "choose image" buttons
-        if lockerComboField?.text != nil {
+        if lockerComboField!.text != nil {
             
-            lockerComboField?.tag = 1
-            lockerNumberField?.tag = 1
-            if let viewWithTag = self.view.viewWithTag(1) {
+            
+            
+            lockerComboField.removeFromSuperview()
+            lockerNumberField.removeFromSuperview()
+            /*if let viewWithTag = self.view.viewWithTag(1) {
                 viewWithTag.removeFromSuperview()
             }else{
                 print("tag not found")
@@ -225,7 +231,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
                 viewWithTag.removeFromSuperview()
             }else{
                 print("tag not found")
-            }
+            }*/
 
             myLockerCombo.center = CGPointMake(self.view.center.x, lockerCell.frame.size.height / 2)
        
@@ -236,10 +242,12 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             
             myLockerNumber.textAlignment = NSTextAlignment.Center
             
-            self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1))!.hidden = true
+            if let hiddenRow = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1)) {
+                hiddenRow.hidden = true
+            }
             
-            user!.setObject(lockerNumberField.text!, forKey: "lockerNumber")
-            user!.setObject(lockerComboField.text!, forKey: "lockerCombo")
+            
+            
             
             
         }
@@ -258,17 +266,25 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
   
         
         
-        let imageData = UIImagePNGRepresentation(image)
+        let imageData = UIImageJPEGRepresentation(image, 0.5)
         if picker == pickedBarcodeImage {
             if let imageFile = PFFile(name: "image.png", data: imageData!) {
-                user!.setObject(imageFile, forKey: "barcode")
+                
+                user!.saveInBackgroundWithBlock({ (success, error) in
+                    if success {
+                        print("success")
+                    } else {
+                        print(error)
+                    }
+                    
+                })
+                user!["barcode"] = imageFile
+                user!.saveInBackground()
+                //user!.saveEventually()
                 print("setImage")
-            imageFile.getDataInBackgroundWithBlock({ (data, error) in
-                if let downloadedImage = UIImage(data: data!) {
-                    self.barcodeImage.image = downloadedImage
-                }
-                print("in block")
-            })
+            
+            self.barcodeImage.image = image
+                
               self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 0))!.hidden = true
                 displayAlert("Success!", message: "You can always change this image in settings")
             }
@@ -370,7 +386,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         } else if sender.tag == 2 {
             
             let subject = "Suggested Changes/Bug fixes to MIHS Band App"
-            let body = "Hello"
+            let body = " "
             
             let email = "mailto:zsheill7@gmail.com?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
 

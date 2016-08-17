@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CFm-wB-d7M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g7d-Iw-fNf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -379,7 +379,7 @@
                             <tableViewSection headerTitle="My Marching Band Instrument" id="Bxb-pe-BPd">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="120" id="hMD-1r-Ky9">
-                                        <rect key="frame" x="0.0" y="49.5" width="414" height="120"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hMD-1r-Ky9" id="4XI-Db-MXW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
@@ -405,7 +405,7 @@
                             <tableViewSection headerTitle="My Concert Band Instrument" id="QSq-8z-VVx">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="LzL-d9-MtN">
-                                        <rect key="frame" x="0.0" y="202.5" width="414" height="120"/>
+                                        <rect key="frame" x="0.0" y="266.5" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LzL-d9-MtN" id="ufa-f8-O7j">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
@@ -431,7 +431,7 @@
                             <tableViewSection headerTitle="My Concert Band" id="0L1-g2-13c">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="rdS-XW-PeO">
-                                        <rect key="frame" x="0.0" y="355.5" width="414" height="120"/>
+                                        <rect key="frame" x="0.0" y="419.5" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rdS-XW-PeO" id="jCm-EL-zxL">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
@@ -457,7 +457,7 @@
                             <tableViewSection id="GWG-Fy-tWW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="49" id="qrp-Yf-bvX">
-                                        <rect key="frame" x="0.0" y="487.5" width="414" height="49"/>
+                                        <rect key="frame" x="0.0" y="551.5" width="414" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qrp-Yf-bvX" id="cUV-9h-acG">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="48.5"/>
@@ -553,6 +553,9 @@
                                                 <constraint firstItem="VdV-9f-tb6" firstAttribute="centerX" secondItem="Jmy-ea-epM" secondAttribute="centerX" id="ctl-hE-W2d"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Wt3-QB-iFj" kind="show" identifier="goToSettings" id="JgH-1H-eil"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -663,7 +666,6 @@
                         <outlet property="lockerNumberField" destination="HaJ-Nl-soE" id="U8T-T9-6ei"/>
                         <outlet property="myLockerCombo" destination="Rjs-q2-214" id="hfX-rL-pGn"/>
                         <outlet property="myLockerNumber" destination="RVn-R1-Xyj" id="Pvo-VO-6Nr"/>
-                        <segue destination="OsV-Ay-w3S" kind="show" identifier="goToSettings" id="YzP-Qa-I15"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U43-pg-fZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2768,7 +2770,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qHc-DJ-PR0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rsh-Xe-ucD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="103.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-fm-TuY">
@@ -2811,18 +2813,18 @@
                         <viewControllerLayoutGuide type="bottom" id="hwe-tY-NcK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V8c-Mo-2vp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="103.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="diP-ja-Rzb">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="398" height="103.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="qCH-uR-K2L">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="398" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qCH-uR-K2L" id="a1h-0E-Asv">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2854,10 +2856,10 @@
                         <viewControllerLayoutGuide type="bottom" id="MSn-DG-0B4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vGE-K8-JlR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="103.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ggM-Vw-9M6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ggM-Vw-9M6">
                                 <rect key="frame" x="0.0" y="0.0" width="398" height="103.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -2897,10 +2899,10 @@
                         <viewControllerLayoutGuide type="bottom" id="bu2-8D-4UF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SNL-w8-1Mc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="111.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7rB-8J-TZJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7rB-8J-TZJ">
                                 <rect key="frame" x="0.0" y="0.0" width="398" height="111.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -3320,11 +3322,11 @@
         <image name="placeholder5" width="600" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hLB-je-k5o"/>
-        <segue reference="8Ho-tU-PJy"/>
-        <segue reference="USK-is-yw8"/>
-        <segue reference="YzP-Qa-I15"/>
-        <segue reference="QO1-r1-TSL"/>
         <segue reference="DTg-Av-LgZ"/>
+        <segue reference="USK-is-yw8"/>
+        <segue reference="bu0-oE-uI1"/>
+        <segue reference="QO1-r1-TSL"/>
+        <segue reference="JgH-1H-eil"/>
+        <segue reference="hLB-je-k5o"/>
     </inferredMetricsTieBreakers>
 </document>

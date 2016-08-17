@@ -142,7 +142,14 @@ class SettingsTableViewController: UITableViewController {
         let alert = UIAlertController(title: "Logout", message: "Do you want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-                PFUser.logOut()
+            PFUser.logOutInBackgroundWithBlock({ (error) in
+                if error != nil {
+                    print(error)
+                } else {
+                    print("success")
+                }
+            })
+            
             let loginNC = self.storyboard?.instantiateViewControllerWithIdentifier("loginNC")
             self.presentViewController(loginNC!, animated: true, completion: nil)
         

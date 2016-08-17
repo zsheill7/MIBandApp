@@ -20,7 +20,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
 
     var events = [eventItem]()
     
-    let user = PFUser.currentUser()
+    var user = PFUser.currentUser()
 
   
 
@@ -32,7 +32,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }*/
         navigationItem.hidesBackButton = true
         
-        var query1 = PFUser.query()
+        let query1 = PFUser.query()
         
         query1?.findObjectsInBackgroundWithBlock({ (objects, error) in
             if let users = objects {
@@ -40,7 +40,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 
             }
             
-            var marchingQuery = PFQuery(className: "Event")
+            let marchingQuery = PFQuery(className: "Event")
             
             
             let userInstrument = PFUser.currentUser()!["marchingInstrument"] as! String

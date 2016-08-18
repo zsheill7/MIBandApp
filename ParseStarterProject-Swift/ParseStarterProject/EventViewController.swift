@@ -11,7 +11,7 @@ import Parse
 
 
 
-class AddEventTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class AddEventTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var eventDescription: UITextField!
     
@@ -125,7 +125,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         super.viewDidLoad()
         
       
-        
+        eventDescription.delegate = self
         
         
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
@@ -143,6 +143,13 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+     self.view.endEditing(true)
+     return false
+     }
     
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

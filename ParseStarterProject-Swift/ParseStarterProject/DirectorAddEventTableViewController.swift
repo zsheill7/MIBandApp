@@ -11,7 +11,7 @@ import Parse
 
 
 
-class DirectorAddEventTableViewController: UITableViewController, UISearchBarDelegate {
+class DirectorAddEventTableViewController: UITableViewController, UISearchBarDelegate, UITextFieldDelegate{
     
     @IBOutlet weak var eventType: UIPickerView!
     
@@ -141,7 +141,7 @@ class DirectorAddEventTableViewController: UITableViewController, UISearchBarDel
         
         
         
-        
+        eventDescription.delegate = self
         
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         formatter.timeStyle = NSDateFormatterStyle.ShortStyle
@@ -232,6 +232,9 @@ class DirectorAddEventTableViewController: UITableViewController, UISearchBarDel
         
         
 
+    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     

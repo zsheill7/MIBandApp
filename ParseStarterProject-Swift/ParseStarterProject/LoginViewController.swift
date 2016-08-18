@@ -9,7 +9,8 @@
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController {
+
+class LoginViewController: UIViewController, UITextFieldDelegate {
   
    
     @IBOutlet weak var username: UITextField!
@@ -44,6 +45,12 @@ class LoginViewController: UIViewController {
          
          
          }
+        
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        username.delegate = self
+        password.delegate = self
     }
 
     
@@ -95,6 +102,8 @@ class LoginViewController: UIViewController {
     }
     
     
+    
+    
     @IBAction func signUp(sender: AnyObject) {
         
         self.performSegueWithIdentifier("loginToSignup", sender: self)
@@ -110,6 +119,14 @@ class LoginViewController: UIViewController {
             return false
         }
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    /*func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }*/
     
 
 }

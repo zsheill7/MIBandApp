@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UITextFieldDelegate {
     var signupActive = true
     
     @IBOutlet weak var firstName: UITextField!
@@ -131,6 +131,13 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        username.delegate = self
+        password.delegate = self
+        firstName.delegate = self
+        lastName.delegate = self
+        email.delegate = self
+        confirmPassword.delegate = self
+        
         // Do any additional setup after loading the view.
     }
 
@@ -138,6 +145,11 @@ class SignupViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     
   /*override func viewDidAppear(animated: Bool) {
         if PFUser.currentUser() != nil {

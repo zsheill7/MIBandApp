@@ -43,7 +43,9 @@
                             <constraint firstItem="O3T-tn-2Cs" firstAttribute="top" secondItem="CrJ-sO-mZq" secondAttribute="bottom" constant="14" id="n3E-FZ-eoz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="Q73-rB-QBb"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="Q73-rB-QBb">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="IVM-0L-Wua"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

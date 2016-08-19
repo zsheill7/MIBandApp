@@ -22,7 +22,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var user = PFUser.currentUser()
 
-  
+    var detailVC: DetailViewController? = nil
 
     
     override func viewDidLoad() {
@@ -30,9 +30,15 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         /*if NSUserDefaults.standardUserDefaults().objectForKey("eventList") != nil {
             eventList = NSUserDefaults.standardUserDefaults().objectForKey("eventList") as! [eventItem]
         }*/
+        print("here")
         navigationItem.hidesBackButton = true
         
         let query1 = PFUser.query()
+        
+        if let split = self.splitViewController {
+            let controllers = split.viewControllers
+            self.detailVC = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+        }
         
         query1?.findObjectsInBackgroundWithBlock({ (objects, error) in
             if let users = objects {
@@ -127,6 +133,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         self.performSegueWithIdentifier(segueString, sender: self)
     }
     
+   
     override func viewDidAppear(animated: Bool) {
         table.reloadData()
     }

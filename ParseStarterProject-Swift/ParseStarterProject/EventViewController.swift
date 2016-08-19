@@ -151,6 +151,10 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
      return false
      }
     
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1

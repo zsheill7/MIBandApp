@@ -198,6 +198,10 @@ class DirectorAddEventTableViewController: UITableViewController, UISearchBarDel
         }
     }*/
     
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == ensembleTable {
             if searchActive == true {

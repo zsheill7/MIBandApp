@@ -20,7 +20,7 @@ import TwitterKit
 // import ParseUI
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
@@ -51,11 +51,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nonmemberStoryboard = UIStoryboard(name: "Nonmember", bundle: nil)
         
         let nonmemberTBC = nonmemberStoryboard.instantiateViewControllerWithIdentifier("nonmemberTBC") as! UITabBarController
-        let navigationViewController = nonmemberTBC.viewControllers![3] as! UINavigationController
-        let photosViewController = navigationViewController.topViewController as! PhotosViewController
-        photosViewController.store = PhotoStore()
+        let navigationVC = nonmemberTBC.viewControllers![3] as! UINavigationController
+        let photosVC = navigationVC.topViewController as! PhotosViewController
+        photosVC.store = PhotoStore()
 
-        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let splitVC = mainStoryboard.instantiateViewControllerWithIdentifier("splitVC") as! UISplitViewController
+        let masterNavigationVC = splitVC.viewControllers[splitVC.viewControllers.count-1] as! UINavigationController
+        splitVC.delegate = self
+
         
         
         

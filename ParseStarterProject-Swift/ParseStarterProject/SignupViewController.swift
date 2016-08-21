@@ -45,7 +45,9 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         
     }
     @IBAction func logIn(sender: AnyObject) {
-        storyboard?.instantiateViewControllerWithIdentifier("loginNC")
+        let loginNC = storyboard?.instantiateViewControllerWithIdentifier("loginNC")
+        loginNC!.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        self.presentViewController(loginNC!, animated: true, completion: nil)
     }
 
     @IBAction func signUp(sender: AnyObject) {

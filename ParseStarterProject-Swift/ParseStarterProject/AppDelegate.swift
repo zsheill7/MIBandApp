@@ -58,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let splitVC = mainStoryboard.instantiateViewControllerWithIdentifier("splitVC") as! UISplitViewController
         let masterNavigationVC = splitVC.viewControllers[splitVC.viewControllers.count-1] as! UINavigationController
+        masterNavigationVC.view.window?.rootViewController = splitVC
         splitVC.delegate = self
 
         
@@ -206,10 +207,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
         guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
         guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-        if topAsDetailController.detailItem == nil {
+        /*if topAsDetailController.detailItem == nil {
             // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
             return true
-        }
+        }*/
         return false
     }
 

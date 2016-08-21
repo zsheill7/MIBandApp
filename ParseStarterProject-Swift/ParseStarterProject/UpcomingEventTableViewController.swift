@@ -183,8 +183,12 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
-    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+   /* func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
+    }*/
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("showDetail", sender: self)
     }
     
 
@@ -293,6 +297,27 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         }
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        closePicker()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetail" {
+            
+            
+            let detailNC = segue.destinationViewController as! UINavigationController
+            let detailVC = detailNC.topViewController as! DetailViewController
+            if let indexPath = self.table.indexPathForSelectedRow {
+                detailVC.eventTitleText = events[indexPath.row].title
+                detailVC.dateText = events[indexPath.row].getDateString()
+                detailVC.eventDescriptionText = events[indexPath.row].description
+                detailVC.instrumentText = events[indexPath.row].instrument
+            }
+        }
+        
+        
     }
 
 

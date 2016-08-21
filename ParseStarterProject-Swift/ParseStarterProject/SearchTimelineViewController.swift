@@ -36,7 +36,7 @@ class SearchTimelineViewController: TWTRTimelineViewController {
         let client = TWTRAPIClient()
         self.dataSource = TWTRUserTimelineDataSource(screenName: "@mihsband", APIClient: client)
         
-        pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 70, width: 200, height: 160)
+        pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 15, width: 200, height: 160)
         
         createPicker()
     }
@@ -137,5 +137,9 @@ class SearchTimelineViewController: TWTRTimelineViewController {
                 }
             }
         }
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        closePicker()
     }
 }

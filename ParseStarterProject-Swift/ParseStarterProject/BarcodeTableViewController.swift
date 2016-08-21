@@ -409,6 +409,10 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         return false
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        closePicker()
+    }
+    
    
     
     

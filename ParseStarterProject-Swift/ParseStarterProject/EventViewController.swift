@@ -30,7 +30,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
     
     
     
-    let eventPickerData = ["Marching Band Sectional", "Concert Band Sectional", "Ensemble Rehearsal"]
+    let eventPickerData = ["Marching Band Sectional", "Concert Band Sectional", "Ensemble Rehearsal", "Reminder"]
     let bandTypePickerData = ["Marching Band", "Concert Band"]
     
     func displayAlert(title: String, message: String) {

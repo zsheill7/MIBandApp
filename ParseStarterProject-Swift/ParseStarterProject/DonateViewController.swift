@@ -218,6 +218,9 @@ class DonateViewController: UIViewController {
         }
     }
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        closePicker()
+    }
 
     /*
     // MARK: - Navigation

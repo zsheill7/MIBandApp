@@ -104,6 +104,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func homeButtonTapped(sender: AnyObject) {
         let initialVC = storyboard?.instantiateViewControllerWithIdentifier("initialVC")
+        
         self.presentViewController(initialVC!, animated: true, completion: nil)
     }
     
@@ -111,7 +112,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signUp(sender: AnyObject) {
         
         /*self.performSegueWithIdentifier("loginToSignup", sender: self)*/
-        storyboard?.instantiateViewControllerWithIdentifier("createAccountNC")
+        let createAccountNC = storyboard?.instantiateViewControllerWithIdentifier("createAccountNC")
+        createAccountNC!.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        self.presentViewController(createAccountNC!, animated: true, completion: nil)
     }
     
     func isAppAlreadyLaunchedOnce()->Bool{

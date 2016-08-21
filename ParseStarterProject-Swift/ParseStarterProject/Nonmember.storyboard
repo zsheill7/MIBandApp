@@ -18,16 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="MIHS Band" translatesAutoresizingMaskIntoConstraints="NO" id="CrJ-sO-mZq">
-                                <rect key="frame" x="30" y="62" width="354" height="277"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIHS Band" translatesAutoresizingMaskIntoConstraints="NO" id="CrJ-sO-mZq">
+                                <rect key="frame" x="32" y="82" width="350" height="284"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tn-2Cs">
-                                <rect key="frame" x="39" y="353" width="350" height="164"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tn-2Cs">
+                                <rect key="frame" x="36" y="382" width="342" height="251"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="MZc-97-8df"/>
-                                    <constraint firstAttribute="height" constant="157" id="o2L-TL-fSO"/>
+                                    <constraint firstAttribute="height" constant="251" id="8UK-PJ-nlU"/>
                                 </constraints>
-                                <string key="text">At over 280 members, the Mercer Island High School band program is one of the largest in the state, with close to one in every four MIHS students participating.  The Marching Band performs at all MIHS home football games during the year as well as the MIHS Homecoming Parade. In addition, the MIHS Marching Band has performed at The Tournament of Roses, the London New Years Parade and on numerous other national and international stages.</string>
+                                <string key="text">The Mercer Island High School band program is one of the largest in the state, with over 280 band members.  The Marching Band performs at all MIHS home football games during the year as well as the MIHS Homecoming Parade. In addition, the MIHS Marching Band has performed at The Tournament of Roses, the London New Years Parade and on numerous other national and international stages.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -35,18 +34,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="O3T-tn-2Cs" secondAttribute="trailing" constant="7" id="0Fq-qW-Ctb"/>
-                            <constraint firstItem="CrJ-sO-mZq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="BZM-ly-D3f"/>
-                            <constraint firstItem="O3T-tn-2Cs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TCR-gX-aXq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CrJ-sO-mZq" secondAttribute="trailing" constant="10" id="WzF-lt-bfP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CrJ-sO-mZq" secondAttribute="trailing" constant="10" id="dZx-3r-ILL"/>
-                            <constraint firstItem="O3T-tn-2Cs" firstAttribute="top" secondItem="CrJ-sO-mZq" secondAttribute="bottom" constant="14" id="n3E-FZ-eoz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O3T-tn-2Cs" secondAttribute="trailing" constant="16" id="Geg-vj-lwx"/>
+                            <constraint firstItem="O3T-tn-2Cs" firstAttribute="top" secondItem="CrJ-sO-mZq" secondAttribute="bottom" constant="16" id="Ry3-mS-zXQ"/>
+                            <constraint firstItem="CrJ-sO-mZq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="SJS-8F-jSH"/>
+                            <constraint firstItem="CrJ-sO-mZq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="b9f-tP-2hd"/>
+                            <constraint firstItem="CrJ-sO-mZq" firstAttribute="centerX" secondItem="O3T-tn-2Cs" secondAttribute="centerX" id="fz4-dw-bCX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O3T-tn-2Cs" secondAttribute="bottom" constant="54" id="uKc-2L-CrW"/>
+                            <constraint firstItem="CrJ-sO-mZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zv0-mU-hdv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="Q73-rB-QBb">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="IVM-0L-Wua"/>
+                        <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="IVM-0L-Wua">
+                            <connections>
+                                <action selector="pickerSelect:" destination="BYZ-38-t0r" id="xDz-Az-xGm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="8yc-ZY-0rh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,10 +85,17 @@
                             <constraint firstItem="ZUy-df-efL" firstAttribute="top" secondItem="eyR-7L-Wvl" secondAttribute="topMargin" id="pOU-r1-AsU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Upcoming Events" id="aes-Jg-jOO"/>
+                    <navigationItem key="navigationItem" title="Upcoming Events" id="aes-Jg-jOO">
+                        <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="Ae3-s5-IGA">
+                            <connections>
+                                <action selector="pickerSelect:" destination="tGC-fO-ahW" id="IVy-D0-x01"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="webView" destination="ZUy-df-efL" id="nlr-lh-KnV"/>
+                        <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="jxB-oK-8h8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akN-Nt-eOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -145,11 +159,20 @@
                             <outlet property="delegate" destination="eib-Cv-VEP" id="Omr-Uc-8c7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Twitter" id="CIp-f3-lQd"/>
+                    <navigationItem key="navigationItem" title="Twitter" id="CIp-f3-lQd">
+                        <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="WqE-UZ-xCu">
+                            <connections>
+                                <action selector="pickerSelect:" destination="eib-Cv-VEP" id="9qf-Bo-85N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="bOD-PV-8Ul"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="573-ct-RLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3001" y="844"/>
+            <point key="canvasLocation" x="2999" y="962"/>
         </scene>
         <!--Donate View Controller-->
         <scene sceneID="V5z-Mu-CeS">
@@ -177,10 +200,17 @@
                             <constraint firstItem="wGW-Yp-DOu" firstAttribute="top" secondItem="Ega-ko-Wr9" secondAttribute="bottom" id="f2T-69-5cM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Support Our Bands" id="9IE-z5-M5J"/>
+                    <navigationItem key="navigationItem" title="Support Our Bands" id="9IE-z5-M5J">
+                        <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="7z4-ES-aPl">
+                            <connections>
+                                <action selector="pickerSelect:" destination="XEg-wu-Z5M" id="Jlh-UN-9aG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="webView" destination="Ega-ko-Wr9" id="VQL-hT-jHo"/>
+                        <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="TO7-j5-I99"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxJ-PW-DJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -463,12 +493,19 @@
                             <constraint firstItem="o3l-JU-RcA" firstAttribute="top" secondItem="OqU-yz-FYN" secondAttribute="topMargin" constant="15" id="ioJ-jJ-WT3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Photos" id="Zx5-Mj-HOg"/>
+                    <navigationItem key="navigationItem" title="Photos" id="Zx5-Mj-HOg">
+                        <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="eHz-J2-Y8j">
+                            <connections>
+                                <action selector="pickerSelect:" destination="zvE-y3-m2o" id="zwy-e0-yES"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="o3l-JU-RcA" id="Rf6-FR-bkH"/>
                         <segue destination="2DY-wj-dJa" kind="show" identifier="showPhoto" id="agD-jm-4dU">
                             <nil key="action"/>
                         </segue>
+                        <segue destination="SlA-7C-R9P" kind="show" id="vgk-fe-mid"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1J-kK-H7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -529,13 +566,49 @@
             </objects>
             <point key="canvasLocation" x="2236" y="-733"/>
         </scene>
+        <!--aboutUsVC-->
+        <scene sceneID="JI5-hl-TLj">
+            <objects>
+                <viewController storyboardIdentifier="aboutUsVC" title="aboutUsVC" id="SlA-7C-R9P" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z5V-gD-D8D"/>
+                        <viewControllerLayoutGuide type="bottom" id="MMp-h0-XUP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WjI-4o-nsk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbq-ly-QY1">
+                                <rect key="frame" x="40" y="198" width="335" height="176"/>
+                                <string key="text">This app was programmed by Zoe Sheill, MIHS sophomore and member of the saxophone and flute section.  Email: zsheill7@gmail.com  All photos taken by Dr. David E. Cummings</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fbq-ly-QY1" secondAttribute="trailing" constant="19" id="Bjy-L0-RIH"/>
+                            <constraint firstItem="fbq-ly-QY1" firstAttribute="top" secondItem="Z5V-gD-D8D" secondAttribute="bottom" constant="134" id="aTm-LL-gGA"/>
+                            <constraint firstItem="fbq-ly-QY1" firstAttribute="leading" secondItem="WjI-4o-nsk" secondAttribute="leadingMargin" constant="20" id="hkV-hb-EHz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2x-c2-glc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4008" y="972"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Calendar icon" width="25" height="25"/>
         <image name="Info icon" width="25" height="25"/>
         <image name="MIHS Band" width="500" height="386"/>
+        <image name="Menu 2-25" width="25" height="25"/>
         <image name="Stack of Photos-25" width="25" height="25"/>
         <image name="Twitter-25" width="25" height="25"/>
         <image name="volunteeringIcon" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8yc-ZY-0rh"/>
+    </inferredMetricsTieBreakers>
 </document>

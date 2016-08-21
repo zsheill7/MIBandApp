@@ -102,11 +102,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    @IBAction func homeButtonTapped(sender: AnyObject) {
+        let initialVC = storyboard?.instantiateViewControllerWithIdentifier("initialVC")
+        self.presentViewController(initialVC!, animated: true, completion: nil)
+    }
     
     
     @IBAction func signUp(sender: AnyObject) {
         
-        self.performSegueWithIdentifier("loginToSignup", sender: self)
+        /*self.performSegueWithIdentifier("loginToSignup", sender: self)*/
+        storyboard?.instantiateViewControllerWithIdentifier("createAccountNC")
     }
     
     func isAppAlreadyLaunchedOnce()->Bool{

@@ -19,6 +19,10 @@ extension UIColor {
     class func titleGreen() -> UIColor {
         return UIColor(red: 145.0/255, green: 193.0/255, blue: 100.0/255, alpha: 1)
     }
+    
+    class func buttonBlue() -> UIColor {
+        return UIColor(red:0.19, green:0.54, blue:0.98, alpha:1.0)
+    }
 }
 
 class SettingsTableViewController: UITableViewController {

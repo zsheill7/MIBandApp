@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class BarcodeTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverControllerDelegate {
+class BarcodeTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //User locker info
     @IBOutlet weak var myLockerCombo: UILabel!
@@ -42,9 +42,9 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     
     struct properties {
         static let pickerEvents = [
-            ["title" : "Settings", "color" : UIColor(red:0.19, green:0.54, blue:0.98, alpha:1.0)],
-            ["title" : "About Us", "color": UIColor(red:0.19, green:0.54, blue:0.98, alpha:1.0)],
-            ["title" : "Suggest a Change", "color" : UIColor(red:0.19, green:0.54, blue:0.98, alpha:1.0)],
+            ["title" : "Settings", "color" : UIColor.buttonBlue()],
+            ["title" : "About Us", "color": UIColor.buttonBlue()],
+            ["title" : "Suggest a Change", "color" : UIColor.buttonBlue()],
 
         ]
     }
@@ -70,11 +70,13 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         
         
     }
-    
+    let cellIdentifier = "cell"
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 10, width: 200, height: 160)
+        pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 70, width: 200, height: 160)
+        
+        
         //Setting barcode image and locker image if it exists for user
         if let imageFile = user!["barcode"] as? PFFile {
             
@@ -310,9 +312,11 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     
     //Creates dropdown menu bar that includes "Settings," "About Us," "Suggested Changes"
     
+    
     @IBAction func pickerSelect(sender: UIBarButtonItem) {
         picker.hidden ? openPicker() : closePicker()
     }
+    
     
     func createPicker()
     {
@@ -327,22 +331,23 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         {
             let button = UIButton()
             
-            button.frame = CGRect(x: 0, y: offset, width: 200, height: 44)
+            button.frame = CGRect(x: 0, y: offset, width: 200, height: 40)
             button.setTitleColor(event["color"] as? UIColor, forState: .Normal)
             button.setTitleColor(UIColor.blueColor(), forState: .Highlighted)
             button.setTitle(event["title"] as? String, forState: .Normal)
             button.tag = index
-
+            
             button.userInteractionEnabled = true
             
-            button.addTarget(self, action: #selector(BarcodeTableViewController.pickerButtonTapped(_:)), forControlEvents: UIControlEvents.TouchDown)
+            button.addTarget(self, action: #selector(BarcodeTableViewController.pickerButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             
             picker.addSubview(button)
             
-            offset += 44
+            
+                offset += 44
+            
         }
-        
-        view.addSubview(picker)
+                view.addSubview(picker)
     
     }
     
@@ -382,7 +387,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             
             /*let aboutUsVC = storyboard?.instantiateViewControllerWithIdentifier("aboutUsVC")
             self.presentViewController(aboutUsVC!, animated: true, completion: nil)*/
-            self.performSegueWithIdentifier("goToSettings", sender: self)
+            self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
             let subject = "Suggested Changes/Bug fixes to MIHS Band App"

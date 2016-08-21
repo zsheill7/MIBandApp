@@ -17,8 +17,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lastName: UITextField!
     
     @IBOutlet weak var email: UITextField!
-    
-    @IBOutlet weak var username: UITextField!
+  
     
     @IBOutlet weak var password: UITextField!
     
@@ -46,7 +45,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         
     }
     @IBAction func logIn(sender: AnyObject) {
-        self.performSegueWithIdentifier("signupToLogin", sender: self)
+        storyboard?.instantiateViewControllerWithIdentifier("loginNC")
     }
 
     @IBAction func signUp(sender: AnyObject) {
@@ -118,6 +117,10 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
         
+    @IBAction func homeButtonPressed(sender: AnyObject) {
+        let initialVC = storyboard?.instantiateViewControllerWithIdentifier("initialVC")
+        self.presentViewController(initialVC!, animated: true, completion: nil)
+    }
   
     override func viewDidAppear(animated: Bool) {
         /*if PFUser.currentUser() != nil {
@@ -131,7 +134,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        username.delegate = self
+ 
         password.delegate = self
         firstName.delegate = self
         lastName.delegate = self

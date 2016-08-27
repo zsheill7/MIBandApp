@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
+    var images:[UIImage] = []
     //--------------------------------------
     // MARK: - UIApplicationDelegate
     //--------------------------------------
@@ -46,7 +47,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         UIApplication.sharedApplication().registerForRemoteNotifications()
+       
         
+        let photoDataSource = PhotoDataSource()
+        
+        
+        var store: PhotoStore!
+        print("here1")
+        
+        for photo in photoDataSource.photos {
+            print("here2")
+            store.fetchImageForPhoto(photo) { (result) in
+                NSOperationQueue.mainQueue().addOperationWithBlock({
+                    
+                    
+                    
+                    let photoIndex = photoDataSource.photos.indexOf(photo)!
+                    //let photoIndexPath = NSIndexPath(forRow: photoIndex, inSection: 0)
+                    
+                    
+                    
+                    /*let photoWidth = self.view.frame.size.width
+                     let newHeight =  self.getHeightFromWidth(photo.image!, newWidth: photoWidth)
+                     
+                     
+                     cell.frame.size.width = photoWidth
+                     cell.frame.size.height = newHeight*/
+                    
+                    self.images.append(photo.image!)
+                    print("added")
+                    /*
+                     let viewWidth = 375
+                     self.cellSizes.append(CGSizeMake(viewWidth, self.getHeightFromWidth(photo.image!, newWidth: viewWidth)))
+                     cell.updateWithImage(photo.image)*/
+                    /*cell.contentView.frame = cell.bounds
+                     cell.contentView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]*/
+                    
+                    
+                    
+                    
+                    
+                })
+            }
+        }
+
         
         let nonmemberStoryboard = UIStoryboard(name: "Nonmember", bundle: nil)
         
@@ -114,6 +158,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                 PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
             }
         }
+        
+        
         
                 
         //let nonmemberStoryboard = UIStoryboard(name: "Nonmember", bundle: nil)

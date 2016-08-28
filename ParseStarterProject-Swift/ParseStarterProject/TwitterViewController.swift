@@ -14,7 +14,7 @@ class TwitterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
+        self.view.userInteractionEnabled = true
         // Add a button to the center of the view to show the timeline
         let button = UIButton(type: .System)
         button.setTitle("Show Timeline", forState: .Normal)
@@ -42,7 +42,8 @@ class TwitterViewController: UIViewController {
     func dismissTimeline() {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
+    
     
     
 }

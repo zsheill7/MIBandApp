@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DonateViewController: UIViewController {
+class DonateViewController: UIViewController, UIWebViewDelegate {
 
     let picker = UIImageView(image: UIImage(named: "Custom Picker View 2"))
     
@@ -29,7 +29,7 @@ class DonateViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.userInteractionEnabled = true
         // Do any additional setup after loading the view.
         
         /*var html = "<p><a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XYZRUJWJCF3SN\"><img src=\"https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif\" alt=\"\" /></a></p>"
@@ -65,6 +65,7 @@ class DonateViewController: UIViewController {
                             print(upcomingEvents)
                             dispatch_async(dispatch_get_main_queue(), {
                                 self.webView.loadHTMLString(upcomingEvents, baseURL: nil)
+                                self.webView.delegate = self
                                 print(upcomingEvents)
                             
                             })
@@ -216,6 +217,14 @@ class DonateViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if let url = request.URL where navigationType == UIWebViewNavigationType.LinkClicked {
+            UIApplication.sharedApplication().openURL(url)
+            return false
+        }
+        return true
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

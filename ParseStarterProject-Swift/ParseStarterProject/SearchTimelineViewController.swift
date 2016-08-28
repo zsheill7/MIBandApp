@@ -29,7 +29,7 @@ class SearchTimelineViewController: TWTRTimelineViewController {
     
     
     override func viewDidLoad() {
-        
+        self.view.userInteractionEnabled = true
         
         super.viewDidLoad()
         

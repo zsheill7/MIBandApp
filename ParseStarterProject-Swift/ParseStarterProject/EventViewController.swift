@@ -90,9 +90,13 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         
         event["description"] = eventDescriptionText
         
+        
+        event["willRepeat"] = false
+        
         if pickerEvent == "Marching Band Sectional" {
             event["instrument"] = PFUser.currentUser()!.objectForKey("marchingInstrument")
             event["ensemble"] = "Marching Band"
+            
         } else {
             
             event["instrument"] = PFUser.currentUser()!.objectForKey("concertInstrument")

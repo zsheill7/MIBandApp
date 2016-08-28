@@ -82,7 +82,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             
                                 //print((object["instrument"] as! String) + userInstrument)
 
-                                var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, UUID: "sdfg")
+                                var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool)
                                 
                                 self.events.append(newEvent)
                                 
@@ -108,7 +108,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         
                         //print((object["instrument"] as! String) + userInstrument)
                         
-                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, UUID: "sdfg")
+                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, object["willRepeat"] as! Bool)
                         
                         self.events.append(newEvent)
                       

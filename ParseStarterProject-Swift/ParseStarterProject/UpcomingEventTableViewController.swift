@@ -52,6 +52,19 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         print("here")
         navigationItem.hidesBackButton = true
         
+        
+        reloadTableData()
+
+        
+        pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 70, width: 200, height: 160)
+        
+        createPicker()
+        
+        
+        
+    }
+    
+    func reloadTableData() {
         let query1 = PFUser.query()
         
         if let split = self.splitViewController {
@@ -69,29 +82,29 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             
             
             let userInstrument = PFUser.currentUser()!["marchingInstrument"] as! String
-                print(userInstrument)
+            print(userInstrument)
             
+            
+            marchingQuery.whereKey("instrument", equalTo: userInstrument)
+            marchingQuery.whereKey("ensemble", equalTo: "Marching Band")
+            marchingQuery.findObjectsInBackgroundWithBlock({ (objects, error) in
                 
-                marchingQuery.whereKey("instrument", equalTo: userInstrument)
-                marchingQuery.whereKey("ensemble", equalTo: "Marching Band")
-                marchingQuery.findObjectsInBackgroundWithBlock({ (objects, error) in
+                if let objects = objects {
                     
-                    if let objects = objects {
+                    for object in objects {
+                        //seeing if the ensemble is "Marching Band"
                         
-                        for object in objects {
-                            //seeing if the ensemble is "Marching Band"
-                            
-                                //print((object["instrument"] as! String) + userInstrument)
-
-                            var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String)
-                            
-                                self.events.append(newEvent)
-                                
-                                self.table.reloadData()
-                            
-                        }
+                        //print((object["instrument"] as! String) + userInstrument)
+                        
+                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String)
+                        
+                        self.events.append(newEvent)
+                        
+                        self.table.reloadData()
+                        
                     }
-                })
+                }
+            })
             
             var concertQuery = PFQuery(className: "Event")
             
@@ -112,7 +125,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String)
                         
                         self.events.append(newEvent)
-                      
+                        
                         self.events = self.events.sort({$0.date.compare($1.date) == .OrderedAscending})
                         self.table.reloadData()
                         
@@ -120,25 +133,12 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                     }
                 }
             })
-
+            
             
             
             
         })
-        
-        
-        
-    
-       
 
-        
-        
-        pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 70, width: 200, height: 160)
-        
-        createPicker()
-        
-        
-        
     }
 
     @IBAction func addEvent(sender: AnyObject) {
@@ -200,20 +200,61 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if editingStyle == UITableViewCellEditingStyle.Delete {
             if events[indexPath.row].willRepeat == false {
+                
+                var query = PFQuery(className: "Event")
+                query.whereKey("UUID", equalTo: events[indexPath.row].UUID)
+                query.findObjectsInBackgroundWithBlock({ (objects, error) in
+                    if error == nil {
+                        
+                        for object in objects! {
+                            object.deleteInBackground()
+                        }
+                    } else {
+                        print(error)
+                    }
+                })
                 events.removeAtIndex(indexPath.row)
+                self.reloadTableData()
             } else /*if events[indexPath.row].willRepeat == false*/{
                 var alert = UIAlertController(title: "Delete Repeating Events", message: "Do you want to only delete this event or delete all events in this series?", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Just this event", style: UIAlertActionStyle.Default, handler: { (action) in
-                    self.events.removeAtIndex(indexPath.row)
+                    
+                    /*var query = PFQuery(className: "Event")
+                    
+                    query.whereKey("objectID", equalTo: eventList[indexPath.row].objectID)
+                    query.findObjectsInBackgroundWithBlock({ (objects, error) in
+                        if error == nil {
+                            for object in objects! {
+                                object.deleteInBackground()
+                            }
+                        } else {
+                            print(error)
+                        }
+                    })*/
+                    //self.events.removeAtIndex(indexPath.row)
+                    self.table.reloadData()
                 }))
                 alert.addAction(UIAlertAction(title: "All events in series", style: UIAlertActionStyle.Default, handler: { (action) in
                     var query = PFQuery(className: "Event")
                     
-                    //query.whereKey(events["UUID"], equalTo: <#T##AnyObject#>)
+                    query.whereKey("UUID", equalTo: self.events[indexPath.row].UUID)
+                    query.findObjectsInBackgroundWithBlock({ (objects, error) in
+                        if error == nil {
+                            for object in objects! {
+                                object.deleteInBackground()
+                            }
+                        } else {
+                            print(error)
+                        }
+                    })
+                    
+                    //self.table.reloadData()
+                    self.reloadTableData()
                 }))
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { (action) in
                     
                 }))
+                self.presentViewController(alert, animated: true, completion: nil)
             
             }
             

@@ -202,9 +202,10 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                         self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
                     }
                 }
+                placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
 
             }
-            placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
+            
         }
 
         

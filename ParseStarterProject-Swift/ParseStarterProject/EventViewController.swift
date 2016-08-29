@@ -114,6 +114,8 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         let endOfSchool = NSDate(dateString: "\(endOfSchoolYear!)-06-20")
         
         if willRepeat == false {
+            
+            let UUID = NSUUID().UUIDString
             var event = PFObject(className: "Event")
             
             event["title"] = pickerEvent
@@ -122,8 +124,9 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
             
             event["description"] = eventDescriptionText
             
-            
             event["willRepeat"] = willRepeat
+            
+            event["UUID"] = UUID
             
             if pickerEvent == "Marching Band Sectional" {
                 event["instrument"] = PFUser.currentUser()!.objectForKey("marchingInstrument")
@@ -154,9 +157,10 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                 }
             }
         } else /*if willRepeat == true*/ {
+            let UUID = NSUUID().UUIDString
             
             while placeholderDate.earlierDate(endOfSchool).isEqualToDate(placeholderDate) {
-            placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
+            
                 
                 var event = PFObject(className: "Event")
                 
@@ -169,6 +173,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                 
                 event["willRepeat"] = willRepeat
                 
+                event["UUID"] = UUID
                 if pickerEvent == "Marching Band Sectional" {
                     event["instrument"] = PFUser.currentUser()!.objectForKey("marchingInstrument")
                     event["ensemble"] = "Marching Band"
@@ -199,6 +204,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                 }
 
             }
+            placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
         }
 
         

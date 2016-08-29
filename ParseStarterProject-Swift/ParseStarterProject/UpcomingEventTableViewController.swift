@@ -83,8 +83,8 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             
                                 //print((object["instrument"] as! String) + userInstrument)
 
-                                var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool)
-                                
+                            var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String)
+                            
                                 self.events.append(newEvent)
                                 
                                 self.table.reloadData()
@@ -109,7 +109,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         
                         //print((object["instrument"] as! String) + userInstrument)
                         
-                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool)
+                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String)
                         
                         self.events.append(newEvent)
                       
@@ -199,7 +199,24 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            eventList.removeAtIndex(indexPath.row)
+            if events[indexPath.row].willRepeat == false {
+                events.removeAtIndex(indexPath.row)
+            } else /*if events[indexPath.row].willRepeat == false*/{
+                var alert = UIAlertController(title: "Delete Repeating Events", message: "Do you want to only delete this event or delete all events in this series?", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Just this event", style: UIAlertActionStyle.Default, handler: { (action) in
+                    self.events.removeAtIndex(indexPath.row)
+                }))
+                alert.addAction(UIAlertAction(title: "All events in series", style: UIAlertActionStyle.Default, handler: { (action) in
+                    var query = PFQuery(className: "Event")
+                    
+                    //query.whereKey(events["UUID"], equalTo: <#T##AnyObject#>)
+                }))
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { (action) in
+                    
+                }))
+            
+            }
+            
             
             //NSUserDefaults.standardUserDefaults().setObject(eventList, forKey: "eventList")
             table.reloadData()

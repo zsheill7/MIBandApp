@@ -9,14 +9,16 @@
 import UIKit
 import Parse
 
-class MoreSettingsTableViewController: UITableViewController {
+class MoreSettingsTableViewController: UITableViewController, UINavigationControllerDelegate {
 
     
     var user = PFUser.currentUser()
     @IBOutlet weak var willRepeatSwitch: UISwitch!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
+        navigationController?.delegate = self
     }
     
     
@@ -32,6 +34,13 @@ class MoreSettingsTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("switch: " + String(willRepeatSwitch.on))
         if let destinationVC = segue.destinationViewController as? AddEventTableViewController {
+            destinationVC.willRepeat = willRepeatSwitch.on
+        }
+    }
+    
+    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+        print("switch: " + String(willRepeatSwitch.on))
+        if let destinationVC = viewController as? AddEventTableViewController {
             destinationVC.willRepeat = willRepeatSwitch.on
         }
     }

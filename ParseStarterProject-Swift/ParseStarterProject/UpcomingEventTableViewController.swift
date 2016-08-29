@@ -30,6 +30,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var willRepeat = false
     
+    var activityIndicator = UIActivityIndicatorView()
     
     
     
@@ -198,8 +199,24 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
    
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
+        
+        
         if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            activityIndicator = UIActivityIndicatorView(frame: self.view.frame)
+            activityIndicator.backgroundColor = UIColor.grayColor()
+            activityIndicator.center = self.view.center
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+            
+            
+    
+            
             if events[indexPath.row].willRepeat == false {
+                
+                view.addSubview(activityIndicator)
+                activityIndicator.startAnimating()
+                UIApplication.sharedApplication().beginIgnoringInteractionEvents()
                 
                 var query = PFQuery(className: "Event")
                 query.whereKey("UUID", equalTo: events[indexPath.row].UUID)
@@ -215,9 +232,15 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 })
                 events.removeAtIndex(indexPath.row)
                 self.reloadTableData()
+                
+                self.activityIndicator.stopAnimating()
             } else /*if events[indexPath.row].willRepeat == false*/{
                 var alert = UIAlertController(title: "Delete Repeating Events", message: "Do you want to only delete this event or delete all events in this series?", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Just this event", style: UIAlertActionStyle.Default, handler: { (action) in
+                    
+                    self.view.addSubview(self.activityIndicator)
+                    self.activityIndicator.startAnimating()
+                    UIApplication.sharedApplication().beginIgnoringInteractionEvents()
                     
                     /*var query = PFQuery(className: "Event")
                     
@@ -233,8 +256,15 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                     })*/
                     //self.events.removeAtIndex(indexPath.row)
                     self.table.reloadData()
+                    
+                    self.activityIndicator.stopAnimating()
                 }))
                 alert.addAction(UIAlertAction(title: "All events in series", style: UIAlertActionStyle.Default, handler: { (action) in
+                    
+                    self.view.addSubview(self.activityIndicator)
+                    self.activityIndicator.startAnimating()
+                    UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+                    
                     var query = PFQuery(className: "Event")
                     
                     query.whereKey("UUID", equalTo: self.events[indexPath.row].UUID)
@@ -250,6 +280,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                     
                     //self.table.reloadData()
                     self.reloadTableData()
+                    self.activityIndicator.stopAnimating()
                 }))
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { (action) in
                     

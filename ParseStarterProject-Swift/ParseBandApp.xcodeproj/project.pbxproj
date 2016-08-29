@@ -62,6 +62,7 @@
 		C8AF37011D51647900B80DB9 /* ContainerViewControllerConcert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF37001D51647900B80DB9 /* ContainerViewControllerConcert.swift */; };
 		C8AF37031D516CBE00B80DB9 /* ContainerViewControllerBandType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF37021D516CBE00B80DB9 /* ContainerViewControllerBandType.swift */; };
 		C8AF37051D516CCA00B80DB9 /* ContainerViewControllerGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF37041D516CCA00B80DB9 /* ContainerViewControllerGrade.swift */; };
+		C8B96B0D1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */; };
 		C8C266D51D3DAB6C00574541 /* ChangePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */; };
 		C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -129,6 +130,7 @@
 		C8AF37001D51647900B80DB9 /* ContainerViewControllerConcert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerConcert.swift; sourceTree = "<group>"; };
 		C8AF37021D516CBE00B80DB9 /* ContainerViewControllerBandType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerBandType.swift; sourceTree = "<group>"; };
 		C8AF37041D516CCA00B80DB9 /* ContainerViewControllerGrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerGrade.swift; sourceTree = "<group>"; };
+		C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreSettingsTableViewController.swift; sourceTree = "<group>"; };
 		C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewController.swift; sourceTree = "<group>"; };
 		C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +209,7 @@
 				C829AA301D35C7680073DF94 /* EventViewController.swift */,
 				C81FE8591D66B4A200E0E33F /* DetailViewController.swift */,
 				C817B8201D4B018400E9A5FD /* DirectorAddEventTableViewController.swift */,
+				C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */,
 				C829AA341D35CA410073DF94 /* eventItem.swift */,
 				C829AA351D35CA410073DF94 /* eventCell.swift */,
 				C85079B11D307B8F000BA862 /* Assets.xcassets */,
@@ -460,6 +463,7 @@
 				C817B8211D4B018400E9A5FD /* DirectorAddEventTableViewController.swift in Sources */,
 				C829AA331D35C7830073DF94 /* UpcomingEventTableViewController.swift in Sources */,
 				C829AA371D35CA410073DF94 /* eventCell.swift in Sources */,
+				C8B96B0D1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift in Sources */,
 				C8AF37051D516CCA00B80DB9 /* ContainerViewControllerGrade.swift in Sources */,
 				C82B3B111D5EA0EF0037FDC2 /* TwitterViewController.swift in Sources */,
 				C82B3B261D5EA1260037FDC2 /* PhotoStore.swift in Sources */,

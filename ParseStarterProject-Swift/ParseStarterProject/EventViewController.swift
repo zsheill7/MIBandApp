@@ -9,7 +9,17 @@
 import UIKit
 import Parse
 
-
+extension NSDate
+{
+    convenience
+    init(dateString:String) {
+        let dateStringFormatter = NSDateFormatter()
+        dateStringFormatter.dateFormat = "yyyy-MM-dd"
+        dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        let d = dateStringFormatter.dateFromString(dateString)!
+        self.init(timeInterval:0, sinceDate:d)
+    }
+}
 
 class AddEventTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
@@ -22,7 +32,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
     
     @IBOutlet weak var bandType: UIPickerView!
 
-   
+    var willRepeat = false
     
     var activityIndicator = UIActivityIndicatorView()
     
@@ -81,44 +91,113 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         //eventList.append(newEvent)
         //print(eventList)
         //NSUserDefaults.standardUserDefaults().setObject(eventList, forKey: "eventList")
+        let cal = NSCalendar.currentCalendar()
+        var placeholderDate = myDatePicker.date
         
-        var event = PFObject(className: "Event")
+        let calendar = NSCalendar.init(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let currentYearInt = Int((calendar?.component(NSCalendarUnit.Year, fromDate: NSDate()))!)
+        let currentMonthInt = (calendar?.component(NSCalendarUnit.Month, fromDate: NSDate()))!
+        var endOfSchoolYear: Int?
         
-        event["title"] = pickerEvent
+        print(currentYearInt)
+        print(currentMonthInt)
+        print(willRepeat)
         
-        event["date"] = myDatePicker.date
-        
-        event["description"] = eventDescriptionText
-        
-        
-        event["willRepeat"] = false
-        
-        if pickerEvent == "Marching Band Sectional" {
-            event["instrument"] = PFUser.currentUser()!.objectForKey("marchingInstrument")
-            event["ensemble"] = "Marching Band"
-            
+        if currentMonthInt > 6 {
+            endOfSchoolYear = currentYearInt + 1
         } else {
-            
-            event["instrument"] = PFUser.currentUser()!.objectForKey("concertInstrument")
-            event["ensemble"] = PFUser.currentUser()!.objectForKey("concertBandType")
+            endOfSchoolYear  = currentYearInt
         }
         
-        event.saveInBackgroundWithBlock{(success, error) -> Void in
-            self.activityIndicator.stopAnimating()
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        let endOfSchool = NSDate(dateString: "\(endOfSchoolYear!)-06-20")
+        
+        if willRepeat == false {
+            var event = PFObject(className: "Event")
             
-            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            event["title"] = pickerEvent
             
-            if error == nil {
+            event["date"] = myDatePicker.date
+            
+            event["description"] = eventDescriptionText
+            
+            
+            event["willRepeat"] = willRepeat
+            
+            if pickerEvent == "Marching Band Sectional" {
+                event["instrument"] = PFUser.currentUser()!.objectForKey("marchingInstrument")
+                event["ensemble"] = "Marching Band"
                 
-                dispatch_async(dispatch_get_main_queue()) {
-                    [unowned self] in
-                    //self.performSegueWithIdentifier("addEvent", sender: self)
-                    let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
-                    self.presentViewController(VC!, animated: true, completion: nil)
+            } else {
+                
+                event["instrument"] = PFUser.currentUser()!.objectForKey("concertInstrument")
+                event["ensemble"] = PFUser.currentUser()!.objectForKey("concertBandType")
+            }
+            
+            event.saveInBackgroundWithBlock{(success, error) -> Void in
+                self.activityIndicator.stopAnimating()
+                
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                
+                if error == nil {
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        [unowned self] in
+                        //self.performSegueWithIdentifier("addEvent", sender: self)
+                        let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
+                        self.presentViewController(VC!, animated: true, completion: nil)
+                    }
+
+                } else {
+                    self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
+                }
+            }
+        } else /*if willRepeat == true*/ {
+            
+            while placeholderDate.earlierDate(endOfSchool).isEqualToDate(placeholderDate) {
+            placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
+                
+                var event = PFObject(className: "Event")
+                
+                event["title"] = pickerEvent
+                
+                event["date"] = placeholderDate
+                
+                event["description"] = eventDescriptionText
+                
+                
+                event["willRepeat"] = willRepeat
+                
+                if pickerEvent == "Marching Band Sectional" {
+                    event["instrument"] = PFUser.currentUser()!.objectForKey("marchingInstrument")
+                    event["ensemble"] = "Marching Band"
+                    
+                } else {
+                    
+                    event["instrument"] = PFUser.currentUser()!.objectForKey("concertInstrument")
+                    event["ensemble"] = PFUser.currentUser()!.objectForKey("concertBandType")
+                }
+                
+                event.saveInBackgroundWithBlock{(success, error) -> Void in
+                    self.activityIndicator.stopAnimating()
+                    
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                    
+                    if error == nil {
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            [unowned self] in
+                            //self.performSegueWithIdentifier("addEvent", sender: self)
+                            let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
+                            self.presentViewController(VC!, animated: true, completion: nil)
+                        }
+                        
+                    } else {
+                        self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
+                    }
                 }
 
-            } else {
-                self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
             }
         }
 

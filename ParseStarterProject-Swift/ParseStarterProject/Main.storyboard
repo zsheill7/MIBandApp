@@ -1490,6 +1490,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tja-VW-dzN">
                                                     <rect key="frame" x="143" y="7" width="129" height="30"/>
                                                     <state key="normal" title="More Settings"/>
+                                                    <connections>
+                                                        <segue destination="PyX-50-UwN" kind="show" id="sUh-BW-gMV"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1545,6 +1548,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0g-aV-cai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4866" y="324"/>
+        </scene>
+        <!--More Settings Table View Controller-->
+        <scene sceneID="K4z-iC-38M">
+            <objects>
+                <tableViewController id="PyX-50-UwN" customClass="MoreSettingsTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="d4i-6Y-Byg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="More Settings" id="kAu-fU-TFM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="elC-wX-Bve">
+                                        <rect key="frame" x="0.0" y="113.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elC-wX-Bve" id="hlK-9H-VzZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat Every Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNh-WA-Kxf">
+                                                    <rect key="frame" x="8" y="11" width="148" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6FD-fr-fT5">
+                                                    <rect key="frame" x="200" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="toggleWillRepeat:" destination="PyX-50-UwN" eventType="valueChanged" id="Ddz-xW-k7u"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6FD-fr-fT5" firstAttribute="top" secondItem="hlK-9H-VzZ" secondAttribute="topMargin" constant="-2" id="KoR-v7-Bxo"/>
+                                                <constraint firstItem="gNh-WA-Kxf" firstAttribute="leading" secondItem="hlK-9H-VzZ" secondAttribute="leadingMargin" id="aNd-F6-med"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6FD-fr-fT5" secondAttribute="bottom" constant="-1.5" id="lJo-Zw-VEX"/>
+                                                <constraint firstItem="6FD-fr-fT5" firstAttribute="leading" secondItem="gNh-WA-Kxf" secondAttribute="trailing" constant="44" id="lKd-Kc-fSU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gNh-WA-Kxf" secondAttribute="bottom" constant="3.5" id="qmj-xG-AQR"/>
+                                                <constraint firstItem="gNh-WA-Kxf" firstAttribute="top" secondItem="hlK-9H-VzZ" secondAttribute="topMargin" constant="3" id="w9Q-co-MNT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gd1-dJ-w0N">
+                                        <rect key="frame" x="0.0" y="157.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gd1-dJ-w0N" id="SnC-Qq-koA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DlA-zO-8YL">
+                                        <rect key="frame" x="0.0" y="201.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DlA-zO-8YL" id="BlO-dZ-sNz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="PyX-50-UwN" id="QO4-5l-19d"/>
+                            <outlet property="delegate" destination="PyX-50-UwN" id="HFl-YI-Plz"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="willRepeatSwitch" destination="6FD-fr-fT5" id="048-zi-1Wx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijl-zB-4Tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5405" y="1049"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wad-fz-p7z">

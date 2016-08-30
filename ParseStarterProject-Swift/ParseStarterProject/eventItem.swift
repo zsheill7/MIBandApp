@@ -16,6 +16,7 @@ struct eventItem {
     var ensemble: String //1 == Marching Band, 2 == Concert Band
     var willRepeat: Bool
     var UUID: String
+    var objectID: String
     
     let labelFont = UIFont(name: "HelveticaNeue-Bold", size: 18)
     //let attributes :Dictionary = [NSFontAttributeName : labelFont]
@@ -23,7 +24,7 @@ struct eventItem {
     
     
     
-    init(title: String, date: NSDate, description: String, instrument: String, ensemble: String, willRepeat: Bool, UUID: String) {
+    init(title: String, date: NSDate, description: String, instrument: String, ensemble: String, willRepeat: Bool, UUID: String, objectID: String) {
         self.date = date
         self.title = title
         self.description = description
@@ -31,6 +32,7 @@ struct eventItem {
         self.ensemble = ensemble
         self.willRepeat = willRepeat
         self.UUID = UUID
+        self.objectID = objectID
         
         
         formatter.dateStyle = NSDateFormatterStyle.LongStyle

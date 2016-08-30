@@ -97,7 +97,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         
                         //print((object["instrument"] as! String) + userInstrument)
                         
-                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String)
+                        let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
                         
                         self.events.append(newEvent)
                         
@@ -123,7 +123,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         
                         //print((object["instrument"] as! String) + userInstrument)
                         
-                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String)
+                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object["objectID"] as! String)
                         
                         self.events.append(newEvent)
                         
@@ -204,7 +204,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         if editingStyle == UITableViewCellEditingStyle.Delete {
             
             activityIndicator = UIActivityIndicatorView(frame: self.view.frame)
-            activityIndicator.backgroundColor = UIColor.grayColor()
+            activityIndicator.backgroundColor = UIColor(white: 1, alpha: 0.5)
             activityIndicator.center = self.view.center
             activityIndicator.hidesWhenStopped = true
             activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
@@ -230,11 +230,14 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         print(error)
                     }
                 })
-                events.removeAtIndex(indexPath.row)
-                self.reloadTableData()
                 
+                
+                events.removeAtIndex(indexPath.row)
+                
+                self.reloadTableData()
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 self.activityIndicator.stopAnimating()
-            } else /*if events[indexPath.row].willRepeat == false*/{
+            } else /*if events[indexPath.row].willRepeat == true*/{
                 var alert = UIAlertController(title: "Delete Repeating Events", message: "Do you want to only delete this event or delete all events in this series?", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Just this event", style: UIAlertActionStyle.Default, handler: { (action) in
                     
@@ -242,32 +245,9 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                     self.activityIndicator.startAnimating()
                     UIApplication.sharedApplication().beginIgnoringInteractionEvents()
                     
-                    /*var query = PFQuery(className: "Event")
-                    
-                    query.whereKey("objectID", equalTo: eventList[indexPath.row].objectID)
-                    query.findObjectsInBackgroundWithBlock({ (objects, error) in
-                        if error == nil {
-                            for object in objects! {
-                                object.deleteInBackground()
-                            }
-                        } else {
-                            print(error)
-                        }
-                    })*/
-                    //self.events.removeAtIndex(indexPath.row)
-                    self.table.reloadData()
-                    
-                    self.activityIndicator.stopAnimating()
-                }))
-                alert.addAction(UIAlertAction(title: "All events in series", style: UIAlertActionStyle.Default, handler: { (action) in
-                    
-                    self.view.addSubview(self.activityIndicator)
-                    self.activityIndicator.startAnimating()
-                    UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-                    
                     var query = PFQuery(className: "Event")
                     
-                    query.whereKey("UUID", equalTo: self.events[indexPath.row].UUID)
+                    query.whereKey("objectID", equalTo: self.events[indexPath.row].objectID)
                     query.findObjectsInBackgroundWithBlock({ (objects, error) in
                         if error == nil {
                             for object in objects! {
@@ -277,10 +257,45 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             print(error)
                         }
                     })
-                    
-                    //self.table.reloadData()
-                    self.reloadTableData()
+                    self.events.removeAtIndex(indexPath.row)
+                    self.table.reloadData()
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
                     self.activityIndicator.stopAnimating()
+                }))
+                alert.addAction(UIAlertAction(title: "All events in series", style: UIAlertActionStyle.Default, handler: { (action) in
+                    
+                    self.view.addSubview(self.activityIndicator)
+                    self.activityIndicator.startAnimating()
+                    UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+                    
+                    var query = PFQuery(className: "Event")
+                    let currentUUID = self.events[indexPath.row].UUID
+                    
+                    query.whereKey("UUID", equalTo: currentUUID)
+                    query.findObjectsInBackgroundWithBlock({ (objects, error) in
+                        if error == nil {
+                            for object in objects! {
+                                object.deleteInBackground()
+                            }
+                            
+                            
+                            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                            self.activityIndicator.stopAnimating()
+                        } else {
+                            print(error)
+                        }
+                    })
+                    
+                    for event in self.events {
+                        if event.UUID == currentUUID {
+                            self.events.removeAtIndex(self.events.indexOf({ (event) -> Bool in
+                                return true
+                            })!)
+                        }
+                    }
+                    //self.reloadTableData()
+                    self.table.reloadData()
+                    
                 }))
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { (action) in
                     

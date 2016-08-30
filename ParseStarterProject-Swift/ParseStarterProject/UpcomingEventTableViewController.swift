@@ -44,6 +44,19 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
+    func displayAlert(title: String, message: String) {
+        
+       
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            
+            
+        })))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,7 +136,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         
                         //print((object["instrument"] as! String) + userInstrument)
                         
-                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object["objectID"] as! String)
+                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
                         
                         self.events.append(newEvent)
                         
@@ -143,16 +156,32 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     @IBAction func addEvent(sender: AnyObject) {
-        var segueString = "sectionLeaderAdd"
         
         
+        if let isSectionLeader = user!["isSectionLeader"] as? Bool {
+            if isSectionLeader == true {
+                let segueString = "sectionLeaderAdd"
+                self.performSegueWithIdentifier(segueString, sender: self)
+                
+            }
+        }
         if let isAdmin = user!["isAdmin"] as? Bool {
             if isAdmin == true {
-                segueString = "adminAdd"
+            let segueString = "adminAdd"
+            self.performSegueWithIdentifier(segueString, sender: self)
+                
+            } else {
+                self.displayAlert("Permission Required", message: "You need to be a section leader or administrator to add events")
+                
             }
         }
         
-        self.performSegueWithIdentifier(segueString, sender: self)
+        
+        
+        
+        
+        
+        
     }
     
    

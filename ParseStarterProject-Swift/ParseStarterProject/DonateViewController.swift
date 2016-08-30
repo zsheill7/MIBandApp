@@ -64,8 +64,7 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
                             let upcomingEvents = upcomingArray[0]
                             print(upcomingEvents)
                             dispatch_async(dispatch_get_main_queue(), {
-                                self.webView.loadHTMLString(upcomingEvents, baseURL: nil)
-                                self.webView.delegate = self
+                                
                                 print(upcomingEvents)
                             
                             })

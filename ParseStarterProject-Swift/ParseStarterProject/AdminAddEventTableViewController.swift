@@ -46,22 +46,17 @@ class DirectorAddEventTableViewController: UITableViewController, UISearchBarDel
     
     func displayAlert(title: String, message: String) {
         
-        if #available(iOS 8.0, *) {
-            var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             
-            alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-                
-                self.dismissViewControllerAnimated(true, completion: nil)
-                
-            })))
+            self.dismissViewControllerAnimated(true, completion: nil)
             
-            self.presentViewController(alert, animated: true, completion: nil)
-        } else {
-            print("error")
-        }
+        })))
         
-        
-        
+        self.presentViewController(alert, animated: true, completion: nil)
+
     }
     
     

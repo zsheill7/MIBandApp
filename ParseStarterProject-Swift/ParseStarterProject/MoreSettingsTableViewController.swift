@@ -38,6 +38,10 @@ class MoreSettingsTableViewController: UITableViewController, UINavigationContro
         }
     }
     
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
     func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
         print("switch: " + String(willRepeatSwitch.on))
         if let destinationVC = viewController as? AddEventTableViewController {

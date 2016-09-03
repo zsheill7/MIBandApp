@@ -40,9 +40,11 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
       
             
             
-        let attemptedUrl = NSURL(string: "https://misbb.wordpress.com/donate/")
+        let url = NSURL(string: "https://misbb.wordpress.com/donate/")
         
-        if let url = attemptedUrl {
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
+        /*if let url = attemptedUrl {
             
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) in
                 
@@ -86,7 +88,7 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
         } else {
             
             print("error")
-        }
+        }*/
         
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 70, width: 200, height: 160)
         
@@ -219,7 +221,7 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if let url = request.URL where navigationType == UIWebViewNavigationType.LinkClicked {
+        if let url = request.URL where navigationType == UIWebViewNavigationType.LinkClicked{
             UIApplication.sharedApplication().openURL(url)
             return false
         }

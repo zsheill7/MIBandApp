@@ -163,18 +163,19 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 let segueString = "sectionLeaderAdd"
                 self.performSegueWithIdentifier(segueString, sender: self)
                 
+            } else if let isAdmin = user!["isAdmin"] as? Bool {
+                if isAdmin == true {
+                    let segueString = "adminAdd"
+                    self.performSegueWithIdentifier(segueString, sender: self)
+                    
+                } else {
+                    self.displayAlert("Permission Required", message: "You need to be a section leader or administrator to add events")
+                    
+                }
+                
             }
         }
-        if let isAdmin = user!["isAdmin"] as? Bool {
-            if isAdmin == true {
-            let segueString = "adminAdd"
-            self.performSegueWithIdentifier(segueString, sender: self)
-                
-            } else {
-                self.displayAlert("Permission Required", message: "You need to be a section leader or administrator to add events")
-                
-            }
-        }
+        
         
         
         

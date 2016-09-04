@@ -76,13 +76,19 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Rectangle short shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Exl-88-If3">
                                         <rect key="frame" x="147" y="390" width="311" height="63"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="Eoa-TO-vva"/>
+                                            <constraint firstAttribute="width" constant="311" id="Jeg-lr-7mS"/>
                                             <constraint firstAttribute="height" constant="63" id="KaQ-YM-EkA"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Eoa-TO-vva"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="loginPage2" translatesAutoresizingMaskIntoConstraints="NO" id="lPf-7A-QEw">
                                         <rect key="frame" x="128" y="147" width="344" height="241"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="344" id="avC-bc-3gd"/>
                                             <constraint firstAttribute="height" constant="241" id="seX-5c-U4x"/>
                                         </constraints>
                                     </imageView>
@@ -113,6 +119,7 @@
                                         <rect key="frame" x="162" y="409" width="153" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="ETH-Eg-QHU"/>
+                                            <constraint firstAttribute="width" constant="153" id="ez4-C2-Rmu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,6 +162,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="b4T-i5-Nnz" firstAttribute="leading" secondItem="Exl-88-If3" secondAttribute="leading" id="2mr-e6-0ul"/>
                                     <constraint firstItem="Exl-88-If3" firstAttribute="leading" secondItem="lPf-7A-QEw" secondAttribute="trailing" constant="-325" id="6SQ-7I-k3z"/>
                                     <constraint firstItem="8qT-rk-MX3" firstAttribute="leading" secondItem="6KY-9e-WRI" secondAttribute="leading" constant="-7" id="BL7-dw-sV1"/>
                                     <constraint firstItem="iv1-Ln-Lxs" firstAttribute="leading" secondItem="b4T-i5-Nnz" secondAttribute="trailing" constant="8" id="G5a-4C-ARN"/>
@@ -185,6 +193,11 @@
                             <constraint firstItem="eyI-k8-Acj" firstAttribute="centerX" secondItem="XnT-vQ-hAV" secondAttribute="centerX" id="fGS-zU-h3D"/>
                             <constraint firstItem="lPf-7A-QEw" firstAttribute="centerX" secondItem="XnT-vQ-hAV" secondAttribute="centerX" id="nOE-Kw-feQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nOE-Kw-feQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Vlf-LX-AEo">
                         <barButtonItem key="leftBarButtonItem" image="Home icon" id="Whb-Ud-3W7">
@@ -336,7 +349,7 @@
                             <constraint firstItem="odk-0d-dmA" firstAttribute="width" secondItem="Mg2-Qx-abl" secondAttribute="height" multiplier="82:111" id="STM-Xh-GTA"/>
                             <constraint firstItem="ghG-MW-pSq" firstAttribute="top" secondItem="Mg2-Qx-abl" secondAttribute="bottom" constant="-109" id="UZ6-sk-vng"/>
                             <constraint firstItem="e44-rd-gmt" firstAttribute="top" secondItem="l0F-Jx-UZF" secondAttribute="bottom" id="YYQ-4L-8ER"/>
-                            <constraint firstItem="BvH-Mm-b8l" firstAttribute="leading" secondItem="GGo-E5-Qzb" secondAttribute="trailing" constant="19" id="Z5p-op-PX3"/>
+                            <constraint firstItem="BvH-Mm-b8l" firstAttribute="leading" secondItem="GGo-E5-Qzb" secondAttribute="trailing" constant="8" id="Z5p-op-PX3"/>
                             <constraint firstItem="UE7-eP-VjO" firstAttribute="leading" secondItem="Mg2-Qx-abl" secondAttribute="trailing" constant="-280" id="ZFV-W7-dzV"/>
                             <constraint firstItem="tFM-Jj-ZIV" firstAttribute="top" secondItem="Mg2-Qx-abl" secondAttribute="bottom" constant="-57" id="ZK1-Sb-Vli"/>
                             <constraint firstItem="UE7-eP-VjO" firstAttribute="leading" secondItem="mcm-B4-iAg" secondAttribute="trailing" constant="11" id="aXk-VD-Tr7"/>

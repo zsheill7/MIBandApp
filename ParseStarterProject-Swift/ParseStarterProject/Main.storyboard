@@ -11,7 +11,7 @@
         <!--CalendarViewController-->
         <scene sceneID="Xea-PJ-nsm">
             <objects>
-                <viewController title="CalendarViewController" id="0XY-nV-fQa" customClass="CalendarViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CalendarViewController" id="0XY-nV-fQa" customClass="CalendarViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eqU-Tb-ufg"/>
                         <viewControllerLayoutGuide type="bottom" id="QQH-wX-Sdd"/>
@@ -57,7 +57,7 @@
         <!--Login View Controller-->
         <scene sceneID="TbQ-Wd-VjM">
             <objects>
-                <viewController id="1lv-Ft-yU8" customClass="LoginViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1lv-Ft-yU8" customClass="LoginViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IoY-6J-icC"/>
                         <viewControllerLayoutGuide type="bottom" id="yg0-ws-mQe"/>
@@ -206,7 +206,7 @@
         <!--Create Account View Controller-->
         <scene sceneID="ow8-V1-Wnp">
             <objects>
-                <viewController storyboardIdentifier="createAccountVC" id="g7d-Iw-fNf" userLabel="Create Account View Controller" customClass="SignupViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createAccountVC" id="g7d-Iw-fNf" userLabel="Create Account View Controller" customClass="SignupViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="abW-sy-2y6"/>
                         <viewControllerLayoutGuide type="bottom" id="e44-rd-gmt"/>
@@ -387,7 +387,7 @@
         <!--User Setup Table View Controller-->
         <scene sceneID="wTu-4A-HFB">
             <objects>
-                <tableViewController id="BX3-6r-NiP" customClass="UserSetupTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BX3-6r-NiP" customClass="UserSetupTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="11" sectionFooterHeight="1" id="7e2-rT-LkE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,7 +518,7 @@
         <!--Barcode-->
         <scene sceneID="nBk-tb-HvS">
             <objects>
-                <tableViewController id="rL5-Lr-wAR" customClass="BarcodeTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rL5-Lr-wAR" customClass="BarcodeTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="4" id="hE2-xV-CoH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -763,7 +763,7 @@
         <!--settingsVC-->
         <scene sceneID="E5J-Mv-q1k">
             <objects>
-                <tableViewController storyboardIdentifier="settingsVC" title="settingsVC" id="Wt3-QB-iFj" customClass="SettingsTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="settingsVC" title="settingsVC" id="Wt3-QB-iFj" customClass="SettingsTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="J3K-zx-y0P">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1059,7 +1059,7 @@
         <!--Settings Instruments Table View Controller-->
         <scene sceneID="t3Y-mw-kjC">
             <objects>
-                <tableViewController id="UQB-57-vva" customClass="SettingsInstrumentsTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="UQB-57-vva" customClass="SettingsInstrumentsTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="f8h-tc-zAR">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1087,7 +1087,7 @@
         <!--Change Password Table View Controller-->
         <scene sceneID="Ptz-eO-f3I">
             <objects>
-                <tableViewController id="GR3-xe-rAy" customClass="ChangePasswordTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GR3-xe-rAy" customClass="ChangePasswordTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="GMj-aT-j31">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1235,7 +1235,7 @@
         <!--Director Table View Controller-->
         <scene sceneID="yk2-Qq-Pho">
             <objects>
-                <tableViewController id="aD9-OK-aPr" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aD9-OK-aPr" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="10" id="i8r-2K-64K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1355,7 +1355,7 @@
         <!--Add Event-->
         <scene sceneID="JWE-8D-j5N">
             <objects>
-                <tableViewController id="mtu-kE-ktg" customClass="AddEventTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mtu-kE-ktg" customClass="AddEventTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="BG3-HV-VxF">
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1533,7 +1533,7 @@
         <!--More Settings Table View Controller-->
         <scene sceneID="K4z-iC-38M">
             <objects>
-                <tableViewController id="PyX-50-UwN" customClass="MoreSettingsTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="PyX-50-UwN" customClass="MoreSettingsTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="d4i-6Y-Byg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1611,7 +1611,7 @@
         <!--Director Table View Controller-->
         <scene sceneID="Qxm-uE-edy">
             <objects>
-                <tableViewController id="1Y7-nH-o8E" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="1Y7-nH-o8E" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="10" id="31T-eR-env">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1724,7 +1724,7 @@
         <!--Director Table View Controller-->
         <scene sceneID="Mp5-6L-wSW">
             <objects>
-                <tableViewController id="Tl5-95-0Rq" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Tl5-95-0Rq" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="7dY-Zr-Ekr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1814,7 +1814,7 @@
         <!--Director Table View Controller-->
         <scene sceneID="BWb-Go-dWW">
             <objects>
-                <tableViewController id="LDh-pn-aWd" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="LDh-pn-aWd" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="W76-Yu-NgN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1919,7 +1919,7 @@
         <!--Director Table View Controller-->
         <scene sceneID="Pg9-v0-9nZ">
             <objects>
-                <tableViewController id="T1k-62-TSL" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="T1k-62-TSL" userLabel="Director Table View Controller" customClass="DirectorAddEventTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="wab-aZ-5UY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2163,7 +2163,7 @@
         <!--User Setup Table View Controller2-->
         <scene sceneID="JCK-jl-Jj3">
             <objects>
-                <tableViewController id="nVp-yR-5L3" customClass="UserSetupTableViewController2" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="nVp-yR-5L3" customClass="UserSetupTableViewController2" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="s51-ZX-AnZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2379,7 +2379,7 @@
         <!--Container View Controller One-->
         <scene sceneID="dIS-eB-WMT">
             <objects>
-                <viewController id="Af9-ov-d63" customClass="ContainerViewControllerOne" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Af9-ov-d63" customClass="ContainerViewControllerOne" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tlu-xV-ayo"/>
                         <viewControllerLayoutGuide type="bottom" id="qHc-DJ-PR0"/>
@@ -2422,7 +2422,7 @@
         <!--Container View Controller Two-->
         <scene sceneID="Oer-AL-9bi">
             <objects>
-                <viewController id="0UF-Ev-cQv" customClass="ContainerViewControllerTwo" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0UF-Ev-cQv" customClass="ContainerViewControllerTwo" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gAY-os-qvL"/>
                         <viewControllerLayoutGuide type="bottom" id="hwe-tY-NcK"/>
@@ -2465,7 +2465,7 @@
         <!--Container View Controller Three-->
         <scene sceneID="rsL-NX-9wa">
             <objects>
-                <viewController id="hJk-70-uiI" customClass="ContainerViewControllerThree" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hJk-70-uiI" customClass="ContainerViewControllerThree" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H7X-gk-YFg"/>
                         <viewControllerLayoutGuide type="bottom" id="MSn-DG-0B4"/>
@@ -2508,7 +2508,7 @@
         <!--Container View Controller Grade-->
         <scene sceneID="iFS-ja-1Ez">
             <objects>
-                <viewController id="VIq-bE-DcU" customClass="ContainerViewControllerGrade" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VIq-bE-DcU" customClass="ContainerViewControllerGrade" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fij-66-01k"/>
                         <viewControllerLayoutGuide type="bottom" id="bu2-8D-4UF"/>
@@ -2589,7 +2589,7 @@
         <!--Barcode-->
         <scene sceneID="eII-9Q-Obf">
             <objects>
-                <tableViewController id="6Wk-Gt-Woz" customClass="LockerSettingsTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6Wk-Gt-Woz" customClass="LockerSettingsTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="4" id="J1S-9M-2cj">
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2701,7 +2701,7 @@
         <!--Barcode-->
         <scene sceneID="5TK-5B-fLh">
             <objects>
-                <tableViewController id="MIx-1V-cuw" customClass="BarcodeSettingsTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="MIx-1V-cuw" customClass="BarcodeSettingsTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="4" id="oG7-hg-ffb">
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2781,7 +2781,7 @@
         <!--Initial View Controller-->
         <scene sceneID="E6a-EG-Ddi">
             <objects>
-                <viewController storyboardIdentifier="initialVC" title="Initial View Controller" modalTransitionStyle="crossDissolve" id="CFm-wB-d7M" customClass="InitialViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initialVC" title="Initial View Controller" modalTransitionStyle="crossDissolve" id="CFm-wB-d7M" customClass="InitialViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KRu-Kk-qkG"/>
                         <viewControllerLayoutGuide type="bottom" id="DPh-iL-mRC"/>
@@ -2790,42 +2790,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDT-QF-BUw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDT-QF-BUw">
                                 <rect key="frame" x="321" y="480" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Band symbol" translatesAutoresizingMaskIntoConstraints="NO" id="jmL-It-u2Y">
-                                <rect key="frame" x="0.0" y="35" width="414" height="325"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Band symbol" translatesAutoresizingMaskIntoConstraints="NO" id="jmL-It-u2Y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
                                 <color key="backgroundColor" red="0.50348317620000005" green="0.94799357650000005" blue="0.082912229000000004" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yJ-KF-ca7">
-                                <rect key="frame" x="239" y="403" width="143" height="62"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="143" id="0gs-O4-QeV"/>
-                                    <constraint firstAttribute="height" constant="62" id="wU4-js-B2y"/>
+                                    <constraint firstAttribute="height" constant="336" id="9JX-M2-ENz"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Band Member-1"/>
-                                <connections>
-                                    <action selector="BandMemberButtonPressed:" destination="CFm-wB-d7M" eventType="touchUpInside" id="tz5-Na-wCe"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Band member label-2" translatesAutoresizingMaskIntoConstraints="NO" id="Zhi-8f-X8N">
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Band member label-2" translatesAutoresizingMaskIntoConstraints="NO" id="Zhi-8f-X8N">
                                 <rect key="frame" x="219" y="486" width="182" height="114"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="182" id="aGr-OJ-YRj"/>
-                                    <constraint firstAttribute="height" constant="114" id="czu-AM-BeO"/>
+                                    <constraint firstAttribute="height" constant="114" id="CLP-cl-SEb"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Community member label-1" translatesAutoresizingMaskIntoConstraints="NO" id="KsG-rI-Lla">
-                                <rect key="frame" x="9" y="486" width="195" height="114"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="195" id="vGx-O9-ZRs"/>
-                                    <constraint firstAttribute="height" constant="114" id="zQ7-i6-PA5"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mv-yb-hlU">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mv-yb-hlU">
                                 <rect key="frame" x="27" y="403" width="158" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="1Cl-t2-2UD"/>
@@ -2836,23 +2820,42 @@
                                     <action selector="communityButtonPressed:" destination="CFm-wB-d7M" eventType="touchUpInside" id="qHk-eu-Hl9"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Community member label-1" translatesAutoresizingMaskIntoConstraints="NO" id="KsG-rI-Lla">
+                                <rect key="frame" x="9" y="486" width="195" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="X5J-On-1X7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yJ-KF-ca7">
+                                <rect key="frame" x="239" y="403" width="143" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="0gs-O4-QeV"/>
+                                    <constraint firstAttribute="height" constant="62" id="wU4-js-B2y"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Band Member-1"/>
+                                <connections>
+                                    <action selector="BandMemberButtonPressed:" destination="CFm-wB-d7M" eventType="touchUpInside" id="tz5-Na-wCe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KsG-rI-Lla" firstAttribute="top" secondItem="1mv-yb-hlU" secondAttribute="bottom" constant="21" id="323-FM-dKz"/>
-                            <constraint firstItem="DPh-iL-mRC" firstAttribute="top" secondItem="KsG-rI-Lla" secondAttribute="bottom" constant="136" id="3rI-2Z-3VB"/>
-                            <constraint firstItem="1mv-yb-hlU" firstAttribute="top" secondItem="jmL-It-u2Y" secondAttribute="bottom" constant="43" id="7oq-Gc-k6M"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CDT-QF-BUw" secondAttribute="trailing" constant="73" id="8mI-i6-bt9"/>
-                            <constraint firstItem="jmL-It-u2Y" firstAttribute="leading" secondItem="yRh-6W-l7P" secondAttribute="leading" id="8od-NR-umE"/>
-                            <constraint firstAttribute="bottom" secondItem="CDT-QF-BUw" secondAttribute="bottom" constant="256" id="FHL-lE-YmD"/>
-                            <constraint firstAttribute="trailing" secondItem="jmL-It-u2Y" secondAttribute="trailing" id="SKR-ll-rhP"/>
-                            <constraint firstItem="Zhi-8f-X8N" firstAttribute="top" secondItem="8yJ-KF-ca7" secondAttribute="bottom" constant="21" id="Whl-Z5-mGj"/>
-                            <constraint firstItem="8yJ-KF-ca7" firstAttribute="leading" secondItem="jmL-It-u2Y" secondAttribute="trailing" constant="-175" id="fOn-zC-spr"/>
-                            <constraint firstItem="jmL-It-u2Y" firstAttribute="top" secondItem="KRu-Kk-qkG" secondAttribute="bottom" constant="15" id="hCH-Af-MOB"/>
-                            <constraint firstItem="8yJ-KF-ca7" firstAttribute="top" secondItem="jmL-It-u2Y" secondAttribute="bottom" constant="43" id="kUD-ke-U5Y"/>
-                            <constraint firstItem="jmL-It-u2Y" firstAttribute="leading" secondItem="1mv-yb-hlU" secondAttribute="trailing" constant="-185" id="mUi-zG-bq8"/>
-                            <constraint firstItem="KsG-rI-Lla" firstAttribute="leading" secondItem="yRh-6W-l7P" secondAttribute="leadingMargin" constant="-11" id="yZc-b5-nrM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zhi-8f-X8N" secondAttribute="trailing" constant="-7" id="yiN-nD-hC9"/>
+                            <constraint firstItem="KsG-rI-Lla" firstAttribute="top" secondItem="1mv-yb-hlU" secondAttribute="bottom" constant="21" id="083-2e-Bgo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jmL-It-u2Y" secondAttribute="trailing" id="0Zn-sT-ICQ"/>
+                            <constraint firstItem="1mv-yb-hlU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yRh-6W-l7P" secondAttribute="leadingMargin" constant="-10" id="1vz-Cp-cQE"/>
+                            <constraint firstItem="8yJ-KF-ca7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1mv-yb-hlU" secondAttribute="trailing" constant="10" id="54h-Dk-Ghj"/>
+                            <constraint firstItem="Zhi-8f-X8N" firstAttribute="centerX" secondItem="8yJ-KF-ca7" secondAttribute="centerX" id="CXc-Ug-AqR"/>
+                            <constraint firstItem="1mv-yb-hlU" firstAttribute="top" secondItem="jmL-It-u2Y" secondAttribute="bottom" constant="10" id="DHo-K3-hyu"/>
+                            <constraint firstItem="KsG-rI-Lla" firstAttribute="centerX" secondItem="1mv-yb-hlU" secondAttribute="centerX" id="PQy-1r-SdI"/>
+                            <constraint firstItem="Zhi-8f-X8N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KsG-rI-Lla" secondAttribute="trailing" constant="5" id="ZgO-bG-ZT5"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="8yJ-KF-ca7" secondAttribute="trailing" constant="-10" id="bGs-D7-ldy"/>
+                            <constraint firstItem="KsG-rI-Lla" firstAttribute="width" secondItem="Zhi-8f-X8N" secondAttribute="width" id="dMq-8J-3Wy"/>
+                            <constraint firstItem="Zhi-8f-X8N" firstAttribute="top" secondItem="8yJ-KF-ca7" secondAttribute="bottom" constant="21" id="dVc-Ta-vSc"/>
+                            <constraint firstItem="8yJ-KF-ca7" firstAttribute="top" secondItem="jmL-It-u2Y" secondAttribute="bottom" constant="10" id="md9-KL-GS0"/>
+                            <constraint firstItem="jmL-It-u2Y" firstAttribute="top" secondItem="KRu-Kk-qkG" secondAttribute="bottom" id="vLA-MA-KX2"/>
+                            <constraint firstItem="jmL-It-u2Y" firstAttribute="leading" secondItem="yRh-6W-l7P" secondAttribute="leadingMargin" id="xdf-jS-A3r"/>
+                            <constraint firstItem="KsG-rI-Lla" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yRh-6W-l7P" secondAttribute="leadingMargin" constant="-11" id="yZc-b5-nrM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zhi-8f-X8N" secondAttribute="trailing" constant="-15" id="yiN-nD-hC9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" image="Home icon" id="TGW-uX-Zep" userLabel="Main"/>
@@ -2886,7 +2889,7 @@
         <!--Detail-->
         <scene sceneID="nTU-rO-Xcj">
             <objects>
-                <viewController title="Detail" id="jwf-i1-O3O" customClass="DetailViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="jwf-i1-O3O" customClass="DetailViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RpO-cH-oPY"/>
                         <viewControllerLayoutGuide type="bottom" id="FTe-OW-r2f"/>
@@ -2991,7 +2994,7 @@
         <!--Upcoming Events-->
         <scene sceneID="LVJ-a7-ot9">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="69w-xa-vuZ" customClass="EventTableViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="69w-xa-vuZ" customClass="EventTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D9d-6l-ubd"/>
                         <viewControllerLayoutGuide type="bottom" id="gFI-xn-ppc"/>
@@ -3004,7 +3007,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="UGF-nl-Vw5" customClass="eventCell" customModule="ParseBandApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="UGF-nl-Vw5" customClass="eventCell" customModule="MI_Band" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UGF-nl-Vw5" id="ycp-ph-5bs">

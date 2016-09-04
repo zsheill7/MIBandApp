@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1305FB91FAD268C967CB4ED4 /* Pods_ParseBandApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA4F162F5FA0350DB6727B1 /* Pods_ParseBandApp.framework */; };
+		45B2E2FB72BD3BB67B198CBA /* Pods_MI_Band.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04279C43CB5B0BF5E8132644 /* Pods_MI_Band.framework */; };
 		81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814A1A49DA1800E65899 /* AppDelegate.swift */; };
 		81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814C1A49DA1800E65899 /* ViewController.swift */; };
 		81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA816B1A49DB6800E65899 /* Bolts.framework */; };
@@ -68,20 +68,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04279C43CB5B0BF5E8132644 /* Pods_MI_Band.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MI_Band.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D9D75FEBC7C0503220AD82A /* Pods-ParseBandApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseBandApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseBandApp/Pods-ParseBandApp.debug.xcconfig"; sourceTree = "<group>"; };
+		319ECE6CFE2706F8185B5774 /* Pods-MI Band.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MI Band.release.xcconfig"; path = "Pods/Target Support Files/Pods-MI Band/Pods-MI Band.release.xcconfig"; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81BA81451A49DA1800E65899 /* ParseBandApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseBandApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BA81451A49DA1800E65899 /* MI Band.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MI Band.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BA814A1A49DA1800E65899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81BA814C1A49DA1800E65899 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81BA816B1A49DB6800E65899 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		81BA816C1A49DB6800E65899 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		81BA816E1A49DB6800E65899 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		81BA81761A49E0D500E65899 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		81BA81781A49E0DB00E65899 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
-		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		9AA4F162F5FA0350DB6727B1 /* Pods_ParseBandApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseBandApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9337BFC7C0494EA845E60FE /* Pods-ParseBandApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseBandApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseBandApp/Pods-ParseBandApp.release.xcconfig"; sourceTree = "<group>"; };
 		C802EE3C1D3D630800110415 /* SettingsInstrumentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInstrumentsTableViewController.swift; sourceTree = "<group>"; };
 		C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +132,7 @@
 		C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreSettingsTableViewController.swift; sourceTree = "<group>"; };
 		C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewController.swift; sourceTree = "<group>"; };
 		C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F786A27A774C5C23D5EA3188 /* Pods-MI Band.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MI Band.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MI Band/Pods-MI Band.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,7 @@
 				81BA81711A49DB6800E65899 /* Parse.framework in Frameworks */,
 				81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */,
 				C82B3B401D5F0D540037FDC2 /* TwitterKit.framework in Frameworks */,
-				1305FB91FAD268C967CB4ED4 /* Pods_ParseBandApp.framework in Frameworks */,
+				45B2E2FB72BD3BB67B198CBA /* Pods_MI_Band.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +162,8 @@
 			children = (
 				0D9D75FEBC7C0503220AD82A /* Pods-ParseBandApp.debug.xcconfig */,
 				A9337BFC7C0494EA845E60FE /* Pods-ParseBandApp.release.xcconfig */,
+				F786A27A774C5C23D5EA3188 /* Pods-MI Band.debug.xcconfig */,
+				319ECE6CFE2706F8185B5774 /* Pods-MI Band.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -188,7 +190,7 @@
 		81BA81461A49DA1800E65899 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81BA81451A49DA1800E65899 /* ParseBandApp.app */,
+				81BA81451A49DA1800E65899 /* MI Band.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,10 +231,8 @@
 				C8AD15691D41A2DB0067AE2F /* Crashlytics.framework */,
 				81BA816B1A49DB6800E65899 /* Bolts.framework */,
 				81BA816C1A49DB6800E65899 /* Parse.framework */,
-				81BA816E1A49DB6800E65899 /* ParseFacebookUtils.framework */,
-				81BA81801A49E10C00E65899 /* ParseUI.framework */,
 				81BA81751A49E0C500E65899 /* System Frameworks */,
-				9AA4F162F5FA0350DB6727B1 /* Pods_ParseBandApp.framework */,
+				04279C43CB5B0BF5E8132644 /* Pods_MI_Band.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -321,9 +321,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81BA81441A49DA1800E65899 /* ParseBandApp */ = {
+		81BA81441A49DA1800E65899 /* MI Band */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "ParseBandApp" */;
+			buildConfigurationList = 81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "MI Band" */;
 			buildPhases = (
 				EEB16F962EA83A395E2B5E83 /* [CP] Check Pods Manifest.lock */,
 				81BA81411A49DA1800E65899 /* Sources */,
@@ -337,9 +337,9 @@
 			);
 			dependencies = (
 			);
-			name = ParseBandApp;
+			name = "MI Band";
 			productName = ParseStarterProject;
-			productReference = 81BA81451A49DA1800E65899 /* ParseBandApp.app */;
+			productReference = 81BA81451A49DA1800E65899 /* MI Band.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -358,7 +358,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "ParseBandApp" */;
+			buildConfigurationList = 81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "MI Band" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -371,7 +371,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81BA81441A49DA1800E65899 /* ParseBandApp */,
+				81BA81441A49DA1800E65899 /* MI Band */,
 			);
 		};
 /* End PBXProject section */
@@ -403,7 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParseBandApp/Pods-ParseBandApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MI Band/Pods-MI Band-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8AD15631D41851A0067AE2F /* ShellScript */ = {
@@ -431,7 +431,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParseBandApp/Pods-ParseBandApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MI Band/Pods-MI Band-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEB16F962EA83A395E2B5E83 /* [CP] Check Pods Manifest.lock */ = {
@@ -587,7 +587,7 @@
 		};
 		81BA81651A49DA1800E65899 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D9D75FEBC7C0503220AD82A /* Pods-ParseBandApp.debug.xcconfig */;
+			baseConfigurationReference = F786A27A774C5C23D5EA3188 /* Pods-MI Band.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -604,7 +604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parseband.app;
-				PRODUCT_NAME = ParseBandApp;
+				PRODUCT_NAME = "MI Band";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseBandApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -613,7 +613,7 @@
 		};
 		81BA81661A49DA1800E65899 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9337BFC7C0494EA845E60FE /* Pods-ParseBandApp.release.xcconfig */;
+			baseConfigurationReference = 319ECE6CFE2706F8185B5774 /* Pods-MI Band.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -630,7 +630,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parseband.app;
-				PRODUCT_NAME = ParseBandApp;
+				PRODUCT_NAME = "MI Band";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseBandApp-Bridging-Header.h";
 			};
@@ -639,7 +639,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "ParseBandApp" */ = {
+		81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "MI Band" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81BA81621A49DA1800E65899 /* Debug */,
@@ -648,7 +648,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "ParseBandApp" */ = {
+		81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "MI Band" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81BA81651A49DA1800E65899 /* Debug */,

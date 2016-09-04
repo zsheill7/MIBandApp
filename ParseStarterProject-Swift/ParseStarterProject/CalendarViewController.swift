@@ -78,7 +78,7 @@ class CalendarViewController: UIViewController {
         calendarWebView.scrollView.scrollEnabled = false
         calendarWebView.scrollView.bounces = false
         
-        pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 15, width: 200, height: 160)
+        pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 70, width: 200, height: 160)
         
         createPicker()
     }

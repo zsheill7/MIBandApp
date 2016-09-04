@@ -14,7 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ParseBandApp.xcscheme</key>
+		<key>Pods-MI Band.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,7 +22,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>012C93B936D55E7A8C86650A23F7B786</key>
+		<key>076431AD215DFA31E91D341D51E95F10</key>
 		<dict>
 			<key>primary</key>
 			<true/>

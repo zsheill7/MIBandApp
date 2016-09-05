@@ -169,6 +169,13 @@ class SettingsTableViewController: UITableViewController {
     }
 
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 2 && indexPath.row == 1 {
+            return 0.0
+        }
+        return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+    }
 
     /*override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! UITableViewHeaderFooterView

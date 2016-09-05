@@ -766,9 +766,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYe-UL-asn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This app was programmed by Zoe Sheill, MIHS junior.  Email: zsheill7@gmail.com  All photos taken by David Cummings" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYe-UL-asn">
                                 <rect key="frame" x="40" y="198" width="335" height="176"/>
-                                <string key="text">This app was programmed by Zoe Sheill, MIHS sophomore and member of the saxophone and flute section.  Email: zsheill7@gmail.com  All photos taken by David Cummings</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -984,6 +983,9 @@
                                                 <constraint firstItem="fsp-rs-IHX" firstAttribute="leading" secondItem="81K-Nz-CpQ" secondAttribute="leadingMargin" constant="7" id="yRU-f6-QVw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="GR3-xe-rAy" kind="show" id="s8j-oM-O8x"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="tf0-wu-RgF">
                                         <rect key="frame" x="0.0" y="413.5" width="375" height="44"/>
@@ -1238,7 +1240,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KiA-qF-bBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="2164"/>
+            <point key="canvasLocation" x="529" y="2104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XL2-q4-sKk">
@@ -2617,7 +2619,7 @@
             <objects>
                 <tableViewController id="6Wk-Gt-Woz" customClass="LockerSettingsTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="4" id="J1S-9M-2cj">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -3184,7 +3186,7 @@
         <segue reference="USK-is-yw8"/>
         <segue reference="agL-Cc-jKq"/>
         <segue reference="wTi-hA-FDf"/>
-        <segue reference="xge-Wa-iBo"/>
+        <segue reference="8Ho-tU-PJy"/>
         <segue reference="hLB-je-k5o"/>
     </inferredMetricsTieBreakers>
 </document>

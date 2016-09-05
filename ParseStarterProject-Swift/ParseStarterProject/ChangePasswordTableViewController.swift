@@ -52,7 +52,9 @@ class ChangePasswordTableViewController: UITableViewController {
             self.displayAlert("Not Long Enough", message: "Please enter a password that is 5 or more characters")
         } else if newPasswordField.text != confirmPasswordField.text {
             self.displayAlert("Passwords Do Not Match", message: "Please re-enter passwords")
-        } else {
+        } else if user!.password == oldPasswordField.text {
+            self.displayAlert("Old Password is Incorrect", message: "Please re-enter passwords")
+        }else {
             
             activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
             activityIndicator.center = self.view.center
@@ -65,6 +67,9 @@ class ChangePasswordTableViewController: UITableViewController {
             user!.password = newPasswordField.text!
             
             user!.saveInBackground()
+            
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            activityIndicator.stopAnimating()
             
             if #available(iOS 8.0, *) {
                 let alert = UIAlertController(title: "Success!", message: "Your password has been changed", preferredStyle: UIAlertControllerStyle.Alert)

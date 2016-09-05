@@ -274,7 +274,15 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     @IBOutlet weak var barcodeButton: UIButton!
 
  
-    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 1 && indexPath.section == 0{
+            return 0.0
+        }
+        if indexPath.row == 2 && indexPath.section == 1 {
+            return 0.0
+        }
+        return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+    }
 
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {

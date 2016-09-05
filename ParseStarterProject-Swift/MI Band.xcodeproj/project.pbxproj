@@ -64,6 +64,7 @@
 		C8AF37051D516CCA00B80DB9 /* ContainerViewControllerGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF37041D516CCA00B80DB9 /* ContainerViewControllerGrade.swift */; };
 		C8B96B0D1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */; };
 		C8C266D51D3DAB6C00574541 /* ChangePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */; };
+		C8E9EB0A1D7D294B0004B570 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */; };
 		C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		C8AF37041D516CCA00B80DB9 /* ContainerViewControllerGrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerGrade.swift; sourceTree = "<group>"; };
 		C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreSettingsTableViewController.swift; sourceTree = "<group>"; };
 		C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewController.swift; sourceTree = "<group>"; };
+		C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F786A27A774C5C23D5EA3188 /* Pods-MI Band.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MI Band.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MI Band/Pods-MI Band.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,14 +175,14 @@
 			children = (
 				814C3AC91B69877600E307BB /* Info.plist */,
 			);
-			path = Resources;
+			name = Resources;
+			path = ../Resources;
 			sourceTree = "<group>";
 		};
 		81BA813C1A49DA1800E65899 = {
 			isa = PBXGroup;
 			children = (
 				81BA81471A49DA1800E65899 /* ParseStarterProject */,
-				814C3AC51B69877600E307BB /* Resources */,
 				81BA816A1A49DB5600E65899 /* Frameworks */,
 				81BA81461A49DA1800E65899 /* Products */,
 				6025BED2FC972A76429C9FC9 /* Pods */,
@@ -256,6 +258,7 @@
 				C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */,
 				C82B3AFF1D5E51070037FDC2 /* BarcodeSettingsTableViewController.swift */,
 				C82B3B011D5E51170037FDC2 /* LockerSettingsTableViewController.swift */,
+				814C3AC51B69877600E307BB /* Resources */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				C82B3B0A1D5EA0EF0037FDC2 /* DonateViewController.swift */,
+				C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */,
 				C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */,
 				C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */,
 				C82B3B0D1D5EA0EF0037FDC2 /* TwitterViewController.swift */,
@@ -475,6 +479,7 @@
 				C85079A11D306F82000BA862 /* CalendarViewController.swift in Sources */,
 				C82B3B2C1D5EA1260037FDC2 /* PhotosCollectionViewController.swift in Sources */,
 				C829AA271D31DA1D0073DF94 /* UserSetupViewController.swift in Sources */,
+				C8E9EB0A1D7D294B0004B570 /* InfoTableViewController.swift in Sources */,
 				C82B3B2B1D5EA1260037FDC2 /* PhotoInfoViewController.swift in Sources */,
 				C82B3B281D5EA1260037FDC2 /* Photo.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,

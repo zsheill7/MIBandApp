@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Js5-gW-bCp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dna-TZ-imJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -25,12 +25,12 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tn-2Cs">
-                                <rect key="frame" x="36" y="382" width="346" height="193"/>
+                                <rect key="frame" x="36" y="382" width="346" height="169"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="6D5-3h-whD"/>
+                                    <constraint firstAttribute="height" constant="169" id="Vux-bc-3gN"/>
                                 </constraints>
                                 <string key="text">The Mercer Island High School band program is one of the largest in the state, with over 280 band members.  The Marching Band performs at all MIHS home football games during the year. In addition, the MIHS Marching Band has performed at The Tournament of Roses, the London New Years Parade and on numerous other national and international stages.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -548,6 +548,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viJ-Fc-dSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3657" y="-74"/>
+        </scene>
+        <!--Info Table View Controller-->
+        <scene sceneID="pXK-Ag-qIc">
+            <objects>
+                <tableViewController id="dna-TZ-imJ" customClass="InfoTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xoQ-0e-dOB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="YfY-H9-gMM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="293" id="2eb-fK-e1c">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="293"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2eb-fK-e1c" id="gd5-a3-8nI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="292.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIHS Band" translatesAutoresizingMaskIntoConstraints="NO" id="Rx2-zY-9Hn">
+                                                    <rect key="frame" x="8" y="8" width="398" height="276.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rx2-zY-9Hn" firstAttribute="leading" secondItem="gd5-a3-8nI" secondAttribute="leadingMargin" id="UhA-pN-Nvn"/>
+                                                <constraint firstItem="Rx2-zY-9Hn" firstAttribute="bottom" secondItem="gd5-a3-8nI" secondAttribute="bottomMargin" id="YdD-6q-zUw"/>
+                                                <constraint firstItem="Rx2-zY-9Hn" firstAttribute="top" secondItem="gd5-a3-8nI" secondAttribute="topMargin" id="fff-cn-e1h"/>
+                                                <constraint firstItem="Rx2-zY-9Hn" firstAttribute="trailing" secondItem="gd5-a3-8nI" secondAttribute="trailingMargin" id="qJl-8Z-dvq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="189" id="EmP-Rn-uhq">
+                                        <rect key="frame" x="0.0" y="293" width="414" height="189"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EmP-Rn-uhq" id="aac-KZ-Lv2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="188.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v82-XL-BKy">
+                                                    <rect key="frame" x="20" y="8" width="374" height="169"/>
+                                                    <string key="text">The Mercer Island High School band program is one of the largest in the state, with over 280 band members.  The Marching Band performs at all MIHS home football games during the year. In addition, the MIHS Marching Band has performed at The Tournament of Roses, the London New Years Parade and on numerous other national and international stages.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="v82-XL-BKy" secondAttribute="bottom" constant="3.5" id="319-h5-kbz"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="v82-XL-BKy" secondAttribute="trailing" constant="12" id="9tz-wR-Be5"/>
+                                                <constraint firstItem="v82-XL-BKy" firstAttribute="leading" secondItem="aac-KZ-Lv2" secondAttribute="leadingMargin" constant="12" id="O3I-EL-3aq"/>
+                                                <constraint firstItem="v82-XL-BKy" firstAttribute="top" secondItem="aac-KZ-Lv2" secondAttribute="topMargin" id="lXM-uu-OAf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="dna-TZ-imJ" id="Q5P-5w-0Uu"/>
+                            <outlet property="delegate" destination="dna-TZ-imJ" id="8tW-YA-gMk"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwB-1F-bXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3477" y="370"/>
         </scene>
         <!--Photos-->
         <scene sceneID="mfW-gq-v08">

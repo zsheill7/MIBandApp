@@ -81,6 +81,16 @@ class CalendarViewController: UIViewController {
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 70, width: 200, height: 160)
         
         createPicker()
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BarcodeTableViewController.handleTap(_:)))
+        self.view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    
+    
+    
+    
+    func handleTap(gestureRecognizer: UIGestureRecognizer) {
+        closePicker()
     }
     
     override func didReceiveMemoryWarning() {

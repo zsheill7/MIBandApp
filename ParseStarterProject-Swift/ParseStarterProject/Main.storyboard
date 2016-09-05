@@ -162,18 +162,23 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="eyI-k8-Acj" firstAttribute="top" secondItem="Gkb-TR-ifF" secondAttribute="bottom" constant="18" id="23r-DH-SMH"/>
                                     <constraint firstItem="b4T-i5-Nnz" firstAttribute="leading" secondItem="Exl-88-If3" secondAttribute="leading" id="2mr-e6-0ul"/>
                                     <constraint firstItem="Exl-88-If3" firstAttribute="leading" secondItem="lPf-7A-QEw" secondAttribute="trailing" constant="-325" id="6SQ-7I-k3z"/>
+                                    <constraint firstItem="lPf-7A-QEw" firstAttribute="top" secondItem="rXQ-RR-00Q" secondAttribute="bottom" constant="-106" id="8Qk-GY-zCD"/>
                                     <constraint firstItem="8qT-rk-MX3" firstAttribute="leading" secondItem="6KY-9e-WRI" secondAttribute="leading" constant="-7" id="BL7-dw-sV1"/>
                                     <constraint firstItem="iv1-Ln-Lxs" firstAttribute="leading" secondItem="b4T-i5-Nnz" secondAttribute="trailing" constant="8" id="G5a-4C-ARN"/>
                                     <constraint firstItem="m6W-8Y-Giw" firstAttribute="width" secondItem="lPf-7A-QEw" secondAttribute="height" multiplier="250:241" id="I0M-OR-M5Z"/>
                                     <constraint firstItem="Gkb-TR-ifF" firstAttribute="width" secondItem="lPf-7A-QEw" secondAttribute="height" multiplier="250:241" id="J5U-9d-Q4B"/>
                                     <constraint firstAttribute="trailing" secondItem="8qT-rk-MX3" secondAttribute="trailing" constant="-312" id="JCN-3t-LGs"/>
+                                    <constraint firstItem="iv1-Ln-Lxs" firstAttribute="centerY" secondItem="Exl-88-If3" secondAttribute="centerY" id="P16-xb-qep"/>
                                     <constraint firstItem="m6W-8Y-Giw" firstAttribute="leading" secondItem="lPf-7A-QEw" secondAttribute="trailing" constant="-283" id="T8q-ZZ-5Qp"/>
                                     <constraint firstItem="Gkb-TR-ifF" firstAttribute="leading" secondItem="lPf-7A-QEw" secondAttribute="trailing" constant="-283" id="Wlw-KQ-Zbx"/>
                                     <constraint firstItem="Exl-88-If3" firstAttribute="top" secondItem="lPf-7A-QEw" secondAttribute="bottom" constant="2" id="XSQ-oi-LNA"/>
                                     <constraint firstItem="m6W-8Y-Giw" firstAttribute="leading" secondItem="rXQ-RR-00Q" secondAttribute="trailing" constant="10" id="YTN-x9-bNC"/>
+                                    <constraint firstItem="lPf-7A-QEw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6KY-9e-WRI" secondAttribute="top" constant="44" id="e5w-w7-1Z9"/>
                                     <constraint firstAttribute="bottom" secondItem="8qT-rk-MX3" secondAttribute="bottom" id="goZ-jp-gl2"/>
+                                    <constraint firstItem="8in-Vj-suG" firstAttribute="top" secondItem="lPf-7A-QEw" secondAttribute="bottom" constant="-105" id="iZh-29-ybs"/>
                                     <constraint firstItem="Gkb-TR-ifF" firstAttribute="leading" secondItem="8in-Vj-suG" secondAttribute="trailing" constant="8" id="mfv-Ch-Cid"/>
                                     <constraint firstItem="lPf-7A-QEw" firstAttribute="top" secondItem="m6W-8Y-Giw" secondAttribute="bottom" constant="-106" id="q1x-a5-qMc"/>
                                     <constraint firstItem="Exl-88-If3" firstAttribute="leading" secondItem="b4T-i5-Nnz" secondAttribute="trailing" constant="-168" id="rX4-WJ-sIF"/>
@@ -183,6 +188,13 @@
                                     <constraint firstItem="Exl-88-If3" firstAttribute="top" secondItem="iv1-Ln-Lxs" secondAttribute="bottom" constant="-43" id="w3j-0J-pa2"/>
                                     <constraint firstItem="8qT-rk-MX3" firstAttribute="top" secondItem="6KY-9e-WRI" secondAttribute="top" constant="-84" id="wII-IX-yG0"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6SQ-7I-k3z"/>
+                                        <exclude reference="w3j-0J-pa2"/>
+                                        <exclude reference="2mr-e6-0ul"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

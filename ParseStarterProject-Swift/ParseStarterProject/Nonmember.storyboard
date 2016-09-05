@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dna-TZ-imJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="go8-f5-ddw">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVO-8M-FHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4935" y="942"/>
+            <point key="canvasLocation" x="5747" y="942"/>
         </scene>
         <!--Twitter-->
         <scene sceneID="esK-km-XKp">
@@ -315,7 +315,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBJ-SC-XKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="FFY-FA-Y5F"/>
             </objects>
-            <point key="canvasLocation" x="7738" y="370"/>
+            <point key="canvasLocation" x="8550" y="370"/>
         </scene>
         <!--nonmemberTBC-->
         <scene sceneID="m9q-6n-6QV">
@@ -327,7 +327,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="K8J-0W-Kz6" kind="relationship" relationship="viewControllers" id="B8R-by-aIo"/>
+                        <segue destination="go8-f5-ddw" kind="relationship" relationship="viewControllers" id="2Sj-eM-0Rw"/>
                         <segue destination="q0U-XE-0K7" kind="relationship" relationship="viewControllers" id="Tvy-Qj-Fr0"/>
                         <segue destination="jDK-Ad-tgt" kind="relationship" relationship="viewControllers" id="QFK-0x-kxz"/>
                         <segue destination="oKT-K6-w4c" kind="relationship" relationship="viewControllers" id="teZ-b7-VvP"/>
@@ -547,9 +547,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viJ-Fc-dSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3657" y="-74"/>
+            <point key="canvasLocation" x="4469" y="-74"/>
         </scene>
-        <!--Info Table View Controller-->
+        <!--Welcome-->
         <scene sceneID="pXK-Ag-qIc">
             <objects>
                 <tableViewController id="dna-TZ-imJ" customClass="InfoTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
@@ -557,17 +557,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="YfY-H9-gMM">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="293" id="2eb-fK-e1c">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="293"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="287" id="2eb-fK-e1c">
+                                        <rect key="frame" x="0.0" y="64" width="414" height="287"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2eb-fK-e1c" id="gd5-a3-8nI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="292.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="286.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIHS Band" translatesAutoresizingMaskIntoConstraints="NO" id="Rx2-zY-9Hn">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MIHS Band" translatesAutoresizingMaskIntoConstraints="NO" id="Rx2-zY-9Hn">
                                                     <rect key="frame" x="8" y="8" width="398" height="276.5"/>
                                                 </imageView>
                                             </subviews>
@@ -579,15 +580,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="189" id="EmP-Rn-uhq">
-                                        <rect key="frame" x="0.0" y="293" width="414" height="189"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="254" id="EmP-Rn-uhq">
+                                        <rect key="frame" x="0.0" y="351" width="414" height="254"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EmP-Rn-uhq" id="aac-KZ-Lv2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="188.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="253.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v82-XL-BKy">
-                                                    <rect key="frame" x="20" y="8" width="374" height="169"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v82-XL-BKy">
+                                                    <rect key="frame" x="8" y="8" width="398" height="148"/>
                                                     <string key="text">The Mercer Island High School band program is one of the largest in the state, with over 280 band members.  The Marching Band performs at all MIHS home football games during the year. In addition, the MIHS Marching Band has performed at The Tournament of Roses, the London New Years Parade and on numerous other national and international stages.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -596,9 +597,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="v82-XL-BKy" secondAttribute="bottom" constant="3.5" id="319-h5-kbz"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="v82-XL-BKy" secondAttribute="trailing" constant="12" id="9tz-wR-Be5"/>
-                                                <constraint firstItem="v82-XL-BKy" firstAttribute="leading" secondItem="aac-KZ-Lv2" secondAttribute="leadingMargin" constant="12" id="O3I-EL-3aq"/>
+                                                <constraint firstItem="v82-XL-BKy" firstAttribute="trailing" secondItem="aac-KZ-Lv2" secondAttribute="trailingMargin" id="XBV-Bw-KxL"/>
                                                 <constraint firstItem="v82-XL-BKy" firstAttribute="top" secondItem="aac-KZ-Lv2" secondAttribute="topMargin" id="lXM-uu-OAf"/>
+                                                <constraint firstItem="v82-XL-BKy" firstAttribute="leading" secondItem="aac-KZ-Lv2" secondAttribute="leadingMargin" id="qcn-qy-IVq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -610,11 +611,18 @@
                             <outlet property="delegate" destination="dna-TZ-imJ" id="8tW-YA-gMk"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Welcome" id="C47-D0-9p1">
+                        <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="gcC-jK-twy">
+                            <connections>
+                                <action selector="pickerSelect:" destination="dna-TZ-imJ" id="Qwr-SK-WCf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwB-1F-bXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3477" y="370"/>
+            <point key="canvasLocation" x="4289" y="370"/>
         </scene>
         <!--Photos-->
         <scene sceneID="mfW-gq-v08">
@@ -665,7 +673,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2x-c2-glc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4008" y="972"/>
+            <point key="canvasLocation" x="4820" y="972"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="HdP-Pk-cC1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="go8-f5-ddw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="Info icon" id="p62-U5-f7M"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bkP-Vb-GvI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dna-TZ-imJ" kind="relationship" relationship="rootViewController" id="0Fb-IF-XDe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Tp-dG-w1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3477" y="370"/>
         </scene>
     </scenes>
     <resources>

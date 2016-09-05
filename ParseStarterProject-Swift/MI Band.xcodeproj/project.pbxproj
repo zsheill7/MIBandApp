@@ -31,7 +31,6 @@
 		C82B3B0E1D5EA0EF0037FDC2 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0A1D5EA0EF0037FDC2 /* DonateViewController.swift */; };
 		C82B3B0F1D5EA0EF0037FDC2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */; };
 		C82B3B101D5EA0EF0037FDC2 /* SearchTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */; };
-		C82B3B111D5EA0EF0037FDC2 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0D1D5EA0EF0037FDC2 /* TwitterViewController.swift */; };
 		C82B3B241D5EA1260037FDC2 /* UpcomingEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B141D5EA1260037FDC2 /* UpcomingEventsViewController.swift */; };
 		C82B3B251D5EA1260037FDC2 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B151D5EA1260037FDC2 /* FlickrAPI.swift */; };
 		C82B3B261D5EA1260037FDC2 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B161D5EA1260037FDC2 /* PhotoStore.swift */; };
@@ -99,7 +98,6 @@
 		C82B3B0A1D5EA0EF0037FDC2 /* DonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTimelineViewController.swift; sourceTree = "<group>"; };
-		C82B3B0D1D5EA0EF0037FDC2 /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		C82B3B141D5EA1260037FDC2 /* UpcomingEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpcomingEventsViewController.swift; path = "../../../NonmemberBandApp/Nonmember Band App/UpcomingEventsViewController.swift"; sourceTree = "<group>"; };
 		C82B3B151D5EA1260037FDC2 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		C82B3B161D5EA1260037FDC2 /* PhotoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 				C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */,
 				C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */,
 				C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */,
-				C82B3B0D1D5EA0EF0037FDC2 /* TwitterViewController.swift */,
 				C82B3B141D5EA1260037FDC2 /* UpcomingEventsViewController.swift */,
 				C82B3B1D1D5EA1260037FDC2 /* Flickr API */,
 				C82B3B231D5EA1260037FDC2 /* Unused Files */,
@@ -469,7 +466,6 @@
 				C829AA371D35CA410073DF94 /* eventCell.swift in Sources */,
 				C8B96B0D1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift in Sources */,
 				C8AF37051D516CCA00B80DB9 /* ContainerViewControllerGrade.swift in Sources */,
-				C82B3B111D5EA0EF0037FDC2 /* TwitterViewController.swift in Sources */,
 				C82B3B261D5EA1260037FDC2 /* PhotoStore.swift in Sources */,
 				C8AF37031D516CBE00B80DB9 /* ContainerViewControllerBandType.swift in Sources */,
 				C82B3B101D5EA0EF0037FDC2 /* SearchTimelineViewController.swift in Sources */,

@@ -39,14 +39,24 @@ class SearchTimelineViewController: TWTRTimelineViewController {
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 15, width: 200, height: 160)
         
         createPicker()
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTap:")
+        self.view.addGestureRecognizer(gestureRecognizer)
     }
     
     
     
-    
-    
-    
-    
+
+
+    func handleTap(gestureRecognizer: UIGestureRecognizer) {
+        closePicker()
+    }
+
+
+
+
+
+
+
     @IBAction func pickerSelect(sender: UIBarButtonItem) {
         picker.hidden ? openPicker() : closePicker()
     }

@@ -97,6 +97,11 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             }
        
             setLockerInfo()
+            
+            if let hiddenRow = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1)) {
+                print("hidden")
+                hiddenRow.hidden = true
+            }
         }
         
         createPicker()

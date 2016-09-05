@@ -32,6 +32,9 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarWebView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
+        
         let isSubscribed = user!.objectForKey("isSubscribed") as? Bool
       
         if isSubscribed == nil || isSubscribed == false {

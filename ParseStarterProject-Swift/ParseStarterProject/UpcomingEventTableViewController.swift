@@ -12,6 +12,17 @@ import Parse
 var eventList = [eventItem]()
 
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+}
 class EventTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var nagivationItem: UINavigationItem!
@@ -63,7 +74,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         /*if NSUserDefaults.standardUserDefaults().objectForKey("eventList") != nil {
             eventList = NSUserDefaults.standardUserDefaults().objectForKey("eventList") as! [eventItem]
         }*/
-        print("here")
+        self.hideKeyboardWhenTappedAround()
         navigationItem.hidesBackButton = true
         
         

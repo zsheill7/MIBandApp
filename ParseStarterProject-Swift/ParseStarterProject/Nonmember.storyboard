@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Info View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Info View Controller" id="BYZ-38-t0r" customClass="InfoViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Info View Controller" id="BYZ-38-t0r" customClass="InfoViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,15 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIHS Band" translatesAutoresizingMaskIntoConstraints="NO" id="CrJ-sO-mZq">
-                                <rect key="frame" x="32" y="82" width="350" height="284"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tn-2Cs">
-                                <rect key="frame" x="36" y="382" width="342" height="251"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MIHS Band" translatesAutoresizingMaskIntoConstraints="NO" id="CrJ-sO-mZq">
+                                <rect key="frame" x="32" y="82" width="350" height="280"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="251" id="8UK-PJ-nlU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="VUs-s4-oAU"/>
                                 </constraints>
-                                <string key="text">The Mercer Island High School band program is one of the largest in the state, with over 280 band members.  The Marching Band performs at all MIHS home football games during the year as well as the MIHS Homecoming Parade. In addition, the MIHS Marching Band has performed at The Tournament of Roses, the London New Years Parade and on numerous other national and international stages.</string>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tn-2Cs">
+                                <rect key="frame" x="36" y="382" width="346" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="6D5-3h-whD"/>
+                                </constraints>
+                                <string key="text">The Mercer Island High School band program is one of the largest in the state, with over 280 band members.  The Marching Band performs at all MIHS home football games during the year. In addition, the MIHS Marching Band has performed at The Tournament of Roses, the London New Years Parade and on numerous other national and international stages.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -39,7 +43,7 @@
                             <constraint firstItem="CrJ-sO-mZq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="SJS-8F-jSH"/>
                             <constraint firstItem="CrJ-sO-mZq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="b9f-tP-2hd"/>
                             <constraint firstItem="CrJ-sO-mZq" firstAttribute="centerX" secondItem="O3T-tn-2Cs" secondAttribute="centerX" id="fz4-dw-bCX"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O3T-tn-2Cs" secondAttribute="bottom" constant="54" id="uKc-2L-CrW"/>
+                            <constraint firstItem="CrJ-sO-mZq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="175:368" id="swc-Dv-8bm"/>
                             <constraint firstItem="CrJ-sO-mZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zv0-mU-hdv"/>
                         </constraints>
                     </view>
@@ -62,7 +66,7 @@
         <!--Upcoming Events-->
         <scene sceneID="BVw-GH-xyF">
             <objects>
-                <viewController id="tGC-fO-ahW" customClass="UpcomingEventsViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tGC-fO-ahW" customClass="UpcomingEventsViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wpx-js-m91"/>
                         <viewControllerLayoutGuide type="bottom" id="pKf-Dt-X40"/>
@@ -105,7 +109,7 @@
         <!--Upcoming Events-->
         <scene sceneID="FoT-R6-uor">
             <objects>
-                <viewController id="QsL-Q7-Ng7" customClass="CalendarViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QsL-Q7-Ng7" customClass="CalendarViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n9B-0s-C2v"/>
                         <viewControllerLayoutGuide type="bottom" id="ZgS-zH-A0G"/>
@@ -139,7 +143,7 @@
         <!--Twitter-->
         <scene sceneID="esK-km-XKp">
             <objects>
-                <tableViewController id="eib-Cv-VEP" customClass="SearchTimelineViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="eib-Cv-VEP" customClass="SearchTimelineViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="o7n-vh-hSd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,7 +181,7 @@
         <!--Donate View Controller-->
         <scene sceneID="V5z-Mu-CeS">
             <objects>
-                <viewController title="Donate View Controller" id="XEg-wu-Z5M" customClass="DonateViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Donate View Controller" id="XEg-wu-Z5M" customClass="DonateViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EzC-uv-EET"/>
                         <viewControllerLayoutGuide type="bottom" id="wGW-Yp-DOu"/>
@@ -220,7 +224,7 @@
         <!--Contact View Controller-->
         <scene sceneID="2T5-eA-SSX">
             <objects>
-                <viewController title="Contact View Controller" id="iNG-6F-agh" customClass="ContactViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Contact View Controller" id="iNG-6F-agh" customClass="ContactViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LBf-IX-zdc"/>
                         <viewControllerLayoutGuide type="bottom" id="YUR-o1-aMG"/>
@@ -434,7 +438,7 @@
         <!--Photos-->
         <scene sceneID="x9Y-z8-Csl">
             <objects>
-                <viewController id="zvE-y3-m2o" customClass="PhotosViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zvE-y3-m2o" customClass="PhotosViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0XD-KP-HeP"/>
                         <viewControllerLayoutGuide type="bottom" id="amc-mA-7nR"/>
@@ -453,7 +457,7 @@
                                     <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="dI2-O4-18b" customClass="PhotoCollectionViewCell" customModule="ParseBandApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="dI2-O4-18b" customClass="PhotoCollectionViewCell" customModule="MI_Band" customModuleProvider="target">
                                         <rect key="frame" x="2" y="66" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -515,7 +519,7 @@
         <!--Photo Info View Controller-->
         <scene sceneID="csd-Cb-ApJ">
             <objects>
-                <viewController id="2DY-wj-dJa" customClass="PhotoInfoViewController" customModule="ParseBandApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2DY-wj-dJa" customClass="PhotoInfoViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AyH-mR-E1c"/>
                         <viewControllerLayoutGuide type="bottom" id="Gf4-Dj-2dj"/>

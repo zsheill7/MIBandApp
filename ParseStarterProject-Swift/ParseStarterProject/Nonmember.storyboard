@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MIHS Band" translatesAutoresizingMaskIntoConstraints="NO" id="CrJ-sO-mZq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="MIHS Band" translatesAutoresizingMaskIntoConstraints="NO" id="CrJ-sO-mZq">
                                 <rect key="frame" x="32" y="82" width="350" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="VUs-s4-oAU"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tn-2Cs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-tn-2Cs">
                                 <rect key="frame" x="36" y="382" width="346" height="193"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="193" id="6D5-3h-whD"/>
@@ -39,11 +38,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="O3T-tn-2Cs" secondAttribute="trailing" constant="16" id="Geg-vj-lwx"/>
-                            <constraint firstItem="O3T-tn-2Cs" firstAttribute="top" secondItem="CrJ-sO-mZq" secondAttribute="bottom" constant="16" id="Ry3-mS-zXQ"/>
+                            <constraint firstItem="O3T-tn-2Cs" firstAttribute="top" relation="lessThanOrEqual" secondItem="CrJ-sO-mZq" secondAttribute="bottom" constant="16" id="Ry3-mS-zXQ"/>
                             <constraint firstItem="CrJ-sO-mZq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="SJS-8F-jSH"/>
-                            <constraint firstItem="CrJ-sO-mZq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="b9f-tP-2hd"/>
+                            <constraint firstItem="CrJ-sO-mZq" firstAttribute="top" relation="lessThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="b9f-tP-2hd"/>
                             <constraint firstItem="CrJ-sO-mZq" firstAttribute="centerX" secondItem="O3T-tn-2Cs" secondAttribute="centerX" id="fz4-dw-bCX"/>
-                            <constraint firstItem="CrJ-sO-mZq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="175:368" id="swc-Dv-8bm"/>
                             <constraint firstItem="CrJ-sO-mZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zv0-mU-hdv"/>
                         </constraints>
                     </view>

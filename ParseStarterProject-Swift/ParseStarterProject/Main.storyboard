@@ -169,6 +169,7 @@
                                     <constraint firstItem="8qT-rk-MX3" firstAttribute="leading" secondItem="6KY-9e-WRI" secondAttribute="leading" constant="-7" id="BL7-dw-sV1"/>
                                     <constraint firstItem="iv1-Ln-Lxs" firstAttribute="leading" secondItem="b4T-i5-Nnz" secondAttribute="trailing" constant="8" id="G5a-4C-ARN"/>
                                     <constraint firstItem="m6W-8Y-Giw" firstAttribute="width" secondItem="lPf-7A-QEw" secondAttribute="height" multiplier="250:241" id="I0M-OR-M5Z"/>
+                                    <constraint firstItem="m6W-8Y-Giw" firstAttribute="width" relation="lessThanOrEqual" secondItem="lPf-7A-QEw" secondAttribute="width" constant="-10" id="IrL-w9-kDI"/>
                                     <constraint firstItem="Gkb-TR-ifF" firstAttribute="width" secondItem="lPf-7A-QEw" secondAttribute="height" multiplier="250:241" id="J5U-9d-Q4B"/>
                                     <constraint firstAttribute="trailing" secondItem="8qT-rk-MX3" secondAttribute="trailing" constant="-312" id="JCN-3t-LGs"/>
                                     <constraint firstItem="iv1-Ln-Lxs" firstAttribute="centerY" secondItem="Exl-88-If3" secondAttribute="centerY" id="P16-xb-qep"/>
@@ -378,7 +379,7 @@
                             <constraint firstItem="X50-2H-5U6" firstAttribute="centerX" secondItem="HSi-CB-PBR" secondAttribute="centerX" id="nQb-NL-BcD"/>
                             <constraint firstItem="mcm-B4-iAg" firstAttribute="top" secondItem="Mg2-Qx-abl" secondAttribute="bottom" constant="-155" id="nVx-by-4HG"/>
                             <constraint firstItem="UE7-eP-VjO" firstAttribute="top" secondItem="Mg2-Qx-abl" secondAttribute="bottom" constant="-158" id="ocE-BJ-MEi"/>
-                            <constraint firstItem="Mg2-Qx-abl" firstAttribute="top" secondItem="abW-sy-2y6" secondAttribute="bottom" constant="90" id="r7F-mJ-WYz"/>
+                            <constraint firstItem="Mg2-Qx-abl" firstAttribute="top" secondItem="abW-sy-2y6" secondAttribute="bottom" constant="60" id="r7F-mJ-WYz"/>
                             <constraint firstItem="GGo-E5-Qzb" firstAttribute="top" secondItem="Mg2-Qx-abl" secondAttribute="bottom" constant="41" id="rNz-zO-cum"/>
                             <constraint firstItem="X50-2H-5U6" firstAttribute="top" secondItem="Mg2-Qx-abl" secondAttribute="bottom" constant="22" id="tsC-HS-haF"/>
                             <constraint firstItem="Mg2-Qx-abl" firstAttribute="leading" secondItem="GGo-E5-Qzb" secondAttribute="trailing" constant="-205" id="vya-vr-fPx"/>

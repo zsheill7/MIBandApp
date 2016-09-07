@@ -159,7 +159,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             }
         }
         
-        
+        /*<key>ITSAppUsesNonExemptEncryption</key><false/>*/
         
                 
         //let nonmemberStoryboard = UIStoryboard(name: "Nonmember", bundle: nil)

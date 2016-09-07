@@ -527,13 +527,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxb-rE-Z2m">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="445"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-4s-IJe">
+                                <rect key="frame" x="9" y="469" width="580" height="74"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="wig-po-or9"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Gf4-Dj-2dj" firstAttribute="top" secondItem="gxb-rE-Z2m" secondAttribute="bottom" id="6nc-0K-0DE"/>
+                            <constraint firstItem="BqH-4s-IJe" firstAttribute="leading" secondItem="Els-l6-WJO" secondAttribute="leadingMargin" constant="-11" id="O9z-TV-rMX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BqH-4s-IJe" secondAttribute="trailing" constant="-9" id="ayJ-ww-k5A"/>
                             <constraint firstItem="gxb-rE-Z2m" firstAttribute="leading" secondItem="Els-l6-WJO" secondAttribute="leadingMargin" constant="-20" id="gBm-qH-ood"/>
+                            <constraint firstItem="Gf4-Dj-2dj" firstAttribute="top" secondItem="BqH-4s-IJe" secondAttribute="bottom" constant="8" id="jpC-18-GNP"/>
                             <constraint firstItem="gxb-rE-Z2m" firstAttribute="top" secondItem="AyH-mR-E1c" secondAttribute="bottom" id="mB1-r2-Ld6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gxb-rE-Z2m" secondAttribute="trailing" constant="-20" id="r3C-m9-WYA"/>
                         </constraints>
@@ -543,6 +556,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="gxb-rE-Z2m" id="ery-Xo-IhF"/>
+                        <outlet property="urlTextView" destination="BqH-4s-IJe" id="UH1-rl-9Iu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viJ-Fc-dSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -655,8 +669,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This app was programmed by Zoe Sheill, MIHS junior.  Email: zsheill7@gmail.com  All photos taken by David Cummings" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbq-ly-QY1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbq-ly-QY1">
                                 <rect key="frame" x="40" y="198" width="335" height="176"/>
+                                <string key="text">This app was programmed by Zoe Sheill.  Email: zsheill7@gmail.com  All photos taken by David Cummings  Email: davidec@u.washington.edu</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

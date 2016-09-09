@@ -422,7 +422,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
-            let subject = "Contact Us"
+            /*let subject = "Contact Us"
             let body = " "
             
             let email = "mailto:parker.bixby@mercerislandschools.org?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
@@ -433,7 +433,8 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
                 {
                     UIApplication.sharedApplication().openURL(emailURL)
                 }
-            }
+            }*/
+            self.performSegueWithIdentifier("toEmailVC", sender: self)
         }
     }
     

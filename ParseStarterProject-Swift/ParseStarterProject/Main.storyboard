@@ -48,6 +48,7 @@
                         <segue destination="OsV-Ay-w3S" kind="show" identifier="goToSettings" id="JEc-w1-sMb"/>
                         <segue destination="Wt3-QB-iFj" kind="show" identifier="goToSettings" id="xge-Wa-iBo"/>
                         <segue destination="9hv-7f-fCP" kind="show" identifier="goToAboutUs" id="wTi-hA-FDf"/>
+                        <segue destination="N0X-i5-mjX" kind="show" identifier="toEmailVC" id="Rfw-pW-Szv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyY-SL-4dl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -709,6 +710,7 @@
                         <outlet property="myLockerCombo" destination="Rjs-q2-214" id="hfX-rL-pGn"/>
                         <outlet property="myLockerNumber" destination="RVn-R1-Xyj" id="Pvo-VO-6Nr"/>
                         <segue destination="9hv-7f-fCP" kind="show" identifier="goToAboutUs" id="b3Q-1b-Adq"/>
+                        <segue destination="N0X-i5-mjX" kind="show" identifier="toEmailVC" id="XCE-Yx-gg1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U43-pg-fZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1120,17 +1122,17 @@
             <objects>
                 <tableViewController id="GR3-xe-rAy" customClass="ChangePasswordTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="GMj-aT-j31">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="CHANGE PASSWORD" id="hGN-xw-gaf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3a7-ti-Vxx">
-                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3a7-ti-Vxx" id="4ZZ-ER-9Lz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Old Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq6-D7-zIx">
@@ -1153,10 +1155,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QEY-L4-ub4">
-                                        <rect key="frame" x="0.0" y="93.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="93.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QEY-L4-ub4" id="z3q-6y-gdk">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-dE-4fx">
@@ -1182,10 +1184,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="J7S-cP-JBM">
-                                        <rect key="frame" x="0.0" y="137.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="137.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J7S-cP-JBM" id="GUX-ha-ho8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryl-XM-1xT">
@@ -1206,10 +1208,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EUJ-Ur-65G">
-                                        <rect key="frame" x="0.0" y="181.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="181.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EUJ-Ur-65G" id="JBM-7o-mtM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meY-10-jEr">
@@ -2622,7 +2624,7 @@
             <objects>
                 <tableViewController id="6Wk-Gt-Woz" customClass="LockerSettingsTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="4" id="J1S-9M-2cj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -3114,6 +3116,7 @@
                         <segue destination="9hv-7f-fCP" kind="show" identifier="goToAboutUs" id="Phz-9U-Zn6"/>
                         <segue destination="mtu-kE-ktg" kind="show" identifier="sectionLeaderAdd" id="0zj-A9-fRP"/>
                         <segue destination="8KU-V9-aQx" kind="show" identifier="adminAdd" id="Izy-6y-13p"/>
+                        <segue destination="N0X-i5-mjX" kind="show" identifier="toEmailVC" id="5ng-KQ-DuG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdp-bb-PG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3157,6 +3160,35 @@
             </objects>
             <point key="canvasLocation" x="1904" y="-1470"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="cqY-nX-iGp">
+            <objects>
+                <tableViewController storyboardIdentifier="emailVC" id="N0X-i5-mjX" customClass="EmailTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1fU-ms-nr8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="v8g-7i-9Ug">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v8g-7i-9Ug" id="zsw-TT-dop">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="N0X-i5-mjX" id="YlH-d7-H6t"/>
+                            <outlet property="delegate" destination="N0X-i5-mjX" id="bye-Lk-mmI"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" image="Calendar icon" id="rcv-gN-Vgn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3L-dt-oUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3579" y="2239"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="477" height="219"/>
@@ -3171,6 +3203,7 @@
         <image name="ButtonLogin" width="228" height="78"/>
         <image name="ButtonSignUp" width="228" height="78"/>
         <image name="Calendar" width="25" height="25"/>
+        <image name="Calendar icon" width="25" height="25"/>
         <image name="Community member label-1" width="591" height="378"/>
         <image name="Home" width="25" height="25"/>
         <image name="Home icon" width="25" height="25"/>
@@ -3188,8 +3221,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="USK-is-yw8"/>
         <segue reference="agL-Cc-jKq"/>
-        <segue reference="wTi-hA-FDf"/>
-        <segue reference="8Ho-tU-PJy"/>
+        <segue reference="XCE-Yx-gg1"/>
+        <segue reference="JgH-1H-eil"/>
+        <segue reference="b3Q-1b-Adq"/>
         <segue reference="hLB-je-k5o"/>
     </inferredMetricsTieBreakers>
 </document>

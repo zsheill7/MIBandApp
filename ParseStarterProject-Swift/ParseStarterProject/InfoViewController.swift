@@ -8,6 +8,16 @@
 
 import UIKit
 
+struct properties {
+    static let pickerEvents = [
+        ["title" : "Log In", "color" : UIColor.buttonBlue()],
+        ["title" : "About Us", "color": UIColor.buttonBlue()],
+        ["title" : "Contact Us", "color" : UIColor.buttonBlue()],
+        
+        ]
+}
+
+
 class InfoViewController: UIViewController {
 
     let picker = UIImageView(image: UIImage(named: "Custom Picker View 2"))
@@ -17,14 +27,7 @@ class InfoViewController: UIViewController {
     
     
     
-    struct properties {
-        static let pickerEvents = [
-            ["title" : "Log In", "color" : UIColor.buttonBlue()],
-            ["title" : "About Us", "color": UIColor.buttonBlue()],
-            ["title" : "Contact Us", "color" : UIColor.buttonBlue()],
-            
-            ]
-    }
+   
     
     
     override func viewDidLoad() {

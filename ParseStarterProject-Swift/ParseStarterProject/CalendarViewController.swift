@@ -24,7 +24,7 @@ class CalendarViewController: UIViewController {
         static let pickerEvents = [
             ["title" : "Settings", "color" : UIColor.buttonBlue()],
             ["title" : "About Us", "color": UIColor.buttonBlue()],
-            ["title" : "Suggest a Change", "color" : UIColor.buttonBlue()],
+            ["title" : "Contact Us", "color" : UIColor.buttonBlue()],
             
             ]
     }
@@ -186,7 +186,7 @@ class CalendarViewController: UIViewController {
             self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
-            let subject = "Contact Us"
+            /*let subject = "Contact Us"
             let body = " "
             
             let email = "mailto:parker.bixby@mercerislandschools.org?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
@@ -197,7 +197,8 @@ class CalendarViewController: UIViewController {
                 {
                     UIApplication.sharedApplication().openURL(emailURL)
                 }
-            }
+            }*/
+            self.performSegueWithIdentifier("toEmailVC", sender: self)
         }
     }
     

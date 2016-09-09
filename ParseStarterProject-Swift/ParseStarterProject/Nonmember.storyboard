@@ -61,7 +61,7 @@
             </objects>
             <point key="canvasLocation" x="2962" y="130"/>
         </scene>
-        <!--Upcoming Events-->
+        <!--Events-->
         <scene sceneID="BVw-GH-xyF">
             <objects>
                 <viewController id="tGC-fO-ahW" customClass="UpcomingEventsViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +87,7 @@
                             <constraint firstItem="ZUy-df-efL" firstAttribute="top" secondItem="eyR-7L-Wvl" secondAttribute="topMargin" id="pOU-r1-AsU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Upcoming Events" id="aes-Jg-jOO">
+                    <navigationItem key="navigationItem" title="Events" id="aes-Jg-jOO">
                         <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="Ae3-s5-IGA">
                             <connections>
                                 <action selector="pickerSelect:" destination="tGC-fO-ahW" id="IVy-D0-x01"/>
@@ -414,11 +414,11 @@
             </objects>
             <point key="canvasLocation" x="2272" y="816"/>
         </scene>
-        <!--Upcoming-->
+        <!--Events-->
         <scene sceneID="S5g-OK-jtX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q0U-XE-0K7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Upcoming" image="Calendar icon" id="pLm-ax-hxo"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="Calendar icon" id="pLm-ax-hxo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ujR-t1-a9X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -526,29 +526,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxb-rE-Z2m">
-                                <rect key="frame" x="0.0" y="64" width="600" height="445"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gxb-rE-Z2m">
+                                <rect key="frame" x="0.0" y="64" width="600" height="429"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-4s-IJe">
-                                <rect key="frame" x="9" y="469" width="580" height="74"/>
+                                <rect key="frame" x="149" y="501" width="440" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="wig-po-or9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="CP6-3h-3uv"/>
+                                    <constraint firstAttribute="height" constant="42" id="H9Q-1B-Vn8"/>
                                 </constraints>
-                                <attributedString key="attributedText"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Hello">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gf4-Dj-2dj" firstAttribute="top" secondItem="gxb-rE-Z2m" secondAttribute="bottom" id="6nc-0K-0DE"/>
-                            <constraint firstItem="BqH-4s-IJe" firstAttribute="leading" secondItem="Els-l6-WJO" secondAttribute="leadingMargin" constant="-11" id="O9z-TV-rMX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BqH-4s-IJe" secondAttribute="trailing" constant="-9" id="ayJ-ww-k5A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gxb-rE-Z2m" secondAttribute="trailing" constant="-20" id="Hvf-Ez-piN"/>
+                            <constraint firstItem="gxb-rE-Z2m" firstAttribute="leading" secondItem="Els-l6-WJO" secondAttribute="leadingMargin" constant="-20" id="NGB-MX-guv"/>
+                            <constraint firstItem="BqH-4s-IJe" firstAttribute="top" secondItem="gxb-rE-Z2m" secondAttribute="bottom" constant="8" id="fNd-1I-fpW"/>
                             <constraint firstItem="gxb-rE-Z2m" firstAttribute="leading" secondItem="Els-l6-WJO" secondAttribute="leadingMargin" constant="-20" id="gBm-qH-ood"/>
-                            <constraint firstItem="Gf4-Dj-2dj" firstAttribute="top" secondItem="BqH-4s-IJe" secondAttribute="bottom" constant="8" id="jpC-18-GNP"/>
                             <constraint firstItem="gxb-rE-Z2m" firstAttribute="top" secondItem="AyH-mR-E1c" secondAttribute="bottom" id="mB1-r2-Ld6"/>
+                            <constraint firstItem="gxb-rE-Z2m" firstAttribute="top" secondItem="AyH-mR-E1c" secondAttribute="bottom" id="pea-jK-qwa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gxb-rE-Z2m" secondAttribute="trailing" constant="-20" id="r3C-m9-WYA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BqH-4s-IJe" secondAttribute="trailing" constant="-9" id="teP-Gb-8xe"/>
+                            <constraint firstItem="BqH-4s-IJe" firstAttribute="leading" secondItem="Els-l6-WJO" secondAttribute="leadingMargin" constant="129" id="xFb-30-r1B"/>
+                            <constraint firstItem="Gf4-Dj-2dj" firstAttribute="top" secondItem="BqH-4s-IJe" secondAttribute="bottom" constant="8" id="xrQ-1c-4Zb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PSo-kN-EVX">
@@ -561,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viJ-Fc-dSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4469" y="-74"/>
+            <point key="canvasLocation" x="4509" y="-305"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="pXK-Ag-qIc">
@@ -669,19 +680,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbq-ly-QY1">
-                                <rect key="frame" x="40" y="198" width="335" height="176"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="65c-bs-Bpt">
+                                <rect key="frame" x="37" y="205" width="340" height="207"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">This app was programmed by Zoe Sheill.  Email: zsheill7@gmail.com  All photos taken by David Cummings  Email: davidec@u.washington.edu</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="fbq-ly-QY1" secondAttribute="trailing" constant="19" id="Bjy-L0-RIH"/>
-                            <constraint firstItem="fbq-ly-QY1" firstAttribute="top" secondItem="Z5V-gD-D8D" secondAttribute="bottom" constant="134" id="aTm-LL-gGA"/>
-                            <constraint firstItem="fbq-ly-QY1" firstAttribute="leading" secondItem="WjI-4o-nsk" secondAttribute="leadingMargin" constant="20" id="hkV-hb-EHz"/>
+                            <constraint firstItem="MMp-h0-XUP" firstAttribute="top" secondItem="65c-bs-Bpt" secondAttribute="bottom" constant="275" id="BqK-r6-CcJ"/>
+                            <constraint firstItem="65c-bs-Bpt" firstAttribute="leading" secondItem="WjI-4o-nsk" secondAttribute="leadingMargin" constant="17" id="NvK-aT-6Jb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="65c-bs-Bpt" secondAttribute="trailing" constant="17" id="aJ4-Ql-67Z"/>
+                            <constraint firstItem="65c-bs-Bpt" firstAttribute="top" secondItem="Z5V-gD-D8D" secondAttribute="bottom" constant="141" id="bpX-3g-ee0"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -719,6 +732,6 @@
         <image name="volunteeringIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8yc-ZY-0rh"/>
+        <segue reference="jxB-oK-8h8"/>
     </inferredMetricsTieBreakers>
 </document>

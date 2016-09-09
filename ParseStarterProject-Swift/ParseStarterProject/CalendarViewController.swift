@@ -71,10 +71,14 @@ class CalendarViewController: UIViewController {
         
         print(screenWidth)
         print(screenHeight)
-        let html = "<iframe src=\"https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=0airjflmdkgrtboce2bninip6s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles\" style=\"border-width:0\" width=\"\(screenWidth)\" height=\"\(screenHeight * 2)\" frameborder=\"0\" scrolling=\"no\"></iframe>"
+       // let html = "<iframe src=\"https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=0airjflmdkgrtboce2bninip6s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles\" style=\"border-width:0\" width=\"\(screenWidth)\" height=\"\(screenHeight * 2)\" frameborder=\"0\" scrolling=\"no\"></iframe>"
         
+        //let html = "<iframe src=\"https://www.charmsoffice.com/charms/calendarembed.asp?s=MercerIsHSB\" width=800 height=800></iframe>"
+        let url = NSURL(string: "www.charmsoffice.com/charms/calsynct.asp?s=MercerIslandBand")
+        let request = NSURLRequest(URL: url!)
+        calendarWebView.loadRequest(request)
         
-        calendarWebView.loadHTMLString(html, baseURL: nil)
+        //calendarWebView.loadHTMLString(html, baseURL: nil)
         self.navigationItem.setHidesBackButton(true, animated: false)
         print( "\(Int(self.calendarWebView.frame.size.width))\\")
         
@@ -182,10 +186,10 @@ class CalendarViewController: UIViewController {
             self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
-            let subject = "Suggested Changes/Bug fixes to MIHS Band App"
+            let subject = "Contact Us"
             let body = " "
             
-            let email = "mailto:zsheill7@gmail.com?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
+            let email = "mailto:parker.bixby@mercerislandschools.org?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
             
             if let emailURL:NSURL = NSURL(string: email!)
             {

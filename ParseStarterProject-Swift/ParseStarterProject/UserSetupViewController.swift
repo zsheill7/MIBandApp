@@ -10,11 +10,12 @@ import UIKit
 import Parse
 
 
-let marchingInstrumentsList = ["Flute", "Clarinet", "Bassoon", "Alto Saxophone", "Low Saxophone", "Trumpet", "Trombone", "Mellophone", "Sousaphone", "Percussion"]
+let marchingInstrumentsList = ["Flute", "Clarinet", "Bassoon", "Alto Saxophone", "Low Saxophone", "Trumpet", "Trombone", "Mellophone", "Sousaphone", "Percussion", "Drum Major"]
 
-let concertInstrumentsList = ["Flute", "Oboe", "Clarinet", "Bassoon", "Alto Saxophone", "Low Saxophone", "Trumpet", "Trombone", "French Horn", "Tuba", "Euphonium", "Percussion"]
+let concertInstrumentsList = ["Flute", "Oboe", "Clarinet", "Bass Clarinet", "Bassoon", "Alto Saxophone", "Tenor Saxophone", "Baritone Saxophone", "Trumpet", "Trombone", "French Horn", "Tuba", "Euphonium", "Percussion", "Piano"]
 
 let bandTypesList = ["Concert Band", "Symphonic Band", "Wind Symphony", "Wind Ensemble", "Percussion Ensemble"]
+
 let gradeList = ["9th Grade", "10th Grade", "11th Grade", "12th Grade"]
 
 

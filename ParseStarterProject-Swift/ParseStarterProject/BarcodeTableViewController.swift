@@ -9,6 +9,9 @@
 import UIKit
 import Parse
 
+    
+
+
 class BarcodeTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //User locker info
@@ -275,11 +278,17 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
 
  
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
         if indexPath.row == 1 && indexPath.section == 0{
-            return 0.0
+            if user!["lockerNumber"] != nil {
+                return 0.0
+            }
         }
+        
         if indexPath.row == 2 && indexPath.section == 1 {
-            return 0.0
+            if user!["lockerCombo"] != nil {
+                return 0.0
+            }
         }
         return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
     }
@@ -413,10 +422,10 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
             self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
-            let subject = "Suggested Changes/Bug fixes to MIHS Band App"
+            let subject = "Contact Us"
             let body = " "
             
-            let email = "mailto:zsheill7@gmail.com?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
+            let email = "mailto:parker.bixby@mercerislandschools.org?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
 
             if let emailURL:NSURL = NSURL(string: email!)
             {
@@ -434,6 +443,9 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         closePicker()
+        
+        self.view.endEditing(true)
+        
     }
     
    

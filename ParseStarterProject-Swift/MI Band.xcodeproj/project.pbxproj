@@ -63,6 +63,7 @@
 		C8AF37051D516CCA00B80DB9 /* ContainerViewControllerGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF37041D516CCA00B80DB9 /* ContainerViewControllerGrade.swift */; };
 		C8B96B0D1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */; };
 		C8C266D51D3DAB6C00574541 /* ChangePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */; };
+		C8D21E771D833673002311A8 /* EmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D21E761D833673002311A8 /* EmailTableViewController.swift */; };
 		C8E9EB0A1D7D294B0004B570 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */; };
 		C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -130,6 +131,7 @@
 		C8AF37041D516CCA00B80DB9 /* ContainerViewControllerGrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerGrade.swift; sourceTree = "<group>"; };
 		C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreSettingsTableViewController.swift; sourceTree = "<group>"; };
 		C8C266D41D3DAB6C00574541 /* ChangePasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewController.swift; sourceTree = "<group>"; };
+		C8D21E761D833673002311A8 /* EmailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTableViewController.swift; sourceTree = "<group>"; };
 		C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F786A27A774C5C23D5EA3188 /* Pods-MI Band.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MI Band.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MI Band/Pods-MI Band.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				C82B3B031D5E51210037FDC2 /* Settings */,
 				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
 				C82B3B321D5EA1400037FDC2 /* Nonmember */,
+				C8D21E761D833673002311A8 /* EmailTableViewController.swift */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				C85079A41D306F82000BA862 /* SignupViewController.swift in Sources */,
 				C829AA361D35CA410073DF94 /* eventItem.swift in Sources */,
 				C82B3B0E1D5EA0EF0037FDC2 /* DonateViewController.swift in Sources */,
+				C8D21E771D833673002311A8 /* EmailTableViewController.swift in Sources */,
 				C817B8211D4B018400E9A5FD /* AdminAddEventTableViewController.swift in Sources */,
 				C829AA331D35C7830073DF94 /* UpcomingEventTableViewController.swift in Sources */,
 				C829AA371D35CA410073DF94 /* eventCell.swift in Sources */,

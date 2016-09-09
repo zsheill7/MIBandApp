@@ -131,7 +131,7 @@ class InfoTableViewController: UITableViewController {
             let subject = "MIHS Band App"
             let body = " "
             
-            let email = "mailto:zsheill7@gmail.com?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
+            let email = "mailto:parker.bixby@mercerislandschools.org?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
             
             if let emailURL:NSURL = NSURL(string: email!)
             {

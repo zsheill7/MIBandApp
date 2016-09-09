@@ -766,19 +766,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYe-UL-asn">
-                                <rect key="frame" x="40" y="198" width="335" height="176"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bPY-mm-r9M">
+                                <rect key="frame" x="37" y="195" width="340" height="207"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">This app was programmed by Zoe Sheill.  Email: zsheill7@gmail.com  All photos taken by David Cummings  Email: davidec@u.washington.edu</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PYe-UL-asn" firstAttribute="top" secondItem="EaS-ar-c32" secondAttribute="bottom" constant="134" id="4ij-oN-peU"/>
-                            <constraint firstItem="PYe-UL-asn" firstAttribute="leading" secondItem="2Ta-Ku-hG7" secondAttribute="leadingMargin" constant="20" id="Erp-Y6-5VF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PYe-UL-asn" secondAttribute="trailing" constant="19" id="Lo0-O2-Icw"/>
+                            <constraint firstItem="bPY-mm-r9M" firstAttribute="top" secondItem="EaS-ar-c32" secondAttribute="bottom" constant="131" id="SaZ-SB-rkb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bPY-mm-r9M" secondAttribute="trailing" constant="17" id="Tac-5G-Dmk"/>
+                            <constraint firstItem="UvR-Fh-w7m" firstAttribute="top" secondItem="bPY-mm-r9M" secondAttribute="bottom" constant="334" id="UgH-XN-yzC"/>
+                            <constraint firstItem="bPY-mm-r9M" firstAttribute="leading" secondItem="2Ta-Ku-hG7" secondAttribute="leadingMargin" constant="17" id="hPc-Dr-VCM"/>
                         </constraints>
                     </view>
                 </viewController>

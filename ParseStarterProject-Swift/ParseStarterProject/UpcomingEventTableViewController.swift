@@ -45,14 +45,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     
-    /*struct properties {
-        static let pickerEvents = [
-            ["title" : "Settings", "color" : UIColor.buttonBlue()],
-            ["title" : "About Us", "color": UIColor.buttonBlue()],
-            ["title" : "Suggest a Change", "color" : UIColor.buttonBlue()],
-            
-            ]
-    }*/
+    
     
     
     func displayAlert(title: String, message: String) {

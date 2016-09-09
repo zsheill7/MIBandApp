@@ -18,14 +18,7 @@ class InfoTableViewController: UITableViewController {
     
     
     
-    struct properties {
-        static let pickerEvents = [
-            ["title" : "Log In", "color" : UIColor.buttonBlue()],
-            ["title" : "About Us", "color": UIColor.buttonBlue()],
-            ["title" : "Contact Us", "color" : UIColor.buttonBlue()],
-            
-            ]
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

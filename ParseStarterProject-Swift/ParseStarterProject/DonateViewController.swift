@@ -17,14 +17,7 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
     
     
     
-    struct properties {
-        static let pickerEvents = [
-            ["title" : "Log In", "color" : UIColor.buttonBlue()],
-            ["title" : "About Us", "color": UIColor.buttonBlue()],
-            ["title" : "Contact Us", "color" : UIColor.buttonBlue()],
-            
-            ]
-    }
+    
     
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {

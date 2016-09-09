@@ -20,14 +20,7 @@ class CalendarViewController: UIViewController {
     
     
     
-    struct properties {
-        static let pickerEvents = [
-            ["title" : "Settings", "color" : UIColor.buttonBlue()],
-            ["title" : "About Us", "color": UIColor.buttonBlue()],
-            ["title" : "Contact Us", "color" : UIColor.buttonBlue()],
-            
-            ]
-    }
+    
     
     @IBOutlet weak var calendarWebView: UIWebView!
     override func viewDidLoad() {

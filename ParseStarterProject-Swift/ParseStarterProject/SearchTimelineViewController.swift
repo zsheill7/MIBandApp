@@ -134,7 +134,7 @@ class SearchTimelineViewController: TWTRTimelineViewController {
             self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
-            let subject = "MIHS Band App"
+            /*let subject = "MIHS Band App"
             let body = " "
             
             let email = "mailto:zsheill7@gmail.com?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
@@ -145,7 +145,8 @@ class SearchTimelineViewController: TWTRTimelineViewController {
                 {
                     UIApplication.sharedApplication().openURL(emailURL)
                 }
-            }
+            }*/
+            self.performSegueWithIdentifier("toEmailVC", sender: self)
         }
     }
     

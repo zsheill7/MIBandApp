@@ -26,7 +26,9 @@ class EmailTableViewController: UITableViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     
-    
+    override func viewDidLoad() {
+        self.title = "Email a Director"
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return directorsArray.count

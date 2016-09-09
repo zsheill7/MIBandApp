@@ -23,7 +23,36 @@ class EmailTableViewController: UITableViewController {
          "Carol Krell",
          "David Bentley"]
     
-    override func viewDidLoad() {
-        <#code#>
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return directorsArray.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        
+        cell.textLabel?.text = directorsArray[indexPath.row]
+        return cell
+        
+    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let subject = ""
+        let body = " "
+        
+        let email = "mailto:\(emailArray[indexPath.row])?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
+        
+        if let emailURL:NSURL = NSURL(string: email!)
+        {
+            if UIApplication.sharedApplication().canOpenURL(emailURL)
+            {
+                UIApplication.sharedApplication().openURL(emailURL)
+            }
+        }
+        
+        
     }
 }

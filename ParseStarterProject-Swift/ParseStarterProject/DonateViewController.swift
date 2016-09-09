@@ -205,7 +205,7 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
             self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
-            let subject = "MIHS Band App"
+            /*let subject = "MIHS Band App"
             let body = " "
             
             let email = "mailto:parker.bixby@mercerislandschools.org?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
@@ -216,7 +216,8 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
                 {
                     UIApplication.sharedApplication().openURL(emailURL)
                 }
-            }
+            }*/
+            self.performSegueWithIdentifier("toEmailVC", sender: self)
         }
     }
     

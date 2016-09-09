@@ -55,6 +55,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="8yc-ZY-0rh"/>
+                        <segue destination="1nV-YD-jbk" kind="show" id="cb7-Nq-PWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,11 +99,12 @@
                     <connections>
                         <outlet property="webView" destination="ZUy-df-efL" id="nlr-lh-KnV"/>
                         <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="jxB-oK-8h8"/>
+                        <segue destination="1nV-YD-jbk" kind="show" identifier="toEmailVC" id="7Vh-Cd-0je"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akN-Nt-eOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2849" y="2299"/>
+            <point key="canvasLocation" x="2801" y="2411"/>
         </scene>
         <!--Upcoming Events-->
         <scene sceneID="FoT-R6-uor">
@@ -138,6 +140,35 @@
             </objects>
             <point key="canvasLocation" x="5747" y="942"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="BVZ-mE-ZUO">
+            <objects>
+                <tableViewController storyboardIdentifier="emailVC" id="1nV-YD-jbk" customClass="EmailTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ffY-k8-fNN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="gEn-nA-ase">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gEn-nA-ase" id="bK5-Pg-uce">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1nV-YD-jbk" id="Tr4-jj-Q7r"/>
+                            <outlet property="delegate" destination="1nV-YD-jbk" id="OON-8e-3fv"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" image="Calendar icon" id="ceb-gx-ItO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XWh-fi-qhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3646" y="2261"/>
+        </scene>
         <!--Twitter-->
         <scene sceneID="esK-km-XKp">
             <objects>
@@ -170,6 +201,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="bOD-PV-8Ul"/>
+                        <segue destination="1nV-YD-jbk" kind="show" identifier="toEmailVC" id="Y1e-Uy-v0K"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="573-ct-RLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,11 +245,12 @@
                     <connections>
                         <outlet property="webView" destination="Ega-ko-Wr9" id="VQL-hT-jHo"/>
                         <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="TO7-j5-I99"/>
+                        <segue destination="1nV-YD-jbk" kind="show" identifier="toEmailVC" id="GXX-KO-rM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxJ-PW-DJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2919.5" y="1525.5"/>
+            <point key="canvasLocation" x="2775.5" y="1557.5"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="2T5-eA-SSX">
@@ -508,6 +541,7 @@
                             <nil key="action"/>
                         </segue>
                         <segue destination="SlA-7C-R9P" kind="show" id="vgk-fe-mid"/>
+                        <segue destination="1nV-YD-jbk" kind="show" identifier="toEmailVC" id="7To-CF-QPZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1J-kK-H7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -733,5 +767,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jxB-oK-8h8"/>
+        <segue reference="7To-CF-QPZ"/>
     </inferredMetricsTieBreakers>
 </document>

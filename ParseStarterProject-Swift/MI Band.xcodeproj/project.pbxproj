@@ -211,6 +211,8 @@
 				C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */,
 				C829AA321D35C7830073DF94 /* UpcomingEventTableViewController.swift */,
 				C850799D1D306F81000BA862 /* CalendarViewController.swift */,
+				C8D21E761D833673002311A8 /* EmailTableViewController.swift */,
+				C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */,
 				C8AD156E1D41AB7B0067AE2F /* User Setup */,
 				C829AA301D35C7680073DF94 /* EventViewController.swift */,
 				C81FE8591D66B4A200E0E33F /* DetailViewController.swift */,
@@ -222,8 +224,6 @@
 				C82B3B031D5E51210037FDC2 /* Settings */,
 				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
 				C82B3B321D5EA1400037FDC2 /* Nonmember */,
-				C8D21E761D833673002311A8 /* EmailTableViewController.swift */,
-				C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";

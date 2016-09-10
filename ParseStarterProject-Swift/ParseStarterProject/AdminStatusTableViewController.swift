@@ -41,7 +41,9 @@ class AdminStatusViewController: UIViewController {
         user!["isAdmin"] = true
         user!["isSectionLeader"] = false
         user!.saveInBackground()
-        user![
+        user!["marchingInstrument"] = "None"
+        user!["concertInstrument"] = "None"
+        user!["concertBandType"] = "None"
         
         self.performSegueWithIdentifier("toTabBarController", sender: self)
     }

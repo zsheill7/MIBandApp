@@ -112,10 +112,7 @@ class UserSetupTableViewController2: UITableViewController {
         if isSectionLeader.on == true && isAdmin.on == true {
             displayAlert("Both Selected", message: "Please select either \"Drum Major\" or \"Section Leader\"")
         } else {
-            user!.setObject(isSectionLeader.on, forKey: "isSectionLeader")
             
-            user!.setObject(isAdmin.on, forKey: "isAdmin")
-            user!.saveInBackground()
             
             if user!["marchingInstrument"] != nil && user!["concertInstrument"] != nil && user!["concertBandType"] != nil{
                 

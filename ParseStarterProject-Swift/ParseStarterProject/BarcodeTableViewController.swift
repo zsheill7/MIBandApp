@@ -352,7 +352,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         
         var offset = 18
         
-        for (index, event) in properties.pickerEvents.enumerate()
+        for (index, event) in properties.memberPickerEvents.enumerate()
         {
             let button = UIButton()
             

@@ -27,6 +27,7 @@ extension UIColor {
 
 class SettingsTableViewController: UITableViewController {
 
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
 
     @IBOutlet var table: UITableView!
    
@@ -142,7 +143,15 @@ class SettingsTableViewController: UITableViewController {
 
     }
     @IBAction func logoutButtonPressed(sender: AnyObject) {
-    if #available(iOS 8.0, *) {
+        
+        activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,50,50))
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+    
         let alert = UIAlertController(title: "Logout", message: "Do you want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
@@ -155,6 +164,10 @@ class SettingsTableViewController: UITableViewController {
             })
             
             let loginNC = self.storyboard?.instantiateViewControllerWithIdentifier("loginNC")
+            
+            self.activityIndicator.stopAnimating()
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            
             self.presentViewController(loginNC!, animated: true, completion: nil)
         
 
@@ -164,11 +177,8 @@ class SettingsTableViewController: UITableViewController {
         })))
         
         self.presentViewController(alert, animated: true, completion: nil)
-    } else {
-    print("error")
     }
-
-    }
+    
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 2 && indexPath.row == 1 {

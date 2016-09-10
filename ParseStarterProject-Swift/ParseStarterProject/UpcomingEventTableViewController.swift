@@ -360,7 +360,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         var offset = 18
         
-        for (index, event) in properties.pickerEvents.enumerate()
+        for (index, event) in properties.memberPickerEvents.enumerate()
         {
             let button = UIButton()
             

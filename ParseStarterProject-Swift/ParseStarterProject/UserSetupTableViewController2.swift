@@ -113,7 +113,7 @@ class UserSetupTableViewController2: UITableViewController {
             displayAlert("Both Selected", message: "Please select either \"Drum Major\" or \"Section Leader\"")
         } else {
             user!.setObject(isSectionLeader.on, forKey: "isSectionLeader")
-            user!.saveInBackground()
+            
             user!.setObject(isAdmin.on, forKey: "isAdmin")
             user!.saveInBackground()
             

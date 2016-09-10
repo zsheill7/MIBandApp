@@ -96,33 +96,38 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 
             }
             
-            let marchingQuery = PFQuery(className: "Event")
-            
-            
-            let userInstrument = PFUser.currentUser()!["marchingInstrument"] as! String
-            print(userInstrument)
-            
-            
-            marchingQuery.whereKey("instrument", equalTo: userInstrument)
-            marchingQuery.whereKey("ensemble", equalTo: "Marching Band")
-            marchingQuery.findObjectsInBackgroundWithBlock({ (objects, error) in
+            if let isAdmin = self.user!["isAdmin"] as? Bool {
+            if isAdmin == true  {
                 
-                if let objects = objects {
+            }
+                let marchingQuery = PFQuery(className: "Event")
+                
+                
+                let userInstrument = PFUser.currentUser()!["marchingInstrument"] as! String
+                print(userInstrument)
+                
+                
+                marchingQuery.whereKey("instrument", equalTo: userInstrument)
+                marchingQuery.whereKey("ensemble", equalTo: "Marching Band")
+                marchingQuery.findObjectsInBackgroundWithBlock({ (objects, error) in
                     
-                    for object in objects {
-                        //seeing if the ensemble is "Marching Band"
+                    if let objects = objects {
                         
-                        //print((object["instrument"] as! String) + userInstrument)
-                        
-                        let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
-                        
-                        self.events.append(newEvent)
-                        
-                        self.table.reloadData()
-                        
+                        for object in objects {
+                            //seeing if the ensemble is "Marching Band"
+                            
+                            //print((object["instrument"] as! String) + userInstrument)
+                            
+                            let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
+                            
+                            self.events.append(newEvent)
+                            
+                            self.table.reloadData()
+                            
+                        }
                     }
-                }
-            })
+                })
+            }
             
             var concertQuery = PFQuery(className: "Event")
             

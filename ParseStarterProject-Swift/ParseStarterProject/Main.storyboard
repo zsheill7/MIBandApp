@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleAspectFill" misplaced="YES" paginationMode="topToBottom" pageLength="1" translatesAutoresizingMaskIntoConstraints="NO" id="ESa-XC-Mvb">
+                            <webView contentMode="scaleAspectFill" paginationMode="topToBottom" pageLength="1" translatesAutoresizingMaskIntoConstraints="NO" id="ESa-XC-Mvb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" red="0.88419000410000004" green="0.95791964760000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -405,6 +405,7 @@
                         <outlet property="lastName" destination="Cfa-Nb-vMo" id="vFi-bk-ZNt"/>
                         <outlet property="password" destination="UE7-eP-VjO" id="25P-8R-7Eg"/>
                         <segue destination="tJs-Rn-57v" kind="show" identifier="signup" id="fzg-Fr-fH2"/>
+                        <segue destination="6wS-FO-4o9" kind="show" identifier="toAdminStatus" id="DGJ-bj-08l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B12-yt-yoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2547,37 +2548,77 @@
                         <viewControllerLayoutGuide type="bottom" id="5Np-Av-SSj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="14O-Ml-r8g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buttonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="4Dh-oS-Ehr">
-                                <rect key="frame" x="119" y="48" width="362" height="475"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="4Dh-oS-Ehr">
+                                <rect key="frame" x="26" y="139" width="362" height="475"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmX-7e-Jvv">
-                                <rect key="frame" x="177" y="137" width="244" height="88"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmX-7e-Jvv">
+                                <rect key="frame" x="84" y="228" width="244" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="Ddl-RS-J8r"/>
+                                    <constraint firstAttribute="width" constant="244" id="qft-bJ-PG3"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="bandMemberButton"/>
+                                <connections>
+                                    <action selector="bandMemberTapped:" destination="6wS-FO-4o9" eventType="touchUpInside" id="Ixh-9q-7vw"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eev-4v-JvY">
-                                <rect key="frame" x="179" y="377" width="244" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eev-4v-JvY">
+                                <rect key="frame" x="86" y="468" width="244" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="gnk-zF-q6X"/>
+                                    <constraint firstAttribute="width" constant="244" id="lkc-05-Fve"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="adminButton"/>
+                                <connections>
+                                    <action selector="adminTapped:" destination="6wS-FO-4o9" eventType="touchUpInside" id="cuR-fs-3Ni"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I am a:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3o-y9-bxS">
-                                <rect key="frame" x="152" y="76" width="307" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGS-p9-sq7">
+                                <rect key="frame" x="83" y="347" width="245" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="hyV-u4-Fq7"/>
+                                    <constraint firstAttribute="height" constant="88" id="low-0S-Exx"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="sectionLeaderButton"/>
+                                <connections>
+                                    <action selector="sectionLeaderTapped:" destination="6wS-FO-4o9" eventType="touchUpInside" id="Nb4-jw-V3Z"/>
+                                    <segue destination="CEL-lg-1j5" kind="show" identifier="toTabBarController" id="lH7-tB-PG4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I am a:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3o-y9-bxS">
+                                <rect key="frame" x="59" y="167" width="307" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGS-p9-sq7">
-                                <rect key="frame" x="176" y="256" width="245" height="88"/>
-                                <state key="normal" title="Button" image="sectionLeaderButton"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TmX-7e-Jvv" firstAttribute="centerX" secondItem="14O-Ml-r8g" secondAttribute="centerX" id="3Th-Ng-n6Y"/>
+                            <constraint firstItem="Eev-4v-JvY" firstAttribute="centerX" secondItem="14O-Ml-r8g" secondAttribute="centerX" id="7lv-rJ-sLr"/>
+                            <constraint firstItem="Eev-4v-JvY" firstAttribute="top" secondItem="4Dh-oS-Ehr" secondAttribute="bottom" constant="-146" id="BEA-qP-pgI"/>
+                            <constraint firstItem="t3o-y9-bxS" firstAttribute="centerX" secondItem="14O-Ml-r8g" secondAttribute="centerX" id="GC8-XT-9MO"/>
+                            <constraint firstItem="4Dh-oS-Ehr" firstAttribute="top" secondItem="TmX-7e-Jvv" secondAttribute="bottom" constant="-177" id="Iuv-9J-chf"/>
+                            <constraint firstItem="4Dh-oS-Ehr" firstAttribute="top" secondItem="OLb-h8-1Pt" secondAttribute="bottom" constant="75" id="OLq-jj-ffk"/>
+                            <constraint firstItem="fGS-p9-sq7" firstAttribute="top" secondItem="4Dh-oS-Ehr" secondAttribute="bottom" constant="-267" id="PrY-Iz-4mL"/>
+                            <constraint firstItem="5Np-Av-SSj" firstAttribute="top" secondItem="4Dh-oS-Ehr" secondAttribute="bottom" constant="122" id="dDC-0Z-h5m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Dh-oS-Ehr" secondAttribute="trailing" constant="6" id="jKs-6F-wkU"/>
+                            <constraint firstItem="4Dh-oS-Ehr" firstAttribute="leading" secondItem="14O-Ml-r8g" secondAttribute="leadingMargin" constant="6" id="qXa-1Q-Vi1"/>
+                            <constraint firstItem="4Dh-oS-Ehr" firstAttribute="top" secondItem="t3o-y9-bxS" secondAttribute="bottom" constant="-49" id="vct-dV-IaK"/>
+                            <constraint firstItem="fGS-p9-sq7" firstAttribute="centerX" secondItem="14O-Ml-r8g" secondAttribute="centerX" id="yyS-vz-GsS"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="BX3-6r-NiP" kind="show" identifier="toUserSetup" id="SyB-fp-Vpd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sde-L7-A2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3379" y="-2254"/>
+            <point key="canvasLocation" x="3525" y="-1656"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="fNX-gR-k3q">
@@ -3312,8 +3353,9 @@
         <image name="sectionLeaderButton" width="888" height="339"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u98-mE-Hmq"/>
         <segue reference="agL-Cc-jKq"/>
+        <segue reference="lH7-tB-PG4"/>
+        <segue reference="SyB-fp-Vpd"/>
         <segue reference="XCE-Yx-gg1"/>
         <segue reference="JgH-1H-eil"/>
         <segue reference="b3Q-1b-Adq"/>

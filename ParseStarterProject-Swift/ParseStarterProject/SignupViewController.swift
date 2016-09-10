@@ -92,7 +92,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                         
                         dispatch_async(dispatch_get_main_queue()) {
                             [unowned self] in
-                            self.performSegueWithIdentifier("signup", sender: self)
+                            self.performSegueWithIdentifier("toAdminStatus", sender: self)
                         }
                         
                         

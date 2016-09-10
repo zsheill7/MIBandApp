@@ -144,17 +144,20 @@ class SettingsTableViewController: UITableViewController {
     }
     @IBAction func logoutButtonPressed(sender: AnyObject) {
         
-        activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,50,50))
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-        view.addSubview(activityIndicator)
-        activityIndicator.startAnimating()
-        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+        
     
         let alert = UIAlertController(title: "Logout", message: "Do you want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            
+            self.activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,50,50))
+            self.activityIndicator.center = self.view.center
+            self.activityIndicator.hidesWhenStopped = true
+            self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+            self.view.addSubview(self.activityIndicator)
+            self.activityIndicator.startAnimating()
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            
             PFUser.logOutInBackgroundWithBlock({ (error) in
                 if error != nil {
                     print(error)

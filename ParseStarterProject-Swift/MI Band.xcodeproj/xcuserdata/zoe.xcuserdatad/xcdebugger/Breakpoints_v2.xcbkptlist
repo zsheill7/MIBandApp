@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseStarterProject/EventViewController.swift"
-            timestampString = "494135675.093162"
+            timestampString = "495320004.734596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "addEventButton(_:)"
             landmarkType = "5">
          </BreakpointContent>

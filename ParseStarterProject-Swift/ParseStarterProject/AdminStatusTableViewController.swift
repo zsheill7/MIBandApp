@@ -43,9 +43,11 @@ class AdminStatusViewController: UIViewController {
         user!.saveInBackground()
         user!["marchingInstrument"] = "None"
         user!["concertInstrument"] = "None"
+        //user!["concertInstrument"]
         user!["concertBandType"] = "None"
         
-        self.performSegueWithIdentifier("toTabBarController", sender: self)
+        let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
+        self.presentViewController(VC!, animated: true, completion: nil)
     }
     
 }

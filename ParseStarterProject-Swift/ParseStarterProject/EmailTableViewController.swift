@@ -42,6 +42,7 @@ class EmailTableViewController: UITableViewController {
         
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         let subject = ""
         let body = " "
         

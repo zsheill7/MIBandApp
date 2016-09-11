@@ -33,7 +33,7 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
     
     var activityIndicator = UIActivityIndicatorView()
     
-    var event = PFObject()
+    var event: PFObject!
     
     @IBOutlet weak var myDatePicker: UIDatePicker!
     
@@ -46,9 +46,14 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
     var willRepeat = false
     let formatter = NSDateFormatter()
     
+    var instruments:[String] = []
+    var ensembles:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        event = PFObject(className: "Event")
+        self.tableView.userInteractionEnabled = true
         eventDescription.delegate = self
         
         
@@ -112,7 +117,7 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
         if willRepeat == false {
             
             let UUID = NSUUID().UUIDString
-            var event = PFObject(className: "Event")
+            
             
             event["title"] = pickerEvent
             
@@ -215,16 +220,17 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var segueID = segue.identifier
         
-        if segueID! == "toInstrument" {
+        /*if segueID! == "toInstrument" {
             var instrumentVC = segue.destinationViewController as! AdminAddEventInstrumentTableViewController
             instrumentVC.event = self.event
         } else if segueID! == "toEnsemble" {
             var ensembleVC = segue.destinationViewController as!
             AdminAddEventEnsembleTableViewController
-        }
+        }*/
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("here")
         if indexPath.section == 0 && indexPath.row == 0 {
             self.performSegueWithIdentifier("toEnsemble", sender: self)
             
@@ -234,7 +240,10 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
     }
     
     override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
+        if indexPath.section != 0 {
+            return false
+        }
+        return true
     }
     
     

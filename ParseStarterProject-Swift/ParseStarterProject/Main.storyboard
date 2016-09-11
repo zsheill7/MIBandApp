@@ -3987,17 +3987,17 @@
                         <outlet property="eventType" destination="WhQ-ib-dm4" id="o2Y-FQ-acQ"/>
                         <outlet property="myDatePicker" destination="zJc-m4-a2a" id="0pC-cV-JEO"/>
                         <segue destination="Q4C-tq-SRZ" kind="show" identifier="toEnsemble" id="CfU-E0-Rom"/>
-                        <segue destination="lhw-HG-E4i" kind="show" identifier="toEnsemble" id="UlL-6N-U7t"/>
+                        <segue destination="lhw-HG-E4i" kind="show" identifier="toInstrument" id="UlL-6N-U7t"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Muf-of-815" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6823" y="904"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Admin Add Event Ensemble Table View Controller-->
         <scene sceneID="Oqu-s1-p4J">
             <objects>
-                <tableViewController id="Q4C-tq-SRZ" sceneMemberID="viewController">
+                <tableViewController id="Q4C-tq-SRZ" customClass="AdminAddEventEnsembleTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="N0O-yJ-DrZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4023,10 +4023,10 @@
             </objects>
             <point key="canvasLocation" x="7303" y="731"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Admin Add Event Instrument Table View Controller-->
         <scene sceneID="baZ-jv-cc4">
             <objects>
-                <tableViewController id="lhw-HG-E4i" sceneMemberID="viewController">
+                <tableViewController id="lhw-HG-E4i" customClass="AdminAddEventInstrumentTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="txT-JC-wB6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

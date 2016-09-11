@@ -11,20 +11,21 @@ import Parse
 
 class AdminAddEventEnsembleTableViewController: UITableViewController {
     
-    var event = PFObject()
+    var ensembles: [String] = []
     
     override func viewDidLoad() {
-        
+        self.tableView.reloadData()
+        self.tableView.allowsMultipleSelection = true
     }
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventList.count
+        return bandTypesList.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        
+        print("here2")
         cell.textLabel?.text = String(bandTypesList[indexPath.row])
         return cell
     }
@@ -32,8 +33,24 @@ class AdminAddEventEnsembleTableViewController: UITableViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
         let destinationVC = segue.destinationViewController as! AdminAddEventOneTableViewController
-        destinationVC.event = event
+        destinationVC.ensembles = ensembles
+       
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
+        
+        let cellText = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
+        ensembles.append(cellText!)
+    }
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.None
+        
+        let cellText = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
+        ensembles = ensembles.filter { $0 != cellText}
     }
 
 }

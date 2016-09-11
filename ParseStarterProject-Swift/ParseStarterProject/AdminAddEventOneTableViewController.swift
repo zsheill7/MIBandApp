@@ -10,7 +10,7 @@ import UIKit
 
 import Parse
 
-class AdminAddEventOneTableViewController: UITableViewController {
+class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     func displayAlert(title: String, message: String) {
         
@@ -39,11 +39,27 @@ class AdminAddEventOneTableViewController: UITableViewController {
     
     @IBOutlet weak var eventType: UIPickerView!
     
+    @IBOutlet weak var bandType: UIPickerView!
+    
        @IBOutlet weak var eventDescription: UITextField!
     
     var willRepeat = false
     let formatter = NSDateFormatter()
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        eventDescription.delegate = self
+        
+        
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        eventType.dataSource = self
+        eventType.delegate = self
+        
+        bandType.dataSource = self
+        bandType.delegate = self
+    }
     @IBAction func addEventButton(sender: AnyObject) {
         activityIndicator = UIActivityIndicatorView(frame: self.view.frame)
         activityIndicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
@@ -193,6 +209,9 @@ class AdminAddEventOneTableViewController: UITableViewController {
     }
     
     
+    @IBAction func moreSettingsPressed(sender: AnyObject) {
+        
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var segueID = segue.identifier
         
@@ -212,5 +231,38 @@ class AdminAddEventOneTableViewController: UITableViewController {
         } else if indexPath.section == 0 && indexPath.row == 1 {
             self.performSegueWithIdentifier("toInstrument", sender: self)
         }
+    }
+    
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        if pickerView == eventType {
+            return eventPickerData.count
+        }
+        return bandTypePickerData.count
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == eventType {
+            return eventPickerData[row]
+        }
+        return bandTypePickerData[row]
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }

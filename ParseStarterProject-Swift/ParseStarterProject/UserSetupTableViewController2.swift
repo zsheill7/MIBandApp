@@ -41,7 +41,7 @@ class UserSetupTableViewController2: UITableViewController {
             downArrow.setImage(UIImage(named: "down"), forState: .Normal)
             downArrow.addTarget(self, action: #selector(UserSetupTableViewController.scrollDown(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             
-            self.view.addSubview(downArrow)
+            //self.view.addSubview(downArrow)
         }
         Mixpanel.mainInstance().identify(distinctId: "564")
         
@@ -109,21 +109,19 @@ class UserSetupTableViewController2: UITableViewController {
     
     @IBAction func finishButton(sender: AnyObject) {
         
-        if isSectionLeader.on == true && isAdmin.on == true {
-            displayAlert("Both Selected", message: "Please select either \"Drum Major\" or \"Section Leader\"")
+        
+            
+            
+        if user!["marchingInstrument"] != nil && user!["concertInstrument"] != nil && user!["concertBandType"] != nil && user!["grade"] != nil{
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+            UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+            mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
         } else {
-            
-            
-            if user!["marchingInstrument"] != nil && user!["concertInstrument"] != nil && user!["concertBandType"] != nil{
-                
-                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
-                UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
-                mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
-            } else {
-                displayAlert("Missing Fields", message: "Please select: \nA marching band instrument\n A concert band instrument\nYour concert band")
-            }
+            displayAlert("Missing Fields", message: "Please select: \nA marching band instrument\n A concert band instrument\nYour concert band")
         }
+        
         
         
         

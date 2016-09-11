@@ -18,6 +18,9 @@
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
 		C802EE3D1D3D630800110415 /* SettingsInstrumentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802EE3C1D3D630800110415 /* SettingsInstrumentsTableViewController.swift */; };
 		C802EE3F1D3D670F00110415 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */; };
+		C80745981D85ADC200026339 /* AdminAddEventTwoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745971D85ADC200026339 /* AdminAddEventTwoTableViewController.swift */; };
+		C807459A1D85AFCD00026339 /* ContainerViewControllerEnsemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745991D85AFCD00026339 /* ContainerViewControllerEnsemble.swift */; };
+		C807459C1D85AFEE00026339 /* ContainerViewControllerSendToInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C807459B1D85AFEE00026339 /* ContainerViewControllerSendToInstrument.swift */; };
 		C817B8211D4B018400E9A5FD /* AdminAddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817B8201D4B018400E9A5FD /* AdminAddEventTableViewController.swift */; };
 		C81FE85A1D66B4A200E0E33F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81FE8591D66B4A200E0E33F /* DetailViewController.swift */; };
 		C829AA271D31DA1D0073DF94 /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */; };
@@ -86,6 +89,9 @@
 		A9337BFC7C0494EA845E60FE /* Pods-ParseBandApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseBandApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseBandApp/Pods-ParseBandApp.release.xcconfig"; sourceTree = "<group>"; };
 		C802EE3C1D3D630800110415 /* SettingsInstrumentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInstrumentsTableViewController.swift; sourceTree = "<group>"; };
 		C802EE3E1D3D670F00110415 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		C80745971D85ADC200026339 /* AdminAddEventTwoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventTwoTableViewController.swift; sourceTree = "<group>"; };
+		C80745991D85AFCD00026339 /* ContainerViewControllerEnsemble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerEnsemble.swift; sourceTree = "<group>"; };
+		C807459B1D85AFEE00026339 /* ContainerViewControllerSendToInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerSendToInstrument.swift; sourceTree = "<group>"; };
 		C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseBandApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C817B8201D4B018400E9A5FD /* AdminAddEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventTableViewController.swift; sourceTree = "<group>"; };
 		C81FE8591D66B4A200E0E33F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -208,18 +214,10 @@
 				C82B3B081D5EA0110037FDC2 /* Nonmember.storyboard */,
 				C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */,
 				C82B3B391D5EB46C0037FDC2 /* InitialViewController.swift */,
-				C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */,
-				C829AA321D35C7830073DF94 /* UpcomingEventTableViewController.swift */,
-				C850799D1D306F81000BA862 /* CalendarViewController.swift */,
 				C8D21E761D833673002311A8 /* EmailTableViewController.swift */,
-				C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */,
+				C80745951D85A7D700026339 /* Member Side */,
 				C8AD156E1D41AB7B0067AE2F /* User Setup */,
-				C829AA301D35C7680073DF94 /* EventViewController.swift */,
-				C81FE8591D66B4A200E0E33F /* DetailViewController.swift */,
-				C817B8201D4B018400E9A5FD /* AdminAddEventTableViewController.swift */,
-				C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */,
-				C829AA341D35CA410073DF94 /* eventItem.swift */,
-				C829AA351D35CA410073DF94 /* eventCell.swift */,
+				C80745961D85A83C00026339 /* Add Event */,
 				C85079B11D307B8F000BA862 /* Assets.xcassets */,
 				C82B3B031D5E51210037FDC2 /* Settings */,
 				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
@@ -252,6 +250,32 @@
 				81BA81761A49E0D500E65899 /* libsqlite3.dylib */,
 			);
 			name = "System Frameworks";
+			sourceTree = "<group>";
+		};
+		C80745951D85A7D700026339 /* Member Side */ = {
+			isa = PBXGroup;
+			children = (
+				C850799F1D306F82000BA862 /* BarcodeTableViewController.swift */,
+				C829AA321D35C7830073DF94 /* UpcomingEventTableViewController.swift */,
+				C850799D1D306F81000BA862 /* CalendarViewController.swift */,
+			);
+			name = "Member Side";
+			sourceTree = "<group>";
+		};
+		C80745961D85A83C00026339 /* Add Event */ = {
+			isa = PBXGroup;
+			children = (
+				C829AA301D35C7680073DF94 /* EventViewController.swift */,
+				C81FE8591D66B4A200E0E33F /* DetailViewController.swift */,
+				C817B8201D4B018400E9A5FD /* AdminAddEventTableViewController.swift */,
+				C8B96B0C1D73B2FE00E638B4 /* MoreSettingsTableViewController.swift */,
+				C829AA341D35CA410073DF94 /* eventItem.swift */,
+				C829AA351D35CA410073DF94 /* eventCell.swift */,
+				C80745971D85ADC200026339 /* AdminAddEventTwoTableViewController.swift */,
+				C80745991D85AFCD00026339 /* ContainerViewControllerEnsemble.swift */,
+				C807459B1D85AFEE00026339 /* ContainerViewControllerSendToInstrument.swift */,
+			);
+			name = "Add Event";
 			sourceTree = "<group>";
 		};
 		C82B3B031D5E51210037FDC2 /* Settings */ = {
@@ -313,6 +337,7 @@
 		C8AD156E1D41AB7B0067AE2F /* User Setup */ = {
 			isa = PBXGroup;
 			children = (
+				C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */,
 				C85079A01D306F82000BA862 /* SignupViewController.swift */,
 				C8AD156C1D41AB5C0067AE2F /* LoginViewController.swift */,
 				C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */,
@@ -488,11 +513,14 @@
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				C82B3B291D5EA1260037FDC2 /* PhotoDataSource.swift in Sources */,
 				C82B3B241D5EA1260037FDC2 /* UpcomingEventsViewController.swift in Sources */,
+				C807459A1D85AFCD00026339 /* ContainerViewControllerEnsemble.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				C82B3B301D5EA1260037FDC2 /* Event.swift in Sources */,
+				C80745981D85ADC200026339 /* AdminAddEventTwoTableViewController.swift in Sources */,
 				C82B3B2A1D5EA1260037FDC2 /* PhotoCollectionViewCell.swift in Sources */,
 				C802EE3F1D3D670F00110415 /* SettingsTableViewController.swift in Sources */,
 				C81FE85A1D66B4A200E0E33F /* DetailViewController.swift in Sources */,
+				C807459C1D85AFEE00026339 /* ContainerViewControllerSendToInstrument.swift in Sources */,
 				C82B3B2F1D5EA1260037FDC2 /* tableViewCell.swift in Sources */,
 				C82B3B271D5EA1260037FDC2 /* PhotosViewController.swift in Sources */,
 				C8D21E791D834E6C002311A8 /* AdminStatusTableViewController.swift in Sources */,

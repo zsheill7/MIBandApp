@@ -11,13 +11,13 @@ import UIKit
 struct properties {
     static let pickerEvents = [
         ["title" : "Log In as a Member", "color" : UIColor.buttonBlue()],
-        ["title" : "About Us", "color": UIColor.buttonBlue()],
+        ["title" : "About This App", "color": UIColor.buttonBlue()],
         ["title" : "Contact Us", "color" : UIColor.buttonBlue()],
         
         ]
     static let memberPickerEvents = [
         ["title" : "Settings", "color" : UIColor.buttonBlue()],
-        ["title" : "About Us", "color": UIColor.buttonBlue()],
+        ["title" : "About This App", "color": UIColor.buttonBlue()],
         ["title" : "Contact Us", "color" : UIColor.buttonBlue()],
         
         ]

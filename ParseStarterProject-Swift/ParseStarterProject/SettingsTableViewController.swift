@@ -115,8 +115,11 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func deleteAccountButtonPressed(sender: AnyObject) {
+        deleteAccountPressed()
+    }
     
-    @IBAction func deleteAccountPressed(sender: AnyObject) {
+   func deleteAccountPressed() {
  
         
         if #available(iOS 8.0, *) {
@@ -142,7 +145,19 @@ class SettingsTableViewController: UITableViewController {
         }
 
     }
+    
     @IBAction func logoutButtonPressed(sender: AnyObject) {
+        logoutPressed()
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 2 && indexPath.row == 2 {
+            logoutPressed()
+        } else if indexPath.section == 3 && indexPath.row == 0 {
+            deleteAccountPressed()
+        }
+    }
+    func logoutPressed() {
         
         
     

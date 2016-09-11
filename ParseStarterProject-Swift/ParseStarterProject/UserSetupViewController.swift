@@ -76,7 +76,7 @@ class UserSetupTableViewController: UITableViewController {
             downArrow.setImage(UIImage(named: "down"), forState: .Normal)
             downArrow.addTarget(self, action: #selector(UserSetupTableViewController.scrollDown(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             
-            self.view.addSubview(downArrow)
+            //self.view.addSubview(downArrow)
         }
         
         
@@ -142,10 +142,10 @@ class UserSetupTableViewController: UITableViewController {
     @IBAction func nextButton(sender: AnyObject) {
         
         
-        if user!["marchingInstrument"] != nil && user!["concertInstrument"] != nil && user!["concertBandType"] != nil{
+        if user!["marchingInstrument"] != nil && user!["concertInstrument"] != nil /*&& user!["concertBandType"] != nil*/{
             self.performSegueWithIdentifier("nextPage", sender: self)
         } else {
-            displayAlert("Missing Fields", message: "Please select: \nA marching band instrument\n A concert band instrument\nYour concert band")
+            displayAlert("Missing Fields", message: "Please select: \nA marching band instrument\n A concert band instrument")
         }
     }
     

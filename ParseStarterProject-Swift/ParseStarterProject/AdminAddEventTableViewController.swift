@@ -17,10 +17,7 @@ class DirectorAddEventTableViewController: UITableViewController, UISearchBarDel
     
     @IBOutlet weak var bandType: UIPickerView!
     
-    
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    @IBOutlet weak var eventDescription: UITextField!
+
     
     @IBOutlet weak var startDatePicker: UIDatePicker!
 
@@ -138,7 +135,7 @@ class DirectorAddEventTableViewController: UITableViewController, UISearchBarDel
         
         
         
-        eventDescription.delegate = self
+        
         
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         formatter.timeStyle = NSDateFormatterStyle.ShortStyle
@@ -148,7 +145,7 @@ class DirectorAddEventTableViewController: UITableViewController, UISearchBarDel
         bandType.dataSource = self
         bandType.delegate = self*/
         
-        searchBar.delegate = self
+        
         
     }
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {

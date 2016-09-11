@@ -714,9 +714,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="65c-bs-Bpt">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="65c-bs-Bpt">
                                 <rect key="frame" x="37" y="205" width="340" height="273"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="273" id="wzu-Oi-xYI"/>
+                                </constraints>
                                 <string key="text">This app was programmed by Zoe Sheill.  Email: zsheill7@gmail.com  All photos taken by David Cummings  Email: davidec@u.washington.edu</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -725,10 +728,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MMp-h0-XUP" firstAttribute="top" secondItem="65c-bs-Bpt" secondAttribute="bottom" constant="275" id="BqK-r6-CcJ"/>
-                            <constraint firstItem="65c-bs-Bpt" firstAttribute="leading" secondItem="WjI-4o-nsk" secondAttribute="leadingMargin" constant="17" id="NvK-aT-6Jb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="65c-bs-Bpt" secondAttribute="trailing" constant="17" id="aJ4-Ql-67Z"/>
-                            <constraint firstItem="65c-bs-Bpt" firstAttribute="top" secondItem="Z5V-gD-D8D" secondAttribute="bottom" constant="141" id="bpX-3g-ee0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="65c-bs-Bpt" secondAttribute="trailing" constant="17" id="32D-4N-7XH"/>
+                            <constraint firstItem="65c-bs-Bpt" firstAttribute="top" secondItem="Z5V-gD-D8D" secondAttribute="bottom" constant="141" id="9wn-b0-h99"/>
+                            <constraint firstItem="65c-bs-Bpt" firstAttribute="leading" secondItem="WjI-4o-nsk" secondAttribute="leadingMargin" constant="17" id="TpE-Vs-Wch"/>
+                            <constraint firstItem="65c-bs-Bpt" firstAttribute="centerX" secondItem="WjI-4o-nsk" secondAttribute="centerX" id="x71-hX-5AZ"/>
                         </constraints>
                     </view>
                 </viewController>

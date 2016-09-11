@@ -75,10 +75,7 @@ class DirectorAddEventTableViewController: UITableViewController, UISearchBarDel
         
         //let attrString = NSAttributedString(string: dateString, attributes:attributes)
         
-        var eventDescriptionText = " "
-        if eventDescription.text != nil {
-            eventDescriptionText = eventDescription.text!
-        }
+        
         //var newEvent: eventItem = eventItem(title: pickerEvent, date: myDatePicker.date, description: eventDescriptionText, UUID: "sdfg")
         
         //eventList.append(newEvent)
@@ -95,7 +92,7 @@ class DirectorAddEventTableViewController: UITableViewController, UISearchBarDel
         
         event["endDate"] = endDatePicker.date
         
-        event["description"] = eventDescriptionText
+        //event["description"] = eventDescriptionText
         
         event["willRepeat"] = false
         

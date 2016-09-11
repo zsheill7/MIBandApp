@@ -6,8 +6,24 @@
 //  Copyright © 2016 Parse. All rights reserved.
 //
 
-import Cocoa
+import UIKit
+import Parse
 
-class ContainerViewControllerSendToInstrument: UIViewController {
+class ContainerViewControllerSendToInstrument: UIViewController /*UITableViewDelegate, UITableViewDataSource */{
+    
+    /*var user = PFUser.currentUser()
+    
+    @IBOutlet weak var instrumentTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        instrumentTableView.delegate = self
+        instrumentTableView.dataSource = self
+        
+        self.instrumentTableView.reloadData()
+    }*/
+    
+    
 
 }

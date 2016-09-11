@@ -21,6 +21,9 @@
 		C80745981D85ADC200026339 /* AdminAddEventTwoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745971D85ADC200026339 /* AdminAddEventTwoTableViewController.swift */; };
 		C807459A1D85AFCD00026339 /* ContainerViewControllerEnsemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745991D85AFCD00026339 /* ContainerViewControllerEnsemble.swift */; };
 		C807459C1D85AFEE00026339 /* ContainerViewControllerSendToInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C807459B1D85AFEE00026339 /* ContainerViewControllerSendToInstrument.swift */; };
+		C80745D81D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745D71D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift */; };
+		C80745DA1D85F20600026339 /* AdminAddEventOneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745D91D85F20600026339 /* AdminAddEventOneTableViewController.swift */; };
+		C80745DC1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745DB1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift */; };
 		C817B8211D4B018400E9A5FD /* AdminAddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817B8201D4B018400E9A5FD /* AdminAddEventTableViewController.swift */; };
 		C81FE85A1D66B4A200E0E33F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81FE8591D66B4A200E0E33F /* DetailViewController.swift */; };
 		C829AA271D31DA1D0073DF94 /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */; };
@@ -92,6 +95,9 @@
 		C80745971D85ADC200026339 /* AdminAddEventTwoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventTwoTableViewController.swift; sourceTree = "<group>"; };
 		C80745991D85AFCD00026339 /* ContainerViewControllerEnsemble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerEnsemble.swift; sourceTree = "<group>"; };
 		C807459B1D85AFEE00026339 /* ContainerViewControllerSendToInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerSendToInstrument.swift; sourceTree = "<group>"; };
+		C80745D71D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventInstrumentTableViewController.swift; sourceTree = "<group>"; };
+		C80745D91D85F20600026339 /* AdminAddEventOneTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventOneTableViewController.swift; sourceTree = "<group>"; };
+		C80745DB1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventEnsembleTableViewController.swift; sourceTree = "<group>"; };
 		C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseBandApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C817B8201D4B018400E9A5FD /* AdminAddEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventTableViewController.swift; sourceTree = "<group>"; };
 		C81FE8591D66B4A200E0E33F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +228,9 @@
 				C82B3B031D5E51210037FDC2 /* Settings */,
 				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
 				C82B3B321D5EA1400037FDC2 /* Nonmember */,
+				C80745D91D85F20600026339 /* AdminAddEventOneTableViewController.swift */,
+				C80745DB1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift */,
+				C80745D71D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -527,6 +536,7 @@
 				C829AA311D35C7690073DF94 /* EventViewController.swift in Sources */,
 				C82B3B001D5E51070037FDC2 /* BarcodeSettingsTableViewController.swift in Sources */,
 				C85079A31D306F82000BA862 /* BarcodeTableViewController.swift in Sources */,
+				C80745D81D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift in Sources */,
 				C82B3B311D5EA1260037FDC2 /* EventList.swift in Sources */,
 				C8C266D51D3DAB6C00574541 /* ChangePasswordTableViewController.swift in Sources */,
 				C8AF37011D51647900B80DB9 /* ContainerViewControllerConcert.swift in Sources */,
@@ -536,6 +546,8 @@
 				C82B3B021D5E51170037FDC2 /* LockerSettingsTableViewController.swift in Sources */,
 				C82B3B0F1D5EA0EF0037FDC2 /* InfoViewController.swift in Sources */,
 				C8AF36FD1D5162DB00B80DB9 /* UserSetupTableViewController2.swift in Sources */,
+				C80745DA1D85F20600026339 /* AdminAddEventOneTableViewController.swift in Sources */,
+				C80745DC1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,50 +1,17 @@
 //
-//  ViewController.swift
-//  Band App Test
+//  AdminAddEventOneTableViewController.swift
+//  MI Band
 //
-//  Created by Zoe Sheill on 6/22/16.
-//  Copyright © 2016 ClassroomM. All rights reserved.
+//  Created by Zoe on 9/11/16.
+//  Copyright © 2016 Parse. All rights reserved.
 //
 
 import UIKit
+
 import Parse
 
-extension NSDate
-{
-    convenience
-    init(dateString:String) {
-        let dateStringFormatter = NSDateFormatter()
-        dateStringFormatter.dateFormat = "yyyy-MM-dd"
-        dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        let d = dateStringFormatter.dateFromString(dateString)!
-        self.init(timeInterval:0, sinceDate:d)
-    }
-}
+class AdminAddEventOneTableViewController: UITableViewController {
 
-let eventPickerData = ["Marching Band Sectional", "Concert Band Sectional", "Ensemble Rehearsal", "Reminder"]
-let bandTypePickerData = ["Marching Band", "Concert Band"]
-
-class AddEventTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
-    
-    @IBOutlet weak var eventDescription: UITextField!
-    
- 
-    @IBOutlet weak var myDatePicker: UIDatePicker!
-    
-    @IBOutlet weak var eventType: UIPickerView!
-    
-    @IBOutlet weak var bandType: UIPickerView!
-
-    var willRepeat = false
-    
-    var activityIndicator = UIActivityIndicatorView()
-    
-    let formatter = NSDateFormatter()
-    
-    
-    
-    
-    
     func displayAlert(title: String, message: String) {
         
         if #available(iOS 8.0, *) {
@@ -60,14 +27,24 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         } else {
             print("error")
         }
-        
-        
-        
+    
     }
 
     
+    var activityIndicator = UIActivityIndicatorView()
+    
+    var event = PFObject()
+    
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    
+    @IBOutlet weak var eventType: UIPickerView!
+    
+       @IBOutlet weak var eventDescription: UITextField!
+    
+    var willRepeat = false
+    let formatter = NSDateFormatter()
+    
     @IBAction func addEventButton(sender: AnyObject) {
-        
         activityIndicator = UIActivityIndicatorView(frame: self.view.frame)
         activityIndicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
         activityIndicator.center = self.view.center
@@ -78,10 +55,11 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         
+        
         let pickerEvent = String(eventPickerData[eventType.selectedRowInComponent(0)])
         
         let bandTypeEvent = String(eventPickerData[bandType.selectedRowInComponent(0)])
-
+        
         //let attrString = NSAttributedString(string: dateString, attributes:attributes)
         
         var eventDescriptionText = " "
@@ -153,7 +131,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                         let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
                         self.presentViewController(VC!, animated: true, completion: nil)
                     }
-
+                    
                 } else {
                     self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
                 }
@@ -162,7 +140,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
             let UUID = NSUUID().UUIDString
             
             while placeholderDate.earlierDate(endOfSchool).isEqualToDate(placeholderDate) {
-            
+                
                 
                 var event = PFObject(className: "Event")
                 
@@ -205,80 +183,34 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                     }
                 }
                 placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
-
+                
             }
             
         }
-
         
 
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
-      
-        eventDescription.delegate = self
-        
-        
-        formatter.dateStyle = NSDateFormatterStyle.LongStyle
-        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        eventType.dataSource = self
-        eventType.delegate = self
-        
-        bandType.dataSource = self
-        bandType.delegate = self
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-     self.view.endEditing(true)
-     return false
-     }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
-        super.viewWillAppear(animated)
-    }
-    
-    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
     }
     
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var segueID = segue.identifier
         
-        if pickerView == eventType {
-            return eventPickerData.count
+        if segueID! == "toInstrument" {
+            var instrumentVC = segue.destinationViewController as! AdminAddEventInstrumentTableViewController
+            instrumentVC.event = self.event
+        } else if segueID! == "toEnsemble" {
+            var ensembleVC = segue.destinationViewController as!
+            AdminAddEventEnsembleTableViewController
         }
-        return bandTypePickerData.count
-  
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == eventType {
-            return eventPickerData[row]
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            self.performSegueWithIdentifier("toEnsemble", sender: self)
+            
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            self.performSegueWithIdentifier("toInstrument", sender: self)
         }
-        return bandTypePickerData[row]
     }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        /*        */
-    }
-    
-    
-
-
 }
-

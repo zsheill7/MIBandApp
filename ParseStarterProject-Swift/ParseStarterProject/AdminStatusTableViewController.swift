@@ -23,7 +23,8 @@ class AdminStatusViewController: UIViewController {
         
         user!["isAdmin"] = true
         
-        self.performSegueWithIdentifier("toUserSetup", sender: self)
+        let VC = self.storyboard?.instantiateViewControllerWithIdentifier("userSetupVC")
+        self.presentViewController(VC!, animated: true, completion: nil)
     }
     
     @IBAction func sectionLeaderTapped(sender: AnyObject) {
@@ -33,7 +34,8 @@ class AdminStatusViewController: UIViewController {
         user!["isAdmin"] = false
         user!.saveInBackground()
         
-        self.performSegueWithIdentifier("toUserSetup", sender: self)
+        let VC = self.storyboard?.instantiateViewControllerWithIdentifier("userSetupVC")
+        self.presentViewController(VC!, animated: true, completion: nil)
     }
     
     @IBAction func adminTapped(sender: AnyObject) {

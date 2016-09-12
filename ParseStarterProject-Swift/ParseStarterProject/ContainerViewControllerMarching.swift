@@ -75,5 +75,8 @@ class ContainerViewControllerOne: UIViewController, UITableViewDelegate, UITable
         user!.saveInBackground()
         
     }
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.None
+    }
 
 }

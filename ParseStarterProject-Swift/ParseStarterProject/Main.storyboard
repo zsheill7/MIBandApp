@@ -415,7 +415,7 @@
         <!--User Setup Table View Controller-->
         <scene sceneID="wTu-4A-HFB">
             <objects>
-                <tableViewController id="BX3-6r-NiP" customClass="UserSetupTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="userSetupVC" id="BX3-6r-NiP" customClass="UserSetupTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="11" sectionFooterHeight="1" id="7e2-rT-LkE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4119,9 +4119,9 @@
         <segue reference="agL-Cc-jKq"/>
         <segue reference="u98-mE-Hmq"/>
         <segue reference="SyB-fp-Vpd"/>
-        <segue reference="Phz-9U-Zn6"/>
-        <segue reference="3Yb-T1-WTu"/>
-        <segue reference="5ng-KQ-DuG"/>
+        <segue reference="wTi-hA-FDf"/>
+        <segue reference="Rfw-pW-Szv"/>
+        <segue reference="xge-Wa-iBo"/>
         <segue reference="hLB-je-k5o"/>
     </inferredMetricsTieBreakers>
 </document>

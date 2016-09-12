@@ -29,6 +29,8 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var table: UITableView!
   
 
+    var instruments:[String] = []
+    var ensembles:[String] = []
     var events = [eventItem]()
     
     var user = PFUser.currentUser()
@@ -117,7 +119,15 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             //seeing if the ensemble is "Marching Band"
                             
                             //print((object["instrument"] as! String) + userInstrument)
+                            let ensembleString = ""
+                            let instrumentString = ""
                             
+                            let ensembleCount = object["ensemble"].count
+                            if  ensembleCount > 0 {
+                                for i in i..<ensembleCount {
+                                    if
+                                }
+                            }
                             let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
                             
                             self.events.append(newEvent)

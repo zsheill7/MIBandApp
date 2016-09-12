@@ -53,10 +53,10 @@ class InitialViewController: UIViewController {
             mainStoryboard.instantiateViewControllerWithIdentifier("loginNC")
         } else {
             
-            let initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("createAccountVC")
+            let initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("createAccountNC")
             self.window?.rootViewController = initialViewController
             UIApplication.sharedApplication().keyWindow?.rootViewController = initialViewController
-            mainStoryboard.instantiateViewControllerWithIdentifier("createAccountVC")
+            mainStoryboard.instantiateViewControllerWithIdentifier("createAccountNC")
             defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
             
         }

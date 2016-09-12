@@ -34,8 +34,9 @@ class AdminStatusViewController: UIViewController {
         user!["isAdmin"] = false
         user!.saveInBackground()
         
-        let VC = self.storyboard?.instantiateViewControllerWithIdentifier("userSetupVC")
-        self.presentViewController(VC!, animated: true, completion: nil)
+        let main2Storyboard = UIStoryboard(name: "Main2", bundle: nil)
+        let VC = main2Storyboard.instantiateViewControllerWithIdentifier("userSetupVC")
+        self.presentViewController(VC, animated: true, completion: nil)
     }
     
     @IBAction func adminTapped(sender: AnyObject) {
@@ -49,8 +50,10 @@ class AdminStatusViewController: UIViewController {
         user!["concertBandType"] = " "
         
         user!.saveInBackground()
-        let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
-        self.presentViewController(VC!, animated: true, completion: nil)
+        let main2Storyboard = UIStoryboard(name: "Main2", bundle: nil)
+        
+        let VC = main2Storyboard.instantiateViewControllerWithIdentifier("tabBarController")
+        self.presentViewController(VC, animated: true, completion: nil)
     }
     
 }

@@ -120,8 +120,9 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
         
     @IBAction func homeButtonPressed(sender: AnyObject) {
-        let initialVC = storyboard?.instantiateViewControllerWithIdentifier("initialVC")
-        self.presentViewController(initialVC!, animated: true, completion: nil)
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialVC = mainStoryboard.instantiateViewControllerWithIdentifier("initialVC")
+        self.presentViewController(initialVC, animated: true, completion: nil)
     }
   
     override func viewDidAppear(animated: Bool) {

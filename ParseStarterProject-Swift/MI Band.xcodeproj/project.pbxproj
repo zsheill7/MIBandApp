@@ -74,6 +74,8 @@
 		C8D21E791D834E6C002311A8 /* AdminStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */; };
 		C8E9EB0A1D7D294B0004B570 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */; };
 		C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */; };
+		C8FD12C11D876DB4004D307C /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FD12C01D876DB4004D307C /* Main2.storyboard */; };
+		C8FD12C31D87703F004D307C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FD12C21D87703F004D307C /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +152,8 @@
 		C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminStatusTableViewController.swift; sourceTree = "<group>"; };
 		C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C8FD12C01D876DB4004D307C /* Main2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
+		C8FD12C21D87703F004D307C /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F786A27A774C5C23D5EA3188 /* Pods-MI Band.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MI Band.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MI Band/Pods-MI Band.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +223,8 @@
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				C82B3B411D5FA3510037FDC2 /* Main.storyboard */,
+				C8FD12C01D876DB4004D307C /* Main2.storyboard */,
+				C8FD12C21D87703F004D307C /* Settings.storyboard */,
 				C82B3B081D5EA0110037FDC2 /* Nonmember.storyboard */,
 				C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */,
 				C82B3B391D5EB46C0037FDC2 /* InitialViewController.swift */,
@@ -429,7 +435,9 @@
 				C82B3B091D5EA0110037FDC2 /* Nonmember.storyboard in Resources */,
 				C85079B21D307B8F000BA862 /* Assets.xcassets in Resources */,
 				C80745DE1D87610200026339 /* Initial.storyboard in Resources */,
+				C8FD12C11D876DB4004D307C /* Main2.storyboard in Resources */,
 				C82B3B421D5FA3510037FDC2 /* Main.storyboard in Resources */,
+				C8FD12C31D87703F004D307C /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

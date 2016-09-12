@@ -38,7 +38,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     override func viewDidAppear(animated: Bool) {
         if PFUser.currentUser()?.objectId != nil {
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main2", bundle: nil)
             let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
             UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
             mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
@@ -79,7 +79,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 dispatch_async(dispatch_get_main_queue()) {
                     [unowned self] in
-                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main2", bundle: nil)
                     let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
                     UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
                     mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
@@ -103,9 +103,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func homeButtonTapped(sender: AnyObject) {
-        let initialVC = storyboard?.instantiateViewControllerWithIdentifier("initialVC")
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialVC = mainStoryboard.instantiateViewControllerWithIdentifier("initialVC")
         
-        self.presentViewController(initialVC!, animated: true, completion: nil)
+        self.presentViewController(initialVC, animated: true, completion: nil)
     }
     
     

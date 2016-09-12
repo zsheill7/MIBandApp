@@ -131,8 +131,9 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
             event["UUID"] = UUID
             
             if pickerEvent == "Marching Band Sectional" {
-                event["instrument"] = PFUser.currentUser()!.objectForKey("marchingInstrument")
-                event["ensemble"] = "Marching Band"
+                let userInstrument = PFUser.currentUser()!.objectForKey("marchingInstrument")
+                event.addObject(userInstrument!, forKey: "instrument")
+                event.addObject("Marching Band", forKey: "ensemble")
                 
             } else {
                 
@@ -183,11 +184,14 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                     event["ensemble"] = "Marching Band"
                     
                 } else {
-                    let concertInstrument = PFUser.currentUser()!.objectForKey("concertInstrument")
-                    let concertBandType = PFUser.currentUser()!.objectForKey("concertBandType")
-
-                    event.addObject(concertInstrument!, forKey: "instrument")
-                    event.addObject(concertBandType!, forKey: "ensemble")
+                    let concertInstrument = PFUser.currentUser()!.objectForKey("concertInstrument") as! String
+                    print(concertInstrument)
+                    let concertBandType = PFUser.currentUser()!.objectForKey("concertBandType") as! String
+                    print("here")
+                    event.addObject(concertInstrument, forKey: "instrument")
+                    
+                    event.addObject(concertBandType, forKey: "ensemble")
+                    
                 }
                 
                 event.saveInBackgroundWithBlock{(success, error) -> Void in

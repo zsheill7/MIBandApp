@@ -24,6 +24,7 @@
 		C80745D81D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745D71D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift */; };
 		C80745DA1D85F20600026339 /* AdminAddEventOneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745D91D85F20600026339 /* AdminAddEventOneTableViewController.swift */; };
 		C80745DC1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80745DB1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift */; };
+		C80745DE1D87610200026339 /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C80745DD1D87610200026339 /* Initial.storyboard */; };
 		C817B8211D4B018400E9A5FD /* AdminAddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817B8201D4B018400E9A5FD /* AdminAddEventTableViewController.swift */; };
 		C81FE85A1D66B4A200E0E33F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81FE8591D66B4A200E0E33F /* DetailViewController.swift */; };
 		C829AA271D31DA1D0073DF94 /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829AA261D31DA1C0073DF94 /* UserSetupViewController.swift */; };
@@ -98,6 +99,7 @@
 		C80745D71D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventInstrumentTableViewController.swift; sourceTree = "<group>"; };
 		C80745D91D85F20600026339 /* AdminAddEventOneTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventOneTableViewController.swift; sourceTree = "<group>"; };
 		C80745DB1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventEnsembleTableViewController.swift; sourceTree = "<group>"; };
+		C80745DD1D87610200026339 /* Initial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Initial.storyboard; sourceTree = "<group>"; };
 		C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseBandApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C817B8201D4B018400E9A5FD /* AdminAddEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAddEventTableViewController.swift; sourceTree = "<group>"; };
 		C81FE8591D66B4A200E0E33F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				C80745D91D85F20600026339 /* AdminAddEventOneTableViewController.swift */,
 				C80745DB1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift */,
 				C80745D71D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift */,
+				C80745DD1D87610200026339 /* Initial.storyboard */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */,
 				C82B3B091D5EA0110037FDC2 /* Nonmember.storyboard in Resources */,
 				C85079B21D307B8F000BA862 /* Assets.xcassets in Resources */,
+				C80745DE1D87610200026339 /* Initial.storyboard in Resources */,
 				C82B3B421D5FA3510037FDC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

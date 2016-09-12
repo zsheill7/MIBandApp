@@ -124,13 +124,14 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             
                             let ensembleCount = object["ensemble"].count
                             
-                            var instrumentMatch == false
-                            instruments = object["instruments"] as! [String]
+                            var instrumentMatch = false
+                            self.instruments = object["instrument"] as! [String]
+                            var instrumentCount = self.instruments.count
                             
                             var matchIndex = 0
                             
                             if  instrumentCount > 1 {
-                                for ensembleString in instruments {
+                                for ensembleString in self.instruments {
                                     if ensembleString == userInstrument {
                                         instrumentMatch = true
                                     }
@@ -139,7 +140,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             
                             
                            
-                            let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: instruments[matchIndex] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
+                            let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: self.instruments[matchIndex] as! String, ensemble: "Marching Band", willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
                             
                             
                             self.events.append(newEvent)
@@ -167,7 +168,41 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                         
                         //print((object["instrument"] as! String) + userInstrument)
                         
-                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
+                    
+                        
+                       
+                        
+                        var instrumentMatch = false
+                        var ensembleMatch = false
+                        self.instruments = object["instrument"] as! [String]
+                        self.ensembles = object["ensemble"] as! [String]
+                        var instrumentCount = self.instruments.count
+                        var ensembleCount = self.ensembles.count
+                        
+                        var instrumentMatchIndex = 0
+                        var ensembleMatchIndex = 0
+                        let userInstrument = PFUser.currentUser()!["marchingInstrument"] as! String
+                        let userEnsemble = PFUser.currentUser()!["concertBandType"] as! String
+                        
+                        if  instrumentCount > 1 {
+                            for (index, instrumentString) in self.instruments.enumerate() {
+                                if instrumentString == userInstrument {
+                                    instrumentMatch = true
+                                    instrumentMatchIndex = index
+                                }
+                            }
+                        }
+                        
+                        if ensembleCount > 1 {
+                            for (index, ensembleString) in self.ensembles.enumerate() {
+                                if ensembleString == userEnsemble {
+                                    ensembleMatch = true
+                                    ensembleMatchIndex = index
+                                }
+                            }
+                        }
+                        
+                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: self.instruments[instrumentMatchIndex], ensemble: self.ensembles[ensembleMatchIndex], willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
                         
                         self.events.append(newEvent)
                         

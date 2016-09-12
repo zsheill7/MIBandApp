@@ -404,13 +404,12 @@
                         <outlet property="firstName" destination="f03-IS-KhQ" id="d6W-ef-zwg"/>
                         <outlet property="lastName" destination="Cfa-Nb-vMo" id="vFi-bk-ZNt"/>
                         <outlet property="password" destination="UE7-eP-VjO" id="25P-8R-7Eg"/>
-                        <segue destination="tJs-Rn-57v" kind="show" identifier="signup" id="fzg-Fr-fH2"/>
                         <segue destination="6wS-FO-4o9" kind="show" identifier="toAdminStatus" id="DGJ-bj-08l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B12-yt-yoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="-1470"/>
+            <point key="canvasLocation" x="2668" y="-1638"/>
         </scene>
         <!--User Setup Table View Controller-->
         <scene sceneID="wTu-4A-HFB">
@@ -2014,25 +2013,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="Z4v-G4-UTy">
-                                        <rect key="frame" x="0.0" y="696.5" width="414" height="93"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z4v-G4-UTy" id="Weg-xC-eKw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="92.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jvr-of-lmU">
-                                                    <rect key="frame" x="8" y="8" width="398" height="78"/>
-                                                </pickerView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="DESCRIPTION" id="KKI-k0-HYs">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="jPH-7f-i4d">
-                                        <rect key="frame" x="0.0" y="839.5" width="414" height="116"/>
+                                        <rect key="frame" x="0.0" y="746.5" width="414" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jPH-7f-i4d" id="eQk-gE-lxI">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="115.5"/>
@@ -2056,7 +2042,7 @@
                             <tableViewSection headerTitle="Start Time" id="4QZ-7H-zUf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="kML-wH-6L7">
-                                        <rect key="frame" x="0.0" y="1005.5" width="414" height="148"/>
+                                        <rect key="frame" x="0.0" y="912.5" width="414" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kML-wH-6L7" id="w5U-Rp-QoD">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="147.5"/>
@@ -2082,7 +2068,7 @@
                             <tableViewSection headerTitle="End Time" id="AcA-cB-sWR">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="139" id="iiq-YL-J41">
-                                        <rect key="frame" x="0.0" y="1203.5" width="414" height="139"/>
+                                        <rect key="frame" x="0.0" y="1110.5" width="414" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iiq-YL-J41" id="24A-d4-pZg">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="138.5"/>
@@ -2104,7 +2090,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qON-O5-P77">
-                                        <rect key="frame" x="0.0" y="1342.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="1249.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qON-O5-P77" id="m7S-q0-6Sm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -2141,7 +2127,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="bandType" destination="Jvr-of-lmU" id="ZOb-sn-gZe"/>
                         <outlet property="endDatePicker" destination="PAb-ES-UjC" id="4hR-Zy-wxh"/>
                         <outlet property="ensembleTable" destination="VIg-x3-tKX" id="dEo-Dl-Xrv"/>
                         <outlet property="eventDescription" destination="VJm-dV-UeD" id="uup-I9-wX7"/>
@@ -2153,7 +2138,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDr-dM-ojC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3944" y="1339"/>
+            <point key="canvasLocation" x="3972" y="1340"/>
         </scene>
         <!--User Setup Table View Controller2-->
         <scene sceneID="JCK-jl-Jj3">
@@ -2467,13 +2452,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <segue destination="BX3-6r-NiP" kind="show" identifier="toUserSetup" id="SyB-fp-Vpd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sde-L7-A2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3525" y="-1656"/>
+            <point key="canvasLocation" x="3261" y="-1706"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="fNX-gR-k3q">
@@ -2583,7 +2565,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNJ-xk-e40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="-717"/>
+            <point key="canvasLocation" x="2466" y="-669"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="tnI-BM-pgk">
@@ -2887,7 +2869,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6y-Uf-lxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-700" y="-962"/>
+            <point key="canvasLocation" x="-372" y="-1353.5"/>
         </scene>
         <!--Master-->
         <scene sceneID="VsA-tR-SuI">
@@ -3932,7 +3914,6 @@
                                                     <rect key="frame" x="169" y="8" width="76" height="26"/>
                                                     <state key="normal" title="Button" image="ButtonConfirm"/>
                                                     <connections>
-                                                        <action selector="addEventButton:" destination="YKF-aF-bK1" eventType="touchUpInside" id="LTC-53-MPx"/>
                                                         <action selector="addEventButton:" destination="Fcp-V2-k3u" eventType="touchUpInside" id="cLI-9z-IQb"/>
                                                     </connections>
                                                 </button>
@@ -4024,36 +4005,6 @@
             </objects>
             <point key="canvasLocation" x="7291" y="1340"/>
         </scene>
-        <!--Add Event-->
-        <scene sceneID="Ktk-Ag-iU3">
-            <objects>
-                <tableViewController id="YKF-aF-bK1" customClass="AddEventTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="3n4-CR-OfQ">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="YKF-aF-bK1" id="URp-FU-3Sg"/>
-                            <outlet property="delegate" destination="YKF-aF-bK1" id="p1L-ax-sxE"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Add Event" id="etC-bK-TQP">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="cHE-Y5-vO9"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="bandType" destination="jIH-yJ-t4p" id="lNJ-QY-cWe"/>
-                        <outlet property="eventDescription" destination="FQU-tm-LuK" id="WTm-c8-STP"/>
-                        <outlet property="eventType" destination="WhQ-ib-dm4" id="Yy9-dX-9uD"/>
-                        <outlet property="myDatePicker" destination="zJc-m4-a2a" id="aSY-j2-tDq"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KKt-qR-fJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6823" y="162"/>
-        </scene>
     </scenes>
     <resources>
         <image name="1" width="477" height="219"/>
@@ -4090,7 +4041,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="agL-Cc-jKq"/>
         <segue reference="u98-mE-Hmq"/>
-        <segue reference="SyB-fp-Vpd"/>
         <segue reference="wTi-hA-FDf"/>
         <segue reference="Rfw-pW-Szv"/>
         <segue reference="xge-Wa-iBo"/>

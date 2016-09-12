@@ -41,10 +41,10 @@ class AdminStatusViewController: UIViewController {
         user!["isAdmin"] = true
         user!["isSectionLeader"] = false
         
-        user!["marchingInstrument"] = "None"
-        user!["concertInstrument"] = "None"
+        user!["marchingInstrument"] = " "
+        user!["concertInstrument"] = " "
         //user!["concertInstrument"]
-        user!["concertBandType"] = "None"
+        user!["concertBandType"] = " "
         
         user!.saveInBackground()
         let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")

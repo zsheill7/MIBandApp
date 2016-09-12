@@ -76,6 +76,7 @@
 		C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */; };
 		C8FD12C11D876DB4004D307C /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FD12C01D876DB4004D307C /* Main2.storyboard */; };
 		C8FD12C31D87703F004D307C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FD12C21D87703F004D307C /* Settings.storyboard */; };
+		C8FD12C51D877112004D307C /* Unused.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FD12C41D877112004D307C /* Unused.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,7 @@
 		C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C8FD12C01D876DB4004D307C /* Main2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
 		C8FD12C21D87703F004D307C /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		C8FD12C41D877112004D307C /* Unused.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unused.storyboard; sourceTree = "<group>"; };
 		F786A27A774C5C23D5EA3188 /* Pods-MI Band.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MI Band.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MI Band/Pods-MI Band.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +229,7 @@
 				C8FD12C21D87703F004D307C /* Settings.storyboard */,
 				C82B3B081D5EA0110037FDC2 /* Nonmember.storyboard */,
 				C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */,
+				C8FD12C41D877112004D307C /* Unused.storyboard */,
 				C82B3B391D5EB46C0037FDC2 /* InitialViewController.swift */,
 				C8D21E761D833673002311A8 /* EmailTableViewController.swift */,
 				C80745951D85A7D700026339 /* Member Side */,
@@ -435,6 +438,7 @@
 				C82B3B091D5EA0110037FDC2 /* Nonmember.storyboard in Resources */,
 				C85079B21D307B8F000BA862 /* Assets.xcassets in Resources */,
 				C80745DE1D87610200026339 /* Initial.storyboard in Resources */,
+				C8FD12C51D877112004D307C /* Unused.storyboard in Resources */,
 				C8FD12C11D876DB4004D307C /* Main2.storyboard in Resources */,
 				C82B3B421D5FA3510037FDC2 /* Main.storyboard in Resources */,
 				C8FD12C31D87703F004D307C /* Settings.storyboard in Resources */,

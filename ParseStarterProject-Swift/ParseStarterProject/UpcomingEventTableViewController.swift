@@ -123,12 +123,24 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             let instrumentString = ""
                             
                             let ensembleCount = object["ensemble"].count
-                            if  ensembleCount > 0 {
-                                for i in i..<ensembleCount {
-                                    if
+                            
+                            var instrumentMatch == false
+                            instruments = object["instruments"] as! [String]
+                            
+                            var matchIndex = 0
+                            
+                            if  instrumentCount > 1 {
+                                for ensembleString in instruments {
+                                    if ensembleString == userInstrument {
+                                        instrumentMatch = true
+                                    }
                                 }
                             }
-                            let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: object["instrument"] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
+                            
+                            
+                           
+                            let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: instruments[matchIndex] as! String, ensemble: object["ensemble"] as! String, willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
+                            
                             
                             self.events.append(newEvent)
                             

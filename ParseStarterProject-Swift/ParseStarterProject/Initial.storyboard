@@ -25,6 +25,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Screen Shot 2016-07-17 at 9.41.47 PM" translatesAutoresizingMaskIntoConstraints="NO" id="geP-jx-cdS">
                                         <rect key="frame" x="-7" y="-84" width="919" height="684"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
+                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="-7" y="-84" width="919" height="884"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="-7" y="-84" width="919" height="884"/>
+                                        </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Rectangle short shadow" translatesAutoresizingMaskIntoConstraints="NO" id="LLW-Xm-Y87">
                                         <rect key="frame" x="147" y="390" width="311" height="63"/>
@@ -44,6 +50,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="241" id="88d-60-Ga8"/>
                                         </constraints>
+                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="128" y="147" width="459" height="241"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="128" y="147" width="459" height="241"/>
+                                        </variation>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Kp-MU-6Tx">
                                         <rect key="frame" x="189" y="223" width="250" height="30"/>
@@ -144,10 +156,16 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="V4k-hS-5Zd"/>
                                         <exclude reference="3ez-xb-tS5"/>
+                                        <exclude reference="V4k-hS-5Zd"/>
                                         <exclude reference="IrI-dv-lNZ"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                                 </variation>
                             </view>
                         </subviews>
@@ -405,6 +423,9 @@
                                     <constraint firstAttribute="width" constant="244" id="UPd-gk-Gr7"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="bandMemberButton"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="246" y="-94" width="244" height="88"/>
+                                </variation>
                                 <connections>
                                     <action selector="bandMemberTapped:" destination="1GZ-ku-ZUP" eventType="touchUpInside" id="QUh-eu-HyM"/>
                                 </connections>
@@ -416,6 +437,9 @@
                                     <constraint firstAttribute="width" constant="244" id="zTg-SM-Ix8"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="adminButton"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="246" y="146" width="244" height="86"/>
+                                </variation>
                                 <connections>
                                     <action selector="adminTapped:" destination="1GZ-ku-ZUP" eventType="touchUpInside" id="6fp-x4-hLp"/>
                                 </connections>
@@ -427,6 +451,9 @@
                                     <constraint firstAttribute="width" constant="245" id="U4R-wY-gfq"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="sectionLeaderButton"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="245.5" y="25" width="245" height="88"/>
+                                </variation>
                                 <connections>
                                     <action selector="sectionLeaderTapped:" destination="1GZ-ku-ZUP" eventType="touchUpInside" id="e12-3G-tl4"/>
                                 </connections>

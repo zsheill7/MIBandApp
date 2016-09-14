@@ -99,11 +99,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let photosVC = navigationVC.topViewController as! PhotosViewController
         photosVC.store = PhotoStore()
 
-        let mainStoryboard = UIStoryboard(name: "Main2", bundle: nil)
+        /*let mainStoryboard = UIStoryboard(name: "Main2", bundle: nil)
         let splitVC = mainStoryboard.instantiateViewControllerWithIdentifier("splitVC") as! UISplitViewController
         let masterNavigationVC = splitVC.viewControllers[splitVC.viewControllers.count-1] as! UINavigationController
         masterNavigationVC.view.window?.rootViewController = splitVC
-        splitVC.delegate = self
+        splitVC.delegate = self*/
 
         
         

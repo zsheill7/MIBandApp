@@ -181,12 +181,13 @@ class SettingsTableViewController: UITableViewController {
                 }
             })
             
-            let loginNC = self.storyboard?.instantiateViewControllerWithIdentifier("loginNC")
+            let initialStoryboard = UIStoryboard(name: "Initial", bundle: nil)
+            let loginNC = initialStoryboard.instantiateViewControllerWithIdentifier("loginNC")
             
             self.activityIndicator.stopAnimating()
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
             
-            self.presentViewController(loginNC!, animated: true, completion: nil)
+            self.presentViewController(loginNC, animated: true, completion: nil)
         
 
         })))

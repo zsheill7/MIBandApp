@@ -39,7 +39,7 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
     
     @IBOutlet weak var eventType: UIPickerView!
     
-    @IBOutlet weak var bandType: UIPickerView!
+ 
     
        @IBOutlet weak var eventDescription: UITextField!
     
@@ -61,9 +61,7 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
         formatter.timeStyle = NSDateFormatterStyle.ShortStyle
         eventType.dataSource = self
         eventType.delegate = self
-        
-        bandType.dataSource = self
-        bandType.delegate = self
+     
     }
     @IBAction func addEventButton(sender: AnyObject) {
         activityIndicator = UIActivityIndicatorView(frame: self.view.frame)
@@ -79,7 +77,7 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
         
         let pickerEvent = String(eventPickerData[eventType.selectedRowInComponent(0)])
         
-        let bandTypeEvent = String(eventPickerData[bandType.selectedRowInComponent(0)])
+       // let bandTypeEvent = String(eventPickerData[bandType.selectedRowInComponent(0)])
         
         //let attrString = NSAttributedString(string: dateString, attributes:attributes)
         
@@ -114,72 +112,29 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
         formatter.dateFormat = "yyyy/MM/dd"
         let endOfSchool = NSDate(dateString: "\(endOfSchoolYear!)-06-20")
         
-        if willRepeat == false {
-            
-            let UUID = NSUUID().UUIDString
-            
-            
-            event["title"] = pickerEvent
-            
-            event["date"] = myDatePicker.date
-            
-            event["description"] = eventDescriptionText
-            
-            event["willRepeat"] = willRepeat
-            
-            event["UUID"] = UUID
-            
-           
-                event["instrument"] = instruments
-                event["ensemble"] = ensembles
+        if instruments.count > 0 && ensembles.count > 0 {
+            if willRepeat == false {
                 
-            
-            
-            event.saveInBackgroundWithBlock{(success, error) -> Void in
-                self.activityIndicator.stopAnimating()
+                let UUID = NSUUID().UUIDString
                 
-                UIApplication.sharedApplication().endIgnoringInteractionEvents()
-                
-                if error == nil {
-                    
-                    dispatch_async(dispatch_get_main_queue()) {
-                        [unowned self] in
-                        //self.performSegueWithIdentifier("addEvent", sender: self)
-                        let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
-                        self.presentViewController(VC!, animated: true, completion: nil)
-                    }
-                    
-                } else {
-                    self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
-                }
-            }
-        } else /*if willRepeat == true*/ {
-            let UUID = NSUUID().UUIDString
-            
-            while placeholderDate.earlierDate(endOfSchool).isEqualToDate(placeholderDate) {
-                
-                
-                var event = PFObject(className: "Event")
                 
                 event["title"] = pickerEvent
                 
-                event["date"] = placeholderDate
+                event["date"] = myDatePicker.date
                 
                 event["description"] = eventDescriptionText
-                
                 
                 event["willRepeat"] = willRepeat
                 
                 event["UUID"] = UUID
-                if pickerEvent == "Marching Band Sectional" {
-                    event["instrument"] = /*PFUser.currentUser()!.objectForKey("marchingInstrument")*/ instruments
-                    event["ensemble"] = "Marching Band"
+                
+                
+                event.addObjectsFromArray(instruments, forKey: "instrument")
+                
+                event.addObjectsFromArray(ensembles, forKey: "ensemble")
+                
                     
-                } else {
-                    
-                    event["instrument"] = /*PFUser.currentUser()!.objectForKey("concertInstrument")*/ instruments
-                    event["ensemble"] = /*PFUser.currentUser()!.objectForKey("concertBandType")*/ ensembles
-                }
+                
                 
                 event.saveInBackgroundWithBlock{(success, error) -> Void in
                     self.activityIndicator.stopAnimating()
@@ -199,13 +154,64 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
                         self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
                     }
                 }
-                placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
+            } else /*if willRepeat == true*/ {
+                let UUID = NSUUID().UUIDString
+                
+                while placeholderDate.earlierDate(endOfSchool).isEqualToDate(placeholderDate) {
+                    
+                    
+                    var event = PFObject(className: "Event")
+                    
+                    event["title"] = pickerEvent
+                    
+                    event["date"] = placeholderDate
+                    
+                    event["description"] = eventDescriptionText
+                    
+                    
+                    event["willRepeat"] = willRepeat
+                    
+                    event["UUID"] = UUID
+                    if pickerEvent == "Marching Band Sectional" {
+                        event["instrument"] = /*PFUser.currentUser()!.objectForKey("marchingInstrument")*/ instruments
+                        event["ensemble"] = "Marching Band"
+                        
+                    } else {
+                        
+                        event["instrument"] = /*PFUser.currentUser()!.objectForKey("concertInstrument")*/ instruments
+                        event["ensemble"] = /*PFUser.currentUser()!.objectForKey("concertBandType")*/ ensembles
+                    }
+                    
+                    event.saveInBackgroundWithBlock{(success, error) -> Void in
+                        self.activityIndicator.stopAnimating()
+                        
+                        UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                        
+                        if error == nil {
+                            
+                            dispatch_async(dispatch_get_main_queue()) {
+                                [unowned self] in
+                                //self.performSegueWithIdentifier("addEvent", sender: self)
+                                let VC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
+                                self.presentViewController(VC!, animated: true, completion: nil)
+                            }
+                            
+                        } else {
+                            self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
+                        }
+                    }
+                    placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
+                    
+                }
                 
             }
-            
+        } else {
+            displayAlert("Missing Fields", message: "Select: Ensemble(s) to send message to\nInstrument(s) to send message to")
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            activityIndicator.stopAnimating()
         }
         
-
+        
         
     }
     

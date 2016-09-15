@@ -198,20 +198,15 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
             self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
-            /*let subject = "MIHS Band App"
-            let body = " "
-            
-            let email = "mailto:parker.bixby@mercerislandschools.org?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
-            
-            if let emailURL:NSURL = NSURL(string: email!)
-            {
-                if UIApplication.sharedApplication().canOpenURL(emailURL)
-                {
-                    UIApplication.sharedApplication().openURL(emailURL)
-                }
-            }*/
+           
             self.performSegueWithIdentifier("toEmailVC", sender: self)
         }
+    }
+    @IBAction func homeButtonTapped(sender: AnyObject) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialVC = mainStoryboard.instantiateViewControllerWithIdentifier("initialVC")
+        
+        self.presentViewController(initialVC, animated: true, completion: nil)
     }
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {

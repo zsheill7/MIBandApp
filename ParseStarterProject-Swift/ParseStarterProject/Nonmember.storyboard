@@ -46,6 +46,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="Q73-rB-QBb">
+                        <barButtonItem key="leftBarButtonItem" image="Home icon" id="XgY-iA-JcZ"/>
                         <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="IVM-0L-Wua">
                             <connections>
                                 <action selector="pickerSelect:" destination="BYZ-38-t0r" id="xDz-Az-xGm"/>
@@ -60,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2962" y="130"/>
+            <point key="canvasLocation" x="4434" y="-1401"/>
         </scene>
         <!--Events-->
         <scene sceneID="BVw-GH-xyF">
@@ -89,6 +90,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="aes-Jg-jOO">
+                        <barButtonItem key="leftBarButtonItem" image="Home icon" id="eY7-wj-sZV">
+                            <connections>
+                                <action selector="homeButtonTapped:" destination="tGC-fO-ahW" id="vLy-MB-dTj"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="Ae3-s5-IGA">
                             <connections>
                                 <action selector="pickerSelect:" destination="tGC-fO-ahW" id="IVy-D0-x01"/>
@@ -193,6 +199,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Twitter" id="CIp-f3-lQd">
+                        <barButtonItem key="leftBarButtonItem" image="Home icon" id="stS-3m-G42">
+                            <connections>
+                                <action selector="homeButtonTapped:" destination="eib-Cv-VEP" id="KHd-Kq-TTG"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="WqE-UZ-xCu">
                             <connections>
                                 <action selector="pickerSelect:" destination="eib-Cv-VEP" id="9qf-Bo-85N"/>
@@ -235,6 +246,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Support Our Bands" id="9IE-z5-M5J">
+                        <barButtonItem key="leftBarButtonItem" image="Home icon" id="z45-tu-Qgp">
+                            <connections>
+                                <action selector="homeButtonTapped:" destination="XEg-wu-Z5M" id="2E4-Pf-w5A"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="7z4-ES-aPl">
                             <connections>
                                 <action selector="pickerSelect:" destination="XEg-wu-Z5M" id="Jlh-UN-9aG"/>
@@ -388,7 +404,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50g-wm-3MU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2282" y="174"/>
+            <point key="canvasLocation" x="3822" y="-1401"/>
         </scene>
         <!--Donate-->
         <scene sceneID="zcB-8b-nul">
@@ -529,6 +545,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photos" id="Zx5-Mj-HOg">
+                        <barButtonItem key="leftBarButtonItem" image="Home icon" id="zR1-bk-cxW">
+                            <connections>
+                                <action selector="homeButtonTapped:" destination="zvE-y3-m2o" id="JsY-EQ-ULJ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="eHz-J2-Y8j">
                             <connections>
                                 <action selector="pickerSelect:" destination="zvE-y3-m2o" id="zwy-e0-yES"/>
@@ -671,6 +692,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Welcome" id="C47-D0-9p1">
+                        <barButtonItem key="leftBarButtonItem" image="Home icon" id="Uzz-e6-1DR">
+                            <connections>
+                                <action selector="homeButtonTapped:" destination="dna-TZ-imJ" id="xDI-bR-iBo"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Menu 2-25" id="gcC-jK-twy">
                             <connections>
                                 <action selector="pickerSelect:" destination="dna-TZ-imJ" id="Qwr-SK-WCf"/>
@@ -681,7 +707,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwB-1F-bXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4289" y="370"/>
+            <point key="canvasLocation" x="3057" y="66"/>
         </scene>
         <!--Photos-->
         <scene sceneID="mfW-gq-v08">
@@ -756,11 +782,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Tp-dG-w1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3477" y="370"/>
+            <point key="canvasLocation" x="2245" y="66"/>
         </scene>
     </scenes>
     <resources>
         <image name="Calendar icon" width="25" height="25"/>
+        <image name="Home icon" width="25" height="25"/>
         <image name="Info icon" width="25" height="25"/>
         <image name="MIHS Band" width="500" height="386"/>
         <image name="Menu 2-25" width="25" height="25"/>

@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     override func viewDidAppear(animated: Bool) {
-        if PFUser.currentUser()?.objectId != nil {
+        if PFUser.currentUser()?["concertInstrument"] != nil {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main2", bundle: nil)
             let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
             UIApplication.sharedApplication().keyWindow?.rootViewController = viewController

@@ -128,8 +128,9 @@ class SettingsTableViewController: UITableViewController {
             alert.addAction((UIAlertAction(title: "Delete Account", style: .Destructive, handler: { (action) -> Void in
                 self.user?.deleteInBackgroundWithBlock({ (success, error) in
                     PFUser.logOut()
-                    let createAccountVC = self.storyboard?.instantiateViewControllerWithIdentifier("createAccountVC")
-                    self.presentViewController(createAccountVC!, animated: true, completion: nil)
+                    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let createAccountVC = mainStoryboard.instantiateViewControllerWithIdentifier("createAccountVC")
+                    self.presentViewController(createAccountVC, animated: true, completion: nil)
                 })
                 
                 
@@ -181,7 +182,7 @@ class SettingsTableViewController: UITableViewController {
                 }
             })
             
-            let initialStoryboard = UIStoryboard(name: "Initial", bundle: nil)
+            let initialStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let loginNC = initialStoryboard.instantiateViewControllerWithIdentifier("loginNC")
             
             self.activityIndicator.stopAnimating()

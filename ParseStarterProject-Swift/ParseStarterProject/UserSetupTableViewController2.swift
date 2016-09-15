@@ -114,7 +114,7 @@ class UserSetupTableViewController2: UITableViewController {
             
         if user!["marchingInstrument"] != nil && user!["concertInstrument"] != nil && user!["concertBandType"] != nil && user!["grade"] != nil{
             
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main2", bundle: nil)
             let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
             UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
             mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")

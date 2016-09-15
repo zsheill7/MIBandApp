@@ -297,7 +297,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfa-Nb-vMo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfa-Nb-vMo">
                                 <rect key="frame" x="318" y="182" width="129" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mlY-zp-f9k"/>
@@ -337,7 +337,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="User_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="bb5-CE-wlb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="User_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="bb5-CE-wlb">
                                 <rect key="frame" x="159" y="183" width="27" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="27" id="2qO-oc-bN8"/>
@@ -347,7 +347,7 @@
                                     <rect key="frame" x="142" y="146" width="27" height="24"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvH-Mm-b8l">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvH-Mm-b8l">
                                 <rect key="frame" x="338" y="482" width="80" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="SAx-Rm-BGh"/>
@@ -361,13 +361,13 @@
                                     <action selector="logIn:" destination="g7d-Iw-fNf" eventType="touchUpInside" id="epg-Jd-JBy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Already Registered?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGo-E5-Qzb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Already Registered?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGo-E5-Qzb">
                                 <rect key="frame" x="179" y="484" width="140" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f03-IS-KhQ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f03-IS-KhQ">
                                 <rect key="frame" x="201" y="182" width="118" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="4qC-gu-GSe"/>
@@ -387,7 +387,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Message Filled-25" translatesAutoresizingMaskIntoConstraints="NO" id="YD7-oE-hmV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Message Filled-25" translatesAutoresizingMaskIntoConstraints="NO" id="YD7-oE-hmV">
                                 <rect key="frame" x="159" y="234" width="27" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AhO-NC-7yM"/>
@@ -405,7 +405,7 @@
                                     <action selector="signUp:" destination="g7d-Iw-fNf" eventType="touchUpInside" id="ait-e0-dI3"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Padlock-Icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="mcm-B4-iAg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Padlock-Icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="mcm-B4-iAg">
                                 <rect key="frame" x="159" y="288" width="31" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="31" id="UFe-Ao-Syn"/>
@@ -475,12 +475,12 @@
                                 <exclude reference="5ot-HN-SBN"/>
                                 <exclude reference="PaC-Y7-wSk"/>
                                 <exclude reference="lYe-7Q-vWs"/>
-                                <exclude reference="PSM-jZ-boE"/>
                                 <exclude reference="kta-EM-LuU"/>
                                 <exclude reference="qGO-sf-qX6"/>
-                                <exclude reference="5wL-ID-SWc"/>
+                                <exclude reference="PSM-jZ-boE"/>
                                 <exclude reference="b8T-mM-wSl"/>
                                 <exclude reference="m5a-Gz-eB6"/>
+                                <exclude reference="5wL-ID-SWc"/>
                                 <exclude reference="2h2-gx-rqt"/>
                                 <exclude reference="Fve-MG-71B"/>
                                 <exclude reference="nCF-3z-zN7"/>
@@ -504,13 +504,13 @@
                                 <include reference="PaC-Y7-wSk"/>
                                 <exclude reference="bwI-HM-lVl"/>
                                 <include reference="lYe-7Q-vWs"/>
-                                <include reference="PSM-jZ-boE"/>
                                 <include reference="kta-EM-LuU"/>
                                 <include reference="qGO-sf-qX6"/>
-                                <include reference="5wL-ID-SWc"/>
+                                <include reference="PSM-jZ-boE"/>
                                 <exclude reference="Gxn-dL-RkK"/>
                                 <include reference="b8T-mM-wSl"/>
                                 <include reference="m5a-Gz-eB6"/>
+                                <include reference="5wL-ID-SWc"/>
                                 <include reference="2h2-gx-rqt"/>
                                 <include reference="Fve-MG-71B"/>
                                 <exclude reference="ZFV-W7-dzV"/>

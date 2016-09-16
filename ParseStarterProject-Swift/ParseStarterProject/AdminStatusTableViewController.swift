@@ -23,8 +23,9 @@ class AdminStatusViewController: UIViewController {
         
         user!["isAdmin"] = true
         
-        let VC = self.storyboard?.instantiateViewControllerWithIdentifier("userSetupVC")
-        self.presentViewController(VC!, animated: true, completion: nil)
+        let main2Storyboard = UIStoryboard(name: "Main2", bundle: nil)
+        let VC = main2Storyboard.instantiateViewControllerWithIdentifier("userSetupVC")
+        self.presentViewController(VC, animated: true, completion: nil)
     }
     
     @IBAction func sectionLeaderTapped(sender: AnyObject) {
@@ -48,6 +49,7 @@ class AdminStatusViewController: UIViewController {
         user!["concertInstrument"] = " "
         //user!["concertInstrument"]
         user!["concertBandType"] = " "
+        user!["grade"] = " "
         
         user!.saveInBackground()
         let main2Storyboard = UIStoryboard(name: "Main2", bundle: nil)

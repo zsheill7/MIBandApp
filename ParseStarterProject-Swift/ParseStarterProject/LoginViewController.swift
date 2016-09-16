@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     override func viewDidAppear(animated: Bool) {
-        if PFUser.currentUser()?["concertInstrument"] != nil {
+        if PFUser.currentUser()?["grade"] != nil {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main2", bundle: nil)
             let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
             UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
@@ -76,13 +76,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if user != nil {
                 
                 // Logged In!
-                
-                dispatch_async(dispatch_get_main_queue()) {
-                    [unowned self] in
-                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main2", bundle: nil)
-                    let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
-                    UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
-                    mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
+                if user!["grade"] != nil {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        [unowned self] in
+                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main2", bundle: nil)
+                        let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+                        UIApplication.sharedApplication().keyWindow?.rootViewController = viewController
+                        mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
+                       // self.presentViewController(viewController, animated: true, completion: nil)
+                        //viewController.modalTransitionStyle = UIModalTransitionStyle.
+                    }
+                } else {
+                    self.displayAlert("Failed login", message: "Please create a new account")
                 }
                 
                 

@@ -667,19 +667,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="253.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v82-XL-BKy">
-                                                    <rect key="frame" x="8" y="8" width="398" height="148"/>
-                                                    <string key="text">The Mercer Island High School band program is one of the largest in the state, with over 280 band members.  The Marching Band performs at all MIHS home football games during the year. In addition, the MIHS Marching Band has performed at The Tournament of Roses, the London New Years Parade and on numerous other national and international stages.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ch5-Dj-Ust">
+                                                    <rect key="frame" x="8" y="8" width="398" height="237.5"/>
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                                </webView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="v82-XL-BKy" secondAttribute="bottom" constant="3.5" id="319-h5-kbz"/>
-                                                <constraint firstItem="v82-XL-BKy" firstAttribute="trailing" secondItem="aac-KZ-Lv2" secondAttribute="trailingMargin" id="XBV-Bw-KxL"/>
-                                                <constraint firstItem="v82-XL-BKy" firstAttribute="top" secondItem="aac-KZ-Lv2" secondAttribute="topMargin" id="lXM-uu-OAf"/>
-                                                <constraint firstItem="v82-XL-BKy" firstAttribute="leading" secondItem="aac-KZ-Lv2" secondAttribute="leadingMargin" id="qcn-qy-IVq"/>
+                                                <constraint firstItem="Ch5-Dj-Ust" firstAttribute="bottom" secondItem="aac-KZ-Lv2" secondAttribute="bottomMargin" id="OKs-SA-QMH"/>
+                                                <constraint firstItem="Ch5-Dj-Ust" firstAttribute="top" secondItem="aac-KZ-Lv2" secondAttribute="topMargin" id="Osd-0S-TBW"/>
+                                                <constraint firstItem="Ch5-Dj-Ust" firstAttribute="trailing" secondItem="aac-KZ-Lv2" secondAttribute="trailingMargin" id="ivd-B5-m03"/>
+                                                <constraint firstItem="Ch5-Dj-Ust" firstAttribute="leading" secondItem="aac-KZ-Lv2" secondAttribute="leadingMargin" id="rk6-Pu-8mt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -704,6 +701,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="webView" destination="Ch5-Dj-Ust" id="Z2v-Wo-9IV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwB-1F-bXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

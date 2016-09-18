@@ -23,7 +23,7 @@ struct properties {
         ]
 }
 
-class InfoTableViewController: UITableViewController {
+class InfoTableViewController: UITableViewController, UIWebViewDelegate{
 
     
     let picker = UIImageView(image: UIImage(named: "Custom Picker View 2"))
@@ -33,10 +33,21 @@ class InfoTableViewController: UITableViewController {
     
     var rowHeight = 280
     
+    @IBOutlet weak var webView: UIWebView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        webView.scrollView.delegate = self
+        webView.scrollView.scrollEnabled = false
+        let attemptedUrl = NSURL(string: "https://misbb.wordpress.com/about/")
+        let HTMLString = "<article id=\"post-2\" class=\"post-2 page type-page status-publish hentry\"><header class=\"entry-header\"><h1 class=\"entry-title\">About</h1></header><!-- .entry-header --> </a>The Mercer Island Band Program is proudly non-competitive and strives for excellence resulting in international awards and performance opportunities. Close to 300 strong, one-in-four high school students and over 700 students district-wide participate in the grade 5-12 band program. Learn more about:</p><ul> <li><a title=\"Bands\" href=\"https://misbb.wordpress.com/about/bands/\">Bands</a></li> <li><a title=\"Directors\" href=\"https://misbb.wordpress.com/about/directors/\">Directors</a></li> <li><a title=\"Student Leadership\" href=\"https://misbb.wordpress.com/about/student-leadership/\">Student Leadership</a></li> <li><a title=\"Awards &amp; Accolades\" href=\"https://misbb.wordpress.com/about/awards-accolades/\">Awards &amp; Accolades</a></li> <li><a title=\"Mercer Island Schools Band Boosters\" href=\"https://misbb.wordpress.com/about/boosters/\">The Mercer Island School Band Boosters</a></li></ul> </div><!-- .entry-content --> <footer class=\"entry-meta\"> </footer><!-- .entry-meta --> </article>"
+        
+        self.webView.loadHTMLString(HTMLString, baseURL: nil)
+        self.webView.delegate = self
+        
+        self.webView.scrollView.scrollEnabled = false
         if DeviceType.IS_IPAD {
             rowHeight = 460
         }

@@ -734,7 +734,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-<<<<<<< HEAD
+
                             <constraint firstItem="x9f-nZ-62p" firstAttribute="leading" secondItem="B34-m7-HlH" secondAttribute="leadingMargin" constant="-20" id="0h5-Es-V26"/>
                             <constraint firstItem="0hb-oc-hfA" firstAttribute="top" secondItem="Bvx-tC-dge" secondAttribute="bottom" constant="21" id="2cf-uz-8cZ"/>
                             <constraint firstItem="0hb-oc-hfA" firstAttribute="trailing" secondItem="g6A-H1-Vrt" secondAttribute="trailing" constant="-15" id="2kI-nF-DkM"/>
@@ -755,26 +755,7 @@
                             <constraint firstItem="g6A-H1-Vrt" firstAttribute="centerX" secondItem="B34-m7-HlH" secondAttribute="centerX" id="n4O-Hq-uQs"/>
                             <constraint firstItem="cs8-0j-vbv" firstAttribute="width" secondItem="3Kh-32-CZx" secondAttribute="height" multiplier="143:114" id="no3-Wt-VwN"/>
                             <constraint firstItem="cs8-0j-vbv" firstAttribute="top" secondItem="x9f-nZ-62p" secondAttribute="bottom" constant="83" id="qRf-wx-G4g"/>
-=======
-                            <constraint firstItem="0hb-oc-hfA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B34-m7-HlH" secondAttribute="leadingMargin" constant="-11" id="A8k-i3-77o"/>
-                            <constraint firstItem="x9f-nZ-62p" firstAttribute="leading" secondItem="B34-m7-HlH" secondAttribute="leadingMargin" id="AfX-Jk-NNd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="x9f-nZ-62p" secondAttribute="trailing" id="Avj-6t-KxB"/>
-                            <constraint firstItem="0hb-oc-hfA" firstAttribute="centerX" secondItem="Bvx-tC-dge" secondAttribute="centerX" id="Gts-e6-l8v"/>
-                            <constraint firstItem="cs8-0j-vbv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Bvx-tC-dge" secondAttribute="trailing" constant="10" id="R1Z-nT-Wf2"/>
-                            <constraint firstItem="3Kh-32-CZx" firstAttribute="top" secondItem="cs8-0j-vbv" secondAttribute="bottom" constant="21" id="SsM-NQ-ciN"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="cs8-0j-vbv" secondAttribute="trailing" constant="-10" id="V5N-Fq-Gjj"/>
-                            <constraint firstItem="cs8-0j-vbv" firstAttribute="top" secondItem="x9f-nZ-62p" secondAttribute="bottom" constant="10" id="XX4-hh-FEv"/>
-                            <constraint firstItem="Bvx-tC-dge" firstAttribute="top" secondItem="x9f-nZ-62p" secondAttribute="bottom" constant="10" id="a8S-wO-J0S"/>
-                            <constraint firstItem="0hb-oc-hfA" firstAttribute="width" secondItem="3Kh-32-CZx" secondAttribute="width" id="byM-ET-2MX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3Kh-32-CZx" secondAttribute="trailing" constant="-15" id="cNT-5i-hew"/>
-                            <constraint firstItem="Bvx-tC-dge" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B34-m7-HlH" secondAttribute="leadingMargin" constant="-10" id="gqJ-d7-453"/>
-                            <constraint firstItem="eOC-vk-bfw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Kh-32-CZx" secondAttribute="bottom" id="l5f-cC-RIJ"/>
-                            <constraint firstItem="0hb-oc-hfA" firstAttribute="top" secondItem="Bvx-tC-dge" secondAttribute="bottom" constant="21" id="qJd-Si-TgJ"/>
-                            <constraint firstItem="eOC-vk-bfw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0hb-oc-hfA" secondAttribute="bottom" id="rO1-b7-KyS"/>
-                            <constraint firstItem="3Kh-32-CZx" firstAttribute="centerX" secondItem="cs8-0j-vbv" secondAttribute="centerX" id="tHv-KZ-P5J"/>
-                            <constraint firstItem="x9f-nZ-62p" firstAttribute="top" secondItem="z4E-6l-Jic" secondAttribute="bottom" id="tep-cV-2s4"/>
-                            <constraint firstItem="3Kh-32-CZx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0hb-oc-hfA" secondAttribute="trailing" constant="5" id="zLh-P0-aD5"/>
->>>>>>> master
+
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" image="Home icon" id="A89-fk-dch" userLabel="Main"/>

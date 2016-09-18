@@ -373,7 +373,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="235" id="VbV-Vf-ozx"/>
                                 </constraints>
-                                <string key="text">This app was programmed by Zoe Sheill.  Email: zsheill7@gmail.com  All photos taken by David Cummings  Email: davidec@u.washington.edu</string>
+                                <string key="text">This app was programmed by Zoe Sheill.
+
+Email: zsheill7@gmail.com
+
+All photos taken by David Cummings
+
+Email: davidec@u.washington.edu</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -1701,7 +1707,11 @@
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
+<<<<<<< HEAD
                                                     <state key="normal" title="Button" image="5AC95F3A-FF91-430F-B349-41BAC2C6B0F9"/>
+=======
+                                                    <state key="normal" title="Button" image="C71902BD-DCC8-4F28-B36E-A4F7A64AFB08"/>
+>>>>>>> master
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2418,7 +2428,15 @@
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
         <image name="5AC95F3A-FF91-430F-B349-41BAC2C6B0F9" width="121" height="26">
+=======
+        <image name="Barcode-25" width="25" height="25"/>
+        <image name="ButtonChoose" width="121" height="26"/>
+        <image name="ButtonConfirm" width="76" height="26"/>
+        <image name="ButtonCreateAccount" width="142" height="26"/>
+        <image name="C71902BD-DCC8-4F28-B36E-A4F7A64AFB08" width="121" height="26">
+>>>>>>> master
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -2697,10 +2715,6 @@ mACdAKAAogCkAKYAqACtAMQAxgDIPwI/Bz8SPxs/Lj8yPz0/Rj9LP1M/Vj9bP2o/bj91P30/ij+PP5E/
 kz+YP6A/oz+oP7A/sz/FP8g/zQAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAD/PA
 </mutableData>
         </image>
-        <image name="Barcode-25" width="25" height="25"/>
-        <image name="ButtonChoose" width="121" height="26"/>
-        <image name="ButtonConfirm" width="76" height="26"/>
-        <image name="ButtonCreateAccount" width="142" height="26"/>
         <image name="Calendar" width="25" height="25"/>
         <image name="Calendar icon" width="25" height="25"/>
         <image name="List-25" width="25" height="25"/>

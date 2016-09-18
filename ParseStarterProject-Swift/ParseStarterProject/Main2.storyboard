@@ -1701,7 +1701,7 @@
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="CFA7D4FC-150C-4D0A-83CE-9855B3DE4448"/>
+                                                    <state key="normal" title="Button" image="4A19EBFB-D89B-4DB7-8378-D9B8594D01DC"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2418,11 +2418,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Barcode-25" width="25" height="25"/>
-        <image name="ButtonChoose" width="121" height="26"/>
-        <image name="ButtonConfirm" width="76" height="26"/>
-        <image name="ButtonCreateAccount" width="142" height="26"/>
-        <image name="CFA7D4FC-150C-4D0A-83CE-9855B3DE4448" width="121" height="26">
+        <image name="4A19EBFB-D89B-4DB7-8378-D9B8594D01DC" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -2701,6 +2697,10 @@ mACdAKAAogCkAKYAqACtAMQAxgDIPwI/Bz8SPxs/Lj8yPz0/Rj9LP1M/Vj9bP2o/bj91P30/ij+PP5E/
 kz+YP6A/oz+oP7A/sz/FP8g/zQAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAD/PA
 </mutableData>
         </image>
+        <image name="Barcode-25" width="25" height="25"/>
+        <image name="ButtonChoose" width="121" height="26"/>
+        <image name="ButtonConfirm" width="76" height="26"/>
+        <image name="ButtonCreateAccount" width="142" height="26"/>
         <image name="Calendar" width="25" height="25"/>
         <image name="Calendar icon" width="25" height="25"/>
         <image name="List-25" width="25" height="25"/>

@@ -31,14 +31,14 @@ class InfoTableViewController: UITableViewController {
     var pickerFrame: CGRect?
     
     
-    
+    var rowHeight = 280
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if DeviceType.IS_IPAD {
-            
+            rowHeight = 460
         }
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 15, width: 200, height: 160)
         
@@ -65,7 +65,14 @@ class InfoTableViewController: UITableViewController {
         picker.hidden ? openPicker() : closePicker()
     }
     
-    
+    /*func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return CGFloat(rowHeight)
+            
+        }
+        
+        return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+    }*/
     func createPicker()
     {
         picker.frame = self.pickerFrame!

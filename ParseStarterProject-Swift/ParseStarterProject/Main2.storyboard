@@ -1701,7 +1701,7 @@
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="A4181C04-6947-4F28-902B-CC54DF4E40F5"/>
+                                                    <state key="normal" title="Button" image="5AC95F3A-FF91-430F-B349-41BAC2C6B0F9"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2418,7 +2418,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="A4181C04-6947-4F28-902B-CC54DF4E40F5" width="121" height="26">
+        <image name="5AC95F3A-FF91-430F-B349-41BAC2C6B0F9" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

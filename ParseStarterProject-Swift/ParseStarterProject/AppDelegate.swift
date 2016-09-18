@@ -67,23 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                     
                     
                     
-                    /*let photoWidth = self.view.frame.size.width
-                     let newHeight =  self.getHeightFromWidth(photo.image!, newWidth: photoWidth)
-                     
-                     
-                     cell.frame.size.width = photoWidth
-                     cell.frame.size.height = newHeight*/
                     
                     self.images.append(photo.image!)
                     print("added")
-                    /*
-                     let viewWidth = 375
-                     self.cellSizes.append(CGSizeMake(viewWidth, self.getHeightFromWidth(photo.image!, newWidth: viewWidth)))
-                     cell.updateWithImage(photo.image)*/
-                    /*cell.contentView.frame = cell.bounds
-                     cell.contentView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]*/
-                    
-                    
                     
                     
                     
@@ -105,6 +91,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         masterNavigationVC.view.window?.rootViewController = splitVC
         splitVC.delegate = self
 
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let initialStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialVC = initialStoryboard.instantiateViewControllerWithIdentifier("initialVC")
+        let loginVC = initialStoryboard.instantiateViewControllerWithIdentifier("loginNC")
+
+        
+        if let isBandMember = NSUserDefaults.standardUserDefaults().objectForKey("isBandMember") as? Bool {
+            if isBandMember == true {
+                
+                self.window?.rootViewController = loginVC
+            } else {
+                
+                self.window?.rootViewController = nonmemberTBC
+            }
+        } else {
+            self.window?.rootViewController = initialVC
+        }
+        
+        
+        
+        self.window?.makeKeyAndVisible()
+        
+      
         
         
         

@@ -37,7 +37,9 @@ class InfoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if DeviceType.IS_IPAD {
+            
+        }
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 15, width: 200, height: 160)
         
         createPicker()

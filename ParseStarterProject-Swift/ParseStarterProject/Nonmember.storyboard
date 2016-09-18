@@ -157,15 +157,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="emailVC" id="1nV-YD-jbk" customClass="EmailTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ffY-k8-fNN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="gEn-nA-ase">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gEn-nA-ase" id="bK5-Pg-uce">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -585,25 +585,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gxb-rE-Z2m">
-                                <rect key="frame" x="0.0" y="64" width="600" height="429"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="451"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-4s-IJe">
-                                <rect key="frame" x="149" y="501" width="440" height="42"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqH-4s-IJe">
+                                <rect key="frame" x="225" y="515" width="150" height="28"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="CP6-3h-3uv"/>
-                                    <constraint firstAttribute="height" constant="42" id="H9Q-1B-Vn8"/>
+                                    <constraint firstAttribute="height" constant="20" id="H9Q-1B-Vn8"/>
+                                    <constraint firstAttribute="width" constant="150" id="Jpe-uX-I6W"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Hello">
                                         <attributes>
                                             <font key="NSFont" metaFont="smallSystem"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CP6-3h-3uv"/>
+                                    </mask>
+                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -615,10 +621,17 @@
                             <constraint firstItem="gxb-rE-Z2m" firstAttribute="top" secondItem="AyH-mR-E1c" secondAttribute="bottom" id="mB1-r2-Ld6"/>
                             <constraint firstItem="gxb-rE-Z2m" firstAttribute="top" secondItem="AyH-mR-E1c" secondAttribute="bottom" id="pea-jK-qwa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gxb-rE-Z2m" secondAttribute="trailing" constant="-20" id="r3C-m9-WYA"/>
+                            <constraint firstItem="BqH-4s-IJe" firstAttribute="centerX" secondItem="Els-l6-WJO" secondAttribute="centerX" id="sRf-nf-Miv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BqH-4s-IJe" secondAttribute="trailing" constant="-9" id="teP-Gb-8xe"/>
                             <constraint firstItem="BqH-4s-IJe" firstAttribute="leading" secondItem="Els-l6-WJO" secondAttribute="leadingMargin" constant="129" id="xFb-30-r1B"/>
                             <constraint firstItem="Gf4-Dj-2dj" firstAttribute="top" secondItem="BqH-4s-IJe" secondAttribute="bottom" constant="8" id="xrQ-1c-4Zb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="teP-Gb-8xe"/>
+                                <exclude reference="xFb-30-r1B"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="PSo-kN-EVX">
                         <barButtonItem key="backBarButtonItem" title="Back" id="5wT-YB-Swx"/>
@@ -811,7 +824,7 @@
         <image name="volunteeringIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YOf-Ve-u7Q"/>
-        <segue reference="7To-CF-QPZ"/>
+        <segue reference="cb7-Nq-PWh"/>
+        <segue reference="8yc-ZY-0rh"/>
     </inferredMetricsTieBreakers>
 </document>

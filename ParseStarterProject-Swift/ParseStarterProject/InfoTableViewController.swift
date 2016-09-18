@@ -41,6 +41,7 @@ class InfoTableViewController: UITableViewController, UIWebViewDelegate{
         
         webView.scrollView.delegate = self
         webView.scrollView.scrollEnabled = false
+        webView.scalesPageToFit = true
         let attemptedUrl = NSURL(string: "https://misbb.wordpress.com/about/")
         let HTMLString = "<article id=\"post-2\" class=\"post-2 page type-page status-publish hentry\"><header class=\"entry-header\"><h1 class=\"entry-title\">About</h1></header><!-- .entry-header --> </a>The Mercer Island Band Program is proudly non-competitive and strives for excellence resulting in international awards and performance opportunities. Close to 300 strong, one-in-four high school students and over 700 students district-wide participate in the grade 5-12 band program. Learn more about:</p><ul> <li><a title=\"Bands\" href=\"https://misbb.wordpress.com/about/bands/\">Bands</a></li> <li><a title=\"Directors\" href=\"https://misbb.wordpress.com/about/directors/\">Directors</a></li> <li><a title=\"Student Leadership\" href=\"https://misbb.wordpress.com/about/student-leadership/\">Student Leadership</a></li> <li><a title=\"Awards &amp; Accolades\" href=\"https://misbb.wordpress.com/about/awards-accolades/\">Awards &amp; Accolades</a></li> <li><a title=\"Mercer Island Schools Band Boosters\" href=\"https://misbb.wordpress.com/about/boosters/\">The Mercer Island School Band Boosters</a></li></ul> </div><!-- .entry-content --> <footer class=\"entry-meta\"> </footer><!-- .entry-meta --> </article>"
         

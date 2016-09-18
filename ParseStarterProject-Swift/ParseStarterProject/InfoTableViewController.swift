@@ -76,14 +76,14 @@ class InfoTableViewController: UITableViewController, UIWebViewDelegate{
         picker.hidden ? openPicker() : closePicker()
     }
     
-    /*func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return CGFloat(rowHeight)
             
         }
         
         return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
-    }*/
+    }
     func createPicker()
     {
         picker.frame = self.pickerFrame!
@@ -165,6 +165,14 @@ class InfoTableViewController: UITableViewController, UIWebViewDelegate{
         let initialVC = mainStoryboard.instantiateViewControllerWithIdentifier("initialVC")
         
         self.presentViewController(initialVC, animated: true, completion: nil)
+    }
+    
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if let url = request.URL where navigationType == UIWebViewNavigationType.LinkClicked {
+            UIApplication.sharedApplication().openURL(url)
+            return false
+        }
+        return true
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

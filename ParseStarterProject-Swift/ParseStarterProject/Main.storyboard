@@ -550,6 +550,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="buttonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="4Dh-oS-Ehr">
                                 <rect key="frame" x="26" y="139" width="362" height="475"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="166" y="109" width="403" height="475"/>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmX-7e-Jvv">
                                 <rect key="frame" x="84" y="228" width="244" height="88"/>
@@ -603,8 +606,12 @@
                             <constraint firstItem="5Np-Av-SSj" firstAttribute="top" secondItem="4Dh-oS-Ehr" secondAttribute="bottom" constant="122" id="TmR-1G-yC7"/>
                             <constraint firstItem="Eev-4v-JvY" firstAttribute="top" secondItem="fGS-p9-sq7" secondAttribute="bottom" constant="33" id="Wq0-yZ-LcT"/>
                             <constraint firstItem="5Np-Av-SSj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4Dh-oS-Ehr" secondAttribute="bottom" id="dDC-0Z-h5m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4Dh-oS-Ehr" secondAttribute="trailing" constant="6" id="jKs-6F-wkU"/>
-                            <constraint firstItem="4Dh-oS-Ehr" firstAttribute="leading" secondItem="14O-Ml-r8g" secondAttribute="leadingMargin" constant="6" id="qXa-1Q-Vi1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Dh-oS-Ehr" secondAttribute="trailing" constant="6" id="jKs-6F-wkU">
+                                <variation key="heightClass=regular-widthClass=regular" constant="145"/>
+                            </constraint>
+                            <constraint firstItem="4Dh-oS-Ehr" firstAttribute="leading" secondItem="14O-Ml-r8g" secondAttribute="leadingMargin" constant="6" id="qXa-1Q-Vi1">
+                                <variation key="heightClass=regular-widthClass=regular" constant="145"/>
+                            </constraint>
                             <constraint firstItem="4Dh-oS-Ehr" firstAttribute="top" secondItem="t3o-y9-bxS" secondAttribute="bottom" constant="-49" id="vct-dV-IaK"/>
                             <constraint firstItem="fGS-p9-sq7" firstAttribute="top" secondItem="TmX-7e-Jvv" secondAttribute="bottom" constant="31" id="xZI-e8-Ktl"/>
                             <constraint firstItem="fGS-p9-sq7" firstAttribute="centerX" secondItem="14O-Ml-r8g" secondAttribute="centerX" id="yyS-vz-GsS"/>
@@ -624,7 +631,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sde-L7-A2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3205" y="-2701"/>
+            <point key="canvasLocation" x="3204.75" y="-2701.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qEu-Qf-Z3i">
@@ -734,7 +741,6 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-
                             <constraint firstItem="x9f-nZ-62p" firstAttribute="leading" secondItem="B34-m7-HlH" secondAttribute="leadingMargin" constant="-20" id="0h5-Es-V26"/>
                             <constraint firstItem="0hb-oc-hfA" firstAttribute="top" secondItem="Bvx-tC-dge" secondAttribute="bottom" constant="21" id="2cf-uz-8cZ"/>
                             <constraint firstItem="0hb-oc-hfA" firstAttribute="trailing" secondItem="g6A-H1-Vrt" secondAttribute="trailing" constant="-15" id="2kI-nF-DkM"/>
@@ -755,7 +761,6 @@
                             <constraint firstItem="g6A-H1-Vrt" firstAttribute="centerX" secondItem="B34-m7-HlH" secondAttribute="centerX" id="n4O-Hq-uQs"/>
                             <constraint firstItem="cs8-0j-vbv" firstAttribute="width" secondItem="3Kh-32-CZx" secondAttribute="height" multiplier="143:114" id="no3-Wt-VwN"/>
                             <constraint firstItem="cs8-0j-vbv" firstAttribute="top" secondItem="x9f-nZ-62p" secondAttribute="bottom" constant="83" id="qRf-wx-G4g"/>
-
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" image="Home icon" id="A89-fk-dch" userLabel="Main"/>

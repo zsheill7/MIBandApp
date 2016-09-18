@@ -1707,10 +1707,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-
-                                                    <state key="normal" title="Button" image="5AC95F3A-FF91-430F-B349-41BAC2C6B0F9"/>
-
-
+                                                    <state key="normal" title="Button" image="0A853D7B-0FE3-484C-A127-4AE2B88CD80C"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2427,9 +2424,7 @@ Email: davidec@u.washington.edu</string>
         </scene>
     </scenes>
     <resources>
-
-        <image name="5AC95F3A-FF91-430F-B349-41BAC2C6B0F9" width="121" height="26">
-
+        <image name="0A853D7B-0FE3-484C-A127-4AE2B88CD80C" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -2708,6 +2703,10 @@ mACdAKAAogCkAKYAqACtAMQAxgDIPwI/Bz8SPxs/Lj8yPz0/Rj9LP1M/Vj9bP2o/bj91P30/ij+PP5E/
 kz+YP6A/oz+oP7A/sz/FP8g/zQAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAD/PA
 </mutableData>
         </image>
+        <image name="Barcode-25" width="25" height="25"/>
+        <image name="ButtonChoose" width="121" height="26"/>
+        <image name="ButtonConfirm" width="76" height="26"/>
+        <image name="ButtonCreateAccount" width="142" height="26"/>
         <image name="Calendar" width="25" height="25"/>
         <image name="Calendar icon" width="25" height="25"/>
         <image name="List-25" width="25" height="25"/>

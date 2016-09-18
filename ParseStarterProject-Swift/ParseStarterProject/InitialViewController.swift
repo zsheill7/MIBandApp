@@ -25,6 +25,11 @@ class InitialViewController: UIViewController {
         memberLabel.contentMode = UIViewContentMode.ScaleAspectFit
     }
     @IBAction func communityButtonPressed(sender: AnyObject) {
+        
+        var isBandMember = false
+        
+        NSUserDefaults.standardUserDefaults().setObject(isBandMember, forKey: "isBandMember")
+        
         let nonmemberStoryboard = UIStoryboard(name: "Nonmember", bundle: nil)
         let initialViewController = nonmemberStoryboard.instantiateViewControllerWithIdentifier("nonmemberTBC") as! UITabBarController
         self.window?.rootViewController = initialViewController
@@ -41,6 +46,8 @@ class InitialViewController: UIViewController {
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
+        var isBandMember = true
+        NSUserDefaults.standardUserDefaults().setObject(isBandMember, forKey: "isBandMember")
         
         
         if let isAppAlreadyLaunchedOnce = defaults.stringForKey("isAppAlreadyLaunchedOnce") {

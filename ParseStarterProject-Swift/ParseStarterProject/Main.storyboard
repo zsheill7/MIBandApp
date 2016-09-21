@@ -27,7 +27,7 @@
                                         <rect key="frame" x="-7" y="-84" width="919" height="684"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="919" id="ISf-XC-mY4"/>
+                                            <constraint firstAttribute="width" constant="1040" id="ISf-XC-mY4"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle short shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Exl-88-If3">
@@ -691,21 +691,6 @@
                                     <action selector="communityButtonPressed:" destination="BrS-VH-Suo" eventType="touchUpInside" id="0At-aR-FFx"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Band symbol" translatesAutoresizingMaskIntoConstraints="NO" id="x9f-nZ-62p">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
-                                <color key="backgroundColor" red="0.50348317620000005" green="0.94799357650000005" blue="0.082912229000000004" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="x9f-nZ-62p" secondAttribute="height" multiplier="207:160" id="YVG-ES-pvy"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="YVG-ES-pvy"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="20" y="20" width="374" height="380"/>
-                                </variation>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Community member label-1" translatesAutoresizingMaskIntoConstraints="NO" id="0hb-oc-hfA">
                                 <rect key="frame" x="9" y="486" width="195" height="114"/>
                                 <constraints>
@@ -738,6 +723,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Band symbol" translatesAutoresizingMaskIntoConstraints="NO" id="x9f-nZ-62p">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                <color key="backgroundColor" red="0.50348317620000005" green="0.94799357650000005" blue="0.082912229000000004" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="x9f-nZ-62p" secondAttribute="height" multiplier="207:160" id="YVG-ES-pvy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YVG-ES-pvy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="20" width="374" height="380"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -750,7 +750,7 @@
                             <constraint firstItem="0hb-oc-hfA" firstAttribute="width" secondItem="B34-m7-HlH" secondAttribute="width" multiplier="0.44" id="NKl-73-OFT"/>
                             <constraint firstItem="cs8-0j-vbv" firstAttribute="centerX" secondItem="3Kh-32-CZx" secondAttribute="centerX" id="QJH-h8-56e"/>
                             <constraint firstItem="g6A-H1-Vrt" firstAttribute="top" secondItem="x9f-nZ-62p" secondAttribute="bottom" constant="8" id="Rsr-ia-Whu"/>
-                            <constraint firstItem="x9f-nZ-62p" firstAttribute="top" secondItem="B34-m7-HlH" secondAttribute="topMargin" id="XAx-dJ-abI"/>
+                            <constraint firstItem="x9f-nZ-62p" firstAttribute="top" secondItem="B34-m7-HlH" secondAttribute="topMargin" constant="20" id="XAx-dJ-abI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x9f-nZ-62p" secondAttribute="trailing" constant="-20" id="YnN-bL-zSQ"/>
                             <constraint firstItem="Bvx-tC-dge" firstAttribute="centerY" secondItem="cs8-0j-vbv" secondAttribute="centerY" id="ZC5-7a-cde"/>
                             <constraint firstItem="0hb-oc-hfA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B34-m7-HlH" secondAttribute="leadingMargin" constant="-15" id="c7Q-dx-ZUb"/>

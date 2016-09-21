@@ -9,9 +9,10 @@
 import UIKit
 import Parse
 
+ var instruments:[String] = []
 class AdminAddEventInstrumentTableViewController: UITableViewController {
     
-    var instruments:[String] = []
+   
     
     override func viewDidLoad() {
         self.tableView.reloadData()
@@ -48,10 +49,16 @@ class AdminAddEventInstrumentTableViewController: UITableViewController {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+   /* override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationVC = segue.destinationViewController as! AdminAddEventOneTableViewController
         
         destinationVC.instruments = instruments
+        print("inPFS")
         
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        let destinationVC = storyboard?.instantiateViewControllerWithIdentifier("adminAddEvent") as! AdminAddEventOneTableViewController
+        destinationVC.instruments = instruments
+    }*/
 }

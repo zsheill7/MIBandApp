@@ -128,7 +128,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         UINavigationBar.appearance().titleTextAttributes =
             [NSForegroundColorAttributeName:UIColor.whiteColor()]
         
-        UIBarButtonItem.appearance().tintColor = UIColor.grayColor()
+        
+        UIBarButtonItem.appearance().tintColor = UIColor.lightGray()
         let navBgImage:UIImage = UIImage(named: "maroonSolid")!
         UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics:  .Default)
 

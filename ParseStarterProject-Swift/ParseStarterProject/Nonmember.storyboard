@@ -157,15 +157,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="emailVC" id="1nV-YD-jbk" customClass="EmailTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ffY-k8-fNN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="gEn-nA-ase">
-                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gEn-nA-ase" id="bK5-Pg-uce">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -179,7 +179,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWh-fi-qhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3646" y="2261"/>
+            <point key="canvasLocation" x="4177.5" y="2188.5"/>
         </scene>
         <!--Twitter-->
         <scene sceneID="esK-km-XKp">
@@ -238,14 +238,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ega-ko-Wr9">
-                                <rect key="frame" x="20" y="64" width="335" height="554"/>
+                                <rect key="frame" x="20" y="0.0" width="335" height="618"/>
                                 <color key="backgroundColor" red="0.88419000410000004" green="0.95791964760000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ega-ko-Wr9" firstAttribute="top" secondItem="EzC-uv-EET" secondAttribute="bottom" id="Joo-Eh-PRZ"/>
+                            <constraint firstItem="Ega-ko-Wr9" firstAttribute="top" secondItem="EzC-uv-EET" secondAttribute="bottom" constant="-64" id="Joo-Eh-PRZ"/>
                             <constraint firstItem="Ega-ko-Wr9" firstAttribute="trailing" secondItem="SXj-Ho-nDS" secondAttribute="trailingMargin" id="Nqv-T5-N0x"/>
                             <constraint firstItem="Ega-ko-Wr9" firstAttribute="leading" secondItem="SXj-Ho-nDS" secondAttribute="leadingMargin" id="OxG-L2-yJB"/>
                             <constraint firstItem="wGW-Yp-DOu" firstAttribute="top" secondItem="Ega-ko-Wr9" secondAttribute="bottom" id="f2T-69-5cM"/>
@@ -451,7 +451,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fu-Ql-6Yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4539" y="1482"/>
+            <point key="canvasLocation" x="5039" y="1450"/>
         </scene>
         <!--Twitter-->
         <scene sceneID="qdj-ru-cSt">
@@ -564,7 +564,7 @@
                         <segue destination="2DY-wj-dJa" kind="show" identifier="showPhoto" id="agD-jm-4dU">
                             <nil key="action"/>
                         </segue>
-                        <segue destination="SlA-7C-R9P" kind="show" id="vgk-fe-mid"/>
+                        <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="vgk-fe-mid"/>
                         <segue destination="1nV-YD-jbk" kind="show" identifier="toEmailVC" id="7To-CF-QPZ"/>
                     </connections>
                 </viewController>
@@ -682,14 +682,14 @@
                                             <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="YOf-Ve-u7Q"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="385" id="EmP-Rn-uhq">
-                                        <rect key="frame" x="0.0" y="355" width="414" height="385"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="454" id="EmP-Rn-uhq">
+                                        <rect key="frame" x="0.0" y="355" width="414" height="454"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EmP-Rn-uhq" id="aac-KZ-Lv2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="384.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="453.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ch5-Dj-Ust">
+                                                <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ch5-Dj-Ust">
                                                     <rect key="frame" x="8" y="8" width="398" height="368.5"/>
                                                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
@@ -704,6 +704,9 @@
                                                 <constraint firstItem="Ch5-Dj-Ust" firstAttribute="leading" secondItem="aac-KZ-Lv2" secondAttribute="leadingMargin" id="rk6-Pu-8mt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1nV-YD-jbk" kind="show" identifier="toEmailVC" id="Kys-i5-uMw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -753,20 +756,20 @@
             </objects>
             <point key="canvasLocation" x="2236" y="-733"/>
         </scene>
-        <!--aboutUsVC-->
+        <!--About This App-->
         <scene sceneID="JI5-hl-TLj">
             <objects>
-                <viewController storyboardIdentifier="aboutUsVC" title="aboutUsVC" id="SlA-7C-R9P" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutUsVC" title="About This App" id="SlA-7C-R9P" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z5V-gD-D8D"/>
                         <viewControllerLayoutGuide type="bottom" id="MMp-h0-XUP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WjI-4o-nsk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="65c-bs-Bpt">
-                                <rect key="frame" x="37" y="205" width="340" height="273"/>
+                                <rect key="frame" x="33" y="205" width="309" height="273"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="273" id="wzu-Oi-xYI"/>
@@ -824,7 +827,7 @@
         <image name="volunteeringIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cb7-Nq-PWh"/>
-        <segue reference="8yc-ZY-0rh"/>
+        <segue reference="GXX-KO-rM9"/>
+        <segue reference="TO7-j5-I99"/>
     </inferredMetricsTieBreakers>
 </document>

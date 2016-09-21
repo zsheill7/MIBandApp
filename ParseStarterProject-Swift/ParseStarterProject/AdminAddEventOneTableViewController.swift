@@ -19,7 +19,7 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 
-                self.dismissViewControllerAnimated(true, completion: nil)
+               
                 
             })))
             
@@ -46,13 +46,16 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
     var willRepeat = false
     let formatter = NSDateFormatter()
     
-    var instruments:[String] = []
-    var ensembles:[String] = []
+    //var instruments:[String] = []
+    //var ensembles:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         event = PFObject(className: "Event")
+        
+        
         self.tableView.userInteractionEnabled = true
         eventDescription.delegate = self
         
@@ -196,9 +199,12 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
                                 self.presentViewController(VC!, animated: true, completion: nil)
                             }
                             
+                            
                         } else {
                             self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
                         }
+                        instruments = []
+                        ensembles = []
                     }
                     placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
                     

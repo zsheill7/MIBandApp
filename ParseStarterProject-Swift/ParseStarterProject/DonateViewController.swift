@@ -30,13 +30,14 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
         donateWebView.loadHTMLString(html, baseURL: nil)*/
         
         
-      
+      let donateHTMLString = "<article id=\"post-69\" class=\"post-69 page type-page status-publish hentry\"> <header class=\"entry-header\"> <h1 class=\"entry-title\">Donate</h1> </header><!-- .entry-header --> <div class=\"entry-content\"> <p>Please donate today to raise money to support and enrich the MISD Band Program.</p> <h1>&#8212; DONATE ONLINE &#8212;</h1> <p><a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XYZRUJWJCF3SN\"><img src=\"https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif\" alt=\"\" /></a></p> <h1>&#8212; WRITE A CHECK &#8212;</h1> <p>Make checks payable to MISBB and mail to P.O. <span style=\"color:#000000;\">Box <span style=\"color:#ff0000;\">1471</span>,</span> Mercer Island, WA 98040</p> <h1></h1> <h1><strong>EVERY DONATION HELPS! </strong></h1> <p><em>The Mercer Island Schools Band Boosters is a non-profit 501(c)(3) corporation, and our tax ID number is 27-4163270. All donations will be acknowledged. More information about MISBB can be found <a title=\"Mercer Island Schools Band Boosters\" href=\"https://misbb.wordpress.com/about/boosters/\">here</a>.</em></p> <p><em>Band Boosters’ funds help provide guest artist workshops, IMS music clubs, one-on-one student support, scholarships, instrument rentals, leadership opportunities, band trip coordination, professional development and community outreach. As a result, band instructors can spend more time in the classroom enriching the musical lives of nearly 1,000 or 40% of Mercer Island 5th – 12th grade students across the district.</em></p> <p><span style=\"text-decoration:underline;color:#0000ff;\"><strong>THANK YOU!</strong></span></p> </div><!-- .entry-content --> <footer class=\"entry-meta\"> </footer><!-- .entry-meta --> </article><!-- #post-69 -->"
             
             
         let url = NSURL(string: "https://misbb.wordpress.com/donate/")
         
-        let request = NSURLRequest(URL: url!)
-        webView.loadRequest(request)
+        /*let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)*/
+        webView.loadHTMLString(donateHTMLString, baseURL: url)
         /*if let url = attemptedUrl {
             
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) in
@@ -217,6 +218,7 @@ class DonateViewController: UIViewController, UIWebViewDelegate {
         return true
     }
 
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         closePicker()
     }

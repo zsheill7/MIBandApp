@@ -9,6 +9,13 @@
 import UIKit
 import Parse
 
+extension String {
+    func isEmail() -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluateWithObject(self)
+    }
+}
+
 class SignupViewController: UIViewController, UITextFieldDelegate {
     var signupActive = true
     
@@ -57,7 +64,10 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             
             displayAlert("Error", message: "Please complete all sections")
             
-        } else if password.text!.characters.count < 5 {
+        } else if email.text?.isEmail() == false{
+            displayAlert("Error", message: "\"\(email.text!)\" is not a valid email address")
+            
+        }else if password.text!.characters.count < 5 {
             self.displayAlert("Not Long Enough", message: "Please enter a password that is 5 or more characters")
         } else if password.text != confirmPassword.text {
             self.displayAlert("Passwords Do Not Match", message: "Please re-enter passwords")

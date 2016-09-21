@@ -8,10 +8,11 @@
 
 import UIKit
 import Parse
+ var ensembles: [String] = []
 
 class AdminAddEventEnsembleTableViewController: UITableViewController {
     
-    var ensembles: [String] = []
+   
     
     override func viewDidLoad() {
         self.tableView.reloadData()
@@ -32,19 +33,27 @@ class AdminAddEventEnsembleTableViewController: UITableViewController {
     
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         
         let destinationVC = segue.destinationViewController as! AdminAddEventOneTableViewController
         destinationVC.ensembles = ensembles
+        print("inPFS")
        
     }
+    override func viewWillDisappear(animated: Bool) {
+        let destinationVC = storyboard?.instantiateViewControllerWithIdentifier("adminAddEvent") as! AdminAddEventOneTableViewController
+        destinationVC.ensembles = ensembles
+        print("in View Will Dis")
+        print(ensembles)
+    }*/
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
         
         let cellText = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
         ensembles.append(cellText!)
+        print("inDidSelect")
     }
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.None
@@ -53,4 +62,5 @@ class AdminAddEventEnsembleTableViewController: UITableViewController {
         ensembles = ensembles.filter { $0 != cellText}
     }
 
+    
 }

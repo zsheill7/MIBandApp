@@ -355,10 +355,10 @@
             </objects>
             <point key="canvasLocation" x="2986" y="-672"/>
         </scene>
-        <!--aboutUsVC-->
+        <!--About This App-->
         <scene sceneID="1HG-T9-YfC">
             <objects>
-                <viewController storyboardIdentifier="aboutUsVC" title="aboutUsVC" id="9hv-7f-fCP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutUsVC" title="About This App" id="9hv-7f-fCP" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EaS-ar-c32"/>
                         <viewControllerLayoutGuide type="bottom" id="UvR-Fh-w7m"/>
@@ -1707,7 +1707,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="1763CDF8-15DF-403B-AC05-F63A71A7783A"/>
+                                                    <state key="normal" title="Button" image="2F0444A9-3DAA-4AC2-8BE5-775E3986555F"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2094,7 +2094,7 @@ Email: davidec@u.washington.edu</string>
         <!--Admin Add Event One Table View Controller-->
         <scene sceneID="Pvc-lL-kW2">
             <objects>
-                <tableViewController id="Fcp-V2-k3u" customClass="AdminAddEventOneTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="adminAddEvent" id="Fcp-V2-k3u" customClass="AdminAddEventOneTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="NwD-Mw-jG8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2424,7 +2424,7 @@ Email: davidec@u.washington.edu</string>
         </scene>
     </scenes>
     <resources>
-        <image name="1763CDF8-15DF-403B-AC05-F63A71A7783A" width="121" height="26">
+        <image name="2F0444A9-3DAA-4AC2-8BE5-775E3986555F" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

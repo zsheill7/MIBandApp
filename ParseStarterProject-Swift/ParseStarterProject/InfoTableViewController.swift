@@ -55,10 +55,12 @@ class InfoTableViewController: UITableViewController, UIWebViewDelegate{
         
         self.webView.loadHTMLString(HTMLString, baseURL: nil)
         self.webView.delegate = self
-        
+       
         self.webView.scrollView.scrollEnabled = false
+        
         if DeviceType.IS_IPAD || DeviceType.IS_IPAD_PRO {
             rowHeight = 510
+            
         }
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 15, width: 200, height: 160)
         

@@ -23,7 +23,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KY-9e-WRI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-07-17 at 9.41.47 PM" translatesAutoresizingMaskIntoConstraints="NO" id="8qT-rk-MX3">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Screen Shot 2016-07-17 at 9.41.47 PM" translatesAutoresizingMaskIntoConstraints="NO" id="8qT-rk-MX3">
                                         <rect key="frame" x="-7" y="-84" width="919" height="684"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                         <constraints>

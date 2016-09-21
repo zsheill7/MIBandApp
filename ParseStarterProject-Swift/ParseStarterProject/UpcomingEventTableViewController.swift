@@ -299,6 +299,10 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if editingStyle == UITableViewCellEditingStyle.Delete {
             
+            if user!["isSectionLeader"] as! Bool == false && user!["isAdmin"] as! Bool == false {
+                displayAlert("Unable to Delete", message: "You must be a section leader or admin to delete events")
+            } else {
+            
             activityIndicator = UIActivityIndicatorView(frame: self.view.frame)
             activityIndicator.backgroundColor = UIColor(white: 1, alpha: 0.5)
             activityIndicator.center = self.view.center
@@ -403,6 +407,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             
             //NSUserDefaults.standardUserDefaults().setObject(eventList, forKey: "eventList")
             table.reloadData()
+            }
         }
     }
     

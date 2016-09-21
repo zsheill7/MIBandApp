@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Info View Controller-->
@@ -768,8 +769,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="65c-bs-Bpt">
-                                <rect key="frame" x="33" y="205" width="309" height="273"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="65c-bs-Bpt">
+                                <rect key="frame" x="13" y="180" width="348" height="308"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="273" id="wzu-Oi-xYI"/>
@@ -787,14 +788,26 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="65c-bs-Bpt" secondAttribute="trailing" constant="17" id="32D-4N-7XH"/>
                             <constraint firstItem="65c-bs-Bpt" firstAttribute="top" secondItem="Z5V-gD-D8D" secondAttribute="bottom" constant="141" id="9wn-b0-h99"/>
+                            <constraint firstItem="65c-bs-Bpt" firstAttribute="centerX" secondItem="WjI-4o-nsk" secondAttribute="centerX" id="Do2-MB-vS4"/>
+                            <constraint firstItem="65c-bs-Bpt" firstAttribute="width" secondItem="WjI-4o-nsk" secondAttribute="width" multiplier="0.9" id="K7q-FX-EHY"/>
+                            <constraint firstItem="65c-bs-Bpt" firstAttribute="height" secondItem="WjI-4o-nsk" secondAttribute="height" multiplier="0.5" id="Knt-va-LNk"/>
                             <constraint firstItem="65c-bs-Bpt" firstAttribute="leading" secondItem="WjI-4o-nsk" secondAttribute="leadingMargin" constant="17" id="TpE-Vs-Wch"/>
+                            <constraint firstItem="65c-bs-Bpt" firstAttribute="centerY" secondItem="WjI-4o-nsk" secondAttribute="centerY" id="tl0-kL-NON"/>
                             <constraint firstItem="65c-bs-Bpt" firstAttribute="centerX" secondItem="WjI-4o-nsk" secondAttribute="centerX" id="x71-hX-5AZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="32D-4N-7XH"/>
+                                <exclude reference="9wn-b0-h99"/>
+                                <exclude reference="TpE-Vs-Wch"/>
+                                <exclude reference="x71-hX-5AZ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2x-c2-glc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4820" y="972"/>
+            <point key="canvasLocation" x="4819.5" y="971.5"/>
         </scene>
         <!--Info-->
         <scene sceneID="HdP-Pk-cC1">

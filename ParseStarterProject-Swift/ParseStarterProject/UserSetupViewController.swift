@@ -149,6 +149,15 @@ class UserSetupTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if DeviceType.IS_IPAD || DeviceType.IS_IPAD_PRO {
+            if indexPath.row == 0 || indexPath.row == 1 {
+                return 1000
+            }
+
+        }
+        return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+    }
     override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
     }

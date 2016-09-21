@@ -216,8 +216,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
         let mixpanel = Mixpanel.initialize(token:"4e35256cfd95a9b236936bcf0104bb92")
         
-        mixpanel.identify(distinctId: "564") //564 is the unique distinct id of user
-        mixpanel.people.set(properties: ["name": "your name", "$email": "email@email.com", "Plan": "Free", "$region" : "Australia"])
+        mixpanel.identify(distinctId: Mixpanel.mainInstance().distinctId) //564 is the unique distinct id of user
+        mixpanel.people.set(properties: ["name": "Zoe Sheill"]/*, "$email": "email@email.com", "Plan": "Free", "$region" : "Australia"]*/)
         mixpanel.people.addPushDeviceToken(deviceToken)
             
         PFPush.subscribeToChannelInBackground("") { (succeeded: Bool, error: NSError?) in

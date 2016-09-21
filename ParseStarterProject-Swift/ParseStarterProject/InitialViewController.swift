@@ -39,7 +39,7 @@ class InitialViewController: UIViewController {
         let photosViewController = navigationViewController.topViewController as! PhotosViewController
         photosViewController.store = PhotoStore()
         
-        presentViewController(initialViewController, animated: true, completion: nil)
+        presentViewController(initialViewController, animated: false, completion: nil)
         
     }
     

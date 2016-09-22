@@ -22,19 +22,6 @@ class InitialViewController: UIViewController {
     
     func displayAlert(title: String, message: String) {
         
-        if #available(iOS 8.0, *) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-            
-            alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-                
-            })))
-            
-            presentViewController(alert, animated: true, completion: nil)
-        } else {
-            print("error")
-        }
-        
-        
         
     }
     
@@ -47,8 +34,21 @@ class InitialViewController: UIViewController {
         communityLabel.contentMode = UIViewContentMode.ScaleAspectFit
         memberLabel.contentMode = UIViewContentMode.ScaleAspectFit
         
+        
         if Reachability.isConnectedToNetwork() == false {
-            
+          print("inside connected")
+            if #available(iOS 8.0, *) {
+                let alert = UIAlertController(title: "No Internet Connection", message: "Please connect to continue", preferredStyle: UIAlertControllerStyle.Alert)
+                print("Here")
+                alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+                    self.view.userInteractionEnabled = false
+                })))
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                print("error")
+            }
+           
         }
     }
     @IBAction func communityButtonPressed(sender: AnyObject) {

@@ -243,9 +243,6 @@
 				C82B3B031D5E51210037FDC2 /* Settings */,
 				C817B81C1D4AC03200E9A5FD /* ParseBandApp-Bridging-Header.h */,
 				C82B3B321D5EA1400037FDC2 /* Nonmember */,
-				C80745D91D85F20600026339 /* AdminAddEventOneTableViewController.swift */,
-				C80745DB1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift */,
-				C80745D71D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift */,
 				C80745DD1D87610200026339 /* Initial.storyboard */,
 				C8F251661D943714009A8B35 /* Reachability.swift */,
 			);
@@ -291,6 +288,9 @@
 		C80745961D85A83C00026339 /* Add Event */ = {
 			isa = PBXGroup;
 			children = (
+				C80745D91D85F20600026339 /* AdminAddEventOneTableViewController.swift */,
+				C80745DB1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift */,
+				C80745D71D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift */,
 				C829AA301D35C7680073DF94 /* EventViewController.swift */,
 				C81FE8591D66B4A200E0E33F /* DetailViewController.swift */,
 				C817B8201D4B018400E9A5FD /* AdminAddEventTableViewController.swift */,

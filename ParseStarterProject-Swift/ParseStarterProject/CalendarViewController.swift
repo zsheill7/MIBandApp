@@ -168,29 +168,13 @@ class CalendarViewController: UIViewController {
         closePicker()
         if sender.tag == 0 {
             print("here")
-            /*let settingsVC = storyboard?.instantiateViewControllerWithIdentifier("settingsNC")
-             self.presentViewController(settingsVC!, animated: true, completion: nil)*/
+            
             self.performSegueWithIdentifier("goToSettings", sender: self)
         } else if sender.tag == 1 {
             
-            
-            /*let aboutUsVC = storyboard?.instantiateViewControllerWithIdentifier("aboutUsVC")
-             self.presentViewController(aboutUsVC!, animated: true, completion: nil)*/
-            self.performSegueWithIdentifier("goToAboutUs", sender: self)
+                        self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
-            /*let subject = "Contact Us"
-            let body = " "
-            
-            let email = "mailto:parker.bixby@mercerislandschools.org?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
-            
-            if let emailURL:NSURL = NSURL(string: email!)
-            {
-                if UIApplication.sharedApplication().canOpenURL(emailURL)
-                {
-                    UIApplication.sharedApplication().openURL(emailURL)
-                }
-            }*/
             self.performSegueWithIdentifier("toEmailVC", sender: self)
         }
     }

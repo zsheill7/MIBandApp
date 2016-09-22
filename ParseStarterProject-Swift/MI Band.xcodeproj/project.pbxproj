@@ -73,6 +73,7 @@
 		C8D21E771D833673002311A8 /* EmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D21E761D833673002311A8 /* EmailTableViewController.swift */; };
 		C8D21E791D834E6C002311A8 /* AdminStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */; };
 		C8E9EB0A1D7D294B0004B570 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */; };
+		C8F251671D943714009A8B35 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F251661D943714009A8B35 /* Reachability.swift */; };
 		C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */; };
 		C8FD12C11D876DB4004D307C /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FD12C01D876DB4004D307C /* Main2.storyboard */; };
 		C8FD12C31D87703F004D307C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FD12C21D87703F004D307C /* Settings.storyboard */; };
@@ -153,6 +154,7 @@
 		C8D21E761D833673002311A8 /* EmailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTableViewController.swift; sourceTree = "<group>"; };
 		C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminStatusTableViewController.swift; sourceTree = "<group>"; };
 		C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		C8F251661D943714009A8B35 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C8FD12C01D876DB4004D307C /* Main2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
 		C8FD12C21D87703F004D307C /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				C80745DB1D85F32100026339 /* AdminAddEventEnsembleTableViewController.swift */,
 				C80745D71D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift */,
 				C80745DD1D87610200026339 /* Initial.storyboard */,
+				C8F251661D943714009A8B35 /* Reachability.swift */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				C829AA361D35CA410073DF94 /* eventItem.swift in Sources */,
 				C82B3B0E1D5EA0EF0037FDC2 /* DonateViewController.swift in Sources */,
 				C8D21E771D833673002311A8 /* EmailTableViewController.swift in Sources */,
+				C8F251671D943714009A8B35 /* Reachability.swift in Sources */,
 				C817B8211D4B018400E9A5FD /* AdminAddEventTableViewController.swift in Sources */,
 				C829AA331D35C7830073DF94 /* UpcomingEventTableViewController.swift in Sources */,
 				C829AA371D35CA410073DF94 /* eventCell.swift in Sources */,

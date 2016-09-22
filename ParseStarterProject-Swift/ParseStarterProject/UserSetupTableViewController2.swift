@@ -11,6 +11,7 @@ class UserSetupTableViewController2: UITableViewController {
     
     @IBOutlet weak var isAdmin: UISwitch!
     
+    @IBOutlet weak var downArrowImageView: UIImageView!
     @IBOutlet weak var isSectionLeader: UISwitch!
     
     func displayAlert(title: String, message: String) {
@@ -43,7 +44,11 @@ class UserSetupTableViewController2: UITableViewController {
             
             //self.view.addSubview(downArrow)
         }
-        Mixpanel.mainInstance().identify(distinctId: "564")
+        
+        downArrowImageView.image = UIImage(named: "down-arrow")
+        
+        let mixpanel = Mixpanel.initialize(token:"4e35256cfd95a9b236936bcf0104bb92")
+        Mixpanel.mainInstance().identify(distinctId: Mixpanel.mainInstance().distinctId)
         
         Mixpanel.mainInstance().track(event: "viewDidLoad",
                                       properties: ["Plan" : "Free"])
@@ -103,9 +108,10 @@ class UserSetupTableViewController2: UITableViewController {
     }
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if DeviceType.IS_IPAD || DeviceType.IS_IPAD_PRO {
-            if indexPath.row == 0 || indexPath.row == 1 {
-                return 1000
+            if indexPath.section == 0 || indexPath.section == 1 {
+                return 200
             }
+            
             
         }
         return super.tableView(tableView, heightForRowAtIndexPath: indexPath)

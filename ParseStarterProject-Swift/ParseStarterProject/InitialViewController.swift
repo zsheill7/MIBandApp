@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class InitialViewController: UIViewController {
     let window = UIWindow?()
     let defaults = NSUserDefaults.standardUserDefaults()
@@ -18,11 +19,37 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var communityLabel: UIImageView!
     
     @IBOutlet weak var memberLabel: UIImageView!
+    
+    func displayAlert(title: String, message: String) {
+        
+        if #available(iOS 8.0, *) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+                
+            })))
+            
+            presentViewController(alert, animated: true, completion: nil)
+        } else {
+            print("error")
+        }
+        
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
+        
+        
         communityButton.contentMode = UIViewContentMode.ScaleAspectFit
         memberButton.contentMode = UIViewContentMode.ScaleAspectFit
         communityLabel.contentMode = UIViewContentMode.ScaleAspectFit
         memberLabel.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        if Reachability.isConnectedToNetwork() == false {
+            
+        }
     }
     @IBAction func communityButtonPressed(sender: AnyObject) {
         

@@ -19,9 +19,9 @@ class AdminStatusViewController: UIViewController {
     
     @IBAction func bandMemberTapped(sender: AnyObject) {
         
-        user!["isSectionLeader"] = true
+        user!["isSectionLeader"] = false
         
-        user!["isAdmin"] = true
+        user!["isAdmin"] = false
         
         let main2Storyboard = UIStoryboard(name: "Main2", bundle: nil)
         let VC = main2Storyboard.instantiateViewControllerWithIdentifier("userSetupVC")

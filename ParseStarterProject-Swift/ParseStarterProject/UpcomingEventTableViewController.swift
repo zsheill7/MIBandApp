@@ -35,6 +35,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var user = PFUser.currentUser()
 
+    var refresher: UIRefreshControl!
     var detailVC: DetailViewController? = nil
 
     let picker = UIImageView(image: UIImage(named: "Custom Picker View 2"))
@@ -66,9 +67,12 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*if NSUserDefaults.standardUserDefaults().objectForKey("eventList") != nil {
-            eventList = NSUserDefaults.standardUserDefaults().objectForKey("eventList") as! [eventItem]
-        }*/
+       
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        table.addSubview(refresher)
+        refresher.endRefreshing()
         self.hideKeyboardWhenTappedAround()
         navigationItem.hidesBackButton = true
         
@@ -82,6 +86,9 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
         
+    }
+    func refresh(sender:AnyObject) {
+        reloadTableData()
     }
     
     func reloadTableData() {
@@ -219,6 +226,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             
         })
 
+        refresher.endRefreshing()
     }
 
     @IBAction func addEvent(sender: AnyObject) {

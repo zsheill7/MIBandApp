@@ -114,7 +114,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
         let formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         let endOfSchool = NSDate(dateString: "\(endOfSchoolYear!)-06-20")
-        
+    
         if willRepeat == false {
             
             let UUID = NSUUID().UUIDString
@@ -174,7 +174,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                 event["description"] = eventDescriptionText
                 
                 
-                event["willRepeat"] = willRepeat
+                event["willRepeat"] = true
                 
                 event["UUID"] = UUID
                 if pickerEvent == "Marching Band Sectional" {

@@ -1759,7 +1759,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="8F2FE539-3B1C-4A6B-A50C-5F0292229D5B"/>
+                                                    <state key="normal" title="Button" image="CCA3FEB2-8970-42F1-979B-3135F173C7E2"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2045,9 +2045,20 @@ Email: davidec@u.washington.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="l3z-iD-a7i">
+                            <rect key="frame" x="0.0" y="64" width="414" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Email"/>
+                                <segment title="Call"/>
+                            </segments>
+                            <connections>
+                                <action selector="indexChanged:" destination="N0X-i5-mjX" eventType="valueChanged" id="O56-hO-DHt"/>
+                            </connections>
+                        </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="v8g-7i-9Ug">
-                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="121" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v8g-7i-9Ug" id="zsw-TT-dop">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -2061,6 +2072,9 @@ Email: davidec@u.washington.edu</string>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" image="Calendar icon" id="rcv-gN-Vgn"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="l3z-iD-a7i" id="Zcp-lB-x8r"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3L-dt-oUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2479,7 +2493,11 @@ Email: davidec@u.washington.edu</string>
         </scene>
     </scenes>
     <resources>
-        <image name="8F2FE539-3B1C-4A6B-A50C-5F0292229D5B" width="121" height="26">
+        <image name="Barcode-25" width="25" height="25"/>
+        <image name="ButtonChoose" width="121" height="26"/>
+        <image name="ButtonConfirm" width="76" height="26"/>
+        <image name="ButtonCreateAccount" width="142" height="26"/>
+        <image name="CCA3FEB2-8970-42F1-979B-3135F173C7E2" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -2758,10 +2776,6 @@ mACdAKAAogCkAKYAqACtAMQAxgDIPwI/Bz8SPxs/Lj8yPz0/Rj9LP1M/Vj9bP2o/bj91P30/ij+PP5E/
 kz+YP6A/oz+oP7A/sz/FP8g/zQAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAD/PA
 </mutableData>
         </image>
-        <image name="Barcode-25" width="25" height="25"/>
-        <image name="ButtonChoose" width="121" height="26"/>
-        <image name="ButtonConfirm" width="76" height="26"/>
-        <image name="ButtonCreateAccount" width="142" height="26"/>
         <image name="Calendar" width="25" height="25"/>
         <image name="Calendar icon" width="25" height="25"/>
         <image name="List-25" width="25" height="25"/>

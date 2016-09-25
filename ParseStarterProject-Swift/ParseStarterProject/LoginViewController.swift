@@ -106,7 +106,47 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
+    @IBAction func resetPasswordPressed(sender: AnyObject) {
+        let titlePrompt = UIAlertController(title: "Reset password", message: "Enter your login email:", preferredStyle: .Alert)
+        var titleTextField: UITextField?
+        titlePrompt.addTextFieldWithConfigurationHandler { (textField) in
+            titleTextField = textField
+            textField.placeholder = "Email"
+            
+            
+        }
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Default, handler: nil)
+        titlePrompt.addAction(cancelAction)
+        
+        titlePrompt.addAction(UIAlertAction(title: "Reset", style: .Destructive, handler: { (action) in
+            if let textField = titleTextField {
+                self.resetPassword(textField.text!)
+            }
+        }))
+        self.presentViewController(titlePrompt, animated: true, completion: nil)
+    }
     
+    func resetPassword(email: String) {
+        let emailToLowerCase = email.lowercaseString
+        
+        let emailClean = emailToLowerCase.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        PFUser.requestPasswordResetForEmailInBackground(emailClean) { (success, error) in
+            if error == nil {
+                let success = UIAlertController(title: "Success", message: "Check your email to reset your password", preferredStyle: .Alert)
+                let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                success.addAction(okButton)
+                self.presentViewController(success, animated: false, completion: nil)
+            } else {
+                let errormessage = error!.userInfo["error"] as! NSString
+                let error = UIAlertController(title: "Cannot complete request", message: errormessage as String, preferredStyle: .Alert)
+                let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                error.addAction(okButton)
+                self.presentViewController(error, animated: false, completion: nil)
+            }
+        }
+    }
     @IBAction func homeButtonTapped(sender: AnyObject) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let initialVC = mainStoryboard.instantiateViewControllerWithIdentifier("initialVC")

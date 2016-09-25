@@ -72,12 +72,13 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
        
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refresher.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        refresher.addTarget(self, action: #selector(EventTableViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         table.addSubview(refresher)
         refresher.endRefreshing()
-        self.hideKeyboardWhenTappedAround()
+       // self.hideKeyboardWhenTappedAround()
         navigationItem.hidesBackButton = true
         
+        var isAdmin = user!["isAdmin"] as! Bool
         
         reloadTableData()
 
@@ -102,15 +103,13 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         query1?.findObjectsInBackgroundWithBlock({ (objects, error) in
-            if let users = objects {
+            if objects != nil {
                 self.events.removeAll(keepCapacity: true)
                 
             }
             
             if let isAdmin = self.user!["isAdmin"] as? Bool {
-            if isAdmin == true  {
-                
-            }
+            
                 let marchingQuery = PFQuery(className: "Event")
                 
                 
@@ -118,8 +117,11 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 print(userInstrument)
                 
                 
-                marchingQuery.whereKey("instrument", equalTo: userInstrument)
-                marchingQuery.whereKey("ensemble", equalTo: "Marching Band")
+                if isAdmin == false  {
+                    marchingQuery.whereKey("instrument", equalTo: userInstrument)
+                    marchingQuery.whereKey("ensemble", equalTo: "Marching Band")
+                }
+                
                 marchingQuery.findObjectsInBackgroundWithBlock({ (objects, error) in
                     
                     if let objects = objects {
@@ -128,8 +130,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             //seeing if the ensemble is "Marching Band"
                             
                             //print((object["instrument"] as! String) + userInstrument)
-                            let ensembleString = ""
-                            let instrumentString = ""
+                            
                             
                             let ensembleCount = object["ensemble"].count
                             
@@ -137,19 +138,26 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             self.instruments = object["instrument"] as! [String]
                             var instrumentCount = self.instruments.count
                             
-                            var matchIndex = 0
+                            var instrumentMatchIndex = 0
                             
                             if  instrumentCount > 1 {
-                                for ensembleString in self.instruments {
-                                    if ensembleString == userInstrument {
+                                for (index, instrumentString) in self.instruments.enumerate() {
+                                    if instrumentString == userInstrument {
                                         instrumentMatch = true
+                                        instrumentMatchIndex = index
                                     }
                                 }
                             }
                             
-                            
+                            var eventInstrument = ""
+                            if isAdmin == false{
+                                eventInstrument = self.instruments[instrumentMatchIndex]
+                            } else {
+                                
+                            }
+                            print(self.instruments)
                            
-                            let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: self.instruments[matchIndex] as! String, ensemble: "Marching Band", willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
+                            let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: self.instruments[instrumentMatchIndex] , ensemble: "Marching Band", willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
                             
                             
                             self.events.append(newEvent)
@@ -165,63 +173,68 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             
             let userConcertInstrument = PFUser.currentUser()!["concertInstrument"] as! String
             
-            
-            concertQuery.whereKey("instrument", equalTo: userConcertInstrument)
-            concertQuery.whereKey("ensemble", notEqualTo: "Marching Band")
-            concertQuery.findObjectsInBackgroundWithBlock({ (objects, error) in
+            if let isAdmin = self.user!["isAdmin"] as? Bool {
                 
-                if let objects = objects {
-                    
-                    for object in objects {
-                        //seeing if the ensemble is "Marching Band"
-                        
-                        //print((object["instrument"] as! String) + userInstrument)
-                        
-                    
-                        
-                       
-                        
-                        var instrumentMatch = false
-                        var ensembleMatch = false
-                        self.instruments = object["instrument"] as! [String]
-                        self.ensembles = object["ensemble"] as! [String]
-                        var instrumentCount = self.instruments.count
-                        var ensembleCount = self.ensembles.count
-                        
-                        var instrumentMatchIndex = 0
-                        var ensembleMatchIndex = 0
-                        let userInstrument = PFUser.currentUser()!["marchingInstrument"] as! String
-                        let userEnsemble = PFUser.currentUser()!["concertBandType"] as! String
-                        
-                        if  instrumentCount > 1 {
-                            for (index, instrumentString) in self.instruments.enumerate() {
-                                if instrumentString == userInstrument {
-                                    instrumentMatch = true
-                                    instrumentMatchIndex = index
-                                }
-                            }
-                        }
-                        
-                        if ensembleCount > 1 {
-                            for (index, ensembleString) in self.ensembles.enumerate() {
-                                if ensembleString == userEnsemble {
-                                    ensembleMatch = true
-                                    ensembleMatchIndex = index
-                                }
-                            }
-                        }
-                        
-                        var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: self.instruments[instrumentMatchIndex], ensemble: self.ensembles[ensembleMatchIndex], willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
-                        
-                        self.events.append(newEvent)
-                        
-                        self.events = self.events.sort({$0.date.compare($1.date) == .OrderedAscending})
-                        self.table.reloadData()
-                        
-                        
-                    }
+                if isAdmin == false  {
+                    concertQuery.whereKey("instrument", equalTo: userConcertInstrument)
+                    concertQuery.whereKey("ensemble", notEqualTo: "Marching Band")
                 }
-            })
+                
+                concertQuery.findObjectsInBackgroundWithBlock({ (objects, error) in
+                    
+                    if let objects = objects {
+                        
+                        for object in objects {
+                            //seeing if the ensemble is "Marching Band"
+                            
+                            //print((object["instrument"] as! String) + userInstrument)
+                            
+                        
+                            
+                           
+                            
+                            var instrumentMatch = false
+                            var ensembleMatch = false
+                            self.instruments = object["instrument"] as! [String]
+                            self.ensembles = object["ensemble"] as! [String]
+                            var instrumentCount = self.instruments.count
+                            var ensembleCount = self.ensembles.count
+                            
+                            var instrumentMatchIndex = 0
+                            var ensembleMatchIndex = 0
+                            let userInstrument = PFUser.currentUser()!["marchingInstrument"] as! String
+                            let userEnsemble = PFUser.currentUser()!["concertBandType"] as! String
+                            
+                            if  instrumentCount > 1 {
+                                for (index, instrumentString) in self.instruments.enumerate() {
+                                    if instrumentString == userInstrument {
+                                        instrumentMatch = true
+                                        instrumentMatchIndex = index
+                                    }
+                                }
+                            }
+                            
+                            if ensembleCount > 1 {
+                                for (index, ensembleString) in self.ensembles.enumerate() {
+                                    if ensembleString == userEnsemble {
+                                        ensembleMatch = true
+                                        ensembleMatchIndex = index
+                                    }
+                                }
+                            }
+                            
+                            var newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: self.instruments[instrumentMatchIndex], ensemble: self.ensembles[ensembleMatchIndex], willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
+                            
+                            self.events.append(newEvent)
+                            
+                            self.events = self.events.sort({$0.date.compare($1.date) == .OrderedAscending})
+                            self.table.reloadData()
+                            
+                            
+                        }
+                    }
+                })
+            }
             
             
             
@@ -230,7 +243,8 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
 
         refresher.endRefreshing()
     }
-
+    
+ 
     @IBAction func addEvent(sender: AnyObject) {
         
         
@@ -282,7 +296,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath) as! eventCell
         
         //print(eventList[indexPath.row])
-        cell.eventTitle.text = events[indexPath.row].title + " " + events[indexPath.row].instrument
+        cell.eventTitle.text = events[indexPath.row].title + " ~ " + events[indexPath.row].instrument
         cell.eventDate.text = events[indexPath.row].getDateString()
         cell.eventDescription.text = events[indexPath.row].description
         

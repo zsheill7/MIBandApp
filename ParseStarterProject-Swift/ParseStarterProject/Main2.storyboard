@@ -1759,7 +1759,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="CCA3FEB2-8970-42F1-979B-3135F173C7E2"/>
+                                                    <state key="normal" title="Button" image="A49832E2-A38B-4FD6-B432-79C871DDE14E"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2493,11 +2493,7 @@ Email: davidec@u.washington.edu</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Barcode-25" width="25" height="25"/>
-        <image name="ButtonChoose" width="121" height="26"/>
-        <image name="ButtonConfirm" width="76" height="26"/>
-        <image name="ButtonCreateAccount" width="142" height="26"/>
-        <image name="CCA3FEB2-8970-42F1-979B-3135F173C7E2" width="121" height="26">
+        <image name="A49832E2-A38B-4FD6-B432-79C871DDE14E" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -2776,6 +2772,10 @@ mACdAKAAogCkAKYAqACtAMQAxgDIPwI/Bz8SPxs/Lj8yPz0/Rj9LP1M/Vj9bP2o/bj91P30/ij+PP5E/
 kz+YP6A/oz+oP7A/sz/FP8g/zQAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAD/PA
 </mutableData>
         </image>
+        <image name="Barcode-25" width="25" height="25"/>
+        <image name="ButtonChoose" width="121" height="26"/>
+        <image name="ButtonConfirm" width="76" height="26"/>
+        <image name="ButtonCreateAccount" width="142" height="26"/>
         <image name="Calendar" width="25" height="25"/>
         <image name="Calendar icon" width="25" height="25"/>
         <image name="List-25" width="25" height="25"/>
@@ -2785,8 +2785,8 @@ kz+YP6A/oz+oP7A/sz/FP8g/zQAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAD/PA
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="u98-mE-Hmq"/>
-        <segue reference="wTi-hA-FDf"/>
         <segue reference="3Yb-T1-WTu"/>
+        <segue reference="Phz-9U-Zn6"/>
         <segue reference="5ng-KQ-DuG"/>
         <segue reference="agL-Cc-jKq"/>
         <segue reference="uGz-Jx-ljy"/>

@@ -29,6 +29,8 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var table: UITableView!
   
 
+   
+    
     var instruments:[String] = []
     var ensembles:[String] = []
     var events = [eventItem]()
@@ -327,12 +329,18 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 UIApplication.sharedApplication().beginIgnoringInteractionEvents()
                 
                 var query = PFQuery(className: "Event")
-                query.whereKey("UUID", equalTo: events[indexPath.row].UUID)
+                query.whereKey("objectID", equalTo: events[indexPath.row].objectID)
                 query.findObjectsInBackgroundWithBlock({ (objects, error) in
                     if error == nil {
                         
                         for object in objects! {
-                            object.deleteInBackground()
+                            object.deleteInBackgroundWithBlock({ (success, error) in
+                                if (success) {
+                                    print("success")
+                                } else {
+                                    print("unable to delete")
+                                }
+                            })
                         }
                     } else {
                         print(error)

@@ -176,13 +176,14 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
                     
                     event["UUID"] = UUID
                     if pickerEvent == "Marching Band Sectional" {
-                        event["instrument"] = /*PFUser.currentUser()!.objectForKey("marchingInstrument")*/ instruments
-                        event["ensemble"] = "Marching Band"
+                        event.addObjectsFromArray(instruments, forKey: "instrument")
+                        event.addObject("Marching Band", forKey: "ensemble")
                         
                     } else {
                         
-                        event["instrument"] = /*PFUser.currentUser()!.objectForKey("concertInstrument")*/ instruments
-                        event["ensemble"] = /*PFUser.currentUser()!.objectForKey("concertBandType")*/ ensembles
+                        event.addObjectsFromArray(instruments, forKey: "instrument")
+                        
+                        event.addObjectsFromArray(ensembles, forKey: "ensemble")
                     }
                     
                     event.saveInBackgroundWithBlock{(success, error) -> Void in

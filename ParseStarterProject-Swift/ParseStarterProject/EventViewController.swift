@@ -46,23 +46,13 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
     
     
     func displayAlert(title: String, message: String) {
-        
-        if #available(iOS 8.0, *) {
             var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 
-                self.dismissViewControllerAnimated(true, completion: nil)
-                
             })))
             
             self.presentViewController(alert, animated: true, completion: nil)
-        } else {
-            print("error")
-        }
-        
-        
-        
     }
 
     
@@ -141,10 +131,12 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                 event["ensemble"] = PFUser.currentUser()!.objectForKey("concertBandType")
             }
             
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            
             event.saveInBackgroundWithBlock{(success, error) -> Void in
                 self.activityIndicator.stopAnimating()
                 
-                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                
                 
                 if error == nil {
                     
@@ -159,7 +151,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                     self.displayAlert("Could not add event", message: "Please try again later or contact an admin")
                 }
             }
-        } else /*if willRepeat == true*/ {
+        } else if willRepeat == true {
             let UUID = NSUUID().UUIDString
             
             while placeholderDate.earlierDate(endOfSchool).isEqualToDate(placeholderDate) {
@@ -181,23 +173,25 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                     
                 let marchingInstrument = PFUser.currentUser()!.objectForKey("marchingInstrument")
                 event.addObject(marchingInstrument!, forKey: "instrument")
-                    event["ensemble"] = "Marching Band"
+                 event.addObject("Marching Band", forKey: "ensemble")
                     
                 } else {
                     let concertInstrument = PFUser.currentUser()!.objectForKey("concertInstrument") as! String
                     print(concertInstrument)
                     let concertBandType = PFUser.currentUser()!.objectForKey("concertBandType") as! String
                     print("here")
+        
                     event.addObject(concertInstrument, forKey: "instrument")
-                    
                     event.addObject(concertBandType, forKey: "ensemble")
+               
                     
                 }
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
                 event.saveInBackgroundWithBlock{(success, error) -> Void in
                     self.activityIndicator.stopAnimating()
                     
-                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                    
                     
                     if error == nil {
                         
@@ -215,6 +209,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDataSource
                 placeholderDate = cal.dateByAddingUnit(.Day, value: 7, toDate: placeholderDate, options: [])!
 
             }
+            willRepeat = false
             
         }
 

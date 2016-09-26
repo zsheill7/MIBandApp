@@ -69,6 +69,8 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.dismissKeyboard()
        
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -114,7 +116,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 
                 
                 let userInstrument = PFUser.currentUser()!["marchingInstrument"] as! String
-                print(userInstrument)
+           
                 
                 
                 if isAdmin == false  {
@@ -155,7 +157,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                             } else {
                                 
                             }
-                            print(self.instruments)
+                      
                            
                             let newEvent: eventItem = eventItem(title: object["title"] as! String, date: object["date"] as! NSDate, description: object["description"] as! String, instrument: self.instruments[instrumentMatchIndex] , ensemble: "Marching Band", willRepeat: object["willRepeat"] as! Bool, UUID: object["UUID"] as! String, objectID: object.objectId!)
                             

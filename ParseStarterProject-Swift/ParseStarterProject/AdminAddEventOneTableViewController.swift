@@ -146,6 +146,16 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
                     
                     if error == nil {
                         
+                        if self.event["title"] as! String == "Reminder" {
+                            
+                            print("inside push")
+                            let push = PFPush()
+                            let channels = concertInstrumentsList
+                            push.setChannels(concertInstrumentsList)
+                            push.setMessage("This is a test push notification")
+                            push.sendPushInBackground()
+                        }
+                        
                         dispatch_async(dispatch_get_main_queue()) {
                             [unowned self] in
                             //self.performSegueWithIdentifier("addEvent", sender: self)
@@ -211,6 +221,8 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
                     
                 }
                 
+                
+                
             }
         } else {
             displayAlert("Missing Fields", message: "Select: Ensemble(s) to send message to\nInstrument(s) to send message to")
@@ -239,7 +251,7 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("here")
+     
         if indexPath.section == 0 && indexPath.row == 0 {
             self.performSegueWithIdentifier("toEnsemble", sender: self)
             

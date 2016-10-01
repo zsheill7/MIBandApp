@@ -275,7 +275,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         
         if DeviceType.IS_IPAD_PRO {
             if indexPath.section == 0 && indexPath.row == 0 {
-                return 600
+                return 400
             }
         }
     

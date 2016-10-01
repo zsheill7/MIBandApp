@@ -196,8 +196,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="252.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder5" translatesAutoresizingMaskIntoConstraints="NO" id="nh2-Ln-zls">
-                                                    <rect key="frame" x="-174" y="8" width="399" height="236"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder5" translatesAutoresizingMaskIntoConstraints="NO" id="nh2-Ln-zls">
+                                                    <rect key="frame" x="8" y="8" width="399" height="236"/>
+                                                    <variation key="widthClass=regular" misplaced="YES">
+                                                        <rect key="frame" x="160" y="8" width="416" height="236"/>
+                                                    </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                         <rect key="frame" x="190" y="8" width="357" height="236.5"/>
                                                     </variation>
@@ -206,7 +209,7 @@
                                             <constraints>
                                                 <constraint firstItem="nh2-Ln-zls" firstAttribute="top" secondItem="rhn-rv-gx7" secondAttribute="topMargin" id="4K2-jl-ndg"/>
                                                 <constraint firstItem="nh2-Ln-zls" firstAttribute="trailing" secondItem="rhn-rv-gx7" secondAttribute="trailingMargin" constant="-181" id="9hS-S7-YnF"/>
-                                                <constraint firstItem="nh2-Ln-zls" firstAttribute="leading" secondItem="rhn-rv-gx7" secondAttribute="leadingMargin" constant="-182" id="Zkj-M7-cpc"/>
+                                                <constraint firstItem="nh2-Ln-zls" firstAttribute="leading" secondItem="rhn-rv-gx7" secondAttribute="leadingMargin" id="Zkj-M7-cpc"/>
                                                 <constraint firstItem="nh2-Ln-zls" firstAttribute="bottom" secondItem="rhn-rv-gx7" secondAttribute="bottomMargin" id="ffX-e2-s0U"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -235,6 +238,9 @@
                                                 <constraint firstItem="VdV-9f-tb6" firstAttribute="top" secondItem="Jmy-ea-epM" secondAttribute="topMargin" id="8eO-j1-nvz"/>
                                                 <constraint firstItem="VdV-9f-tb6" firstAttribute="centerX" secondItem="Jmy-ea-epM" secondAttribute="centerX" id="ctl-hE-W2d"/>
                                             </constraints>
+                                            <variation key="widthClass=regular" ambiguous="YES">
+                                                <rect key="frame" x="0.0" y="0.0" width="736" height="43.5"/>
+                                            </variation>
                                             <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                                 <rect key="frame" x="0.0" y="0.0" width="736" height="43.5"/>
                                             </variation>
@@ -357,7 +363,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U43-pg-fZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3543.75" y="264.75"/>
+            <point key="canvasLocation" x="3543.75" y="264"/>
         </scene>
         <!--Item-->
         <scene sceneID="t9h-Z9-DVW">
@@ -1763,7 +1769,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="81FF891A-6E62-4B9F-99E3-4643DCD0F402"/>
+                                                    <state key="normal" title="Button" image="15278F1D-E3D3-40BC-BC8B-86F23AEE0F04"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -1774,6 +1780,9 @@ Email: davidec@u.washington.edu</string>
                                                 <constraint firstItem="X1f-Pd-IZI" firstAttribute="bottom" secondItem="24g-lP-2yI" secondAttribute="bottomMargin" id="fVB-m9-UtL"/>
                                                 <constraint firstItem="X1f-Pd-IZI" firstAttribute="centerX" secondItem="24g-lP-2yI" secondAttribute="centerX" id="vq1-gx-LSA"/>
                                             </constraints>
+                                            <variation key="widthClass=regular" ambiguous="YES">
+                                                <rect key="frame" x="0.0" y="0.0" width="736" height="43.5"/>
+                                            </variation>
                                             <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                                 <rect key="frame" x="0.0" y="0.0" width="736" height="43.5"/>
                                             </variation>
@@ -2497,7 +2506,7 @@ Email: davidec@u.washington.edu</string>
         </scene>
     </scenes>
     <resources>
-        <image name="81FF891A-6E62-4B9F-99E3-4643DCD0F402" width="121" height="26">
+        <image name="15278F1D-E3D3-40BC-BC8B-86F23AEE0F04" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

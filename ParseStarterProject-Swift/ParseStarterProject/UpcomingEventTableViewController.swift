@@ -312,7 +312,9 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }*/
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("showDetail", sender: self)
+        if !(DeviceType.IS_IPAD || DeviceType.IS_IPAD_PRO) {
+            self.performSegueWithIdentifier("showDetail", sender: self)
+        }
     }
     
 

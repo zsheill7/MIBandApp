@@ -80,7 +80,7 @@
                                                     </connections>
                                                 </containerView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="tDs-2N-7U0">
-                                                    <rect key="frame" x="186" y="169" width="43" height="13.5"/>
+                                                    <rect key="frame" x="186" y="169" width="43" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="43" id="Nru-kE-hOZ"/>
                                                         <constraint firstAttribute="height" constant="13.5" id="bWr-M5-ASH"/>
@@ -115,7 +115,7 @@
                                                     </connections>
                                                 </containerView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="MIc-Za-UBo">
-                                                    <rect key="frame" x="186" y="169" width="43" height="13.5"/>
+                                                    <rect key="frame" x="186" y="169" width="43" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13.5" id="7ji-we-RRl"/>
                                                         <constraint firstAttribute="width" constant="43" id="OfQ-8o-3Yu"/>
@@ -197,13 +197,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder5" translatesAutoresizingMaskIntoConstraints="NO" id="nh2-Ln-zls">
-                                                    <rect key="frame" x="8" y="8" width="398" height="236"/>
+                                                    <rect key="frame" x="-174" y="8" width="399" height="236"/>
+                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                        <rect key="frame" x="190" y="8" width="357" height="236.5"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="nh2-Ln-zls" firstAttribute="top" secondItem="rhn-rv-gx7" secondAttribute="topMargin" id="4K2-jl-ndg"/>
-                                                <constraint firstItem="nh2-Ln-zls" firstAttribute="trailing" secondItem="rhn-rv-gx7" secondAttribute="trailingMargin" id="9hS-S7-YnF"/>
-                                                <constraint firstItem="nh2-Ln-zls" firstAttribute="leading" secondItem="rhn-rv-gx7" secondAttribute="leadingMargin" id="Zkj-M7-cpc"/>
+                                                <constraint firstItem="nh2-Ln-zls" firstAttribute="trailing" secondItem="rhn-rv-gx7" secondAttribute="trailingMargin" constant="-181" id="9hS-S7-YnF"/>
+                                                <constraint firstItem="nh2-Ln-zls" firstAttribute="leading" secondItem="rhn-rv-gx7" secondAttribute="leadingMargin" constant="-182" id="Zkj-M7-cpc"/>
                                                 <constraint firstItem="nh2-Ln-zls" firstAttribute="bottom" secondItem="rhn-rv-gx7" secondAttribute="bottomMargin" id="ffX-e2-s0U"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -354,7 +357,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U43-pg-fZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3544" y="265"/>
+            <point key="canvasLocation" x="3543.75" y="264.75"/>
         </scene>
         <!--Item-->
         <scene sceneID="t9h-Z9-DVW">
@@ -522,7 +525,7 @@ Email: davidec@u.washington.edu</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concert Band: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjK-s6-Lgd">
-                                                    <rect key="frame" x="16" y="11" width="151" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="151" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="151" id="gzn-zB-66M"/>
                                                     </constraints>
@@ -562,7 +565,7 @@ Email: davidec@u.washington.edu</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Barcode Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hek-Kq-YQR">
-                                                    <rect key="frame" x="15" y="11" width="183" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="183" height="22"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -586,7 +589,7 @@ Email: davidec@u.washington.edu</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Locker Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7D-Qj-tuq">
-                                                    <rect key="frame" x="14" y="11" width="183" height="21"/>
+                                                    <rect key="frame" x="14" y="11" width="183" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="183" id="3ov-mo-o5u"/>
                                                     </constraints>
@@ -641,7 +644,7 @@ Email: davidec@u.washington.edu</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Administrator Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGU-8R-o5V">
-                                                    <rect key="frame" x="15" y="11" width="183" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="183" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="183" id="Qok-JA-0sS"/>
                                                     </constraints>
@@ -803,7 +806,7 @@ Email: davidec@u.washington.edu</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-dE-4fx">
-                                                    <rect key="frame" x="15" y="11" width="183" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="183" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="183" id="MED-X5-UxZ"/>
                                                     </constraints>
@@ -1048,7 +1051,7 @@ Email: davidec@u.washington.edu</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyi-0y-TqQ">
-                                                    <rect key="frame" x="8" y="8" width="398" height="77"/>
+                                                    <rect key="frame" x="8" y="8" width="398" height="76.5"/>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -1291,7 +1294,7 @@ Email: davidec@u.washington.edu</string>
                                                     </connections>
                                                 </containerView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="WFK-mb-cHg">
-                                                    <rect key="frame" x="186" y="169" width="43" height="13.5"/>
+                                                    <rect key="frame" x="186" y="169" width="43" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13.5" id="88N-2i-eYC"/>
                                                         <constraint firstAttribute="width" constant="43" id="vyY-Uh-5UU"/>
@@ -1326,7 +1329,7 @@ Email: davidec@u.washington.edu</string>
                                                     </connections>
                                                 </containerView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="mA9-t1-NnR">
-                                                    <rect key="frame" x="186" y="169" width="43" height="13.5"/>
+                                                    <rect key="frame" x="186" y="169" width="43" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13.5" id="aTe-53-k6v"/>
                                                         <constraint firstAttribute="width" constant="43" id="flR-se-tUw"/>
@@ -1407,7 +1410,7 @@ Email: davidec@u.washington.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="398" height="174.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-fm-TuY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-fm-TuY">
                                 <rect key="frame" x="0.0" y="1" width="398" height="173.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1447,7 +1450,7 @@ Email: davidec@u.washington.edu</string>
                         <viewControllerLayoutGuide type="bottom" id="hwe-tY-NcK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V8c-Mo-2vp">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="174.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="174"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="diP-ja-Rzb">
@@ -1533,7 +1536,7 @@ Email: davidec@u.washington.edu</string>
                         <viewControllerLayoutGuide type="bottom" id="bu2-8D-4UF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SNL-w8-1Mc">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="174.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="174"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7rB-8J-TZJ">
@@ -1760,7 +1763,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="821A4115-AB39-495E-B3E8-1CA7DA7AEBF9"/>
+                                                    <state key="normal" title="Button" image="81FF891A-6E62-4B9F-99E3-4643DCD0F402"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2059,7 +2062,7 @@ Email: davidec@u.washington.edu</string>
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="v8g-7i-9Ug">
-                                <rect key="frame" x="0.0" y="121" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v8g-7i-9Ug" id="zsw-TT-dop">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -2130,7 +2133,7 @@ Email: davidec@u.washington.edu</string>
                         <viewControllerLayoutGuide type="bottom" id="aTb-xH-Yy4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dbc-LU-EeE">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="162.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="162"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8gJ-Yl-fG1">
@@ -2494,7 +2497,7 @@ Email: davidec@u.washington.edu</string>
         </scene>
     </scenes>
     <resources>
-        <image name="821A4115-AB39-495E-B3E8-1CA7DA7AEBF9" width="121" height="26">
+        <image name="81FF891A-6E62-4B9F-99E3-4643DCD0F402" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -2786,10 +2789,10 @@ kz+YP6A/oz+oP7A/sz/FP8g/zQAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAD/PA
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="u98-mE-Hmq"/>
-        <segue reference="3Yb-T1-WTu"/>
-        <segue reference="Phz-9U-Zn6"/>
-        <segue reference="5ng-KQ-DuG"/>
-        <segue reference="agL-Cc-jKq"/>
+        <segue reference="JgH-1H-eil"/>
+        <segue reference="XCE-Yx-gg1"/>
+        <segue reference="b3Q-1b-Adq"/>
         <segue reference="uGz-Jx-ljy"/>
+        <segue reference="agL-Cc-jKq"/>
     </inferredMetricsTieBreakers>
 </document>

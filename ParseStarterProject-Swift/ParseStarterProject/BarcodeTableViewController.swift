@@ -70,6 +70,7 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         pickerFrame = CGRect(x: ((self.view.frame.width - picker.frame.size.width) - 10), y: 15, width: 200, height: 160)
         
         
@@ -272,8 +273,14 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
  
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
+        if DeviceType.IS_IPAD_PRO {
+            if indexPath.section == 0 && indexPath.row == 0 {
+                return 600
+            }
+        }
+    
         if indexPath.row == 1 && indexPath.section == 0{
-            if user!["lockerNumber"] != nil {
+            if user!["barcode"] != nil {
                 return 0.0
             }
         }

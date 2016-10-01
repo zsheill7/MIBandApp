@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleAspectFill" misplaced="YES" paginationMode="topToBottom" pageLength="1" translatesAutoresizingMaskIntoConstraints="NO" id="ESa-XC-Mvb">
+                            <webView contentMode="scaleAspectFill" paginationMode="topToBottom" pageLength="1" translatesAutoresizingMaskIntoConstraints="NO" id="ESa-XC-Mvb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" red="0.88419000410000004" green="0.95791964760000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -395,9 +395,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="235" id="VbV-Vf-ozx"/>
                                 </constraints>
-                                <string key="text">This app was programmed by Zoe Sheill.
+                                <string key="text">This app was programmed by Zoe Sheill 
+Contact at:
 
-Email: zsheill7@gmail.com
+zsheill7@gmail.com
 
 All photos taken by David Cummings
 
@@ -1759,7 +1760,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="A49832E2-A38B-4FD6-B432-79C871DDE14E"/>
+                                                    <state key="normal" title="Button" image="821A4115-AB39-495E-B3E8-1CA7DA7AEBF9"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2493,7 +2494,7 @@ Email: davidec@u.washington.edu</string>
         </scene>
     </scenes>
     <resources>
-        <image name="A49832E2-A38B-4FD6-B432-79C871DDE14E" width="121" height="26">
+        <image name="821A4115-AB39-495E-B3E8-1CA7DA7AEBF9" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

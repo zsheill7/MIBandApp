@@ -789,7 +789,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="273" id="wzu-Oi-xYI"/>
                                 </constraints>
-                                <string key="text">This app was programmed by Zoe Sheill.  Email: zsheill7@gmail.com  All photos taken by David Cummings  Email: davidec@u.washington.edu</string>
+                                <string key="text">This app was programmed by Zoe Sheill 
+Contact at:
+
+zsheill7@gmail.com
+
+All photos taken by David Cummings
+
+Email: davidec@u.washington.edu</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>

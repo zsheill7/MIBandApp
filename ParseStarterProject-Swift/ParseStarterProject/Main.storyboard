@@ -142,29 +142,6 @@
                                             <action selector="resetPasswordPressed:" destination="1lv-Ft-yU8" eventType="touchUpInside" id="MfM-zI-CoQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mU-nb-yeQ">
-                                        <rect key="frame" x="216" y="461" width="169" height="23"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="123" id="d07-OE-1zy"/>
-                                        </constraints>
-                                        <state key="normal" title="Forgot Password?">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="d07-OE-1zy"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="338" y="464" width="123" height="30"/>
-                                            <mask key="constraints">
-                                                <include reference="d07-OE-1zy"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="resetPasswordPressed:" destination="1lv-Ft-yU8" eventType="touchUpInside" id="glL-GL-11U"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -178,7 +155,6 @@
                                     <constraint firstItem="rXQ-RR-00Q" firstAttribute="leading" secondItem="lPf-7A-QEw" secondAttribute="leading" constant="20" id="FCf-Mb-U3W"/>
                                     <constraint firstItem="eyI-k8-Acj" firstAttribute="leading" secondItem="lPf-7A-QEw" secondAttribute="trailing" constant="-209" id="FoH-Ie-KvB"/>
                                     <constraint firstItem="8qT-rk-MX3" firstAttribute="leading" secondItem="6KY-9e-WRI" secondAttribute="leading" constant="-7" id="GTt-2Z-Xfj"/>
-                                    <constraint firstItem="5mU-nb-yeQ" firstAttribute="top" secondItem="Exl-88-If3" secondAttribute="bottom" constant="8" id="Jfq-W5-ev9"/>
                                     <constraint firstItem="Gkb-TR-ifF" firstAttribute="leading" secondItem="8in-Vj-suG" secondAttribute="trailing" constant="8" symbolic="YES" id="Jm5-Sj-QOv"/>
                                     <constraint firstItem="lPf-7A-QEw" firstAttribute="centerX" secondItem="6KY-9e-WRI" secondAttribute="centerX" id="KmH-au-5uB"/>
                                     <constraint firstItem="fll-S8-r4m" firstAttribute="top" secondItem="Exl-88-If3" secondAttribute="bottom" constant="8" id="RlL-Hz-Uuy"/>
@@ -194,7 +170,6 @@
                                     <constraint firstItem="m6W-8Y-Giw" firstAttribute="leading" secondItem="Gkb-TR-ifF" secondAttribute="leading" id="bhJ-pA-zNT"/>
                                     <constraint firstItem="b4T-i5-Nnz" firstAttribute="leading" secondItem="Exl-88-If3" secondAttribute="leading" constant="15" id="bin-yO-JbZ"/>
                                     <constraint firstItem="rXQ-RR-00Q" firstAttribute="top" secondItem="m6W-8Y-Giw" secondAttribute="top" id="c1a-LB-3Dn"/>
-                                    <constraint firstItem="5mU-nb-yeQ" firstAttribute="centerX" secondItem="Exl-88-If3" secondAttribute="centerX" id="ejN-xX-Fhu"/>
                                     <constraint firstItem="b4T-i5-Nnz" firstAttribute="top" secondItem="lPf-7A-QEw" secondAttribute="bottom" constant="21" id="hgX-dV-y81"/>
                                     <constraint firstItem="lPf-7A-QEw" firstAttribute="top" secondItem="rXQ-RR-00Q" secondAttribute="bottom" constant="-106" id="lBA-BV-h9F"/>
                                     <constraint firstItem="eyI-k8-Acj" firstAttribute="top" secondItem="Gkb-TR-ifF" secondAttribute="bottom" constant="18" id="pfX-hI-sLO"/>

@@ -158,11 +158,11 @@
             <objects>
                 <tableViewController storyboardIdentifier="emailVC" id="1nV-YD-jbk" customClass="EmailTableViewController" customModule="MI_Band" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ffY-k8-fNN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Qpr-hN-2dG">
-                            <rect key="frame" x="0.0" y="64" width="375" height="29"/>
+                            <rect key="frame" x="0.0" y="64" width="414" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Email"/>
@@ -174,10 +174,10 @@
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="gEn-nA-ase">
-                                <rect key="frame" x="0.0" y="121" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="121" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gEn-nA-ase" id="bK5-Pg-uce">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -697,11 +697,11 @@
                                             <segue destination="SlA-7C-R9P" kind="show" identifier="goToAboutUs" id="YOf-Ve-u7Q"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="454" id="EmP-Rn-uhq">
-                                        <rect key="frame" x="0.0" y="355" width="414" height="454"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="523" id="EmP-Rn-uhq">
+                                        <rect key="frame" x="0.0" y="355" width="414" height="523"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EmP-Rn-uhq" id="aac-KZ-Lv2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="453.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="522.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ch5-Dj-Ust">
@@ -780,7 +780,7 @@
                         <viewControllerLayoutGuide type="bottom" id="MMp-h0-XUP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WjI-4o-nsk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="65c-bs-Bpt">
@@ -861,7 +861,7 @@ Email: davidec@u.washington.edu</string>
         <image name="volunteeringIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GXX-KO-rM9"/>
-        <segue reference="TO7-j5-I99"/>
+        <segue reference="YOf-Ve-u7Q"/>
+        <segue reference="Kys-i5-uMw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -89,7 +89,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                 
                 user.password = password.text!
                 user.username = email.text!
-                
+                user["firstName"] = firstName.text!
+                user["lastName"] = lastName.text!
                 
                 user.signUpInBackgroundWithBlock({ (success, error) -> Void in
                     

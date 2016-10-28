@@ -14,7 +14,6 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
 
     func displayAlert(title: String, message: String) {
         
-        if #available(iOS 8.0, *) {
             var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
@@ -24,10 +23,6 @@ class AdminAddEventOneTableViewController: UITableViewController, UIPickerViewDa
             })))
             
             self.presentViewController(alert, animated: true, completion: nil)
-        } else {
-            print("error")
-        }
-    
     }
 
     

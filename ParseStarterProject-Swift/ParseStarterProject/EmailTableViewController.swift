@@ -11,14 +11,14 @@ import UIKit
 class EmailTableViewController: UITableViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    let emailArray = ["parker.bixby@mercerislandschools.org", "jen.mcclellan@mercerislandschools.org", "Ryan.Lane@mercerislandschools.org",
+    let emailArray = ["parker.bixby@mercerislandschools.org", "jen.mclellan@mercerislandschools.org", "Ryan.Lane@mercerislandschools.org",
                       "Bryan.Wanzer@mercerislandschools.org",
                       "Carol.Krell@mercerislandschools.org",
                       "David.Bentley@mercerislandschools.org"]
     
     let directorsArray =
         ["Parker Bixby",
-         "Jen McClellan",
+         "Jen McLellan",
          "Ryan Lane",
          "Bryan Wanzer",
          "Carol Krell",

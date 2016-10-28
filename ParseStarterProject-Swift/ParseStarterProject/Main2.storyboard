@@ -196,16 +196,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="252.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder5" translatesAutoresizingMaskIntoConstraints="NO" id="nh2-Ln-zls">
-                                                    <rect key="frame" x="8" y="8" width="399" height="236"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder5" translatesAutoresizingMaskIntoConstraints="NO" id="nh2-Ln-zls">
+                                                    <rect key="frame" x="8" y="8" width="398" height="236"/>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                         <rect key="frame" x="190" y="8" width="357" height="236.5"/>
                                                     </variation>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="nh2-Ln-zls" firstAttribute="trailing" secondItem="rhn-rv-gx7" secondAttribute="trailingMargin" id="49t-0E-2R6"/>
                                                 <constraint firstItem="nh2-Ln-zls" firstAttribute="top" secondItem="rhn-rv-gx7" secondAttribute="topMargin" id="4K2-jl-ndg"/>
-                                                <constraint firstItem="nh2-Ln-zls" firstAttribute="trailing" secondItem="rhn-rv-gx7" secondAttribute="trailingMargin" constant="-181" id="9hS-S7-YnF"/>
                                                 <constraint firstItem="nh2-Ln-zls" firstAttribute="leading" secondItem="rhn-rv-gx7" secondAttribute="leadingMargin" id="Zkj-M7-cpc"/>
                                                 <constraint firstItem="nh2-Ln-zls" firstAttribute="bottom" secondItem="rhn-rv-gx7" secondAttribute="bottomMargin" id="ffX-e2-s0U"/>
                                             </constraints>
@@ -357,7 +357,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U43-pg-fZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3543.75" y="264.75"/>
+            <point key="canvasLocation" x="3543" y="264"/>
         </scene>
         <!--Item-->
         <scene sceneID="t9h-Z9-DVW">
@@ -1410,7 +1410,7 @@ Email: davidec@u.washington.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="398" height="174.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-fm-TuY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-fm-TuY">
                                 <rect key="frame" x="0.0" y="1" width="398" height="173.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1450,7 +1450,7 @@ Email: davidec@u.washington.edu</string>
                         <viewControllerLayoutGuide type="bottom" id="hwe-tY-NcK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V8c-Mo-2vp">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="174"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="174.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="diP-ja-Rzb">
@@ -1536,11 +1536,11 @@ Email: davidec@u.washington.edu</string>
                         <viewControllerLayoutGuide type="bottom" id="bu2-8D-4UF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SNL-w8-1Mc">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="174"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="174.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7rB-8J-TZJ">
-                                <rect key="frame" x="0.0" y="0.0" width="398" height="174.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="398" height="175"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="VjK-et-yzn">
@@ -1763,7 +1763,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="height" constant="26" id="Phy-TI-cAG"/>
                                                         <constraint firstAttribute="width" constant="120" id="hnx-lo-F9M"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="6FA8155E-4566-4DCE-8E13-DCE9AB90512D"/>
+                                                    <state key="normal" title="Button" image="3065683C-4337-4D8A-BD33-6A0068A6A814"/>
                                                     <connections>
                                                         <action selector="changePhoto:" destination="MIx-1V-cuw" eventType="touchUpInside" id="kIa-Ln-Kgi"/>
                                                     </connections>
@@ -2062,7 +2062,7 @@ Email: davidec@u.washington.edu</string>
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="v8g-7i-9Ug">
-                                <rect key="frame" x="0.0" y="122" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="121" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v8g-7i-9Ug" id="zsw-TT-dop">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -2133,7 +2133,7 @@ Email: davidec@u.washington.edu</string>
                         <viewControllerLayoutGuide type="bottom" id="aTb-xH-Yy4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dbc-LU-EeE">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="162"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="162.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8gJ-Yl-fG1">
@@ -2171,7 +2171,7 @@ Email: davidec@u.washington.edu</string>
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="NwD-Mw-jG8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="SEND TO:" id="ReO-CD-7Hn">
                                 <cells>
@@ -2188,7 +2188,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="width" constant="162" id="43O-r6-OhK"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2209,7 +2209,7 @@ Email: davidec@u.washington.edu</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0u-sc-HDZ">
                                                     <rect key="frame" x="50" y="11" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose instrument(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOk-FY-G35">
@@ -2218,7 +2218,7 @@ Email: davidec@u.washington.edu</string>
                                                         <constraint firstAttribute="width" constant="170" id="4Q1-Gr-Bjo"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2497,7 +2497,7 @@ Email: davidec@u.washington.edu</string>
         </scene>
     </scenes>
     <resources>
-        <image name="6FA8155E-4566-4DCE-8E13-DCE9AB90512D" width="121" height="26">
+        <image name="3065683C-4337-4D8A-BD33-6A0068A6A814" width="121" height="26">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

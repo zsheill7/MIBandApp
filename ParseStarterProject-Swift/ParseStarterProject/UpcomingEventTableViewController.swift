@@ -89,6 +89,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         createPicker()
         
+        self.view.endEditing(true)
         
         
     }

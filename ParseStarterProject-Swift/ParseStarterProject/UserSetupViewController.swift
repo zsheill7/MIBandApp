@@ -151,7 +151,7 @@ class UserSetupTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if DeviceType.IS_IPAD || DeviceType.IS_IPAD_PRO {
-            if indexPath.section == 0 || indexPath.section == 1 {
+            if (indexPath.section == 0 || indexPath.section == 1) && indexPath.row == 0 {
                 return 350
             }
             

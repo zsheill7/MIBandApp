@@ -134,7 +134,8 @@ class BarcodeTableViewController: UITableViewController, UINavigationControllerD
         //UIAlertController for choosing photo
 
         if #available(iOS 8.0, *) {
-            let alertController = UIAlertController(title: "Choose Photo", message: "", preferredStyle: .ActionSheet)
+            let alertController = UIAlertController(title: "Choose Photo", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            //alertController.modalPresentationStyle = .Popover
             let choosePhoto = UIAlertAction(title: "Choose from Photo Library", style: .Default) { (_) in
                 self.pickedBarcodeImage.delegate = self
                 self.pickedBarcodeImage.sourceType = UIImagePickerControllerSourceType.PhotoLibrary

@@ -525,22 +525,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             self.performSegueWithIdentifier("goToAboutUs", sender: self)
         } else if sender.tag == 2 {
             
-           /* let subject = "Contact Us"
-            let body = " "
-            
-            let email1 = "parker.bixby@mercerislandschools.org"
-            let email2 = "jen.mclellan@mercerislandschools.org"
-            
-            let email = "mailto:\(email1);\(email2)?subject=\(subject)&body=\(body)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
-            
-            if let emailURL:NSURL = NSURL(string: email!)
-            {
-                if UIApplication.sharedApplication().canOpenURL(emailURL)
-                {
-                    UIApplication.sharedApplication().openURL(emailURL)
-                }
-            }*/
-            self.performSegueWithIdentifier("toEmailVC", sender: self)
+                       self.performSegueWithIdentifier("toEmailVC", sender: self)
         }
     }
     

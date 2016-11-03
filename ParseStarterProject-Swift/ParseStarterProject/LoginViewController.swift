@@ -72,11 +72,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             self.activityIndicator.stopAnimating()
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
-            
+             print("here0")
             if user != nil {
-                
+                print("here1.0")
                 // Logged In!
                 if user!["grade"] != nil {
+                    print("here2.0")
                     dispatch_async(dispatch_get_main_queue()) {
                         [unowned self] in
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main2", bundle: nil)
@@ -85,8 +86,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         mainStoryboard.instantiateViewControllerWithIdentifier("tabBarController")
                        // self.presentViewController(viewController, animated: true, completion: nil)
                         //viewController.modalTransitionStyle = UIModalTransitionStyle.
+                        print("here1")
                     }
+                } else if user!.username != nil{
+                     print("here2")
+                    self.performSegueWithIdentifier("toAdminStatus", sender: self)
+                   
                 } else {
+                     print("here3")
                     self.displayAlert("Failed login", message: "Please create a new account")
                 }
                 

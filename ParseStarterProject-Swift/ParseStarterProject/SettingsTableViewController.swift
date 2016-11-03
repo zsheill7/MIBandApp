@@ -133,8 +133,8 @@ class SettingsTableViewController: UITableViewController {
                 self.user?.deleteInBackgroundWithBlock({ (success, error) in
                     PFUser.logOut()
                     let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let createAccountVC = mainStoryboard.instantiateViewControllerWithIdentifier("createAccountVC")
-                    self.presentViewController(createAccountVC, animated: true, completion: nil)
+                    let createAccountNC = mainStoryboard.instantiateViewControllerWithIdentifier("createAccountNC")
+                    self.presentViewController(createAccountNC, animated: true, completion: nil)
                 })
                 
                 

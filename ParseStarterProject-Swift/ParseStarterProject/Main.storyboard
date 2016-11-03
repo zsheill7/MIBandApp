@@ -200,11 +200,12 @@
                     <connections>
                         <outlet property="password" destination="Gkb-TR-ifF" id="spW-b5-WDB"/>
                         <outlet property="username" destination="m6W-8Y-Giw" id="YmX-sv-ai3"/>
+                        <segue destination="6wS-FO-4o9" kind="show" identifier="toAdminStatus" id="o3H-XS-uEH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tft-oz-rZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="-2454"/>
+            <point key="canvasLocation" x="1211" y="-2458"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="ow8-V1-Wnp">
@@ -873,4 +874,7 @@
         <image name="loginPage2" width="612" height="408"/>
         <image name="sectionLeaderButton" width="888" height="339"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="o3H-XS-uEH"/>
+    </inferredMetricsTieBreakers>
 </document>

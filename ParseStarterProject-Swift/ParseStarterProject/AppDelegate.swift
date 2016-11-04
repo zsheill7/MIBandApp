@@ -133,7 +133,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let navBgImage:UIImage = UIImage(named: "maroonSolid")!
         UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics:  .Default)
 
-        /*parse-dashboard --appId mihsbandGRHUILAEHFRALIWH4738568 --masterKey FUHIDLSHfnjdlsh48937596575789 --serverURL "https://mihsband.herokuapp.com/parse" --appName MIHS Band
+        /*parse-dashboard --appId mihsbandGRHUILAEHFRALIWH4738568 --masterKey FUHIDLSHfnjdlsh48937596575789 --serverURL "https://mihsband.herokuapp.com/parse" --appName MIHS_Band
+         
+        parse-dashboard --appId mihsbandGRHUILAEHFRALIWH4738568 --masterKey FUHIDLSHfnjdlsh48937596575789 --serverURL "https://afternoon-wave-53800.herokuapp.com/" --appName MIHS_Band
+         
+         parse-dashboard --appId mihsbandGRHUILAEHFRALIWH4738568 --masterKey FUHIDLSHfnjdlsh48937596575789 --serverURL "https://mihsband2.herokuapp.com/parse" --appName MIHS_Band
  */
         // ****************************************************************************
         // Uncomment and fill in with your Parse credentials:

@@ -38,7 +38,6 @@
 		C82B3B0E1D5EA0EF0037FDC2 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0A1D5EA0EF0037FDC2 /* DonateViewController.swift */; };
 		C82B3B0F1D5EA0EF0037FDC2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */; };
 		C82B3B101D5EA0EF0037FDC2 /* SearchTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */; };
-		C82B3B241D5EA1260037FDC2 /* UpcomingEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B141D5EA1260037FDC2 /* UpcomingEventsViewController.swift */; };
 		C82B3B251D5EA1260037FDC2 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B151D5EA1260037FDC2 /* FlickrAPI.swift */; };
 		C82B3B261D5EA1260037FDC2 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B161D5EA1260037FDC2 /* PhotoStore.swift */; };
 		C82B3B271D5EA1260037FDC2 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B3B171D5EA1260037FDC2 /* PhotosViewController.swift */; };
@@ -73,6 +72,7 @@
 		C8D21E771D833673002311A8 /* EmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D21E761D833673002311A8 /* EmailTableViewController.swift */; };
 		C8D21E791D834E6C002311A8 /* AdminStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */; };
 		C8E9EB0A1D7D294B0004B570 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */; };
+		C8F130651DCBFD3F0049B312 /* UpcomingEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F130641DCBFD3F0049B312 /* UpcomingEventsViewController.swift */; };
 		C8F251671D943714009A8B35 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F251661D943714009A8B35 /* Reachability.swift */; };
 		C8F7A3721D5AA45500F210A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */; };
 		C8FD12C11D876DB4004D307C /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FD12C01D876DB4004D307C /* Main2.storyboard */; };
@@ -119,7 +119,6 @@
 		C82B3B0A1D5EA0EF0037FDC2 /* DonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTimelineViewController.swift; sourceTree = "<group>"; };
-		C82B3B141D5EA1260037FDC2 /* UpcomingEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpcomingEventsViewController.swift; path = "../../../NonmemberBandApp/Nonmember Band App/UpcomingEventsViewController.swift"; sourceTree = "<group>"; };
 		C82B3B151D5EA1260037FDC2 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		C82B3B161D5EA1260037FDC2 /* PhotoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		C82B3B171D5EA1260037FDC2 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +153,7 @@
 		C8D21E761D833673002311A8 /* EmailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTableViewController.swift; sourceTree = "<group>"; };
 		C8D21E781D834E6C002311A8 /* AdminStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminStatusTableViewController.swift; sourceTree = "<group>"; };
 		C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		C8F130641DCBFD3F0049B312 /* UpcomingEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEventsViewController.swift; sourceTree = "<group>"; };
 		C8F251661D943714009A8B35 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		C8F7A3711D5AA45500F210A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C8FD12C01D876DB4004D307C /* Main2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
@@ -245,6 +245,7 @@
 				C82B3B321D5EA1400037FDC2 /* Nonmember */,
 				C80745DD1D87610200026339 /* Initial.storyboard */,
 				C8F251661D943714009A8B35 /* Reachability.swift */,
+				C8F130641DCBFD3F0049B312 /* UpcomingEventsViewController.swift */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -354,7 +355,6 @@
 				C8E9EB091D7D294B0004B570 /* InfoTableViewController.swift */,
 				C82B3B0B1D5EA0EF0037FDC2 /* InfoViewController.swift */,
 				C82B3B0C1D5EA0EF0037FDC2 /* SearchTimelineViewController.swift */,
-				C82B3B141D5EA1260037FDC2 /* UpcomingEventsViewController.swift */,
 				C82B3B1D1D5EA1260037FDC2 /* Flickr API */,
 				C82B3B231D5EA1260037FDC2 /* Unused Files */,
 			);
@@ -544,7 +544,6 @@
 				C82B3B281D5EA1260037FDC2 /* Photo.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				C82B3B291D5EA1260037FDC2 /* PhotoDataSource.swift in Sources */,
-				C82B3B241D5EA1260037FDC2 /* UpcomingEventsViewController.swift in Sources */,
 				C807459A1D85AFCD00026339 /* ContainerViewControllerEnsemble.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				C82B3B301D5EA1260037FDC2 /* Event.swift in Sources */,
@@ -562,6 +561,7 @@
 				C80745D81D85F0BD00026339 /* AdminAddEventInstrumentTableViewController.swift in Sources */,
 				C82B3B311D5EA1260037FDC2 /* EventList.swift in Sources */,
 				C8C266D51D3DAB6C00574541 /* ChangePasswordTableViewController.swift in Sources */,
+				C8F130651DCBFD3F0049B312 /* UpcomingEventsViewController.swift in Sources */,
 				C8AF37011D51647900B80DB9 /* ContainerViewControllerConcert.swift in Sources */,
 				C82B3B2D1D5EA1260037FDC2 /* ContactViewController.swift in Sources */,
 				C802EE3D1D3D630800110415 /* SettingsInstrumentsTableViewController.swift in Sources */,
